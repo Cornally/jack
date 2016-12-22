@@ -1,6 +1,3 @@
-/**
- * @file Main site styles.
- */
 /* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
    only use tags appropriately, where they're meant to be used. We WANT those default styles. */
@@ -15,12 +12,7 @@ header,
 nav,
 section,
 summary,
-form,
-search,
-results,
-result,
-authors,
-author {
+form {
   margin: 0;
   padding: 0;
   border: 0;
