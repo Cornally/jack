@@ -1,2 +1,6 @@
-@import "./settings/settings";
-@import "./utils/reset";
+// Bootstrapping the framework
+@import "./settings/all";
+@import "./utils/all";
+@import "./typography/all";
+
+@import "./components/all";

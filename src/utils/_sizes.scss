@@ -1,0 +1,18 @@
+// Spacing standard unit
+$size_gap: 15px;
+
+// Break points
+$size_break_xs: 320px;
+$size_break_sm: 580px;
+$size_break_md: 820px;
+$size_break_lg: 1024px;
+$size_break_xl: 1280px;
+
+// Loop through these as needed
+$sizes: (
+    xs : $size_break_xs,
+    sm : $size_break_sm,
+    md : $size_break_md,
+    lg : $size_break_lg,
+    xl : $size_break_xl,
+);

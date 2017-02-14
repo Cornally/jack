@@ -1,0 +1,30 @@
+@if $include_typography {
+
+    // Alignment
+    .#{$prefix-typography}text-left {
+        text-align: left;
+    }
+
+    .#{$prefix-typography}text-right {
+        text-align: right;
+    }
+
+    .#{$prefix-typography}text-center {
+        text-align: center;
+    }
+
+
+    // Line breaks
+    .#{$prefix-typography}text-nowrap {
+        white-space: nowrap;
+    }
+
+
+    // Ellipsis (...)
+    .#{$prefix-typography}text-ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+}

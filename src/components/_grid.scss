@@ -1,0 +1,134 @@
+/////////////////////////
+// Twelve Column Grid
+/////////////////////////
+
+// Loop through all of our breakpoint sizes in `utils/_sizes.scss`,
+// create a media query for each respective breakpoint size,
+// Loop through each column and set the flex-basis value.
+
+$columns: 12;
+$column_size: 100% / $columns;
+@mixin col-x {
+    @each $size, $px in $sizes {
+
+        // Build out column widths for each breakpoint size
+        @media (min-width: $px) {
+            @for $i from 0 through $columns {
+                .#{$prefix-component-grid}col-#{$size}-#{$i} {
+                    flex-basis: $column_size * $i;
+                    // Allow '.col-size-0' for columns that should
+                    // retain the width of their contents.
+                    @if $i == 0 {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+
+        // Hide bits
+        @media (min-width: $px) {
+            .#{$prefix-component-grid}hidden-#{$size} {
+                display: none !important;
+            }
+        }
+
+        // Show bits
+        @media (min-width: $px) {
+            .#{$prefix-component-grid}visible-#{$size} {
+                display: initial !important;
+            }
+        }
+
+    }
+}
+
+@if $include_component_grid {
+
+    /**
+    * @file Chris's flexbox grid
+    *
+    *	This can be used in conjunction with 'card' and 'form-section' classes.
+    * 	Make sure you never apply padding to the 'row' class itself.
+    *	Minimize the use of adding styling to the rows themselves.
+    */
+
+    $grid_border: $color_brand_primary;
+    $grid_gap: $size_gap;
+
+    .#{$prefix-component-grid}row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        &.#{$prefix-component-grid}row-space-between {
+            justify-content: space-between;
+        }
+
+        &.#{$prefix-component-grid}row-space-around {
+            justify-content: space-around;
+        }
+
+        &.#{$prefix-component-grid}row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        // Do not wrap columns in row
+        &.#{$prefix-component-grid}row-no-wrap {
+            flex-wrap: nowrap;
+        }
+
+        // Stretch the size of the content in the columns so they're the same width/height
+        &.#{$prefix-component-grid}row-flex {
+            [class^=#{$prefix-component-grid}col-] { display: flex; }
+            [class^=#{$prefix-component-grid}col-] > * { flex: 1; }
+        }
+
+        // Add a hairline border
+        &.#{$prefix-component-grid}row-border {
+            border: 1px solid $grid_border;
+        }
+
+        // Align the content to the left (default)
+        &.#{$prefix-component-grid}row-align-left {
+            justify-content: flex-start;
+        }
+
+        // Align the content to the right
+        &.#{$prefix-component-grid}row-align-right {
+            justify-content: flex-end;
+        }
+
+        // Add a spacing gap around top and bottom
+        &.#{$prefix-component-grid}row-gap {
+            margin: -1 * $grid_gap;
+
+            > [class^=#{$prefix-component-grid}col-] {
+                padding: $grid_gap;
+            }
+        }
+
+        // Add a spacing gap horizontally between cols
+        &.#{$prefix-component-grid}row-col-hgap {
+            margin-left: -1 * $grid_gap;
+            margin-right: -1 * $grid_gap;
+
+            > [class^=#{$prefix-component-grid}col-] {
+                padding-left: $grid_gap;
+                padding-right: $grid_gap;
+            }
+        }
+
+        // Add a spacing gap vertically between cols
+        &.#{$prefix-component-grid}row-col-vgap {
+            margin-top: -1 * $grid_gap;
+            margin-bottom: -1 * $grid_gap;
+
+            > [class^=#{$prefix-component-grid}col-] {
+                padding-top: $grid_gap;
+                padding-bottom: $grid_gap;
+            }
+        }
+    }
+
+    @include col-x;
+}

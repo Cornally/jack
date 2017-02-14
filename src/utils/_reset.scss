@@ -2,7 +2,7 @@
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
    only use tags appropriately, where they're meant to be used. We WANT those default styles. */
 
-@if $include-reset {
+@if $include-util-reset {
     html,
     body,
     div,
@@ -87,7 +87,7 @@
     }
 
 
-    // Disable the ugly-ass yellow autofill boxes
+    // Disable yellow autofill boxes
     input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0px 1000px #333 inset;
         -webkit-text-fill-color: #fff;
@@ -95,7 +95,7 @@
 
     // Change highlight color
     * {
-        &::selection { background: rgba(25,190,255,.5); }
+        &::selection { background: rgba($color_brand_primary, .5); }
     }
 
     // Disable tap highlight
