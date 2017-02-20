@@ -1,0 +1,40 @@
+{
+  "name": "jack",
+  "version": "0.0.1",
+  "description": "Lightweight styling engine",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "sass --watch src:dist",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cornally/jack.git"
+  },
+  "keywords": [
+    "styling",
+    "framework",
+    "jack",
+    "sass",
+    "scss",
+    "flexbox",
+    "flex"
+  ],
+  "author": "@Cornally",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cornally/jack/issues"
+  },
+  "homepage": "https://github.com/Cornally/jack#readme",
+  "dependencies": {
+    "express": "^4.14.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  }
+}

@@ -6,14 +6,14 @@
 // create a media query for each respective breakpoint size,
 // Loop through each column and set the flex-basis value.
 
-$columns: 12;
-$column_size: 100% / $columns;
 @mixin col-x {
-    @each $size, $px in $sizes {
+    $column_count: 12;
+    $column_size: 100% / $column_count;
+    @each $size, $px in $sizes_break {
 
         // Build out column widths for each breakpoint size
         @media (min-width: $px) {
-            @for $i from 0 through $columns {
+            @for $i from 0 through $column_count {
                 .#{$prefix-component-grid}col-#{$size}-#{$i} {
                     flex-basis: $column_size * $i;
                     // Allow '.col-size-0' for columns that should
@@ -100,7 +100,7 @@ $column_size: 100% / $columns;
 
         // Add a spacing gap around top and bottom
         &.#{$prefix-component-grid}row-gap {
-            margin: -1 * $grid_gap;
+            margin: auto -1 * $grid_gap;
 
             > [class^=#{$prefix-component-grid}col-] {
                 padding: $grid_gap;
