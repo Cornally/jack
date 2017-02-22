@@ -1,5 +1,10 @@
 @if $include_typography {
 
+    // Basic sizing
+    body {
+        font-size: $size_font_normal;
+    }
+
     // Alignment
     .#{$prefix-typography}text-left {
         text-align: left;

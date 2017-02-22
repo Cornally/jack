@@ -15,6 +15,13 @@ $include_util_margins: true !default;
 // $prefix_util_margins: $global_prefix;
 $prefix_util_margins: '' !default;
 
+// Include helper classes for margins
+$include_util_padding: true !default;
+
+// Set a prefix or use the global prefix:
+// $prefix_util_padding: $global_prefix;
+$prefix_util_padding: '' !default;
+
 
 
 // Include card style component.  To disable:

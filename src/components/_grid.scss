@@ -6,7 +6,7 @@
 // create a media query for each respective breakpoint size,
 // Loop through each column and set the flex-basis value.
 
-@mixin col-x {
+@mixin grid {
     $column_count: 12;
     $column_size: 100% / $column_count;
     @each $size, $px in $sizes_break {
@@ -14,7 +14,7 @@
         // Build out column widths for each breakpoint size
         @media (min-width: $px) {
             @for $i from 0 through $column_count {
-                .#{$prefix-component-grid}col-#{$size}-#{$i} {
+                .#{$prefix_component_grid}col-#{$size}-#{$i} {
                     flex-basis: $column_size * $i;
                     // Allow '.col-size-0' for columns that should
                     // retain the width of their contents.
@@ -27,108 +27,117 @@
 
         // Hide bits
         @media (min-width: $px) {
-            .#{$prefix-component-grid}hidden-#{$size} {
+            .#{$prefix_component_grid}hidden-#{$size} {
                 display: none !important;
             }
         }
 
         // Show bits
         @media (min-width: $px) {
-            .#{$prefix-component-grid}visible-#{$size} {
+            .#{$prefix_component_grid}visible-#{$size} {
                 display: initial !important;
             }
         }
+
+        // Preserve a smaller gutter on smaller screens
+        @if $px > 768 {
+            @media (min-width: $px) {
+                .#{$prefix_component_grid}container {
+                    max-width: $px - 80px;
+                }
+            }
+        } @else {
+            .#{$prefix_component_grid}container {
+                max-width: 95%;
+            }
+        }
+
 
     }
 }
 
 @if $include_component_grid {
 
-    /**
-    * @file Chris's flexbox grid
-    *
-    *	This can be used in conjunction with 'card' and 'form-section' classes.
-    * 	Make sure you never apply padding to the 'row' class itself.
-    *	Minimize the use of adding styling to the rows themselves.
-    */
-
     $grid_border: $color_brand_primary;
     $grid_gap: $size_gap;
 
-    .#{$prefix-component-grid}row {
+    .#{$prefix_component_grid}row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
 
-        &.#{$prefix-component-grid}row-space-between {
+        // Apply space between the contained elements
+        &.#{$prefix_component_grid}row-space-between {
             justify-content: space-between;
         }
 
-        &.#{$prefix-component-grid}row-space-around {
+        // Apply space around the contained elements
+        &.#{$prefix_component_grid}row-space-around {
             justify-content: space-around;
         }
 
-        &.#{$prefix-component-grid}row-reverse {
+        // Flip the order of your row
+        &.#{$prefix_component_grid}row-reverse {
             flex-direction: row-reverse;
         }
 
         // Do not wrap columns in row
-        &.#{$prefix-component-grid}row-no-wrap {
+        &.#{$prefix_component_grid}row-no-wrap {
             flex-wrap: nowrap;
         }
 
         // Stretch the size of the content in the columns so they're the same width/height
-        &.#{$prefix-component-grid}row-flex {
-            [class^=#{$prefix-component-grid}col-] { display: flex; }
-            [class^=#{$prefix-component-grid}col-] > * { flex: 1; }
+        &.#{$prefix_component_grid}row-flex {
+            [class^=#{$prefix_component_grid}col-] { display: flex; }
+            [class^=#{$prefix_component_grid}col-] > * { flex: 1 1 0; }
         }
 
         // Add a hairline border
-        &.#{$prefix-component-grid}row-border {
+        &.#{$prefix_component_grid}row-border {
             border: 1px solid $grid_border;
         }
 
         // Align the content to the left (default)
-        &.#{$prefix-component-grid}row-align-left {
+        &.#{$prefix_component_grid}row-align-left {
             justify-content: flex-start;
         }
 
         // Align the content to the right
-        &.#{$prefix-component-grid}row-align-right {
+        &.#{$prefix_component_grid}row-align-right {
             justify-content: flex-end;
         }
 
         // Add a spacing gap around top and bottom
-        &.#{$prefix-component-grid}row-gap {
+        &.#{$prefix_component_grid}row-gap {
             margin: auto -1 * $grid_gap;
 
-            > [class^=#{$prefix-component-grid}col-] {
+            > [class^=#{$prefix_component_grid}col-] {
                 padding: $grid_gap;
             }
         }
 
         // Add a spacing gap horizontally between cols
-        &.#{$prefix-component-grid}row-col-hgap {
+        &.#{$prefix_component_grid}row-col-hgap {
             margin-left: -1 * $grid_gap;
             margin-right: -1 * $grid_gap;
 
-            > [class^=#{$prefix-component-grid}col-] {
+            > [class^=#{$prefix_component_grid}col-] {
                 padding-left: $grid_gap;
                 padding-right: $grid_gap;
             }
         }
 
         // Add a spacing gap vertically between cols
-        &.#{$prefix-component-grid}row-col-vgap {
+        &.#{$prefix_component_grid}row-col-vgap {
             margin-top: -1 * $grid_gap;
             margin-bottom: -1 * $grid_gap;
 
-            > [class^=#{$prefix-component-grid}col-] {
+            > [class^=#{$prefix_component_grid}col-] {
                 padding-top: $grid_gap;
                 padding-bottom: $grid_gap;
             }
         }
     }
 
-    @include col-x;
+    @include grid;
 }

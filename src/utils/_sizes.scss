@@ -1,14 +1,14 @@
 // Keep spacing between elements consistent with standard gaps
 $size_gap: 7.5px;
 
-// Break points
+// Break points for @media
 $size_break_xs: 320px;
 $size_break_sm: 580px;
 $size_break_md: 820px;
 $size_break_lg: 1024px;
 $size_break_xl: 1280px;
 
-// Loop through these as needed
+// Break point map
 $sizes_break: (
     xs : $size_break_xs,
     sm : $size_break_sm,
@@ -17,3 +17,9 @@ $sizes_break: (
     xl : $size_break_xl
 );
 
+// Font sizes
+$size_font_smaller: 10px;
+$size_font_small: 12px;
+$size_font_normal: 14px;
+$size_font_big: 18px;
+$size_font_bigger: 36px;

@@ -1,0 +1,65 @@
+/////////////////////////
+// Margin Helpers
+/////////////////////////
+
+// Based on our gap size defined in `utils/_sizes.scss`,
+// create a media query for each respective breakpoint size,
+// Loop through each spacing size and set spacing values.
+// .{prefix}-margin-{top, right, left, bottom, left & right, top & bottom}-{breakpoint_size}-{spacing_size}
+
+@mixin spacing($type, $count) {
+    $type_count: $count;
+    $t: null;
+    $prefix_util_spacing: null;
+    // Handle spacing type (margin or padding)
+    @if $type == "margin" {
+        $t: "m";
+        $prefix_util_spacing: $prefix_util_margins;
+    } @else if $type == "padding" {
+        $t: "p";
+        $prefix_util_spacing: $prefix_util_padding;
+    }
+
+    // Loop through each break point size
+    @each $size, $px in $sizes_break {
+        @media (min-width: $px) {
+            @for $i from 0 through $type_count {
+                .#{$prefix_util_spacing}#{$t}-t-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i) !important;
+                }
+                .#{$prefix_util_spacing}#{$t}-r-#{$size}-#{$i} {
+                    #{$type}-right: decimal-round($size_gap * $i) !important;
+                }
+                .#{$prefix_util_spacing}#{$t}-b-#{$size}-#{$i} {
+                    #{$type}-bottom: decimal-round($size_gap * $i) !important;
+                }
+                .#{$prefix_util_spacing}#{$t}-l-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i) !important;
+                }
+                .#{$prefix_util_spacing}#{$t}-x-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i) !important;
+                    #{$type}-right: decimal-round($size_gap * $i) !important;
+                }
+                .#{$prefix_util_spacing}#{$t}-y-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i) !important;
+                    #{$type}-bottom: decimal-round($size_gap * $i) !important;
+                }
+            }
+            
+            // Horizontally center if we have display: block; and a width set
+            .#{$prefix_util_margins}m-x-#{$size}-auto {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+
+@if $include_util_margins {
+    @include spacing("margin", 5);
+}
+
+@if $include_util_padding {
+    @include spacing("padding", 5);
+}
