@@ -1,0 +1,15 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 7.5px; }
+  .card.card-no-padding {
+    padding: 0; }
+  .card.card-border {
+    border: 1px solid #f7f7f7; }
+  .card .card-head {
+    font-size: 18px;
+    font-weight: bold; }
+  .card .card-body {
+    font-size: 14px; }
+
+/*# sourceMappingURL=card.css.map */

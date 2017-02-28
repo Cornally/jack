@@ -9,7 +9,7 @@ Install the package `npm install jack-strap --save`.  There are a few options fo
 for the minified production version.
 
 1. Import compiled component resources into your project's existing SASS/LESS:
-`@import url('node_modules/jack-strap/dist/grid.css');`
+`@import url('node_modules/jack-strap/dist/components/grid.css');`
 
 2. Import component SASS partials and overwrite the defaults for more flexibility, e.g.:
 ```

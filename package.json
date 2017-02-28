@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "sass --watch src:dist",
-    "test": "test"
+    "release": "sass --watch src:dist --style compressed"
   },
   "repository": {
     "type": "git",

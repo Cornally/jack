@@ -1,0 +1,21 @@
+body {
+  font-size: 14px; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+/*# sourceMappingURL=typography-helpers.css.map */

@@ -1,3 +1,5 @@
+// Global override to include everything (opt out vs. in)
+$jack_include_all: false !default;
 
 // Prefix to be applied before classes:
 // $global_prefix: 'your-theme-';

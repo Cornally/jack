@@ -1,3 +1,5 @@
+@import '../settings/all';
+
 @if $include_component_card {
 
     $card_padding: $size_gap;
