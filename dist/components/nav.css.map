@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGI,IAA6B;EACzB,KAAK,EAAE,IAAI;EACX,WAAW,EAAE,IAAI;EACjB,UAAU,ECAI,OAAO;EDErB,2BAAiD;IAC7C,QAAQ,EAAE,KAAK;IACf,GAAG,EAAE,CAAC;IACN,IAAI,EAAE,CAAC;EAGX,cAAkC;IAC9B,SAAS,EEQL,IAAI;IFPR,WAAW,EAAE,IAAI;EAGrB,MAAE;IACE,KAAK,EAAE,KAAK",
+"sources": ["../../src/components/nav.scss","../../src/settings/_colors.scss","../../src/settings/_sizes.scss"],
+"names": [],
+"file": "nav.css"
+}
