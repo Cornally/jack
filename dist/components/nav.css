@@ -1,15 +1,2 @@
-.nav {
-  width: 100%;
-  line-height: 50px;
-  background: #6cc644; }
-  .nav.nav-position-fixed-top {
-    position: fixed;
-    top: 0;
-    left: 0; }
-  .nav .nav-logo {
-    font-size: 18px;
-    font-weight: bold; }
-  .nav a {
-    color: white; }
-
+.nav{width:100%;line-height:50px;background:#6cc644}@media (min-width: 320px){.nav.nav-xs-sticky{position:fixed;top:0;left:0}.nav.nav-xs-sticky+*:before{display:block;content:"";padding-top:50px}}@media (min-width: 580px){.nav.nav-sm-sticky{position:fixed;top:0;left:0}.nav.nav-sm-sticky+*:before{display:block;content:"";padding-top:50px}}@media (min-width: 820px){.nav.nav-md-sticky{position:fixed;top:0;left:0}.nav.nav-md-sticky+*:before{display:block;content:"";padding-top:50px}}@media (min-width: 1024px){.nav.nav-lg-sticky{position:fixed;top:0;left:0}.nav.nav-lg-sticky+*:before{display:block;content:"";padding-top:50px}}@media (min-width: 1280px){.nav.nav-xl-sticky{position:fixed;top:0;left:0}.nav.nav-xl-sticky+*:before{display:block;content:"";padding-top:50px}}.nav .nav-logo{font-size:18px;font-weight:bold}.nav a{color:white}
 /*# sourceMappingURL=nav.css.map */

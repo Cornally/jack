@@ -2,7 +2,7 @@
 
 @if $include_component_card {
 
-    $card_padding: $size_gap;
+    $card_padding: decimal-round($size_gap*2);
 
     .#{$prefix-component_card}card {
         display: flex;

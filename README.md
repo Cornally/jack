@@ -52,8 +52,11 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
 3. Hero
     * Full-width
     * Container-width
-4. Top Navigation
-5. Side Navigation
+4. Navigation
+    * Top
+    * Side
+    * Breadcrumb
+5. Tables
 
 ## 4. Customization
 1. Sizing

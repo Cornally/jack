@@ -47,6 +47,9 @@
                     #{$type}-top: decimal-round($size_gap * $i) !important;
                     #{$type}-bottom: decimal-round($size_gap * $i) !important;
                 }
+                .#{$prefix_util_spacing}#{$t}-#{$size}-#{$i} {
+                    #{$type}: decimal-round($size_gap * $i) !important;
+                }
             }
             
             // Horizontally center if we have display: block; and a width set

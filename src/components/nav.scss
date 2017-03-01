@@ -6,12 +6,24 @@
         line-height: 50px;
         background: $color_brand_primary;
 
-        &.#{$prefix_component_nav}nav-position-fixed-top {
-            position: fixed;
-            top: 0;
-            left: 0;
+        // Set sticky per size
+        @each $size, $px in $sizes_break {
+            @media (min-width: $px) {
+                &.#{$prefix_component_nav}nav-#{$size}-sticky {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    
+                    // Push content down the height of the nav when sticky
+                    & + *:before {
+                        display: block;
+                        content: "";
+                        padding-top: 50px;
+                    }
+                }
+            }
         }
-
+        
         .#{$prefix_component_nav}nav-logo {
             font-size: $size_font_big;
             font-weight: bold;
