@@ -78,7 +78,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #fff; }
 
 *::selection {
-  background: rgba(108, 198, 68, 0.5); }
+  background: rgba(68, 75, 198, 0.5); }
 
 * {
   -webkit-tap-highlight-color: transparent; }
@@ -1581,7 +1581,7 @@ body {
   .row.row-flex [class^=col-] > * {
     flex: 1 1 0; }
   .row.row-border {
-    border: 1px solid #6cc644; }
+    border: 1px solid #444bc6; }
   .row.row-align-left {
     justify-content: flex-start; }
   .row.row-align-right {
@@ -1851,7 +1851,7 @@ body {
 .nav {
   width: 100%;
   line-height: 50px;
-  background: #6cc644; }
+  background: #444bc6; }
   @media (min-width: 320px) {
     .nav.nav-xs-sticky {
       position: fixed;
