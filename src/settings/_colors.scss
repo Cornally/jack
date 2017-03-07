@@ -1,8 +1,22 @@
-$color_light_01: #ffffff;
-$color_light_02: #f7f7f7;
+$color_light_01       : #ffffff;
+$color_light_02       : #f7f7f7;
+$color_light_03       : #ebebeb;
+$color_light_04       : #d8d8d8;
 
-$color_dark_01: #000000;
-$color_dark_02: #232425;
+$color_dark_01        : #000000;
+$color_dark_02        : #232425;
 
-$color_brand_primary: #6cc644;
+$color_brand_primary  : #6cc644;
 $color_brand_secondary: #91dd70;
+
+$color_state_success  : #55E38C;
+$color_state_warning  : #EEE571;
+$color_state_info     : #71C9EE;
+$color_state_error    : #DC4848;
+
+$colors_states: (
+    success: $color_state_success,
+    warning: $color_state_warning,
+    info   : $color_state_info,
+    error  : $color_state_error
+);

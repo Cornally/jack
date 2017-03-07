@@ -1,2 +1,89 @@
-html,body,div,span,article,details,footer,header,nav,section,summary,form{margin:0;padding:0;border:0;vertical-align:baseline;box-sizing:border-box}html{height:100%;font-size:62.5%;font-family:sans-serif;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{height:100%;width:100%;margin:0 auto;position:relative;overflow-x:hidden}a,input,select{box-sizing:border-box;-webkit-font-smoothing:antialiased}img{max-width:100%;-ms-interpolation-mode:bicubic;display:block}a{text-decoration:none}a:hover{text-decoration:none}a:focus{outline-color:#19beff}h1,h2,h3{outline:none}p,h1,h2,h3,h4{padding:0;margin:0}button::-moz-focus-inner{border:0}input::-moz-focus-inner{border:0}input:-webkit-autofill{-webkit-box-shadow:0 0 0px 1000px #333 inset;-webkit-text-fill-color:#fff}*::selection{background:rgba(108,198,68,0.5)}*{-webkit-tap-highlight-color:transparent}.typekit-badge{display:none !important}
+/* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
+   We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
+   only use tags appropriately, where they're meant to be used. We WANT those default styles. */
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden; }
+
+a,
+input,
+select {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; }
+
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+  display: block; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+  a:focus {
+    outline-color: #19beff; }
+
+h1,
+h2,
+h3 {
+  outline: none; }
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  padding: 0;
+  margin: 0; }
+
+button::-moz-focus-inner {
+  border: 0; }
+
+input::-moz-focus-inner {
+  border: 0; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: #fff; }
+
+*::selection {
+  background: rgba(108, 198, 68, 0.5); }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+.typekit-badge {
+  display: none !important; }
+
 /*# sourceMappingURL=reset.css.map */

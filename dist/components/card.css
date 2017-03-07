@@ -1,2 +1,38 @@
-.card{display:flex;flex-direction:column;padding:decimal-round(15px)}.card.card-no-padding{padding:0}.card.card-border{border:1px solid #f7f7f7}.card .card-head{font-size:18px;font-weight:bold}.card .card-body{font-size:14px}
+.card {
+  display: flex;
+  flex-direction: column; }
+  .card.card-no-padding {
+    padding: 0; }
+  .card.card-border {
+    border: 1px solid #ebebeb; }
+  .card.card-shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+    .card.card-shadow.card-border {
+      border: 1px solid #d8d8d8; }
+  .card.card-state-success {
+    border-color: #55E38C; }
+    .card.card-state-success .card-head {
+      color: white;
+      background: #55E38C; }
+  .card.card-state-warning {
+    border-color: #EEE571; }
+    .card.card-state-warning .card-head {
+      color: white;
+      background: #EEE571; }
+  .card.card-state-info {
+    border-color: #71C9EE; }
+    .card.card-state-info .card-head {
+      color: white;
+      background: #71C9EE; }
+  .card.card-state-error {
+    border-color: #DC4848; }
+    .card.card-state-error .card-head {
+      color: white;
+      background: #DC4848; }
+  .card .card-head {
+    font-size: 18px;
+    font-weight: bold; }
+  .card .card-body {
+    font-size: 14px; }
+
 /*# sourceMappingURL=card.css.map */
