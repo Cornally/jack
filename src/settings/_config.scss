@@ -52,6 +52,16 @@ $prefix_component_nav: '' !default;
 
 
 
+// Include form buttons.  To disable:
+// $include_forms_buttons: false;
+$include_forms_buttons: true !default;
+
+// Set a prefix or use the global prefix:
+// $prefix_forms_buttons: $global_prefix;
+$prefix_forms_buttons: '' !default;
+
+
+
 // Include typography.  To disable:
 // $include_typography: false;
 $include_typography: true !default;

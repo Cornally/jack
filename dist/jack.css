@@ -78,7 +78,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #fff; }
 
 *::selection {
-  background: rgba(108, 198, 68, 0.5); }
+  background: rgba(68, 75, 198, 0.5); }
 
 * {
   -webkit-tap-highlight-color: transparent; }
@@ -1506,27 +1506,6 @@ input:-webkit-autofill {
   .m-x-xl-auto {
     margin-left: auto;
     margin-right: auto; } }
-body {
-  font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
-.text-center {
-  text-align: center; }
-
-.text-nowrap {
-  white-space: nowrap; }
-
-.text-ellipsis {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
-
 .card {
   display: flex;
   flex-direction: column; }
@@ -1535,29 +1514,34 @@ body {
   .card.card-border {
     border: 1px solid #ebebeb; }
   .card.card-shadow {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0 2px 4px rgba(21, 22, 26, 0.05); }
     .card.card-shadow.card-border {
       border: 1px solid #d8d8d8; }
+  .card.card-state-default {
+    border-color: #31333B; }
+    .card.card-state-default .card-head {
+      background: #31333B;
+      color: white; }
   .card.card-state-success {
-    border-color: #55E38C; }
+    border-color: #6FDA7A; }
     .card.card-state-success .card-head {
-      color: white;
-      background: #55E38C; }
+      background: #6FDA7A;
+      color: white; }
   .card.card-state-warning {
-    border-color: #EEE571; }
+    border-color: #EEE371; }
     .card.card-state-warning .card-head {
-      color: white;
-      background: #EEE571; }
+      background: #EEE371;
+      color: white; }
   .card.card-state-info {
-    border-color: #71C9EE; }
+    border-color: #6BB8EB; }
     .card.card-state-info .card-head {
-      color: white;
-      background: #71C9EE; }
+      background: #6BB8EB;
+      color: white; }
   .card.card-state-error {
-    border-color: #DC4848; }
+    border-color: #DC4646; }
     .card.card-state-error .card-head {
-      color: white;
-      background: #DC4848; }
+      background: #DC4646;
+      color: white; }
   .card .card-head {
     font-size: 18px;
     font-weight: bold; }
@@ -1581,7 +1565,7 @@ body {
   .row.row-flex [class^=col-] > * {
     flex: 1 1 0; }
   .row.row-border {
-    border: 1px solid #6cc644; }
+    border: 1px solid #444bc6; }
   .row.row-align-left {
     justify-content: flex-start; }
   .row.row-align-right {
@@ -1851,7 +1835,7 @@ body {
 .nav {
   width: 100%;
   line-height: 50px;
-  background: #6cc644; }
+  background: #444bc6; }
   @media (min-width: 320px) {
     .nav.nav-xs-sticky {
       position: fixed;
@@ -1902,5 +1886,90 @@ body {
     font-weight: bold; }
   .nav a {
     color: white; }
+
+.btn-default, .btn-default-line, .btn-success, .btn-success-line, .btn-warning, .btn-warning-line, .btn-info, .btn-info-line, .btn-error, .btn-error-line {
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold; }
+  .btn-group .btn-default, .btn-group .btn-default-line, .btn-group .btn-success, .btn-group .btn-success-line, .btn-group .btn-warning, .btn-group .btn-warning-line, .btn-group .btn-info, .btn-group .btn-info-line, .btn-group .btn-error, .btn-group .btn-error-line {
+    float: left;
+    margin-right: 7.5px;
+    margin-bottom: 7.5px; }
+
+.btn-default {
+  border-color: #31333B;
+  background: #31333B;
+  color: white; }
+
+.btn-default-line {
+  border-color: #31333B;
+  background: rgba(49, 51, 59, 0.025);
+  color: #31333B; }
+
+.btn-success {
+  border-color: #6FDA7A;
+  background: #6FDA7A;
+  color: white; }
+
+.btn-success-line {
+  border-color: #6FDA7A;
+  background: rgba(111, 218, 122, 0.025);
+  color: #6FDA7A; }
+
+.btn-warning {
+  border-color: #EEE371;
+  background: #EEE371;
+  color: white; }
+
+.btn-warning-line {
+  border-color: #EEE371;
+  background: rgba(238, 227, 113, 0.025);
+  color: #EEE371; }
+
+.btn-info {
+  border-color: #6BB8EB;
+  background: #6BB8EB;
+  color: white; }
+
+.btn-info-line {
+  border-color: #6BB8EB;
+  background: rgba(107, 184, 235, 0.025);
+  color: #6BB8EB; }
+
+.btn-error {
+  border-color: #DC4646;
+  background: #DC4646;
+  color: white; }
+
+.btn-error-line {
+  border-color: #DC4646;
+  background: rgba(220, 70, 70, 0.025);
+  color: #DC4646; }
+
+body {
+  color: #15161A;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 /*# sourceMappingURL=jack.css.map */

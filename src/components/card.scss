@@ -29,8 +29,8 @@
             &.#{$prefix_component_card}card-state-#{$state} {
                 border-color: $color;
                 .#{$prefix_component_card}card-head {
-                    color: white;
                     background: $color;
+                    color: white;
                 }
             }
         }

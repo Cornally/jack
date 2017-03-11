@@ -1,7 +1,7 @@
 .nav {
   width: 100%;
   line-height: 50px;
-  background: #6cc644; }
+  background: #444bc6; }
   @media (min-width: 320px) {
     .nav.nav-xs-sticky {
       position: fixed;

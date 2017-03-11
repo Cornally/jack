@@ -2,8 +2,9 @@
 
 @if $include_typography {
 
-    // Basic sizing
+    // Defaults
     body {
+        color: $color_dark_01;
         font-size: $size_font_normal;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     }

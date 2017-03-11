@@ -6,29 +6,34 @@
   .card.card-border {
     border: 1px solid #ebebeb; }
   .card.card-shadow {
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); }
+    box-shadow: 0 2px 4px rgba(21, 22, 26, 0.05); }
     .card.card-shadow.card-border {
       border: 1px solid #d8d8d8; }
+  .card.card-state-default {
+    border-color: #31333B; }
+    .card.card-state-default .card-head {
+      background: #31333B;
+      color: white; }
   .card.card-state-success {
-    border-color: #55E38C; }
+    border-color: #6FDA7A; }
     .card.card-state-success .card-head {
-      color: white;
-      background: #55E38C; }
+      background: #6FDA7A;
+      color: white; }
   .card.card-state-warning {
-    border-color: #EEE571; }
+    border-color: #EEE371; }
     .card.card-state-warning .card-head {
-      color: white;
-      background: #EEE571; }
+      background: #EEE371;
+      color: white; }
   .card.card-state-info {
-    border-color: #71C9EE; }
+    border-color: #6BB8EB; }
     .card.card-state-info .card-head {
-      color: white;
-      background: #71C9EE; }
+      background: #6BB8EB;
+      color: white; }
   .card.card-state-error {
-    border-color: #DC4848; }
+    border-color: #DC4646; }
     .card.card-state-error .card-head {
-      color: white;
-      background: #DC4848; }
+      background: #DC4646;
+      color: white; }
   .card .card-head {
     font-size: 18px;
     font-weight: bold; }

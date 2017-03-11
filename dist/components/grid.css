@@ -15,7 +15,7 @@
   .row.row-flex [class^=col-] > * {
     flex: 1 1 0; }
   .row.row-border {
-    border: 1px solid #6cc644; }
+    border: 1px solid #444bc6; }
   .row.row-align-left {
     justify-content: flex-start; }
   .row.row-align-right {

@@ -78,7 +78,7 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #fff; }
 
 *::selection {
-  background: rgba(108, 198, 68, 0.5); }
+  background: rgba(68, 75, 198, 0.5); }
 
 * {
   -webkit-tap-highlight-color: transparent; }
