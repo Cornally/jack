@@ -1518,9 +1518,9 @@ input:-webkit-autofill {
     .card.card-shadow.card-border {
       border: 1px solid #d8d8d8; }
   .card.card-state-default {
-    border-color: #31333B; }
+    border-color: #1D1E23; }
     .card.card-state-default .card-head {
-      background: #31333B;
+      background: #1D1E23;
       color: white; }
   .card.card-state-success {
     border-color: #6FDA7A; }
@@ -1901,14 +1901,14 @@ input:-webkit-autofill {
     margin-bottom: 7.5px; }
 
 .btn-default {
-  border-color: #31333B;
-  background: #31333B;
+  border-color: #1D1E23;
+  background: #1D1E23;
   color: white; }
 
 .btn-default-line {
-  border-color: #31333B;
-  background: rgba(49, 51, 59, 0.025);
-  color: #31333B; }
+  border-color: #1D1E23;
+  background: rgba(29, 30, 35, 0.025);
+  color: #1D1E23; }
 
 .btn-success {
   border-color: #6FDA7A;

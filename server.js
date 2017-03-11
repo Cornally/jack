@@ -7,7 +7,7 @@ app.use('/dist', express.static(__dirname + '/dist'));
 
 // Viewed at http://localhost:8080
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/docs/index.html'));
+    res.sendFile(path.join(__dirname + '/dist/index.html'));
 });
 
 app.listen(8080);

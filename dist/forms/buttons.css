@@ -12,14 +12,14 @@
     margin-bottom: 7.5px; }
 
 .btn-default {
-  border-color: #31333B;
-  background: #31333B;
+  border-color: #1D1E23;
+  background: #1D1E23;
   color: white; }
 
 .btn-default-line {
-  border-color: #31333B;
-  background: rgba(49, 51, 59, 0.025);
-  color: #31333B; }
+  border-color: #1D1E23;
+  background: rgba(29, 30, 35, 0.025);
+  color: #1D1E23; }
 
 .btn-success {
   border-color: #6FDA7A;
