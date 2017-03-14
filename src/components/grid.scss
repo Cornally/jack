@@ -29,14 +29,14 @@
 
         // Hide bits
         @media (min-width: $px) {
-            .#{$prefix_component_grid}hidden-#{$size} {
+            .#{$prefix_component_grid}col-#{$size}--hidden {
                 display: none !important;
             }
         }
 
         // Show bits
         @media (min-width: $px) {
-            .#{$prefix_component_grid}visible-#{$size} {
+            .#{$prefix_component_grid}col-#{$size}--visible {
                 display: initial !important;
             }
         }
@@ -69,48 +69,48 @@
         flex-wrap: wrap;
 
         // Apply space between the contained elements
-        &.#{$prefix_component_grid}row-space-between {
+        &.#{$prefix_component_grid}row--space-between {
             justify-content: space-between;
         }
 
         // Apply space around the contained elements
-        &.#{$prefix_component_grid}row-space-around {
+        &.#{$prefix_component_grid}row--space-around {
             justify-content: space-around;
         }
 
         // Flip the order of your row
-        &.#{$prefix_component_grid}row-reverse {
+        &.#{$prefix_component_grid}row--reverse {
             flex-direction: row-reverse;
         }
 
         // Do not wrap columns in row
-        &.#{$prefix_component_grid}row-no-wrap {
+        &.#{$prefix_component_grid}row--no-wrap {
             flex-wrap: nowrap;
         }
 
         // Stretch the size of the content in the columns so they're the same width/height
-        &.#{$prefix_component_grid}row-flex {
+        &.#{$prefix_component_grid}row--flex {
             [class^=#{$prefix_component_grid}col-] { display: flex; }
             [class^=#{$prefix_component_grid}col-] > * { flex: 1 1 0; }
         }
 
         // Add a hairline border
-        &.#{$prefix_component_grid}row-border {
+        &.#{$prefix_component_grid}row--border {
             border: 1px solid $grid_border;
         }
 
         // Align the content to the left (default)
-        &.#{$prefix_component_grid}row-align-left {
+        &.#{$prefix_component_grid}row--align-left {
             justify-content: flex-start;
         }
 
         // Align the content to the right
-        &.#{$prefix_component_grid}row-align-right {
+        &.#{$prefix_component_grid}row--align-right {
             justify-content: flex-end;
         }
 
         // Add a spacing gap around top and bottom
-        &.#{$prefix_component_grid}row-gap {
+        &.#{$prefix_component_grid}row--gap {
             margin: auto -1 * $grid_gap;
 
             > [class^=#{$prefix_component_grid}col-] {
@@ -119,7 +119,7 @@
         }
 
         // Add a spacing gap horizontally between cols
-        &.#{$prefix_component_grid}row-col-hgap {
+        &.#{$prefix_component_grid}row--col-hgap {
             margin-left: -1 * $grid_gap;
             margin-right: -1 * $grid_gap;
 
@@ -130,7 +130,7 @@
         }
 
         // Add a spacing gap vertically between cols
-        &.#{$prefix_component_grid}row-col-vgap {
+        &.#{$prefix_component_grid}row--col-vgap {
             margin-top: -1 * $grid_gap;
             margin-bottom: -1 * $grid_gap;
 

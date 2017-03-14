@@ -1,62 +1,62 @@
-.btn-default, .btn-default-line, .btn-success, .btn-success-line, .btn-warning, .btn-warning-line, .btn-info, .btn-info-line, .btn-error, .btn-error-line {
+.btn--default, .btn--default--line, .btn--success, .btn--success--line, .btn--warning, .btn--warning--line, .btn--info, .btn--info--line, .btn--error, .btn--error--line {
   display: block;
   border-style: solid;
   border-width: 1px;
   border-radius: 3px;
-  padding: 10px 15px;
+  padding: 7.5px 15px;
   font-size: 14px;
   font-weight: bold; }
-  .btn-group .btn-default, .btn-group .btn-default-line, .btn-group .btn-success, .btn-group .btn-success-line, .btn-group .btn-warning, .btn-group .btn-warning-line, .btn-group .btn-info, .btn-group .btn-info-line, .btn-group .btn-error, .btn-group .btn-error-line {
+  .btn-group .btn--default, .btn-group .btn--default--line, .btn-group .btn--success, .btn-group .btn--success--line, .btn-group .btn--warning, .btn-group .btn--warning--line, .btn-group .btn--info, .btn-group .btn--info--line, .btn-group .btn--error, .btn-group .btn--error--line {
     float: left;
     margin-right: 7.5px;
     margin-bottom: 7.5px; }
 
-.btn-default {
-  border-color: #1D1E23;
-  background: #1D1E23;
+.btn--default {
+  border-color: #31333B;
+  background: #31333B;
   color: white; }
 
-.btn-default-line {
-  border-color: #1D1E23;
-  background: rgba(29, 30, 35, 0.025);
-  color: #1D1E23; }
+.btn--default--line {
+  border-color: #31333B;
+  background: rgba(49, 51, 59, 0.025);
+  color: #31333B; }
 
-.btn-success {
+.btn--success {
   border-color: #6FDA7A;
   background: #6FDA7A;
   color: white; }
 
-.btn-success-line {
+.btn--success--line {
   border-color: #6FDA7A;
   background: rgba(111, 218, 122, 0.025);
   color: #6FDA7A; }
 
-.btn-warning {
+.btn--warning {
   border-color: #EEE371;
   background: #EEE371;
   color: white; }
 
-.btn-warning-line {
+.btn--warning--line {
   border-color: #EEE371;
   background: rgba(238, 227, 113, 0.025);
   color: #EEE371; }
 
-.btn-info {
+.btn--info {
   border-color: #6BB8EB;
   background: #6BB8EB;
   color: white; }
 
-.btn-info-line {
+.btn--info--line {
   border-color: #6BB8EB;
   background: rgba(107, 184, 235, 0.025);
   color: #6BB8EB; }
 
-.btn-error {
+.btn--error {
   border-color: #DC4646;
   background: #DC4646;
   color: white; }
 
-.btn-error-line {
+.btn--error--line {
   border-color: #DC4646;
   background: rgba(220, 70, 70, 0.025);
   color: #DC4646; }

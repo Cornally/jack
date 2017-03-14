@@ -7,7 +7,7 @@
             border-style: solid;
             border-width: 1px;
             border-radius: 3px;
-            padding: 10px 15px;
+            padding: $size_gap $size_gap*2;
             font-size: 14px;
             font-weight: bold;
 
@@ -23,7 +23,7 @@
         @each $state, $color in $colors_states {
 
             // Solid Buttons
-            .#{$prefix_forms_buttons}btn-#{$state} {
+            .#{$prefix_forms_buttons}btn--#{$state} {
                 @extend %btn;
                 border-color: $color;
                 background: $color;
@@ -31,7 +31,7 @@
             }
 
             // Line Buttons
-            .#{$prefix_forms_buttons}btn-#{$state}-line {
+            .#{$prefix_forms_buttons}btn--#{$state}--line {
                 @extend %btn;
                 border-color: $color;
                 background: rgba($color,.025);

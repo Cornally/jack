@@ -8,17 +8,17 @@
         display: flex;
         flex-direction: column;
 
-        &.#{$prefix_component_card}card-no-padding {
+        &.#{$prefix_component_card}card--no-padding {
             padding: 0;
         }
 
-        &.#{$prefix_component_card}card-border {
+        &.#{$prefix_component_card}card--border {
             border: 1px solid $color_light_03;
         }
 
-        &.#{$prefix-component_card}card-shadow {
+        &.#{$prefix-component_card}card--shadow {
             box-shadow: 0 2px 4px rgba($color_dark_01,.05);
-            &.#{$prefix_component_card}card-border {
+            &.#{$prefix_component_card}card--border {
                 border: 1px solid $color_light_04;
             }
         }
@@ -26,21 +26,28 @@
         // Card States
         @each $state, $color in $colors_states {
             // Build out column widths for each breakpoint size
-            &.#{$prefix_component_card}card-state-#{$state} {
+            &.#{$prefix_component_card}card--#{$state} {
                 border-color: $color;
-                .#{$prefix_component_card}card-head {
+                .#{$prefix_component_card}card__head {
                     background: $color;
-                    color: white;
+                    color: darken($color, 25%);
+                }
+                // Using the passed color as a base, lighten / desaturate slightly
+                // and set this as our background color.  Set a darker version of
+                // the color as the card body font color.
+                .#{$prefix_component_card}card__body {
+                    background: desaturate(lighten($color, 25%), 15%);
+                    color: darken($color, 25%);
                 }
             }
         }
 
-        .#{$prefix_component_card}card-head {
+        .#{$prefix_component_card}card__head {
             font-size: $size_font_big;
             font-weight: bold;
         }
 
-        .#{$prefix_component_card}card-body {
+        .#{$prefix_component_card}card__body {
             font-size: $size_font_normal;
         }
 

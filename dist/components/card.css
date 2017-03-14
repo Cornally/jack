@@ -1,43 +1,58 @@
 .card {
   display: flex;
   flex-direction: column; }
-  .card.card-no-padding {
+  .card.card--no-padding {
     padding: 0; }
-  .card.card-border {
+  .card.card--border {
     border: 1px solid #ebebeb; }
-  .card.card-shadow {
+  .card.card--shadow {
     box-shadow: 0 2px 4px rgba(21, 22, 26, 0.05); }
-    .card.card-shadow.card-border {
+    .card.card--shadow.card--border {
       border: 1px solid #d8d8d8; }
-  .card.card-state-default {
-    border-color: #1D1E23; }
-    .card.card-state-default .card-head {
-      background: #1D1E23;
-      color: white; }
-  .card.card-state-success {
+  .card.card--default {
+    border-color: #31333B; }
+    .card.card--default .card__head {
+      background: #31333B;
+      color: black; }
+    .card.card--default .card__body {
+      background: #767676;
+      color: black; }
+  .card.card--success {
     border-color: #6FDA7A; }
-    .card.card-state-success .card-head {
+    .card.card--success .card__head {
       background: #6FDA7A;
-      color: white; }
-  .card.card-state-warning {
+      color: #29a035; }
+    .card.card--success .card__body {
+      background: #d8f0db;
+      color: #29a035; }
+  .card.card--warning {
     border-color: #EEE371; }
-    .card.card-state-warning .card-head {
+    .card.card--warning .card__head {
       background: #EEE371;
-      color: white; }
-  .card.card-state-info {
+      color: #c8b818; }
+    .card.card--warning .card__body {
+      background: #f9f8e5;
+      color: #c8b818; }
+  .card.card--info {
     border-color: #6BB8EB; }
-    .card.card-state-info .card-head {
+    .card.card--info .card__head {
       background: #6BB8EB;
-      color: white; }
-  .card.card-state-error {
+      color: #1a7cbd; }
+    .card.card--info .card__body {
+      background: #deedf7;
+      color: #1a7cbd; }
+  .card.card--error {
     border-color: #DC4646; }
-    .card.card-state-error .card-head {
+    .card.card--error .card__head {
       background: #DC4646;
-      color: white; }
-  .card .card-head {
+      color: #891a1a; }
+    .card.card--error .card__body {
+      background: #e9b8b8;
+      color: #891a1a; }
+  .card .card__head {
     font-size: 18px;
     font-weight: bold; }
-  .card .card-body {
+  .card .card__body {
     font-size: 14px; }
 
 /*# sourceMappingURL=card.css.map */

@@ -9,7 +9,7 @@
         // Set sticky per size
         @each $size, $px in $sizes_break {
             @media (min-width: $px) {
-                &.#{$prefix_component_nav}nav-#{$size}-sticky {
+                &.#{$prefix_component_nav}nav-#{$size}--sticky {
                     position: fixed;
                     top: 0;
                     left: 0;
@@ -24,7 +24,7 @@
             }
         }
         
-        .#{$prefix_component_nav}nav-logo {
+        .#{$prefix_component_nav}nav__logo {
             font-size: $size_font_big;
             font-weight: bold;
         }
