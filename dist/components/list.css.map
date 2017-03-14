@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAQI,WAAqC;EACjC,aAAa,EAAE,iCAAyC;EACxD,sBAAa;IAAE,aAAa,EAAE,CAAC",
+"sources": ["../../src/components/list.scss"],
+"names": [],
+"file": "list.css"
+}

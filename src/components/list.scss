@@ -1,0 +1,14 @@
+@import '../settings/all';
+
+@if $include_component_list {
+
+    .#{$prefix_component_list}list {
+        
+    }
+
+    .#{$prefix_component_list}list__item {
+        border-bottom: 1px solid rgba($color_brand_primary, .15);
+        &:last-child { border-bottom: 0; }
+    }
+
+}

@@ -42,6 +42,14 @@ $include_component_grid: true !default;
 // $prefix_component_grid: $global_prefix;
 $prefix_component_grid: '' !default;
 
+// Include lists.  To disable:
+// $include_component_list: false;
+$include_component_list: true !default;
+
+// Set a prefix or use the global prefix:
+// $prefix_component_list: $global_prefix;
+$prefix_component_list: '' !default;
+
 // Include nav style component.  To disable:
 // $include_component_nav: false;
 $include_component_nav: true !default;

@@ -1,0 +1,6 @@
+.list__item {
+  border-bottom: 1px solid rgba(82, 88, 199, 0.15); }
+  .list__item:last-child {
+    border-bottom: 0; }
+
+/*# sourceMappingURL=list.css.map */

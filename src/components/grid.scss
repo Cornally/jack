@@ -24,6 +24,10 @@
                         max-width: 100%;
                     }
                 }
+
+                .#{$prefix_component_grid}col-#{$size}-offset-#{$i} {
+                    margin-left: $column_size * $i;
+                }
             }
         }
 
