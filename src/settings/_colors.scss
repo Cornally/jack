@@ -11,10 +11,10 @@ $color_dark_04        : #414551 !default;
 $color_brand_primary  : #5258C7 !default;
 $color_brand_secondary: #71E2D8 !default;
 
-$color_state_success  : #6FDA7A;
-$color_state_warning  : #EEE371;
-$color_state_info     : #6BB8EB;
-$color_state_error    : #DC4646;
+$color_state_success  : #6FDA7A !default;
+$color_state_warning  : #EEE371 !default;
+$color_state_info     : #6BB8EB !default;
+$color_state_error    : #DC4646 !default;
 
 $colors_states: (
     default: $color_dark_03,
