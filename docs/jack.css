@@ -2047,6 +2047,56 @@ input:-webkit-autofill {
   .list__item:last-child {
     border-bottom: 0; }
 
+.list__item--default:before {
+  display: inline-block;
+  content: "default";
+  text-indent: -9999px;
+  background: #31333B;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px; }
+
+.list__item--success:before {
+  display: inline-block;
+  content: "success";
+  text-indent: -9999px;
+  background: #6FDA7A;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px; }
+
+.list__item--warning:before {
+  display: inline-block;
+  content: "warning";
+  text-indent: -9999px;
+  background: #EEE371;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px; }
+
+.list__item--info:before {
+  display: inline-block;
+  content: "info";
+  text-indent: -9999px;
+  background: #6BB8EB;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px; }
+
+.list__item--error:before {
+  display: inline-block;
+  content: "error";
+  text-indent: -9999px;
+  background: #DC4646;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 15px; }
+
 .nav {
   width: 100%;
   line-height: 50px;
@@ -2103,7 +2153,7 @@ input:-webkit-autofill {
     color: white; }
 
 .btn--default, .btn--default--line, .btn--success, .btn--success--line, .btn--warning, .btn--warning--line, .btn--info, .btn--info--line, .btn--error, .btn--error--line {
-  display: block;
+  display: inline-block;
   border-style: solid;
   border-width: 1px;
   border-radius: 3px;
@@ -2169,6 +2219,21 @@ body {
   color: #15161A;
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+.text-size-xs {
+  font-size: 10px; }
+
+.text-size-sm {
+  font-size: 12px; }
+
+.text-size-md {
+  font-size: 14px; }
+
+.text-size-lg {
+  font-size: 18px; }
+
+.text-size-xl {
+  font-size: 36px; }
 
 .text-left {
   text-align: left; }

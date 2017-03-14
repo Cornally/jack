@@ -9,28 +9,36 @@
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     }
 
+
+    // Sizes
+    @each $size, $px in $sizes_font {
+        .#{$prefix_typography}text-size-#{$size} {
+            font-size: $px;
+        }
+    }
+
     // Alignment
-    .#{$prefix-typography}text-left {
+    .#{$prefix_typography}text-left {
         text-align: left;
     }
 
-    .#{$prefix-typography}text-right {
+    .#{$prefix_typography}text-right {
         text-align: right;
     }
 
-    .#{$prefix-typography}text-center {
+    .#{$prefix_typography}text-center {
         text-align: center;
     }
 
 
     // Line breaks
-    .#{$prefix-typography}text-nowrap {
+    .#{$prefix_typography}text-nowrap {
         white-space: nowrap;
     }
 
 
     // Ellipsis (...)
-    .#{$prefix-typography}text-ellipsis {
+    .#{$prefix_typography}text-ellipsis {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

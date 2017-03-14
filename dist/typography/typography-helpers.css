@@ -3,6 +3,21 @@ body {
   font-size: 14px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
 
+.text-size-xs {
+  font-size: 10px; }
+
+.text-size-sm {
+  font-size: 12px; }
+
+.text-size-md {
+  font-size: 14px; }
+
+.text-size-lg {
+  font-size: 18px; }
+
+.text-size-xl {
+  font-size: 36px; }
+
 .text-left {
   text-align: left; }
 

@@ -1,5 +1,5 @@
 .btn--default, .btn--default--line, .btn--success, .btn--success--line, .btn--warning, .btn--warning--line, .btn--info, .btn--info--line, .btn--error, .btn--error--line {
-  display: block;
+  display: inline-block;
   border-style: solid;
   border-width: 1px;
   border-radius: 3px;

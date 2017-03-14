@@ -11,4 +11,20 @@
         &:last-child { border-bottom: 0; }
     }
 
+
+    @each $state, $color in $colors_states {
+        .#{$prefix_component_list}list__item--#{$state} {
+            &:before {
+                display: inline-block;
+                content: "#{$state}";
+                text-indent: -9999px;
+                background: $color;
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+        }
+    }
+
 }
