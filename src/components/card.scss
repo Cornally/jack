@@ -47,6 +47,13 @@
             font-weight: bold;
         }
 
+        .#{$prefix_component_card}card__media {
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background: $color_light_04;
+        }
+
         .#{$prefix_component_card}card__body {
             font-size: $size_font_normal;
         }
