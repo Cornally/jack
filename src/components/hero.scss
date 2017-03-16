@@ -1,0 +1,13 @@
+@import '../settings/all';
+
+@if $include_component_hero {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background: $color_brand_secondary;
+        min-height: 75vh;
+    }
+}

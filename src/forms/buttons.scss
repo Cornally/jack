@@ -22,7 +22,7 @@
         // Button States
         @each $state, $color in $colors_states {
 
-            // Solid Buttons
+            // Solid
             .#{$prefix_forms_buttons}btn--#{$state} {
                 @extend %btn;
                 border-color: $color;
@@ -30,8 +30,28 @@
                 color: white;
             }
 
-            // Line Buttons
+            // Line
             .#{$prefix_forms_buttons}btn--#{$state}--line {
+                @extend %btn;
+                border-color: $color;
+                background: rgba($color,.025);
+                color: $color;
+            }
+        }
+
+        // Button Brand Colors
+        @each $brand, $color in $colors_brand {
+
+            // Solid
+            .#{$prefix_forms_buttons}btn--#{$brand} {
+                @extend %btn;
+                border-color: $color;
+                background: $color;
+                color: white;
+            }
+
+            // Line
+            .#{$prefix_forms_buttons}btn--#{$brand}--line {
                 @extend %btn;
                 border-color: $color;
                 background: rgba($color,.025);

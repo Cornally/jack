@@ -6,7 +6,11 @@
     body {
         color: $color_dark_01;
         font-size: $size_font_normal;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    }
+
+    h1 {
+        font-weight: 800;
     }
 
 
@@ -42,6 +46,21 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+    }
+
+
+    // Stateful colors
+    @each $state, $color in $colors_states {
+        .#{$prefix_typography}text--#{$state} {
+            color: $color;
+        }
+    }
+
+    // Brand colors
+    @each $brand, $color in $colors_brand {
+        .#{$prefix_typography}text--#{$brand} {
+            color: $color;
+        }
     }
 
 }

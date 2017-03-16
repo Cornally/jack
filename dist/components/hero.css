@@ -1,0 +1,10 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: #71E2D8;
+  min-height: 75vh; }
+
+/*# sourceMappingURL=hero.css.map */

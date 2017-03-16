@@ -1,7 +1,10 @@
 body {
   color: #15161A;
   font-size: 14px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+
+h1 {
+  font-weight: 800; }
 
 .text-size-xs {
   font-size: 10px; }
@@ -34,5 +37,26 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
+
+.text--default {
+  color: #31333B; }
+
+.text--success {
+  color: #6FDA7A; }
+
+.text--warning {
+  color: #EEE371; }
+
+.text--info {
+  color: #6BB8EB; }
+
+.text--error {
+  color: #DC4646; }
+
+.text--primary {
+  color: #5258C7; }
+
+.text--secondary {
+  color: #71E2D8; }
 
 /*# sourceMappingURL=typography-helpers.css.map */

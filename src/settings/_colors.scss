@@ -8,9 +8,18 @@ $color_dark_02        : #1D1E23 !default;
 $color_dark_03        : #31333B !default;
 $color_dark_04        : #414551 !default;
 
+
+// Brand colors
 $color_brand_primary  : #5258C7 !default;
 $color_brand_secondary: #71E2D8 !default;
 
+$colors_brand: (
+    primary  : $color_brand_primary,
+    secondary: $color_brand_secondary,
+);
+
+
+// Stateful colors
 $color_state_success  : #6FDA7A !default;
 $color_state_warning  : #EEE371 !default;
 $color_state_info     : #6BB8EB !default;
