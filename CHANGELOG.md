@@ -1,6 +1,6 @@
-## 0.0.6 (March 16, 2017)
+## 0.0.7 (March 17, 2017)
 
-**This is the complete 0.0.1 to 0.0.5 CHANGELOG.**
+**This is the complete 0.0.1 to 0.0.7 CHANGELOG.**
 
 ## 0.0.7 (March 17, 2017)
 
