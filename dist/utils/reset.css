@@ -13,9 +13,6 @@ nav,
 section,
 summary,
 form {
-  margin: 0;
-  padding: 0;
-  border: 0;
   vertical-align: baseline;
   box-sizing: border-box; }
 
@@ -47,31 +44,15 @@ img {
   -ms-interpolation-mode: bicubic;
   display: block; }
 
-a {
+a, a:hover {
   text-decoration: none; }
-  a:hover {
-    text-decoration: none; }
-  a:focus {
-    outline-color: #19beff; }
+a:focus {
+  outline-color: #5258C7; }
 
 h1,
 h2,
 h3 {
   outline: none; }
-
-p,
-h1,
-h2,
-h3,
-h4 {
-  padding: 0;
-  margin: 0; }
-
-button::-moz-focus-inner {
-  border: 0; }
-
-input::-moz-focus-inner {
-  border: 0; }
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #333 inset;

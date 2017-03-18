@@ -19,12 +19,16 @@ $global_prefix: 'cc-';
 // Opt out of Jack's reset stylesheet
 $include_util_reset: false;
 
+@import 'node_modules/jack-strap/src/jack';
+```
+or
+```
 @import 'node_modules/jack-strap/src/settings/colors';
 @import 'node_modules/jack-strap/src/settings/sizes';
 @import 'node_modules/jack-strap/src/typography/typography';
 ```
 
-For a full list of configuration options, view `node_modules/jack-strap/components/settings/_config.scss` after installing the module.
+For a full list of configuration options, view `node_modules/jack-strap/components/settings/_default.config.scss` after installing the module.
 
 ## 2. Components
 1. Color management

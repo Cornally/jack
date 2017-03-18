@@ -1,13 +1,13 @@
 .card {
   display: flex;
   flex-direction: column; }
-  .card.card--no-padding {
+  .card--no-padding {
     padding: 0; }
-  .card.card--border {
+  .card--border {
     border: 1px solid #ebebeb; }
-  .card.card--shadow {
-    box-shadow: 0 2px 4px rgba(21, 22, 26, 0.05); }
-    .card.card--shadow.card--border {
+  .card--shadow {
+    box-shadow: 0 1px 4px 1px rgba(21, 22, 26, 0.075); }
+    .card--shadow--border {
       border: 1px solid #d8d8d8; }
   .card.card--default {
     border-color: #31333B; }
@@ -49,15 +49,15 @@
     .card.card--error .card__body {
       background: #e9b8b8;
       color: #891a1a; }
-  .card .card__head {
+  .card__head {
     font-size: 18px;
     font-weight: bold; }
-  .card .card__media {
+  .card__media {
     height: 200px;
     line-height: 200px;
     text-align: center;
     background: #d8d8d8; }
-  .card .card__body {
+  .card__body {
     font-size: 14px;
     line-height: 1.5em; }
 

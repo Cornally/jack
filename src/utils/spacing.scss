@@ -2,13 +2,21 @@
 @import './decimal';
 
 /////////////////////////
-// Margin Helpers
+// Spacing Helpers
 /////////////////////////
 
 // Based on our gap size defined in `utils/_sizes.scss`,
 // create a media query for each respective breakpoint size,
 // Loop through each spacing size and set spacing values.
 // .{prefix}-margin-{top, right, left, bottom, left & right, top & bottom}-{breakpoint_size}-{spacing_size}
+//
+// We emit placeholder classes for extendability and
+// to avoid having to include these repeatedly on a 
+// particular component. To add padding to all card headers
+// you can extend the emitted placeholders below:
+// e.g. .your__component { @extend %p-x-xs-2 !optional; }
+// Note the use of `!optional`, this is required to prevent
+// compile-time errors.
 
 @mixin spacing($type, $count) {
     $type_count: $count;
@@ -27,32 +35,41 @@
     @each $size, $px in $sizes_break {
         @media (min-width: $px) {
             @for $i from 0 through $type_count {
+                // Construct classes & extendable faux classes
+                %#{$t}-t-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-t-#{$size}-#{$i} {
-                    #{$type}-top: decimal-round($size_gap * $i) !important;
+                    #{$type}-top: decimal-round($size_gap * $i);
                 }
+                %#{$t}-r-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-r-#{$size}-#{$i} {
-                    #{$type}-right: decimal-round($size_gap * $i) !important;
+                    #{$type}-right: decimal-round($size_gap * $i);
                 }
+                %#{$t}-b-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-b-#{$size}-#{$i} {
-                    #{$type}-bottom: decimal-round($size_gap * $i) !important;
+                    #{$type}-bottom: decimal-round($size_gap * $i);
                 }
+                %#{$t}-l-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-l-#{$size}-#{$i} {
-                    #{$type}-left: decimal-round($size_gap * $i) !important;
+                    #{$type}-left: decimal-round($size_gap * $i);
                 }
+                %#{$t}-x-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-x-#{$size}-#{$i} {
-                    #{$type}-left: decimal-round($size_gap * $i) !important;
-                    #{$type}-right: decimal-round($size_gap * $i) !important;
+                    #{$type}-left: decimal-round($size_gap * $i);
+                    #{$type}-right: decimal-round($size_gap * $i);
                 }
+                %#{$t}-y-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-y-#{$size}-#{$i} {
-                    #{$type}-top: decimal-round($size_gap * $i) !important;
-                    #{$type}-bottom: decimal-round($size_gap * $i) !important;
+                    #{$type}-top: decimal-round($size_gap * $i);
+                    #{$type}-bottom: decimal-round($size_gap * $i);
                 }
+                %#{$t}-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-#{$size}-#{$i} {
-                    #{$type}: decimal-round($size_gap * $i) !important;
+                    #{$type}: decimal-round($size_gap * $i);
                 }
             }
             
             // Horizontally center if we have display: block; and a width set
+            %m-x-#{$size}-auto,
             .#{$prefix_util_margins}m-x-#{$size}-auto {
                 margin-left: auto;
                 margin-right: auto;
