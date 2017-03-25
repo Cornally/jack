@@ -12,7 +12,7 @@ for the minified production version.
 `@import url('node_modules/jack-strap/dist/components/grid.css');`
 
 2. Import component SASS partials and overwrite the defaults inside `src/settings/_user.config.scss` for granular control, e.g.:
-```
+```sass
 // Add project-specific prefix
 $global_prefix: 'cc-';
 
@@ -22,7 +22,7 @@ $include_util_reset: false;
 @import 'node_modules/jack-strap/src/jack';
 ```
 or
-```
+```sass
 @import 'node_modules/jack-strap/src/settings/colors';
 @import 'node_modules/jack-strap/src/settings/sizes';
 @import 'node_modules/jack-strap/src/typography/typography';
