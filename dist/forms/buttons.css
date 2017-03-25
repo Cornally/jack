@@ -72,13 +72,13 @@
   color: #5258C7; }
 
 .btn--secondary {
-  border-color: #71E2D8;
-  background: #71E2D8;
+  border-color: #7defe5;
+  background: #7defe5;
   color: white; }
 
 .btn--secondary--line {
-  border-color: #71E2D8;
-  background: rgba(113, 226, 216, 0.025);
-  color: #71E2D8; }
+  border-color: #7defe5;
+  background: rgba(125, 239, 229, 0.025);
+  color: #7defe5; }
 
 /*# sourceMappingURL=buttons.css.map */

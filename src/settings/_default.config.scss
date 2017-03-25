@@ -1,4 +1,4 @@
-// Overwrite the values found in this file inside "_user.config.scss"
+// Overwrite the values found in this file inside `_user.config.scss`
 
 // Global override to include everything (opt out vs. in)
 $jack_include_all: false !default;
@@ -27,67 +27,108 @@ $include_util_padding: true !default;
 $prefix_util_padding: '' !default;
 
 
+///////////////////////////////////////////////////////////
+//
+//  Components
+//
+//  To opt out of including a component, set its
+//  `$include_component_{name}` value to false
+//  inside `_user.config.scss`.  For example,
+//  `$include_component_grid: false` will exclude
+//  the Jack grid from your compiled output.
+// 
+//  Add a custom prefix to a component's outputted
+//  selector by modifying `$prefix_component_{name}`
+//  inside `_user.config.scss`.  This is useful
+//  for avoiding collisions with other frameworks.
+//  You may also apply your global prefix:
+//  e.g. `$prefix_component_card: $global_prefix`
+//
+///////////////////////////////////////////////////////////
 
-// Include card style component.  To disable:
-// $include_component_card: false;
+// Include card style component
 $include_component_card: true !default;
-
-// Set a prefix or use the global prefix:
-// $prefix_component_card: $global_prefix;
 $prefix_component_card: '' !default;
 
 
-// Include flexbox grid.  To disable:
-// $include_component_grid: false;
-$include_component_grid: true !default;
+// Include card style component
+$include_component_code: false !default;
+$prefix_component_code: '' !default;
 
-// Set a prefix or use the global prefix:
-// $prefix_component_grid: $global_prefix;
+
+// Include dividing line style component
+$include_component_divider: true !default;
+$prefix_component_divider: '' !default;
+
+
+// Include flexbox grid
+$include_component_grid: true !default;
 $prefix_component_grid: '' !default;
 
 
-// Include hero styling.  To disable:
-// $include_component_hero: false;
+// Include hero styling
 $include_component_hero: true !default;
-
-// Set a prefix or use the global prefix:
-// $prefix_component_hero: $global_prefix;
 $prefix_component_hero: '' !default;
 
 
-// Include lists.  To disable:
-// $include_component_list: false;
+// Include list styling
 $include_component_list: true !default;
-
-// Set a prefix or use the global prefix:
-// $prefix_component_list: $global_prefix;
 $prefix_component_list: '' !default;
 
 
-// Include nav style component.  To disable:
-// $include_component_nav: false;
+// Include navigation bar styling
 $include_component_nav: true !default;
-
-// Set a prefix or use the global prefix:
-// $prefix_component_nav: $global_prefix;
 $prefix_component_nav: '' !default;
 
 
-
-// Include form buttons.  To disable:
-// $include_forms_buttons: false;
-$include_forms_buttons: true !default;
-
-// Set a prefix or use the global prefix:
-// $prefix_forms_buttons: $global_prefix;
-$prefix_forms_buttons: '' !default;
+// Include well style component
+$include_component_well: true !default;
+$prefix_component_well: '' !default;
 
 
+///////////////////////////////////////////////////////////
+//
+//  Form Controls
+//
+//  To opt out of including a form control's styles, set 
+//  its `$include_form_{name}` value to false
+//  inside `_user.config.scss`.  For example,
+//  `$include_form_buttons: false` will exclude
+//  the Jack button styles from your compiled output.
+// 
+//  Add a custom prefix to a form control's outputted
+//  selector by modifying `$prefix_form_{name}`
+//  inside `_user.config.scss`.  This is useful
+//  for avoiding collisions with other frameworks.
+//  You may also apply your global prefix:
+//  e.g. `$prefix_form_buttons: $global_prefix`
+//
+///////////////////////////////////////////////////////////
 
-// Include typography.  To disable:
-// $include_typography: false;
+// Include form buttons
+$include_form_buttons: true !default;
+$prefix_form_buttons: '' !default;
+
+
+///////////////////////////////////////////////////////////
+//
+//  Typography
+//
+//  To opt out of including typography settings, set 
+//  its `$include_typography` value to false
+//  inside `_user.config.scss`.  For example,
+//  `$include_typography: false` will exclude
+//  the Jack button styles from your compiled output.
+// 
+//  Add a custom prefix to the typography outputted
+//  selectors by modifying `$prefix_typography`
+//  inside `_user.config.scss`.  This is useful
+//  for avoiding collisions with other frameworks.
+//  You may also apply your global prefix:
+//  e.g. `$prefix_typography: $global_prefix`
+//
+///////////////////////////////////////////////////////////
+
+// Include typography
 $include_typography: true !default;
-
-// Set a prefix or use the global prefix:
-// $prefix_typography: $global_prefix;
 $prefix_typography: '' !default;

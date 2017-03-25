@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIC;QACqC;EACpC,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,GAAG;EACX,MAAM,EAAE,IAAI;EACZ,gBAAgB,ECPM,OAAO",
+"sources": ["../../src/components/divider.scss","../../src/settings/_colors.scss"],
+"names": [],
+"file": "divider.css"
+}

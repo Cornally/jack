@@ -75,6 +75,10 @@
     h4,
     h5,
     ul,
+    figure,
+    code,
+    pre,
+    hr,
     li {
         @extend %no_margins !optional;
         @extend %no_padding !optional;

@@ -1,7 +1,8 @@
 @import '../settings/all';
 
 @if $include_component_hero {
-    .hero {
+
+    .#{$prefix_component_hero}hero {
         display: flex;
         flex-direction: column;
         justify-content: center;
