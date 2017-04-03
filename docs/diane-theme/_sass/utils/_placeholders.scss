@@ -1,0 +1,14 @@
+// Placeholders
+// You get a cleaner, more consolidated output by using placeholders.
+//
+//  e.g.
+//  .a { @extend %no_margins; }
+//  .b { @extend %no_margins; }
+//
+//  Compiles down to .a, .b { margin: 0; }
+//
+// You may have to add `!optional` to your extended rules to silence SASS
+// compilation errors, e.g. .c { @extend %no_margins !optional; }
+%no_margins { margin: 0; }
+%no_padding { padding: 0; }
+%no_borders { border: 0; }

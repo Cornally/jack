@@ -1,0 +1,61 @@
+@import '../settings/all';
+
+@if $include_form_buttons {
+        // Placeholder button
+        %btn {
+            display: inline-block;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 3px;
+            padding: $size_gap $size_gap*2;
+            font-size: 14px;
+            font-weight: bold;
+
+            // Space them out by default
+            .btn-group & {
+                float: left;
+                margin-right: $size_gap;
+                margin-bottom: $size_gap;
+            }
+        }
+
+        // Button States
+        @each $state, $color in $colors_states {
+
+            // Solid
+            .#{$prefix_form_buttons}btn--#{$state} {
+                @extend %btn;
+                border-color: $color;
+                background: $color;
+                color: white;
+            }
+
+            // Line
+            .#{$prefix_form_buttons}btn--#{$state}--line {
+                @extend %btn;
+                border-color: $color;
+                background: rgba($color,.025);
+                color: $color;
+            }
+        }
+
+        // Button Brand Colors
+        @each $brand, $color in $colors_brand {
+
+            // Solid
+            .#{$prefix_form_buttons}btn--#{$brand} {
+                @extend %btn;
+                border-color: $color;
+                background: $color;
+                color: white;
+            }
+
+            // Line
+            .#{$prefix_form_buttons}btn--#{$brand}--line {
+                @extend %btn;
+                border-color: $color;
+                background: rgba($color,.025);
+                color: $color;
+            }
+        }
+}

@@ -4,6 +4,7 @@
 
 FEATURES:
 
+  * Stubbed out Jekyll documentation.
   * Added the `generateColorTicks` mixin to `_colors.scss` for evenly distributing a single base color into a sequence of lighter or darker derivatives.
 
 IMPROVEMENTS:

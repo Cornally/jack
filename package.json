@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node server.js --host 0.0.0.0",
     "watch": "sass --watch src:dist src/jack.scss:docs/_site/assets/jack.css --sourcemap=none",
-    "release": "sass --update src:dist --style compressed --sourcemap=none"
+    "release": "sass --update src:dist --style compressed --sourcemap=none",
+    "copy": "node copy.js"
   },
   "repository": {
     "type": "git",
@@ -31,10 +32,11 @@
   },
   "homepage": "https://github.com/Cornally/jack#readme",
   "dependencies": {
-    "express": "^4.14.1",
+    "copy": "^0.3.0",
+    "express": "^4.15.2",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "node-sass": "^4.5.0"
+    "node-sass": "^4.5.2"
   }
 }
