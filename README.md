@@ -5,7 +5,7 @@ A modern styling library with an affinity for animation.  Just add content, kid.
 Install the package `npm install jack-strap --save`.  There are a few options for harnessing the power of Jack.
 
 1. For active development, load everything:
-`<link rel="stylesheet" href="node_modules/jack-strap/dist/jack.css"`
+`<link rel="stylesheet" href="node_modules/jack-strap/dist/jack.css">`
 for the minified production version.
 
 1. Import compiled component resources into your project's existing SASS/LESS:

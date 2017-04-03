@@ -1,6 +1,6 @@
 {
   "name": "jack-strap",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Lightweight/portable styling engine",
   "main": "server.js",
   "directories": {
@@ -8,8 +8,8 @@
   },
   "scripts": {
     "start": "node server.js --host 0.0.0.0",
-    "watch": "sass --watch src:dist src/jack.scss:docs/_site/assets/jack.css",
-    "release": "sass --update src:dist --style compressed"
+    "watch": "sass --watch src:dist src/jack.scss:docs/_site/assets/jack.css --sourcemap=none",
+    "release": "sass --update src:dist --style compressed --sourcemap=none"
   },
   "repository": {
     "type": "git",

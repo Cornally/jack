@@ -15,9 +15,9 @@
 
         color: $cmp__base;
         background: $cmp__background;
-        @extend %p-xs-3 !optional;
         border-radius: 3px;
         overflow: auto;
+        @extend %p-xs-3 !optional;
     }
     .hll { background-color: #ffffcc; }
     .c { color: #87ceeb; }

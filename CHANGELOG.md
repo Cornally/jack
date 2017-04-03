@@ -1,6 +1,14 @@
-## 0.0.7 (March 17, 2017)
+**This is the complete CHANGELOG.**
 
-**This is the complete 0.0.1 to 0.0.7 CHANGELOG.**
+## 0.0.8 (April 2, 2017)
+
+FEATURES:
+
+  * Added the `generateColorTicks` mixin to `_colors.scss` for evenly distributing a single base color into a sequence of lighter or darker derivatives.
+
+IMPROVEMENTS:
+
+  * Disabled sourcemaps for now.  You may re-enable them inside `package.json`.
 
 ## 0.0.7 (March 17, 2017)
 
