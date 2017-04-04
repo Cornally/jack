@@ -25,6 +25,7 @@ twitter_username: Cornally
 github_username:  Cornally
 
 # Build settings
+destination:  ../docs
 markdown: kramdown
 theme: diane-theme
 gems:
