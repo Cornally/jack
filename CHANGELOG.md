@@ -1,5 +1,11 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.9 (April 4, 2017)
+
+IMPROVEMENTS:
+
+  * Separated the documentation src files out into another repository.
+
 ## 0.0.8 (April 2, 2017)
 
 FEATURES:

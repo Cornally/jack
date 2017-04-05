@@ -1,6 +1,6 @@
 {
   "name": "jack-strap",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Lightweight/portable styling engine",
   "main": "server.js",
   "directories": {
@@ -9,10 +9,7 @@
   "scripts": {
     "start": "node server.js --host 0.0.0.0",
     "watch": "sass --watch src:dist src/jack.scss:docs/assets/jack.css --sourcemap=none",
-    "release": "sass --update src:dist --style compressed --sourcemap=none",
-    "copy": "node copy.js",
-    "jekyll-dev": "npm run copy && cd docs-src && bundle exec jekyll serve --host 0.0.0.0 --baseurl ''",
-    "jekyll-release": "npm run copy && cd docs-src && JEKYLL_ENV=production jekyll build && cd .."
+    "release": "sass --update src:dist --style compressed --sourcemap=none"
   },
   "repository": {
     "type": "git",
