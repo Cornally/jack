@@ -1,40 +1,35 @@
 ---
-title: List
+title: Lists
+description: Lists let you repeat elements using semantic HTML tags.  You may also indicate state on your list items using the global state names defined in the _colors.scss partial.
 layout: component
+states:
+    - item:
+        title: Default
+        description: null
+        tpl: list.html
+    - item:
+        title: States
+        description: Indicate States
+        tpl: list--states.html
+    - item:
+        title: States Bars
+        description: Indicate States w/ Bars
+        tpl: list--states-bar.html
 ---
+<h1>{{ page.title }}</h1>
+<p class="well">{{ page.description }}</p>
 
-<h1 class="m-b-xs-4">Lists</h1>
-<p class="m-b-xs-4 well">Incidunt delectus et ipsum porro expedita omnis. Consequuntur qui dolorem animi adipisci id et id repellat. Tempora nihil et et voluptates minima. Nihil ipsa doloremque voluptate vitae non aut aut accusantium. Commodi voluptatem molestiae cumque corrupti ut porro ut. Dolor itaque vel modi.</p>
-<hr class="divider m-b-xs-2">
-<div class="row m-b-xs-5">
-    <div class="col-xs-12 col-md-6 card">
-        <div class="card__head p-xs-2">Default</div>
-        <div class="card__body p-xs-2">{% include list.html %}</div>
-    </div>
-    <div class="col-xs-12 card card--highlight">
-        <div class="card__head p-xs-2">HTML</div>
-        <div class="card__body">{% highlight html %}{% include list.html %}{% endhighlight %}</div>
-    </div>
-</div>
-<hr class="divider m-b-xs-2">
-<div class="row m-b-xs-5">
-    <div class="col-xs-12 col-md-6 card">
-        <div class="card__head p-xs-2">States</div>
-        <div class="card__body p-xs-2">{% include list--states.html %}</div>
-    </div>
-    <div class="col-xs-12 card card--highlight">
-        <div class="card__head p-xs-2">HTML</div>
-        <div class="card__body">{% highlight html %}{% include list--states.html %}{% endhighlight %}</div>
-    </div>
-</div>
-<hr class="divider m-b-xs-2">
+{% for state in page.states %}
+<hr class="divider">
 <div class="row">
-    <div class="col-xs-12 col-md-6 card">
-        <div class="card__head p-xs-2">States (Bars)</div>
-        <div class="card__body p-xs-2">{% include list--states-bar.html %}</div>
+    <div class="card card--example">
+        <div class="card__head">{{ state.item.title }}</div>
+        <div class="card__body">{% include {{ state.item.tpl }} %}</div>
     </div>
-    <div class="col-xs-12 card card--highlight">
-        <div class="card__head p-xs-2">HTML</div>
-        <div class="card__body">{% highlight html %}{% include list--states-bar.html %}{% endhighlight %}</div>
+    <div class="card card--highlight">
+        <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-{{ forloop.index }}">Copy HTML</a></div>
+        <div class="card__body">{% highlight html %}{% include {{ state.item.tpl }} %}{% endhighlight %}</div>
+        <textarea class="card__copy" id="copy-{{ forloop.index }}" readonly>{% include {{ state.item.tpl }} %}</textarea>
     </div>
 </div>
+{% endfor %}

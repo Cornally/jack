@@ -7,8 +7,7 @@
 ///////////////////////////////////
 $color_brand_primary: #52aac7;
 $color_brand_secondary: #e0ef7d;
-@import 'jack';
-
+@import 'jack/jack';
 
 ///////////////////////////////////
 // Documentation styles start here
@@ -17,6 +16,10 @@ $color_brand_secondary: #e0ef7d;
     .nav__right a {
         @extend %p-x-xs-1;
     }
+}
+
+.list__item {
+    @extend %p-y-xs-1;
 }
 
 // Home View
@@ -33,12 +36,18 @@ $color_brand_secondary: #e0ef7d;
     .card {
         @extend %m-b-xs-4;
     }
-    .list__item {
-        @extend %p-y-xs-1;
-    }
 }
 
 // Component View
+@import 'diane/components';
 .page--component {
     
 }
+
+
+///////////////////////////////////
+// Global Fonts
+///////////////////////////////////
+@import 'diane/fonts';
+h1, h2, h3, h4, .card__header { font-family: 'F37 Bolton Bold'; }
+p { font-family: 'F37 Bolton Regular'; }

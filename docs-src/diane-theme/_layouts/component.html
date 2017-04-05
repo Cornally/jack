@@ -3,6 +3,11 @@
   {% include head.html %}
   <body class="page--component">
     {% include nav.html %}
-    <div class="container m-y-xs-1 m-x-xs-auto p-xs-3">{{ content }}</div>
+    <div class="container container--content">{{ content }}</div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        new Clipboard('.copy');
+      });
+    </script>
   </body>
 </html>

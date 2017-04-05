@@ -11,8 +11,8 @@
     "watch": "sass --watch src:dist src/jack.scss:docs/assets/jack.css --sourcemap=none",
     "release": "sass --update src:dist --style compressed --sourcemap=none",
     "copy": "node copy.js",
-    "jekyll-dev": "copy && cd docs-src && bundle exec jekyll serve --baseurl ''",
-    "jekyll-release": "copy && cd docs-src && JEKYLL_ENV=production jekyll build && cd .."
+    "jekyll-dev": "npm run copy && cd docs-src && bundle exec jekyll serve --host 0.0.0.0 --baseurl ''",
+    "jekyll-release": "npm run copy && cd docs-src && JEKYLL_ENV=production jekyll build && cd .."
   },
   "repository": {
     "type": "git",

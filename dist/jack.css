@@ -2550,7 +2550,7 @@ hr,
   height: 50px;
   position: relative;
   display: block;
-  color: #6167d0;
+  color: #383eae;
   top: -2px;
   transform: rotate(-5deg);
   user-select: none; }
@@ -2650,7 +2650,8 @@ hr,
 body {
   color: #15161A;
   font-size: 14px;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif; }
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "F37 Bolton Regular"; }
 
 h1 {
   font-weight: 800; }
