@@ -1,4 +1,5 @@
 @import '../settings/all';
+@import '../utils/placeholders';
 
 /* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
@@ -17,9 +18,9 @@
     section,
     summary,
     form {
-        @extend %no_margins !optional;
-        @extend %no_padding !optional;
-        @extend %no_borders !optional;
+        @extend %no_margins;
+        @extend %no_padding;
+        @extend %no_borders;
         vertical-align: baseline;
         box-sizing: border-box;
     }

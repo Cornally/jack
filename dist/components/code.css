@@ -1,3 +1,8 @@
+@media (min-width: 320px) {
+  .highlight {
+    padding: decimal-round(22.5px);
+  }
+}
 pre,
 xmp,
 plaintext,

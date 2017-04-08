@@ -1,4 +1,5 @@
 @import '../settings/all';
+@import '../utils/placeholders';
 
 @if $include_component_code {
 
@@ -17,7 +18,7 @@
         background: $cmp__background;
         border-radius: 3px;
         overflow: auto;
-        @extend %p-xs-3 !optional;
+        @extend %p-xs-3;
     }
     .hll { background-color: #ffffcc; }
     .c { color: #87ceeb; }

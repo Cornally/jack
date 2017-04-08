@@ -1,3 +1,70 @@
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
 /* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
    only use tags appropriately, where they're meant to be used. We WANT those default styles. */

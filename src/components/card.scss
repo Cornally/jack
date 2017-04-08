@@ -1,4 +1,5 @@
 @import '../settings/all';
+@import '../utils/placeholders';
 
 @if $include_component_card {
 
@@ -54,6 +55,18 @@
         &__head {
             font-size: $size_font_big;
             font-weight: bold;
+        }
+
+        &__head__title {
+            font-size: $size_font_big;
+            font-weight: bold;
+        }
+
+        &__head__subtitle {
+            font-size: $size_font_normal;
+            font-weight: lighter;
+            color: $color_dark_04;
+            @extend %m-t-xs-2;
         }
 
         &__media {

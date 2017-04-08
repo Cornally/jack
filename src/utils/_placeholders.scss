@@ -12,3 +12,61 @@
 %no_margins { margin: 0; }
 %no_padding { padding: 0; }
 %no_borders { border: 0; }
+
+
+// Emit mirror of `spacing.scss` %placeholders, regardless of user settings
+@mixin spacing_extender($type, $count) {
+    $type_count: $count;
+    $t: null;
+    $prefix_util_spacing: null;
+
+    // Handle spacing type (margin or padding)
+    @if $type == "margin" {
+        $t: "m";
+        $prefix_util_spacing: $prefix_util_margins;
+    } @else if $type == "padding" {
+        $t: "p";
+        $prefix_util_spacing: $prefix_util_padding;
+    }
+
+    // Loop through each break point size
+    @each $size, $px in $sizes_break {
+        @media (min-width: $px) {
+            @for $i from 0 through $type_count {
+                // Construct classes & extendable faux classes
+                %#{$t}-t-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i);
+                }
+                %#{$t}-r-#{$size}-#{$i} {
+                    #{$type}-right: decimal-round($size_gap * $i);
+                }
+                %#{$t}-b-#{$size}-#{$i} {
+                    #{$type}-bottom: decimal-round($size_gap * $i);
+                }
+                %#{$t}-l-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i);
+                }
+                %#{$t}-x-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i);
+                    #{$type}-right: decimal-round($size_gap * $i);
+                }
+                %#{$t}-y-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i);
+                    #{$type}-bottom: decimal-round($size_gap * $i);
+                }
+                %#{$t}-#{$size}-#{$i} {
+                    #{$type}: decimal-round($size_gap * $i);
+                }
+            }
+            
+            // Horizontally center if we have display: block; and a width set
+            %m-x-#{$size}-auto {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+}
+
+@include spacing_extender("margin", 5);
+@include spacing_extender("padding", 5);

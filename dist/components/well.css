@@ -1,3 +1,12 @@
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: decimal-round(0px);
+  }
+
+  .well {
+    padding: decimal-round(22.5px);
+  }
+}
 .well {
   background: #ebebeb;
 }

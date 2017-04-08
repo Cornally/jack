@@ -14,7 +14,7 @@
 // to avoid having to include these repeatedly on a 
 // particular component. To add padding to all card headers
 // you can extend the emitted placeholders below:
-// e.g. .your__component { @extend %p-x-xs-2 !optional; }
+// e.g. .your__component { @extend %p-x-xs-2; }
 // Note the use of `!optional`, this is required to prevent
 // compile-time errors.
 
@@ -22,6 +22,7 @@
     $type_count: $count;
     $t: null;
     $prefix_util_spacing: null;
+
     // Handle spacing type (margin or padding)
     @if $type == "margin" {
         $t: "m";
@@ -36,40 +37,32 @@
         @media (min-width: $px) {
             @for $i from 0 through $type_count {
                 // Construct classes & extendable faux classes
-                %#{$t}-t-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-t-#{$size}-#{$i} {
                     #{$type}-top: decimal-round($size_gap * $i);
                 }
-                %#{$t}-r-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-r-#{$size}-#{$i} {
                     #{$type}-right: decimal-round($size_gap * $i);
                 }
-                %#{$t}-b-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-b-#{$size}-#{$i} {
                     #{$type}-bottom: decimal-round($size_gap * $i);
                 }
-                %#{$t}-l-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-l-#{$size}-#{$i} {
                     #{$type}-left: decimal-round($size_gap * $i);
                 }
-                %#{$t}-x-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-x-#{$size}-#{$i} {
                     #{$type}-left: decimal-round($size_gap * $i);
                     #{$type}-right: decimal-round($size_gap * $i);
                 }
-                %#{$t}-y-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-y-#{$size}-#{$i} {
                     #{$type}-top: decimal-round($size_gap * $i);
                     #{$type}-bottom: decimal-round($size_gap * $i);
                 }
-                %#{$t}-#{$size}-#{$i},
                 .#{$prefix_util_spacing}#{$t}-#{$size}-#{$i} {
                     #{$type}: decimal-round($size_gap * $i);
                 }
             }
             
             // Horizontally center if we have display: block; and a width set
-            %m-x-#{$size}-auto,
             .#{$prefix_util_margins}m-x-#{$size}-auto {
                 margin-left: auto;
                 margin-right: auto;

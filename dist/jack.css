@@ -1,3 +1,94 @@
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: decimal-round(15px);
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: decimal-round(0px);
+  }
+
+  .table th, .table td {
+    padding-left: decimal-round(7.5px);
+    padding-right: decimal-round(7.5px);
+  }
+
+  .table th, .table td {
+    padding-top: decimal-round(15px);
+    padding-bottom: decimal-round(15px);
+  }
+
+  .highlight, .well {
+    padding: decimal-round(22.5px);
+  }
+}
 /* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
    only use tags appropriately, where they're meant to be used. We WANT those default styles. */
@@ -146,6 +237,30 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
 }
 
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
 @media (min-width: 320px) {
   .m-t-xs-0 {
     margin-top: 0px;
@@ -1103,7 +1218,6 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-bottom: 0px;
   }
 
-  .well--no-padding,
   .p-xs-0 {
     padding: 0px;
   }
@@ -1124,7 +1238,6 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-left: 8px;
   }
 
-  .table th, .table td,
   .p-x-xs-1 {
     padding-left: 8px;
     padding-right: 8px;
@@ -1160,7 +1273,6 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-right: 15px;
   }
 
-  .table th, .table td,
   .p-y-xs-2 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1196,7 +1308,6 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-bottom: 23px;
   }
 
-  .highlight, .well,
   .p-xs-3 {
     padding: 23px;
   }
@@ -2010,6 +2121,97 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
     margin-right: auto;
   }
 }
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -2088,6 +2290,15 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
   font-size: 18px;
   font-weight: bold;
 }
+.card__head__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+.card__head__subtitle {
+  font-size: 14px;
+  font-weight: lighter;
+  color: #414551;
+}
 .card__media {
   height: 200px;
   line-height: 200px;
@@ -2099,6 +2310,97 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
   line-height: 1.5em;
 }
 
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
 pre,
 xmp,
 plaintext,
@@ -3317,6 +3619,97 @@ hr,
   user-select: none;
 }
 
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
 .table {
   border-spacing: 0;
   width: 100%;
@@ -3338,6 +3731,97 @@ hr,
   border-bottom: 1px solid #ebebeb;
 }
 
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
 .well {
   background: #ebebeb;
 }

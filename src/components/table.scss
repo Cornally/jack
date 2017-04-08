@@ -1,4 +1,5 @@
 @import '../settings/all';
+@import '../utils/placeholders';
 
 @if $include_component_table {
 
@@ -7,13 +8,13 @@
         width: 100%;
 
         th {
-            @extend %p-x-xs-1 !optional;
-            @extend %p-y-xs-2 !optional;
+            @extend %p-x-xs-1;
+            @extend %p-y-xs-2;
             text-align: left;
         }
         td {
-            @extend %p-x-xs-1 !optional;
-            @extend %p-y-xs-2 !optional;
+            @extend %p-x-xs-1;
+            @extend %p-y-xs-2;
         }
         
         &--striped {
