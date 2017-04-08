@@ -1,5 +1,17 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.10 (April 7, 2017)
+
+FEATURES:
+
+  * Added the table component with basic, zebra-striped, and bordered flavors.
+  * Update docs with table component.
+
+IMPROVEMENTS:
+
+  * Modified the build process to better complement the document construction.
+  * Minified and expanded outputs are now available inside the `dist/min` folder
+
 ## 0.0.9 (April 4, 2017)
 
 IMPROVEMENTS:

@@ -14,7 +14,8 @@ section,
 summary,
 form {
   vertical-align: baseline;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html {
   height: 100%;
@@ -24,45 +25,56 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+}
 
 body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
   position: relative;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 a,
 input,
 select {
   box-sizing: border-box;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: antialiased;
+}
 
 img {
   max-width: 100%;
   -ms-interpolation-mode: bicubic;
-  display: block; }
+  display: block;
+}
 
 a, a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+}
 a:focus {
-  outline-color: #5258C7; }
+  outline-color: #5258C7;
+}
 
 h1,
 h2,
 h3 {
-  outline: none; }
+  outline: none;
+}
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #333 inset;
-  -webkit-text-fill-color: #fff; }
+  -webkit-text-fill-color: #fff;
+}
 
 *::selection {
-  background: rgba(82, 88, 199, 0.5); }
+  background: rgba(82, 88, 199, 0.5);
+}
 
 * {
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+}
 
 .typekit-badge {
-  display: none !important; }
+  display: none !important;
+}

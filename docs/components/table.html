@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Tables</title>
+  <meta name="description" content="Tables Tables have some &quot;baggage&quot; from the olden days when folks used them for layout. You know where they really shine? When it&#39;s time to show tabular data.">
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="/jack/diane-theme/css/styles.css">
+  <link rel="canonical" href="/jack/components/table.html">
+  <link rel="alternate" type="application/rss+xml" title="JACK - Just Add Content Kid" href="/jack/feed.xml">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  
+  
+</head>
+  <body class="page--component">
+    <nav class="nav nav--docs nav-sm--sticky">
+    <div class="container m-x-xs-auto">
+        <div class="row row--space-between">
+            <div class="nav__left">
+                <a href="/jack/" class="nav__logo">Jack</a>
+            </div>
+            <div class="nav__right">
+                <a href="/jack/kitchen-sink">Components</a>
+                <a href="https://www.github.com/Cornally/jack">Github</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container content">
+    <h1>Tables</h1>
+    <p class="well">Tables have some "baggage" from the olden days when folks used them for layout.  You know where they really shine?  When it's time to show tabular data.</p>
+
+    
+    <hr class="divider" />
+    <div class="row">
+        <div class="card card--example">
+            <div class="card__head">Default</div>
+            <div class="card__body"><table class="table">
+<thead>
+    <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+</tbody>
+</table></div>
+        </div>
+        <div class="card card--highlight">
+            <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-1">Copy HTML</a></div>
+            <div class="card__body">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/thead&gt;</span>
+<span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+            <textarea class="card__copy" id="copy-1" readonly=""><table class="table">
+<thead>
+    <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+</tbody>
+</table></textarea>
+        </div>
+    </div>
+    
+    <hr class="divider" />
+    <div class="row">
+        <div class="card card--example">
+            <div class="card__head">Striped</div>
+            <div class="card__body"><table class="table table--striped">
+<thead>
+    <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+</tbody>
+</table></div>
+        </div>
+        <div class="card card--highlight">
+            <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-2">Copy HTML</a></div>
+            <div class="card__body">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table--striped"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/thead&gt;</span>
+<span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+            <textarea class="card__copy" id="copy-2" readonly=""><table class="table table--striped">
+<thead>
+    <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+</tbody>
+</table></textarea>
+        </div>
+    </div>
+    
+    <hr class="divider" />
+    <div class="row">
+        <div class="card card--example">
+            <div class="card__head">Border</div>
+            <div class="card__body"><table class="table table--border">
+<thead>
+    <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+</tbody>
+</table></div>
+        </div>
+        <div class="card card--highlight">
+            <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-3">Copy HTML</a></div>
+            <div class="card__body">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table--border"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;thead&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;th&gt;</span>Header<span class="nt">&lt;/th&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/thead&gt;</span>
+<span class="nt">&lt;tbody&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;tr&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with big data<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with medium data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell with small data.<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;td&gt;</span>Cell out.<span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;/tr&gt;</span>
+<span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></code></pre></figure>
+</div>
+            <textarea class="card__copy" id="copy-3" readonly=""><table class="table table--border">
+<thead>
+    <tr>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+        <th>Header</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+    <tr>
+        <td>Cell with big data</td>
+        <td>Cell with medium data.</td>
+        <td>Cell with small data.</td>
+        <td>Cell out.</td>
+    </tr>
+</tbody>
+</table></textarea>
+        </div>
+    </div>
+    
+</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        new Clipboard('.copy');
+      });
+    </script>
+  </body>
+</html>

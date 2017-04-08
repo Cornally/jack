@@ -1,15 +1,16 @@
 {
   "name": "jack-strap",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Lightweight/portable styling engine",
   "main": "server.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "start": "node server.js --host 0.0.0.0",
-    "watch": "sass --watch src:dist src/jack.scss:docs/assets/jack.css --sourcemap=none",
-    "release": "sass --update src:dist --style compressed --sourcemap=none"
+    "start": "npm run watch",
+    "watch": "node copy-sass.js",
+    "sasswatch": "sass --watch src:dist --style expanded --sourcemap=none",
+    "build": "sass --update src:dist --style expanded --sourcemap=none && sass --update src:dist/min --style compressed --sourcemap=none"
   },
   "repository": {
     "type": "git",
@@ -31,11 +32,11 @@
   },
   "homepage": "https://github.com/Cornally/jack#readme",
   "dependencies": {
-    "copy": "^0.3.0",
     "express": "^4.15.2",
     "path": "^0.12.7"
   },
   "devDependencies": {
+    "cpx": "^1.5.0",
     "node-sass": "^4.5.2"
   }
 }

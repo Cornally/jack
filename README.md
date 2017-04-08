@@ -36,6 +36,7 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
 3. Grid
 4. Cards
 5. Lists
+6. Tables
 
 ## 3. Component Roadmap
 1. Form Controls
@@ -62,12 +63,11 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
     * Top
     * Side
     * Breadcrumb
-5. Tables
-6. Animation
+5. Animation
     * Keyframes
     * Easing
     * Timing management
-7. Layout
+6. Layout
     * Wells
 
 ## 4. Customization
