@@ -8,7 +8,6 @@ $jack_include_all: false !default;
 $global_prefix: 'jk-' !default;
 
 
-
 // Include basic styling reset
 $include_util_reset: true !default;
 
@@ -76,6 +75,11 @@ $include_component_list: true !default;
 $prefix_component_list: '' !default;
 
 
+// Include modal styling
+$include_component_modal: true !default;
+$prefix_component_modal: '' !default;
+
+
 // Include navigation bar styling
 $include_component_nav: true !default;
 $prefix_component_nav: '' !default;
@@ -98,7 +102,7 @@ $prefix_component_well: '' !default;
 //  To opt out of including a form control's styles, set 
 //  its `$include_form_{name}` value to false
 //  inside `_user.config.scss`.  For example,
-//  `$include_form_buttons: false` will exclude
+//  `$include_form_button: false` will exclude
 //  the Jack button styles from your compiled output.
 // 
 //  Add a custom prefix to a form control's outputted
@@ -106,13 +110,13 @@ $prefix_component_well: '' !default;
 //  inside `_user.config.scss`.  This is useful
 //  for avoiding collisions with other frameworks.
 //  You may also apply your global prefix:
-//  e.g. `$prefix_form_buttons: $global_prefix`
+//  e.g. `$prefix_form_button: $global_prefix`
 //
 ///////////////////////////////////////////////////////////
 
 // Include form buttons
-$include_form_buttons: true !default;
-$prefix_form_buttons: '' !default;
+$include_form_button: true !default;
+$prefix_form_button: '' !default;
 
 
 ///////////////////////////////////////////////////////////

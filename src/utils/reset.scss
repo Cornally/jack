@@ -81,18 +81,18 @@
     pre,
     hr,
     li {
-        @extend %no_margins !optional;
-        @extend %no_padding !optional;
+        @extend %no_margins;
+        @extend %no_padding;
     }
 
     // Hide Firefox <button> outline
     button::-moz-focus-inner {
-        @extend %no_borders !optional;
+        @extend %no_borders;
     }
 
     // Hide Firefox <input> outline
     input::-moz-focus-inner {
-        @extend %no_borders !optional;
+        @extend %no_borders;
     }
 
 

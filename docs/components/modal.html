@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Modals</title>
+  <meta name="description" content="Modals Modals or dialog boxes are popping off!">
+  <link href="//fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="/jack/diane-theme/css/styles.css">
+  <link rel="canonical" href="/jack/components/modal.html">
+  <link rel="alternate" type="application/rss+xml" title="JACK - Just Add Content Kid" href="/jack/feed.xml">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.6.0/clipboard.min.js"></script>
+  
+  
+</head>
+  <body class="page--component">
+    <nav class="nav nav--docs nav-sm--sticky">
+    <div class="container m-x-xs-auto">
+        <div class="row row--space-between">
+            <div class="nav__left">
+                <a href="/jack/" class="nav__logo">Jack</a>
+            </div>
+            <div class="nav__right">
+                <a href="/jack/kitchen-sink">Components</a>
+                <a href="https://www.github.com/Cornally/jack">Github</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container content">
+    <h1>Modals</h1>
+    <p class="well">Modals or dialog boxes are popping off!</p>
+
+    
+    <hr class="divider" />
+    <div class="row">
+        <div class="card card--example">
+            <div class="card__head">
+            <div class="card__head__title">Default</div>
+            <div class="card__head__subtitle">Check this out!</div>
+            </div>
+            <div class="card__body"><div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__window p-xs-4">
+        <h2 class="text-center text--primary m-b-xs-4">That's how you modal.</h2>
+        <hr class="divider" />
+        <p>Ducimus pariatur animi ab consectetur fuga. Asperiores perferendis eveniet ducimus laudantium. Et minus est modi iusto asperiores explicabo natus qui.</p>
+        <div class="row row--space-around m-b-xs-0">
+            <div class="btn-group"><a href="/jack/components/modal" class="btn--primary--line">OK</a><a href="/jack/components/modal" class="btn--default--line">Close</a></div>
+        </div>
+    </div>
+</div></div>
+        </div>
+        <div class="card card--highlight">
+            <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-1">Copy HTML</a></div>
+            <div class="card__body">
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal__overlay"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal__window p-xs-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"text-center text--primary m-b-xs-4"</span><span class="nt">&gt;</span>That's how you modal.<span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;hr</span> <span class="na">class=</span><span class="s">"divider"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Ducimus pariatur animi ab consectetur fuga. Asperiores perferendis eveniet ducimus laudantium. Et minus est modi iusto asperiores explicabo natus qui.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row--space-around m-b-xs-0"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/jack/components/modal"</span> <span class="na">class=</span><span class="s">"btn--primary--line"</span><span class="nt">&gt;</span>OK<span class="nt">&lt;/a&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/jack/components/modal"</span> <span class="na">class=</span><span class="s">"btn--default--line"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/a&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></figure>
+</div>
+            <textarea class="card__copy" id="copy-1" readonly=""><div class="modal">
+    <div class="modal__overlay"></div>
+    <div class="modal__window p-xs-4">
+        <h2 class="text-center text--primary m-b-xs-4">That's how you modal.</h2>
+        <hr class="divider" />
+        <p>Ducimus pariatur animi ab consectetur fuga. Asperiores perferendis eveniet ducimus laudantium. Et minus est modi iusto asperiores explicabo natus qui.</p>
+        <div class="row row--space-around m-b-xs-0">
+            <div class="btn-group"><a href="/jack/components/modal" class="btn--primary--line">OK</a><a href="/jack/components/modal" class="btn--default--line">Close</a></div>
+        </div>
+    </div>
+</div></textarea>
+        </div>
+    </div>
+    
+</div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        new Clipboard('.copy');
+      });
+    </script>
+  </body>
+</html>

@@ -1,4 +1,12 @@
 .list {
+  margin: 0;
+}
+
+.list {
+  padding: 0;
+}
+
+.list {
   list-style: none;
 }
 

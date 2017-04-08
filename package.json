@@ -9,7 +9,6 @@
   "scripts": {
     "start": "npm run watch",
     "watch": "node copy-sass.js",
-    "sasswatch": "sass --watch src:dist --style expanded --sourcemap=none",
     "build": "sass --update src:dist --style expanded --sourcemap=none && sass --update src:dist/min --style compressed --sourcemap=none"
   },
   "repository": {

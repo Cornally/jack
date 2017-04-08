@@ -66,6 +66,41 @@
             }
         }
     }
+
+
+    // Generate placeholders without media queries.
+    @for $i from 0 through $type_count {
+        // Construct classes & extendable faux classes
+        %#{$t}-t-#{$i} {
+            #{$type}-top: decimal-round($size_gap * $i);
+        }
+        %#{$t}-r-#{$i} {
+            #{$type}-right: decimal-round($size_gap * $i);
+        }
+        %#{$t}-b-#{$i} {
+            #{$type}-bottom: decimal-round($size_gap * $i);
+        }
+        %#{$t}-l-#{$i} {
+            #{$type}-left: decimal-round($size_gap * $i);
+        }
+        %#{$t}-x-#{$i} {
+            #{$type}-left: decimal-round($size_gap * $i);
+            #{$type}-right: decimal-round($size_gap * $i);
+        }
+        %#{$t}-y-#{$i} {
+            #{$type}-top: decimal-round($size_gap * $i);
+            #{$type}-bottom: decimal-round($size_gap * $i);
+        }
+        %#{$t}-#{$i} {
+            #{$type}: decimal-round($size_gap * $i);
+        }
+    }
+
+    // Horizontally center if we have display: block; and a width set
+    %m-x-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @include spacing_extender("margin", 5);

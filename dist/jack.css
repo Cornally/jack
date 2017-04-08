@@ -3375,6 +3375,97 @@ hr,
   min-height: 75vh;
 }
 
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
 .list {
   list-style: none;
 }
@@ -3519,6 +3610,126 @@ hr,
   content: "error";
   text-indent: -9999px;
   background: #DC4646;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  margin: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, p,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+figure,
+code,
+pre,
+hr,
+li, .list {
+  padding: 0;
+}
+
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+}
+
+@media (min-width: 320px) {
+  .card__head__subtitle {
+    margin-top: 15px;
+  }
+}
+@media (min-width: 320px) {
+  .well--no-padding {
+    padding: 0px;
+  }
+
+  .table th, .table td {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .table th, .table td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .highlight, .well {
+    padding: 23px;
+  }
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(49, 51, 59, 0.85);
+  z-index: 101;
+}
+.modal__window {
+  background: #ffffff;
+  border-radius: 5px;
+  width: 80vw;
+  max-height: 80vh;
+  max-width: 720px;
+  z-index: 102;
 }
 
 .nav {

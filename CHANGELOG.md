@@ -5,7 +5,8 @@
 FEATURES:
 
   * Added the table component with basic, zebra-striped, and bordered flavors.
-  * Update docs with table component.
+  * Added modal component.
+  * Update docs with table and modal components.
 
 IMPROVEMENTS:
 

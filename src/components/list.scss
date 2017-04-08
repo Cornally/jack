@@ -1,10 +1,11 @@
 @import '../settings/all';
+@import '../utils/placeholders';
 
 @if $include_component_list {
 
     .#{$prefix_component_list}list {
-        @extend %no_margins !optional;
-        @extend %no_padding !optional;
+        @extend %no_margins;
+        @extend %no_padding;
         list-style: none;
     }
 

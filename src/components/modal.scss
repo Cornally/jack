@@ -1,0 +1,41 @@
+@import '../settings/all';
+@import '../utils/placeholders';
+
+@if $include_component_modal {
+
+    $cmp__window: $color_light_01;
+    $cmp__overlay: rgba($color_dark_03, .85);
+
+    .#{$prefix_component_list}modal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+
+        &__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $cmp__overlay;
+            z-index: 101;
+        }
+
+        &__window {
+            background: $color_light_01;
+            border-radius: $size_br_normal;
+            width: 80vw;
+            max-height: 80vh;
+            max-width: 720px;
+            z-index: 102;
+        }
+    }
+
+}

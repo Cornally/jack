@@ -1,12 +1,12 @@
 @import '../settings/all';
 
-@if $include_form_buttons {
+@if $include_form_button {
         // Placeholder button
         %btn {
             display: inline-block;
             border-style: solid;
             border-width: 1px;
-            border-radius: 3px;
+            border-radius: $size_br_small;
             padding: $size_gap $size_gap*2;
             font-size: 14px;
             font-weight: bold;
@@ -23,7 +23,7 @@
         @each $state, $color in $colors_states {
 
             // Solid
-            .#{$prefix_form_buttons}btn--#{$state} {
+            .#{$prefix_form_button}btn--#{$state} {
                 @extend %btn;
                 border-color: $color;
                 background: $color;
@@ -31,7 +31,7 @@
             }
 
             // Line
-            .#{$prefix_form_buttons}btn--#{$state}--line {
+            .#{$prefix_form_button}btn--#{$state}--line {
                 @extend %btn;
                 border-color: $color;
                 background: rgba($color,.025);
@@ -43,7 +43,7 @@
         @each $brand, $color in $colors_brand {
 
             // Solid
-            .#{$prefix_form_buttons}btn--#{$brand} {
+            .#{$prefix_form_button}btn--#{$brand} {
                 @extend %btn;
                 border-color: $color;
                 background: $color;
@@ -51,7 +51,7 @@
             }
 
             // Line
-            .#{$prefix_form_buttons}btn--#{$brand}--line {
+            .#{$prefix_form_button}btn--#{$brand}--line {
                 @extend %btn;
                 border-color: $color;
                 background: rgba($color,.025);

@@ -1,0 +1,28 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(49, 51, 59, 0.85);
+  z-index: 101;
+}
+.modal__window {
+  background: #ffffff;
+  border-radius: 5px;
+  width: 80vw;
+  max-height: 80vh;
+  max-width: 720px;
+  z-index: 102;
+}

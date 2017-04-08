@@ -16,7 +16,7 @@
 
         color: $cmp__base;
         background: $cmp__background;
-        border-radius: 3px;
+        border-radius: $size_br_small;
         overflow: auto;
         @extend %p-xs-3;
     }
