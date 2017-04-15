@@ -1,8 +1,3 @@
-@media (min-width: 320px) {
-  .card__head__subtitle {
-    margin-top: decimal-round(15px);
-  }
-}
 .card {
   display: flex;
   flex-direction: column;
@@ -89,6 +84,7 @@
   font-size: 14px;
   font-weight: lighter;
   color: #414551;
+  margin-top: 15px;
 }
 .card__media {
   height: 200px;

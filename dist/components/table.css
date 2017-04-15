@@ -1,20 +1,13 @@
-@media (min-width: 320px) {
-  .table th, .table td {
-    padding-left: decimal-round(7.5px);
-    padding-right: decimal-round(7.5px);
-  }
-
-  .table th, .table td {
-    padding-top: decimal-round(15px);
-    padding-bottom: decimal-round(15px);
-  }
-}
 .table {
   border-spacing: 0;
   width: 100%;
 }
 .table th {
+  padding: 7.5px 15px;
   text-align: left;
+}
+.table td {
+  padding: 7.5px 15px;
 }
 .table--striped tbody tr {
   background: #ffffff;

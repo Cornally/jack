@@ -1,5 +1,4 @@
 @import '../settings/all';
-@import '../utils/placeholders';
 
 /* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
@@ -95,7 +94,6 @@
         @extend %no_borders;
     }
 
-
     // Disable yellow autofill boxes
     input:-webkit-autofill {
         -webkit-box-shadow: 0 0 0px 1000px #333 inset;
@@ -103,13 +101,8 @@
     }
 
     // Change highlight color
-    * {
-        &::selection { background: rgba($color_brand_primary, .5); }
-    }
+    * { &::selection { background: rgba($color_brand_primary, .5); }}
 
     // Disable tap highlight
     * { -webkit-tap-highlight-color: transparent; }
-
-    // Hide Typekit badge
-    .typekit-badge { display: none !important; }
 }

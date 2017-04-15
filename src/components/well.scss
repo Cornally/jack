@@ -1,14 +1,13 @@
 @import '../settings/all';
-@import '../utils/placeholders';
 
 @if $include_component_well {
 
     .#{$prefix-component_well}well {
         background: $color_light_03;
-        @extend %p-xs-3;
+        padding: $size_gap*3;
 
         &--no-padding {
-            @extend %p-xs-0;
+            padding: 0;
         }
 
         &--border {

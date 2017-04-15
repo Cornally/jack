@@ -20,15 +20,15 @@
 
 @mixin spacing($type, $count) {
     $type_count: $count;
-    $t: null;
+    $prefix_type: null;
     $prefix_util_spacing: null;
 
     // Handle spacing type (margin or padding)
     @if $type == "margin" {
-        $t: "m";
+        $prefix_type: "m";
         $prefix_util_spacing: $prefix_util_margins;
     } @else if $type == "padding" {
-        $t: "p";
+        $prefix_type: "p";
         $prefix_util_spacing: $prefix_util_padding;
     }
 
@@ -37,28 +37,28 @@
         @media (min-width: $px) {
             @for $i from 0 through $type_count {
                 // Construct classes & extendable faux classes
-                .#{$prefix_util_spacing}#{$t}-t-#{$size}-#{$i} {
-                    #{$type}-top: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-t-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i) !important;
                 }
-                .#{$prefix_util_spacing}#{$t}-r-#{$size}-#{$i} {
-                    #{$type}-right: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-r-#{$size}-#{$i} {
+                    #{$type}-right: decimal-round($size_gap * $i) !important;
                 }
-                .#{$prefix_util_spacing}#{$t}-b-#{$size}-#{$i} {
-                    #{$type}-bottom: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-b-#{$size}-#{$i} {
+                    #{$type}-bottom: decimal-round($size_gap * $i) !important;
                 }
-                .#{$prefix_util_spacing}#{$t}-l-#{$size}-#{$i} {
-                    #{$type}-left: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-l-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i) !important;
                 }
-                .#{$prefix_util_spacing}#{$t}-x-#{$size}-#{$i} {
-                    #{$type}-left: decimal-round($size_gap * $i);
-                    #{$type}-right: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-x-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i) !important;
+                    #{$type}-right: decimal-round($size_gap * $i) !important;
                 }
-                .#{$prefix_util_spacing}#{$t}-y-#{$size}-#{$i} {
-                    #{$type}-top: decimal-round($size_gap * $i);
-                    #{$type}-bottom: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-y-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i) !important;
+                    #{$type}-bottom: decimal-round($size_gap * $i) !important;
                 }
-                .#{$prefix_util_spacing}#{$t}-#{$size}-#{$i} {
-                    #{$type}: decimal-round($size_gap * $i);
+                .#{$prefix_util_spacing}#{$prefix_type}-#{$size}-#{$i} {
+                    #{$type}: decimal-round($size_gap * $i) !important;
                 }
             }
             

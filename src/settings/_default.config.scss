@@ -28,6 +28,25 @@ $prefix_util_padding: '' !default;
 
 ///////////////////////////////////////////////////////////
 //
+//  Animation
+//
+//  To opt out of including our animation keyframes,
+//  easing, mixins, set its
+//  `$include_component_{name}` value to false
+//  inside `_user.config.scss`.  For example,
+//  `$include_component_grid: false` will exclude
+//  the Jack grid from your compiled output.
+//
+///////////////////////////////////////////////////////////
+
+$include_animation: true !default;
+$include_animation_keyframes: true !default;
+$include_animation_easing: true !default;
+$animation_default_easing: ease-in-out;
+
+
+///////////////////////////////////////////////////////////
+//
 //  Components
 //
 //  To opt out of including a component, set its
@@ -68,6 +87,11 @@ $prefix_component_grid: '' !default;
 // Include hero styling
 $include_component_hero: true !default;
 $prefix_component_hero: '' !default;
+
+
+// Include link styling
+$include_component_link: true !default;
+$prefix_component_link: '' !default;
 
 
 // Include list styling

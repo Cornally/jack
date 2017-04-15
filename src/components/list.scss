@@ -1,5 +1,4 @@
 @import '../settings/all';
-@import '../utils/placeholders';
 
 @if $include_component_list {
 
@@ -10,6 +9,7 @@
     }
 
     .#{$prefix_component_list}list__item {
+        padding: $size_gap $size_gap*2;
         border-bottom: 1px solid rgba($color_brand_primary, .10);
         &:last-child { border-bottom: 0; }
     }

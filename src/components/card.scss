@@ -1,5 +1,4 @@
 @import '../settings/all';
-@import '../utils/placeholders';
 
 @if $include_component_card {
 
@@ -66,7 +65,7 @@
             font-size: $size_font_normal;
             font-weight: lighter;
             color: $color_dark_04;
-            @extend %m-t-xs-2;
+            margin-top: $size_gap*2;
         }
 
         &__media {
