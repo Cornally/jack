@@ -5,7 +5,19 @@ body {
 }
 
 h1 {
-  font-weight: 800;
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+p {
+  line-height: 1.5em;
 }
 
 .text-size-xs {

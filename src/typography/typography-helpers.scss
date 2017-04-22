@@ -10,7 +10,19 @@
     }
 
     h1 {
-        font-weight: 800;
+        font-size: $size_font_bigger;
+    }
+
+    h2 {
+        font-size: $size_font_big;
+    }
+
+    h3 {
+        font-size: $size_font_normal;
+    }
+
+    p {
+        line-height: 1.5em;
     }
 
 

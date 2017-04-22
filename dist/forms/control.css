@@ -1,0 +1,21 @@
+.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline-color: #7defe5;
+  font-size: 14px;
+  padding: 14px;
+}
+input.form-control,
+textarea.form-control,
+select.form-control {
+  border: 1px solid #ebebeb;
+}
+.form-control::placeholder {
+  color: #d8d8d8;
+}
+
+.form-group .form-control:not(:last-child) {
+  margin-bottom: 14px;
+}

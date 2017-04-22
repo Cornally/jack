@@ -1,34 +1,76 @@
-/*
-Sass::SyntaxError: "html" failed to @extend "%no_margins".
-The selector "%no_margins" was not found.
-Use "@extend %no_margins !optional" if the extend should be able to fail.
+/* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
+   We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
+   only use tags appropriately, where they're meant to be used. We WANT those default styles. */
+html,
+body,
+div,
+span,
+article,
+details,
+footer,
+header,
+nav,
+section,
+summary,
+form {
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
 
+html {
+  height: 100%;
+  font-size: 62.5%;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 
-Backtrace:
-src/utils/reset.scss:20
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/extend.rb:62:in `block in check_extends_fired!'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/util/subset_map.rb:105:in `block in each_value'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/util/subset_map.rb:105:in `each'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/util/subset_map.rb:105:in `each_value'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/extend.rb:51:in `check_extends_fired!'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/visitors/extend.rb:16:in `visit'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:39:in `css_tree'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/tree/root_node.rb:20:in `render'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/engine.rb:281:in `render'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/plugin.rb:82:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/2.3.0/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
-/usr/local/bin/sass:23:in `load'
-/usr/local/bin/sass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Sass::SyntaxError: \"html\" failed to @extend \"%no_margins\".\A The selector \"%no_margins\" was not found.\A Use \"@extend %no_margins !optional\" if the extend should be able to fail.\A "; }
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a,
+input,
+select {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+  display: block;
+}
+
+a, a:hover {
+  text-decoration: none;
+}
+a:focus {
+  outline-color: #5258C7;
+}
+
+h1,
+h2,
+h3 {
+  outline: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+  -webkit-text-fill-color: #fff;
+}
+
+*::selection {
+  background: rgba(82, 88, 199, 0.5);
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}

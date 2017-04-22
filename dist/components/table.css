@@ -3,11 +3,11 @@
   width: 100%;
 }
 .table th {
-  padding: 7.5px 15px;
+  padding: 7px 14px;
   text-align: left;
 }
 .table td {
-  padding: 7.5px 15px;
+  padding: 7px 14px;
 }
 .table--striped tbody tr {
   background: #ffffff;

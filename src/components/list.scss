@@ -3,8 +3,8 @@
 @if $include_component_list {
 
     .#{$prefix_component_list}list {
-        @extend %no_margins;
-        @extend %no_padding;
+        @extend %no_margins !optional;
+        @extend %no_padding !optional;
         list-style: none;
     }
 

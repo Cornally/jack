@@ -1,16 +1,18 @@
 .btn--default, .btn--default--line, .btn--success, .btn--success--line, .btn--warning, .btn--warning--line, .btn--info, .btn--info--line, .btn--error, .btn--error--line, .btn--primary, .btn--primary--line, .btn--secondary, .btn--secondary--line {
+  cursor: pointer;
   display: inline-block;
   border-style: solid;
   border-width: 1px;
   border-radius: 3px;
-  padding: 7.5px 15px;
   font-size: 14px;
   font-weight: bold;
+  padding: 7px 14px;
+  text-align: center;
 }
 .btn-group .btn--default, .btn-group .btn--default--line, .btn-group .btn--success, .btn-group .btn--success--line, .btn-group .btn--warning, .btn-group .btn--warning--line, .btn-group .btn--info, .btn-group .btn--info--line, .btn-group .btn--error, .btn-group .btn--error--line, .btn-group .btn--primary, .btn-group .btn--primary--line, .btn-group .btn--secondary, .btn-group .btn--secondary--line {
   float: left;
-  margin-right: 7.5px;
-  margin-bottom: 7.5px;
+  margin-right: 7px;
+  margin-bottom: 7px;
 }
 
 .btn--default {
@@ -18,11 +20,27 @@
   background: #31333B;
   color: white;
 }
+.btn--default:hover {
+  color: white;
+  background: #2b2c33;
+}
+.btn--default:active {
+  color: white;
+  background: #26272d;
+}
 
 .btn--default--line {
   border-color: #31333B;
   background: rgba(49, 51, 59, 0.025);
   color: #31333B;
+}
+.btn--default--line:hover {
+  color: #31333B;
+  background: rgba(49, 51, 59, 0.25);
+}
+.btn--default--line:active {
+  color: #31333B;
+  background: rgba(49, 51, 59, 0.5);
 }
 
 .btn--success {
@@ -30,11 +48,27 @@
   background: #6FDA7A;
   color: white;
 }
+.btn--success:hover {
+  color: white;
+  background: #61be6a;
+}
+.btn--success:active {
+  color: white;
+  background: #55a85e;
+}
 
 .btn--success--line {
   border-color: #6FDA7A;
   background: rgba(111, 218, 122, 0.025);
   color: #6FDA7A;
+}
+.btn--success--line:hover {
+  color: #6FDA7A;
+  background: rgba(111, 218, 122, 0.25);
+}
+.btn--success--line:active {
+  color: #6FDA7A;
+  background: rgba(111, 218, 122, 0.5);
 }
 
 .btn--warning {
@@ -42,11 +76,27 @@
   background: #EEE371;
   color: white;
 }
+.btn--warning:hover {
+  color: white;
+  background: #cfc562;
+}
+.btn--warning:active {
+  color: white;
+  background: #b7af57;
+}
 
 .btn--warning--line {
   border-color: #EEE371;
   background: rgba(238, 227, 113, 0.025);
   color: #EEE371;
+}
+.btn--warning--line:hover {
+  color: #EEE371;
+  background: rgba(238, 227, 113, 0.25);
+}
+.btn--warning--line:active {
+  color: #EEE371;
+  background: rgba(238, 227, 113, 0.5);
 }
 
 .btn--info {
@@ -54,11 +104,27 @@
   background: #6BB8EB;
   color: white;
 }
+.btn--info:hover {
+  color: white;
+  background: #5da0cc;
+}
+.btn--info:active {
+  color: white;
+  background: #528eb5;
+}
 
 .btn--info--line {
   border-color: #6BB8EB;
   background: rgba(107, 184, 235, 0.025);
   color: #6BB8EB;
+}
+.btn--info--line:hover {
+  color: #6BB8EB;
+  background: rgba(107, 184, 235, 0.25);
+}
+.btn--info--line:active {
+  color: #6BB8EB;
+  background: rgba(107, 184, 235, 0.5);
 }
 
 .btn--error {
@@ -66,11 +132,27 @@
   background: #DC4646;
   color: white;
 }
+.btn--error:hover {
+  color: white;
+  background: #bf3d3d;
+}
+.btn--error:active {
+  color: white;
+  background: #a93636;
+}
 
 .btn--error--line {
   border-color: #DC4646;
   background: rgba(220, 70, 70, 0.025);
   color: #DC4646;
+}
+.btn--error--line:hover {
+  color: #DC4646;
+  background: rgba(220, 70, 70, 0.25);
+}
+.btn--error--line:active {
+  color: #DC4646;
+  background: rgba(220, 70, 70, 0.5);
 }
 
 .btn--primary {
@@ -78,11 +160,27 @@
   background: #5258C7;
   color: white;
 }
+.btn--primary:hover {
+  color: white;
+  background: #474dad;
+}
+.btn--primary:active {
+  color: white;
+  background: #3f4499;
+}
 
 .btn--primary--line {
   border-color: #5258C7;
   background: rgba(82, 88, 199, 0.025);
   color: #5258C7;
+}
+.btn--primary--line:hover {
+  color: #5258C7;
+  background: rgba(82, 88, 199, 0.25);
+}
+.btn--primary--line:active {
+  color: #5258C7;
+  background: rgba(82, 88, 199, 0.5);
 }
 
 .btn--secondary {
@@ -90,9 +188,25 @@
   background: #7defe5;
   color: white;
 }
+.btn--secondary:hover {
+  color: white;
+  background: #6dd0c7;
+}
+.btn--secondary:active {
+  color: white;
+  background: #60b8b0;
+}
 
 .btn--secondary--line {
   border-color: #7defe5;
   background: rgba(125, 239, 229, 0.025);
   color: #7defe5;
+}
+.btn--secondary--line:hover {
+  color: #7defe5;
+  background: rgba(125, 239, 229, 0.25);
+}
+.btn--secondary--line:active {
+  color: #7defe5;
+  background: rgba(125, 239, 229, 0.5);
 }

@@ -7,17 +7,19 @@
     plaintext,
     listing { white-space: pre-wrap; }
 
+    code { color: #cd5c5c; }
+
+    // Longer blocks of code
     .highlight {
+        $cmp_base: $color_light_01;
+        $cmp_background: $color_dark_03;
 
-        // Default to a white background
-        $cmp__base: $color_light_01;
-        $cmp__background: $color_dark_03;
-
-        color: $cmp__base;
-        background: $cmp__background;
+        background: $cmp_background;
         border-radius: $size_br_small;
         overflow: auto;
         padding: $size_gap*3;
+
+        code { color: $cmp_base; }
     }
     .hll { background-color: #ffffcc; }
     .c { color: #87ceeb; }

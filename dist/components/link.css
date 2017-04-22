@@ -1,0 +1,57 @@
+a,
+.link {
+  color: #5258C7;
+}
+a:hover,
+.link:hover {
+  color: #42469f;
+}
+
+.link--default {
+  color: #31333B;
+}
+.link--default:hover {
+  color: #27292f;
+}
+
+.link--success {
+  color: #6FDA7A;
+}
+.link--success:hover {
+  color: #59ae62;
+}
+
+.link--warning {
+  color: #EEE371;
+}
+.link--warning:hover {
+  color: #beb65a;
+}
+
+.link--info {
+  color: #6BB8EB;
+}
+.link--info:hover {
+  color: #5693bc;
+}
+
+.link--error {
+  color: #DC4646;
+}
+.link--error:hover {
+  color: #b03838;
+}
+
+.link--primary {
+  color: #5258C7;
+}
+.link--primary:hover {
+  color: #42469f;
+}
+
+.link--secondary {
+  color: #7defe5;
+}
+.link--secondary:hover {
+  color: #64bfb7;
+}

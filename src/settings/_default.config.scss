@@ -142,6 +142,10 @@ $prefix_component_well: '' !default;
 $include_form_button: true !default;
 $prefix_form_button: '' !default;
 
+// Include form inputs, text areas, radios, checkboxes, etc.
+$include_form_control: true !default;
+$prefix_form_control: '' !default;
+
 
 ///////////////////////////////////////////////////////////
 //

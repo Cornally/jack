@@ -32,6 +32,38 @@
         $prefix_util_spacing: $prefix_util_padding;
     }
 
+    @for $i from 0 through $type_count {
+        .#{$prefix_util_spacing}#{$prefix_type}-t-#{$i} {
+            #{$type}-top: decimal-round($size_gap * $i) !important;
+        }
+        .#{$prefix_util_spacing}#{$prefix_type}-r-#{$i} {
+            #{$type}-right: decimal-round($size_gap * $i) !important;
+        }
+        .#{$prefix_util_spacing}#{$prefix_type}-b-#{$i} {
+            #{$type}-bottom: decimal-round($size_gap * $i) !important;
+        }
+        .#{$prefix_util_spacing}#{$prefix_type}-l-#{$i} {
+            #{$type}-left: decimal-round($size_gap * $i) !important;
+        }
+        .#{$prefix_util_spacing}#{$prefix_type}-x-#{$i} {
+            #{$type}-left: decimal-round($size_gap * $i) !important;
+            #{$type}-right: decimal-round($size_gap * $i) !important;
+        }
+        .#{$prefix_util_spacing}#{$prefix_type}-y-#{$i} {
+            #{$type}-top: decimal-round($size_gap * $i) !important;
+            #{$type}-bottom: decimal-round($size_gap * $i) !important;
+        }
+        .#{$prefix_util_spacing}#{$prefix_type}-#{$i} {
+            #{$type}: decimal-round($size_gap * $i) !important;
+        }
+    }
+    
+    // Horizontally center if we have display: block; and a width set
+    .#{$prefix_util_margins}m-x-auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     // Loop through each break point size
     @each $size, $px in $sizes_break {
         @media (min-width: $px) {

@@ -1,5 +1,20 @@
+///////////////////////////////////////////////////////////
+//
+//  Global Size Vars
+//
+//  Variables shared across all components will pull
+//  their respective sizing from this file.  Override
+//  at the component level with `$cmp_` prefixed vars.
+//  This convention helps create explicit, consistent
+//  sizing at the global or component level.  Defining
+//  component-level SASS vars nested inside their
+//  respective component tag results in a "local" variable
+//  as opposed to the globals below.
+//
+///////////////////////////////////////////////////////////
+
 // Keep spacing between elements consistent with standard gaps
-$size_gap: 7.5px !default;
+$size_gap: 7px !default;
 
 
 // Break points for @media

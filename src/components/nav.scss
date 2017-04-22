@@ -32,7 +32,10 @@
         }
 
         a {
-            color: white;
+            color: $color_light_01;
+        }
+        a:hover {
+            color: $color_light_02;
         }
     }
 }
@@ -40,7 +43,7 @@
 .nav .nav__left {
     overflow: hidden;
 }
-.nav .nav__logo{
+.nav .nav__logo {
     font-size: 60px;
 	font-weight: bolder;
 	line-height: 1;
@@ -54,4 +57,7 @@
 	top: -2px;
 	transform: rotate(-5deg);
 	user-select: none;
+    &:hover {
+        color: darken($color_brand_primary, 20%);
+    }
 }

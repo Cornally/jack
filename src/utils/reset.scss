@@ -17,9 +17,9 @@
     section,
     summary,
     form {
-        @extend %no_margins;
-        @extend %no_padding;
-        @extend %no_borders;
+        @extend %no_margins !optional;
+        @extend %no_padding !optional;
+        @extend %no_borders !optional;
         vertical-align: baseline;
         box-sizing: border-box;
     }
@@ -80,18 +80,18 @@
     pre,
     hr,
     li {
-        @extend %no_margins;
-        @extend %no_padding;
+        @extend %no_margins !optional;
+        @extend %no_padding !optional;
     }
 
     // Hide Firefox <button> outline
     button::-moz-focus-inner {
-        @extend %no_borders;
+        @extend %no_borders !optional;
     }
 
     // Hide Firefox <input> outline
     input::-moz-focus-inner {
-        @extend %no_borders;
+        @extend %no_borders !optional;
     }
 
     // Disable yellow autofill boxes

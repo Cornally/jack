@@ -2,10 +2,12 @@
 
 @if $include_component_modal {
 
-    $cmp__window: $color_light_01;
-    $cmp__overlay: rgba($color_dark_03, .85);
+    $cmp_window: $color_light_01;
+    $cmp_overlay: rgba($color_dark_03, .85);
 
     .#{$prefix_component_list}modal {
+        visibility: hidden;
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -16,8 +18,11 @@
         right: 0;
         bottom: 0;
         z-index: 100;
+        
 
         &--active {
+            visibility: visible;
+            
            .#{$prefix_component_list}modal__overlay {
             opacity: 1;
            }
@@ -33,7 +38,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: $cmp__overlay;
+            background: $cmp_overlay;
             z-index: 101;
             
             opacity: 0;

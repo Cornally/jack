@@ -73,7 +73,10 @@
   font-weight: bold;
 }
 .nav a {
-  color: white;
+  color: #ffffff;
+}
+.nav a:hover {
+  color: #f7f7f7;
 }
 
 .nav .nav__left {
@@ -94,4 +97,7 @@
   top: -2px;
   transform: rotate(-5deg);
   user-select: none;
+}
+.nav .nav__logo:hover {
+  color: #2c3087;
 }
