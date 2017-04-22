@@ -1,5 +1,17 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.11 (April 22, 2017)
+
+FEATURES:
+
+  * Roughed out basic form styling.
+  * Added link styling
+  * Updated docs with newer spacing/grid classes.
+
+IMPROVEMENTS:
+
+  * Created proper spacing & grid classes without media queries to clean up all the lifting the `xs` classes were previously doing.
+
 ## 0.0.10 (April 7, 2017)
 
 FEATURES:
