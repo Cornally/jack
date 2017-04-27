@@ -1,0 +1,19 @@
+$animation_duration: .2s;
+
+// Normalize animation timing. Use this mixin to
+// convert a distance traveled to the duration.
+// Use 100 (px) as the standard unit.
+// @example
+//      transition: transform distanceToDuration(10px) ease;
+//      transform: translate3d(0, durationToDistance(.2), 0;
+
+$velocity: 1;
+
+@function distanceToDuration($distance) {
+    @return (($distance/100) / $velocity) + "s";
+}
+
+
+@function durationToDistance($duration) {
+    @return (($duration*100) * $velocity) + "px";
+}

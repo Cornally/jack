@@ -1,0 +1,36 @@
+@import '../settings/all';
+
+@if $include_component_table {
+
+    .#{$prefix-component_well}table {
+        border-spacing: 0;
+        width: 100%;
+
+        th {
+            padding: $size_gap $size_gap*2;
+            text-align: left;
+        }
+        td {
+            padding: $size_gap $size_gap*2;
+        }
+        
+        &--striped {
+            tbody tr {
+                background: $color_light_01;
+            }
+            tbody tr:nth-child(odd) {
+                background: $color_light_02;
+            }
+        }
+        
+        &--border {
+            border: 1px solid $color_light_03;
+            thead tr th,
+            tbody tr:not(:last-child) td {
+                border-bottom: 1px solid $color_light_03;
+            }
+        }
+
+    }
+
+}

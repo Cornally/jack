@@ -1,0 +1,108 @@
+@import '../settings/all';
+
+/* Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
+   We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
+   only use tags appropriately, where they're meant to be used. We WANT those default styles. */
+
+@if $include-util-reset {
+    html,
+    body,
+    div,
+    span,
+    article,
+    details,
+    footer,
+    header,
+    nav,
+    section,
+    summary,
+    form {
+        @extend %no_margins !optional;
+        @extend %no_padding !optional;
+        @extend %no_borders !optional;
+        vertical-align: baseline;
+        box-sizing: border-box;
+    }
+
+    html { 
+        height: 100%;
+        font-size: 62.5%;
+        font-family: sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -ms-text-size-adjust: 100%;
+        -moz-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+        height: 100%;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    a,
+    input,
+    select { 
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased; // Chrome needs this explicitely on inputs (vs. just html {...})
+    }
+
+    img {
+        max-width: 100%;
+        -ms-interpolation-mode: bicubic;
+        display: block;
+    }
+
+    // Default links
+    a {
+        &,
+        &:hover { text-decoration: none; }
+        &:focus { outline-color: $color_brand_primary; }
+    }
+
+    // Outline moved to box-shadow for accessibility
+    h1,
+    h2,
+    h3 { outline: none; }
+
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    ul,
+    figure,
+    code,
+    pre,
+    hr,
+    li {
+        @extend %no_margins !optional;
+        @extend %no_padding !optional;
+    }
+
+    // Hide Firefox <button> outline
+    button::-moz-focus-inner {
+        @extend %no_borders !optional;
+    }
+
+    // Hide Firefox <input> outline
+    input::-moz-focus-inner {
+        @extend %no_borders !optional;
+    }
+
+    // Disable yellow autofill boxes
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #333 inset;
+        -webkit-text-fill-color: #fff;
+    }
+
+    // Change highlight color
+    * { &::selection { background: rgba($color_brand_primary, .5); }}
+
+    // Disable tap highlight
+    * { -webkit-tap-highlight-color: transparent; }
+}

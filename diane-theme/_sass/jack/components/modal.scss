@@ -1,0 +1,61 @@
+@import '../settings/all';
+
+@if $include_component_modal {
+
+    $cmp_window: $color_light_01;
+    $cmp_overlay: rgba($color_dark_03, .85);
+
+    .#{$prefix_component_list}modal {
+        visibility: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 100;
+        
+
+        &--active {
+            visibility: visible;
+            
+           .#{$prefix_component_list}modal__overlay {
+            opacity: 1;
+           }
+           .#{$prefix_component_list}modal__window {
+            opacity: 1;
+            transition: opacity .2s ease .2s;
+           }
+        }
+
+        &__overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: $cmp_overlay;
+            z-index: 101;
+            
+            opacity: 0;
+            transition: opacity .5s ease;
+        }
+
+        &__window {
+            background: $color_light_01;
+            border-radius: $size_br_normal;
+            width: 80vw;
+            max-height: 80vh;
+            max-width: 720px;
+            z-index: 102;
+
+            opacity: 0;
+            transition: opacity .2s ease 0s;
+        }
+    }
+
+}
