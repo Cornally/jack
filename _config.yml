@@ -25,13 +25,13 @@ twitter_username: Cornally
 github_username:  Cornally
 
 # Build settings
-destination:  ../../jack/docs # For gh-pages
 markdown: kramdown
 theme: diane-theme
 gems:
   - jekyll-feed
 sass:
   style: compressed
+  sass_dir: diane-theme/_sass
 exclude:
   - Gemfile
   - Gemfile.lock
