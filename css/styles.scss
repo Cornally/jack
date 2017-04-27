@@ -26,6 +26,9 @@ $color_brand_secondary: #e0ef7d;
     padding: $size_gap auto;
 }
 
+code { padding: 0 5px; }
+.card--highlight code { padding: 0; }
+
 // Home View
 .page--home {
     p {

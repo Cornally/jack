@@ -1,20 +1,12 @@
 ---
-title: Tables
-description: Tables have some "baggage" from the olden days when folks used them for layout.  You know where they really shine?  When it's time to show tabular data.
+title: Cards
+description: Card components can be used to isolate or create separation between content.  You may indicate state or include media (think photos or videos) in your cards.
 layout: component
 states:
     - item:
         title: Default
-        description: Your standard no-frills table.
-        tpl: table.html
-    - item:
-        title: Striped
-        description: Add alternate zebra-striping to your table by adding the <code>.table--striped</code> class to the table tag.
-        tpl: table--striped.html
-    - item:
-        title: Border
-        description: Add a border with the <code>.table--border</code> class to frame your table.
-        tpl: table--border.html
+        description: Cards occupy 100% the width of their container by default.  In our example, we throw our grid construct around our card to constraint the width.
+        tpl: card.html
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
@@ -25,10 +17,14 @@ states:
     <div class="row">
         <div class="card card--example">
             <div class="card__head">
-                <div class="card__head__title">{{ state.item.title }}</div>
+                {{ state.item.title }}
                 {% if state.item.description %}<div class="card__head__subtitle">{{ state.item.description }}</div>{% endif %}
             </div>
-            <div class="card__body">{% include {{ state.item.tpl }} %}</div>
+            <div class="card__body">
+                <div class="row row--gap row--flex">
+                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">{% include {{ state.item.tpl }} %}</div>
+                </div>
+            </div>
         </div>
         <div class="card card--highlight">
             <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-{{ forloop.index }}">Copy HTML</a></div>
