@@ -3,6 +3,6 @@ var cpx = require('cpx');
 
 console.log('Watching for changes...');
 
-cpx.watch('./src/**/*.scss', '../jack-docs/src/diane-theme/_sass/jack', {}, (e) => {
+cpx.watch('./src/**/*.scss', '../gh-pages/_sass/jack', {}, (e) => {
     console.log("Copied!");
 });
