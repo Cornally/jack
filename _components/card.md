@@ -5,7 +5,7 @@ layout: component
 states:
     - item:
         title: Default
-        description: Cards occupy 100% the width of their container by default.  In our example, we throw our grid construct around our card to constraint the width.
+        description: Cards occupy 100% the width of their container by default.  In our example, we throw our grid construct around our card to constrain the width.
         tpl: card.html
 ---
 <div class="container content">

@@ -7,6 +7,11 @@
 ///////////////////////////////////
 $color_brand_primary: #52aac7;
 $color_brand_secondary: #e0ef7d;
+
+// Set your default <body> values
+$typography_header_font: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typography_body_lineheight: 1.8em;
+
 @import 'jack/jack';
 
 ///////////////////////////////////
