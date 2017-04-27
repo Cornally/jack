@@ -11,6 +11,7 @@
 
         display: flex;
         flex-direction: column;
+        background: $cmp_background;
 
         &--no-padding {
             padding: 0;
@@ -27,30 +28,13 @@
             }
         }
 
-        &__head,
-        &__body {
-            background: $cmp_background;
-        }
-
         // Card States
         @each $state, $color in $colors_states {
             // Build out column widths for each breakpoint size
             &.#{$prefix_component_card}card--#{$state} {
+                background: desaturate(lighten($color, 25%), 15%);
                 border-color: $color;
-                .#{$prefix_component_card}card__head {
-                    background: $color;
-                    color: darken($color, 25%);
-                    padding: $size_gap*2;
-                }
-                // Using the passed color as a base, lighten / desaturate slightly
-                // and set this as our background color.  Set a darker version of
-                // the color as the card body font color.
-                .#{$prefix_component_card}card__body {
-                    background: desaturate(lighten($color, 25%), 15%);
-                    color: darken($color, 25%);
-                    padding-top: $size_gap*3;
-                    margin-top: 0;
-                }
+                color: darken($color, 25%);
             }
         }
 
