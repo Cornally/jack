@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  {% include head.html %}
+  <body class="page--component">
+    {% include nav.html %}
+    {{ content }}
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        new Clipboard('.copy');
+      });
+    </script>
+  </body>
+</html>
