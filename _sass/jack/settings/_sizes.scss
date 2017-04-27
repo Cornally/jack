@@ -1,0 +1,56 @@
+///////////////////////////////////////////////////////////
+//
+//  Global Size Vars
+//
+//  Variables shared across all components will pull
+//  their respective sizing from this file.  Override
+//  at the component level with `$cmp_` prefixed vars.
+//  This convention helps create explicit, consistent
+//  sizing at the global or component level.  Defining
+//  component-level SASS vars nested inside their
+//  respective component tag results in a "local" variable
+//  as opposed to the globals below.
+//
+///////////////////////////////////////////////////////////
+
+// Keep spacing between elements consistent with standard gaps
+$size_gap: 7px !default;
+
+
+// Break points for @media
+$size_break_xs: 320px !default;
+$size_break_sm: 580px !default;
+$size_break_md: 820px !default;
+$size_break_lg: 1024px !default;
+$size_break_xl: 1280px !default;
+
+// Break point map
+$sizes_break: (
+    xs : $size_break_xs,
+    sm : $size_break_sm,
+    md : $size_break_md,
+    lg : $size_break_lg,
+    xl : $size_break_xl
+);
+
+
+// Font sizes
+$size_font_smaller: 10px !default;
+$size_font_small: 12px !default;
+$size_font_normal: 14px !default;
+$size_font_big: 18px !default;
+$size_font_bigger: 36px !default;
+
+// Font size mapping
+$sizes_font: (
+    xs : $size_font_smaller,
+    sm : $size_font_small,
+    md : $size_font_normal,
+    lg : $size_font_big,
+    xl : $size_font_bigger
+);
+
+
+// Border radius sizes
+$size_br_small: 3px;
+$size_br_normal: 5px;

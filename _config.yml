@@ -26,12 +26,11 @@ github_username:  Cornally
 
 # Build settings
 markdown: kramdown
-theme: diane-theme
 gems:
   - jekyll-feed
 sass:
   style: compressed
-  sass_dir: diane-theme/_sass
+  sass_dir: _sass
 exclude:
   - Gemfile
   - Gemfile.lock

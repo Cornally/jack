@@ -1,0 +1,66 @@
+// Utility colors
+$color_light_01       : #ffffff !default;
+$color_light_02       : #f7f7f7 !default;
+$color_light_03       : #ebebeb !default;
+$color_light_04       : #d8d8d8 !default;
+$color_dark_01        : #15161A !default;
+$color_dark_02        : #1D1E23 !default;
+$color_dark_03        : #31333B !default;
+$color_dark_04        : #414551 !default;
+
+
+// Brand colors
+$color_brand_primary  : #5258C7 !default;
+$color_brand_secondary: #7defe5 !default;
+
+
+$colors_brand: (
+    primary  : $color_brand_primary,
+    secondary: $color_brand_secondary
+);
+
+
+// Stateful colors
+$color_state_success : #6FDA7A !default;
+$color_state_warning : #EEE371 !default;
+$color_state_info    : #6BB8EB !default;
+$color_state_error   : #DC4646 !default;
+$color_state_default : $color_dark_03 !default;
+$color_state_disabled: $color_light_04 !default;
+
+$colors_states: (
+    default : $color_state_default,
+    success : $color_state_success,
+    warning : $color_state_warning,
+    info    : $color_state_info,
+    error   : $color_state_error,
+    disabled: $color_state_disabled
+);
+
+
+////////////////////////////////////////////////////////////////////
+// 
+//  Color Shifter
+//
+//  Distribute a base color to generate light/dark utility colors.
+//  `$name`: The base name of the outputted styling rule
+//  `$color`: What's the starting point for our color spread
+//  `$shift`: Apply a lightening or darkening to base $color
+//  `$count`: Number of derivatives
+//  e.g. 
+//  @include generateColorTicks('red', #ff0000, 'lighten', 5);
+//  @include generateColorTicks('darken', #264285, 'darken', 5);
+//
+////////////////////////////////////////////////////////////////////
+@mixin generateColorTicks($name, $color, $shift, $count) {
+    $increment: 50/$count;
+    @for $i from 1 through $count {
+        .color_#{$name}_0#{$i} {
+            @if ($shift == 'lighten') {
+                color: desaturate(lighten($color, $i*$increment), 30%);
+            } @else {
+                color: desaturate(darken($color, $i*$increment), 30%);
+            }
+        } 
+    }
+}
