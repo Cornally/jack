@@ -2,27 +2,32 @@
 
 @if $include_typography {
 
+    %header_font { font-family: $typography_header_font; }
+
     // Defaults
     body {
         color: $color_dark_01;
         font-size: $size_font_normal;
-        font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-family: $typography_body_font;
     }
 
     h1 {
         font-size: $size_font_bigger;
+        @extend %header_font;
     }
 
     h2 {
         font-size: $size_font_big;
+        @extend %header_font;
     }
 
     h3 {
         font-size: $size_font_normal;
+        @extend %header_font;
     }
 
     p {
-        line-height: 1.5em;
+        line-height: $typography_body_lineheight;
     }
 
 

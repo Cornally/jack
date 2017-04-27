@@ -40,6 +40,7 @@
                 .#{$prefix_component_card}card__head {
                     background: $color;
                     color: darken($color, 25%);
+                    padding: $size_gap*2;
                 }
                 // Using the passed color as a base, lighten / desaturate slightly
                 // and set this as our background color.  Set a darker version of
@@ -47,11 +48,14 @@
                 .#{$prefix_component_card}card__body {
                     background: desaturate(lighten($color, 25%), 15%);
                     color: darken($color, 25%);
+                    padding-top: $size_gap*3;
+                    margin-top: 0;
                 }
             }
         }
 
         &__head {
+            padding: $size_gap*3;
             font-size: $size_font_big;
             font-weight: bold;
         }
@@ -76,8 +80,14 @@
         }
 
         &__body {
+            padding: $size_gap*3;
             font-size: $size_font_normal;
-            line-height: 1.5em;
+            line-height: $typography_body_lineheight;
+        }
+
+        &__head + &__body {
+            padding-top: 0;
+            margin-top: $size_gap*-2;
         }
 
     }

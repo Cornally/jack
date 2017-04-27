@@ -38,6 +38,16 @@
                     color: white;
                     background: $color/1.3;
                 }
+                // This styling should render the button's appearance "unclickable"
+                @if($state == 'disabled') {
+                    &,
+                    &:hover,
+                    &:active {
+                        color: darken($color, 25%);
+                        background: $color;
+                    }
+                    &:hover { cursor: not-allowed; }
+                }
             }
 
             // Line
@@ -53,6 +63,16 @@
                 &:active {
                     color: $color;
                     background: rgba($color,.5);
+                }
+                // This styling should render the button's appearance "unclickable"
+                @if($state == 'disabled') {
+                    &,
+                    &:hover,
+                    &:active {
+                        color: $color, 25;
+                        background: rgba($color,.025);
+                    }
+                    &:hover { cursor: not-allowed; }
                 }
             }
         }
