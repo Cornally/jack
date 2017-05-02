@@ -32,7 +32,10 @@ $typography_body_lineheight: 1.8em;
 }
 
 code { padding: 0 5px; }
-.card--highlight code { padding: 0; }
+.card--highlight code {
+    padding: 0;
+    word-break: break-word;
+}
 
 // Home View
 .page--home {
