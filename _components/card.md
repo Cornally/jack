@@ -1,12 +1,19 @@
 ---
 title: Cards
-description: Card components can be used to isolate or create separation between content.  You may indicate state or include media (think photos or videos) in your cards.
+description: Cards can be used to isolate or create separation between content.  You may indicate state or include media (think photos or videos) in your cards.  They occupy 100% the width of their container by default.  In our examples, we wrap the cards with our grid construct to constrain the width.
 layout: component
 states:
     - item:
         title: Default
-        description: Cards occupy 100% the width of their container by default.  In our example, we throw our grid construct around our card to constrain the width.
         tpl: card.html
+    - item:
+        title: Media Card
+        description: Include a photo or video thumbnail alongside your card content
+        tpl: card--media.html
+    - item:
+        title: Stateful Card
+        description: Indicate state by adding the states defined inside <code>colors.scss</code>
+        tpl: card--states.html
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
@@ -22,12 +29,12 @@ states:
             </div>
             <div class="card__body">
                 <div class="row row--gap row--flex">
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3">{% include {{ state.item.tpl }} %}</div>
+                    {% include {{ state.item.tpl }} section="example" %}
                 </div>
             </div>
         </div>
         <div class="card card--highlight">
-            <div class="card__head">HTML <a class="copy" data-clipboard-target="#copy-{{ forloop.index }}">Copy HTML</a></div>
+            <div class="card__head">HTML<a class="copy" data-clipboard-target="#copy-{{ forloop.index }}">Copy HTML</a></div>
             <div class="card__body">{% highlight html %}{% include {{ state.item.tpl }} %}{% endhighlight %}</div>
             <textarea class="card__copy" id="copy-{{ forloop.index }}" readonly>{% include {{ state.item.tpl }} %}</textarea>
         </div>
