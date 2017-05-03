@@ -12,8 +12,10 @@ code {
 .highlight {
   background: #31333B;
   border-radius: 3px;
-  overflow: auto;
+}
+.highlight pre {
   padding: 21px;
+  overflow: auto;
 }
 .highlight code {
   color: #ffffff;

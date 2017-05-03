@@ -3,14 +3,14 @@
   -moz-appearance: none;
   -ms-appearance: none;
   appearance: none;
-  outline-color: #7defe5;
+  outline-color: #74818a;
   font-size: 14px;
   padding: 14px;
 }
 input.form-control,
 textarea.form-control,
 select.form-control {
-  border: 1px solid #ebebeb;
+  border: 1px solid #efeeee;
 }
 .form-control::placeholder {
   color: #d8d8d8;

@@ -3,17 +3,17 @@
   flex-direction: column;
   background: #ffffff;
 }
-.card--no-padding {
+.card--no-padding__head, .card--no-padding__body {
   padding: 0;
 }
 .card--border {
-  border: 1px solid #ebebeb;
+  border: 1px solid #efeeee;
 }
 .card--shadow {
   box-shadow: 0 1px 4px 1px rgba(21, 22, 26, 0.075);
 }
 .card--shadow--border {
-  border: 1px solid #ebebeb;
+  border: 1px solid #efeeee;
 }
 .card.card--default {
   background: #767676;
@@ -73,5 +73,5 @@
 }
 .card__head + .card__body {
   padding-top: 0;
-  margin-top: -14px;
+  margin-top: -21px;
 }

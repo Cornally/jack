@@ -16,9 +16,9 @@
   background: #f7f7f7;
 }
 .table--border {
-  border: 1px solid #ebebeb;
+  border: 1px solid #efeeee;
 }
 .table--border thead tr th,
 .table--border tbody tr:not(:last-child) td {
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid #efeeee;
 }

@@ -4,7 +4,7 @@
 
 .list__item {
   padding: 7px 14px;
-  border-bottom: 1px solid rgba(82, 88, 199, 0.1);
+  border-bottom: 1px solid rgba(252, 172, 61, 0.1);
 }
 .list__item:last-child {
   border-bottom: 0;
@@ -143,4 +143,31 @@
   content: "error";
   text-indent: -9999px;
   background: #DC4646;
+}
+
+.list__item--disabled:before {
+  display: inline-block;
+  content: "disabled";
+  text-indent: -9999px;
+  background: #d8d8d8;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.list__item--disabled-bar {
+  position: relative;
+  padding-left: 20px;
+}
+.list__item--disabled-bar:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  content: "disabled";
+  text-indent: -9999px;
+  background: #d8d8d8;
 }

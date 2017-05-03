@@ -1,3 +1,7 @@
+h1, h2, h3 {
+  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
 body {
   color: #15161A;
   font-size: 14px;
@@ -80,6 +84,10 @@ p {
 
 .text--error {
   color: #DC4646;
+}
+
+.text--disabled {
+  color: #d8d8d8;
 }
 
 .text--primary {

@@ -1,10 +1,10 @@
 a,
 .link {
-  color: #5258C7;
+  color: #fcac3d;
 }
 a:hover,
 .link:hover {
-  color: #42469f;
+  color: #ca8a31;
 }
 
 .link--default {
@@ -40,6 +40,13 @@ a:hover,
 }
 .link--error:hover {
   color: #b03838;
+}
+
+.link--disabled {
+  color: #d8d8d8;
+}
+.link--disabled:hover {
+  color: #adadad;
 }
 
 .link--primary {

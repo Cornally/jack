@@ -53,7 +53,7 @@ a, a:hover {
   text-decoration: none;
 }
 a:focus {
-  outline-color: #5258C7;
+  outline-color: #fcac3d;
 }
 
 h1,
@@ -68,7 +68,7 @@ input:-webkit-autofill {
 }
 
 *::selection {
-  background: rgba(82, 88, 199, 0.5);
+  background: rgba(252, 172, 61, 0.5);
 }
 
 * {
