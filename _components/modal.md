@@ -5,7 +5,7 @@ layout: component
 states:
     - item:
         title: Default
-        description: Click to view!
+        description: Click to launch modal!
         tpl: modal.html
 ---
 <div class="container content">

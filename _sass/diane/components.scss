@@ -18,6 +18,7 @@
 
         .card--highlight {
             @extend .col-xs-12;
+            > .card__head + .card__body { margin-top: 0; } 
         }
 
         .copy {

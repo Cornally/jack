@@ -6,31 +6,35 @@ layout: default
     {% include hero.html %}
 
     <div class="container p-4 m-x-auto">
+      
+      <div>
+        <h2 class="m-b-2">Intro</h2>
+        <p>Jack is the culmanation of many years of producing styling deliverables.  It's not just about making a design system work.  It's about making it performant, easily extendable, well documented, and customizable.</p>
+        <p>You can include as little OR as much of Jack as you see fit.  The goal is to cautiously toe the line between providing an opinionated architecture without forcing Helvetica Nueue down your throat.  You control the design through the extendable nature of Jack's offerings.</p>
+        <p>With that said, we'll be providing example implementations and themes that take some design liberties to hand-hold you in the right direction...tripping and falling into ocular bliss!</p>
+      </div>
 
-      <div class="card">
-        <div class="card__head">
-          Intro
-        </div>
-        <div class="card__body">
-          <p>Jack is the culmanation of many years of producing styling deliverables.  It's not just about making a design system work.  It's about making it performant, easily extendable, well documented, and customizable.</p>
-          <p>You can include as little OR as much of Jack as you see fit.  The goal is to cautiously toe the line between providing an opinionated architecture without forcing Helvetica Nueue down your throat.  You control the design through the extendable nature of JACK's offerings.</p>
-          <p>With that said, we'll be providing example implementations and themes that take some design liberties to hand-hold you in the right direction...tripping and falling into ocular bliss!</p>
-        </div>
+      <hr class="divider">
+
+      <div>
+        <h2 class="m-b-2">Installation Methods</h2>
+        <h3>Lite</h3>
+        <p>This is for folks who don't want to write a line of custom CSS.  You should be able to get your project started with our development library.  Grab the minified libraries from <code>https://cdn.jackstrap.com/latest/min/jack.min.css</code></p>
+        <h3>Organic</h3>
+        <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code></p>
+        <h3>Deep-Tissue</h3>
+        <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code></p>
       </div>
 
       <hr class="divider">
       
-      <div class="card">
-        <div class="card__head">
-          Components
-        </div>
-        <div class="card__body">
-          <ul class="list">
-          {% for component in site.components %}
-            <li class="list__item"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
-          {% endfor %}
-        </ul>
-        </div>
+      <div>
+        <h2 class="m-b-2">Components</h2>
+        <ul class="list">
+        {% for component in site.components %}
+          <li class="list__item"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
+        {% endfor %}
+      </ul>
       </div>
 
     </div>

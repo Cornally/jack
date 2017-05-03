@@ -32,9 +32,9 @@ $typography_body_lineheight: 1.8em;
 }
 
 code { padding: 0 5px; }
-.card--highlight code {
-    padding: 0;
-    word-break: break-word;
+.card--highlight {
+    width: 100%;
+    pre { white-space: pre; }
 }
 
 // Home View
@@ -46,7 +46,7 @@ code { padding: 0 5px; }
         margin-bottom: $size_gap*2;
     }
     .divider {
-         margin: $size_gap*2 0;
+         margin: $size_gap*4 0;
     }
     .card {
         margin-bottom: $size_gap*4;
