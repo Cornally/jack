@@ -23,6 +23,13 @@ $typography_body_lineheight: 1.8em;
     }
 }
 
+.anchor--docs {
+    display: block;
+    position: relative;
+    top: -64px;
+    visibility: hidden;
+}
+
 .card__head {
     font-family: $typography_header_font;
 }

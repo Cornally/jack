@@ -4,24 +4,64 @@ description: Cards can be used to isolate or create separation between content. 
 layout: component
 states:
     - item:
-        title: Default
+        title: Basic Cards
         tpl: card.html
     - item:
-        title: Media Card
+        title: Media Cards
         description: Include a photo or video thumbnail alongside your card content
         tpl: card--media.html
     - item:
-        title: Stateful Card
+        title: Stateful Cards
         description: Indicate state by adding the states defined inside <code>colors.scss</code>
         tpl: card--states.html
+classes:
+    - item:
+        title: .card--border
+        description: Add a light solid border
+        tag: .card
+    - item:
+        title: .card--shadow
+        description: Add a light shadow (box-shadow)
+        tag: .card
+    - item:
+        title: .card--no-padding
+        description: Remove the default padding from the head/body
+        tag: .card
+    - item:
+        title: .card--info
+        description: Add blue informational treatment to card, derived from color mappings in <code>_colors.scss</code>
+        tag: .card
+    - item:
+        title: .card--success
+        description: Add green positive treatment to card, derived from color mappings in <code>_colors.scss</code>
+        tag: .card
+    - item:
+        title: .card--warning
+        description: Add orange warning treatment to card, derived from color mappings in <code>_colors.scss</code>
+        tag: .card
+    - item:
+        title: .card--error
+        description: Add red alert treatment to card, derived from color mappings in <code>_colors.scss</code>
+        tag: .card
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
     <p class="well">{{ page.description }}</p>
 
+    <a class="anchor--docs" id="modifier-classes"></a>
+    <table class="table table--striped m-b-4">
+        <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
+        <tbody>
+            {% for class in page.classes %}
+            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td>{{ class.item.description }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
     {% for state in page.states %}
     <hr class="divider">
     <div class="row">
+        <a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>
         <div class="card card--example">
             <div class="card__head">
                 {{ state.item.title }}

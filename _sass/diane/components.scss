@@ -11,8 +11,8 @@
 
         .card--example {
             @extend .col-xs-12;
-            .card__head,
-            .card__body { padding: $size_gap*2; }
+            > .card__head,
+            > .card__body { padding: $size_gap*2; }
             > .card__head + .card__body { margin-top: 0; } 
         }
 

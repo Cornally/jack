@@ -7,9 +7,9 @@
         line-height: 50px;
         background: $color_brand_primary;
 
-        // Set sticky per size
         @each $size, $px in $sizes_break {
             @media (min-width: $px) {
+                // Set sticky per size
                 &.#{$prefix_component_nav}nav-#{$size}--sticky {
                     position: fixed;
                     top: 0;
@@ -24,6 +24,28 @@
                     }
                 }
             }
+
+            @media (max-width: $px) {
+                // Initial state
+                &.#{$prefix_component_nav}nav-#{$size}--hamburger {
+                    .nav__links {
+                        width: 100%;
+                        height: 0;
+                        margin-top: $size_gap;
+                        position: absolute;
+                        left: -9999px;
+                        top: -9999px;
+                        transition: height .18s ease-in-out;
+                    }
+                    .nav__links a { display: block; }
+                }
+                // Open state
+                &.#{$prefix_component_nav}nav-#{$size}--hamburger--open .nav__links {
+                    height: 100%;
+                    position: static;
+                }
+            }
+
         }
         
         .#{$prefix_component_nav}nav__logo {
