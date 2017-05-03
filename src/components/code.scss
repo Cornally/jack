@@ -16,9 +16,10 @@
 
         background: $cmp_background;
         border-radius: $size_br_small;
-        overflow: auto;
-        padding: $size_gap*3;
-
+        pre {
+            padding: $size_gap*3;
+            overflow: auto;
+        }
         code { color: $cmp_base; }
     }
     .hll { background-color: #ffffcc; }
