@@ -54,12 +54,12 @@
 
             // Hide bits
             .#{$prefix_component_grid}#{$size}--hidden {
-                display: none;
+                display: none !important;
             }
 
             // Show bits
             .#{$prefix_component_grid}#{$size}--visible {
-                display: initial;
+                display: initial !important;
             }
         
         }
