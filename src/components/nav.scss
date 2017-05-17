@@ -2,15 +2,18 @@
 
 @if $include_component_nav {
 
+    $cmp_nav_height: 50px;
+
     .#{$prefix_component_nav}nav {
         width: 100%;
-        min-height: 50px;
-        line-height: 50px;
+        min-height: $cmp_nav_height;
+        line-height: $cmp_nav_height;
         background: $color_brand_primary;
 
         @each $size, $px in $sizes_break {
             @media (min-width: $px) {
-                // Set sticky per size
+
+                // Set sticky per size so that you can determine when the nav goes sticky
                 &.#{$prefix_component_nav}nav-#{$size}--sticky {
                     position: fixed;
                     top: 0;
@@ -21,7 +24,7 @@
                     & + *:before {
                         display: block;
                         content: "";
-                        padding-top: 50px;
+                        padding-top: $cmp_nav_height;
                     }
                 }
             }
@@ -30,14 +33,16 @@
         // Slide Down Menu
         @media (max-width: $size_break_sm) {
             &.#{$prefix_component_nav}nav--slidedown {
-                .nav__links {
+                .#{$prefix_component_nav}nav__logo {
+                    text-align: center;
+                }
+                .#{$prefix_component_nav}nav__links {
                     width: 100%;
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .36s ease-out;
 
                     a:first-child {
-                        margin-top: $size_gap*2;
                         border-top: 1px solid rgba($color_light_01, .075);
                     }
                 }
@@ -46,10 +51,10 @@
                     transition: all .18s ease;
                 }
             }
+
             // Open state
             &.#{$prefix_component_nav}nav--slidedown--active {
-                .container { max-width: 100%; }
-                .nav__links {
+                .#{$prefix_component_nav}nav__links {
                     max-height: 483px;
                     overflow-y: auto;
                 }
@@ -75,53 +80,35 @@
             color: $color_light_02;
         }
     }
-}
 
-.#{$prefix_component_nav}nav__logo {
-    font-size: $size_font_big;
-    font-weight: bold;
-    
-    // Slanted doc treatment
-    font-size: 60px;
-	font-weight: bolder;
-	line-height: 1;
-	padding: 0 10px;
-	letter-spacing: -0.1em;
-	margin: 0;
-	height: 50px;
-	position: relative;
-	display: block;
-	color: darken($color_brand_primary, 10%);
-	top: -2px;
-	transform: rotate(-5deg);
-	user-select: none;
-    &:hover {
-        color: darken($color_brand_primary, 20%);
+    .#{$prefix_component_nav}nav__logo {
+        font-size: $size_font_big;
+        font-weight: bold;
     }
-}
 
-.#{$prefix_component_nav}nav__left {
-    overflow: hidden;
-}
+    .#{$prefix_component_nav}nav__left {
+        overflow: hidden;
+    }
 
-// Icon
-.#{$prefix_component_nav}nav__hamburger__icon {
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-	height: 50px;
-    display: flex;
-    flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-.#{$prefix_component_nav}nav__hamburger__icon__line {
-	width: 24px;
-	height: 2px;
-	background: lighten($color_brand_primary, 25%);
-	border-radius: 2px;
-	margin-bottom: 6px;
-    &:last-child { margin-bottom: 0; }
+    // Icon
+    .#{$prefix_component_nav}nav__hamburger__icon {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $cmp_nav_height;
+        height: $cmp_nav_height;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .#{$prefix_component_nav}nav__hamburger__icon__line {
+        width: 24px;
+        height: 2px;
+        background: lighten($color_brand_primary, 25%);
+        border-radius: 2px;
+        margin-bottom: 5px;
+        &:last-child { margin-bottom: 0; }
+    }
 }

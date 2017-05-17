@@ -55,7 +55,7 @@
 
 .col-0 {
   flex-basis: 0%;
-  max-width: 100%;
+  flex: none;
 }
 
 .col-offset-0 {
@@ -161,7 +161,7 @@
 @media (min-width: 320px) {
   .col-xs-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-xs-offset-0 {
@@ -279,7 +279,7 @@
 @media (min-width: 580px) {
   .col-sm-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-sm-offset-0 {
@@ -397,7 +397,7 @@
 @media (min-width: 820px) {
   .col-md-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-md-offset-0 {
@@ -516,7 +516,7 @@
 @media (min-width: 1024px) {
   .col-lg-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-lg-offset-0 {
@@ -635,7 +635,7 @@
 @media (min-width: 1280px) {
   .col-xl-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-xl-offset-0 {

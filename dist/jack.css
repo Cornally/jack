@@ -2832,7 +2832,7 @@ hr,
 
 .col-0 {
   flex-basis: 0%;
-  max-width: 100%;
+  flex: none;
 }
 
 .col-offset-0 {
@@ -2938,7 +2938,7 @@ hr,
 @media (min-width: 320px) {
   .col-xs-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-xs-offset-0 {
@@ -3056,7 +3056,7 @@ hr,
 @media (min-width: 580px) {
   .col-sm-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-sm-offset-0 {
@@ -3174,7 +3174,7 @@ hr,
 @media (min-width: 820px) {
   .col-md-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-md-offset-0 {
@@ -3293,7 +3293,7 @@ hr,
 @media (min-width: 1024px) {
   .col-lg-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-lg-offset-0 {
@@ -3412,7 +3412,7 @@ hr,
 @media (min-width: 1280px) {
   .col-xl-0 {
     flex-basis: 0%;
-    max-width: 100%;
+    flex: none;
   }
 
   .col-xl-offset-0 {
@@ -3897,6 +3897,9 @@ a--active,
   }
 }
 @media (max-width: 580px) {
+  .nav.nav--slidedown .nav__logo {
+    text-align: center;
+  }
   .nav.nav--slidedown .nav__links {
     width: 100%;
     max-height: 0;
@@ -3904,7 +3907,6 @@ a--active,
     transition: max-height .36s ease-out;
   }
   .nav.nav--slidedown .nav__links a:first-child {
-    margin-top: 14px;
     border-top: 1px solid rgba(255, 255, 255, 0.075);
   }
   .nav.nav--slidedown .nav__links a {
@@ -3912,9 +3914,6 @@ a--active,
   }
   .nav.nav--slidedown .nav__hamburger__icon__line {
     transition: all .18s ease;
-  }
-  .nav.nav--slidedown--active .container {
-    max-width: 100%;
   }
   .nav.nav--slidedown--active .nav__links {
     max-height: 483px;
@@ -3940,22 +3939,6 @@ a--active,
 .nav__logo {
   font-size: 18px;
   font-weight: bold;
-  font-size: 60px;
-  font-weight: bolder;
-  line-height: 1;
-  padding: 0 10px;
-  letter-spacing: -0.1em;
-  margin: 0;
-  height: 50px;
-  position: relative;
-  display: block;
-  color: #383eae;
-  top: -2px;
-  transform: rotate(-5deg);
-  user-select: none;
-}
-.nav__logo:hover {
-  color: #2c3087;
 }
 
 .nav__left {
@@ -3980,7 +3963,7 @@ a--active,
   height: 2px;
   background: #b2b5e6;
   border-radius: 2px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 .nav__hamburger__icon__line:last-child {
   margin-bottom: 0;

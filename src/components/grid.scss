@@ -20,7 +20,7 @@
             // Allow '.col-size-0' for columns that should
             // retain the width of their contents.
             @if $i == 0 {
-                max-width: 100%;
+                flex: none;
             }
         }
 
@@ -42,7 +42,7 @@
                     // Allow '.col-size-0' for columns that should
                     // retain the width of their contents.
                     @if $i == 0 {
-                        max-width: 100%;
+                        flex: none;
                     }
                 }
 
