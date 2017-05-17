@@ -40,7 +40,7 @@
                     width: 100%;
                     max-height: 0;
                     overflow: hidden;
-                    transition: max-height .36s ease-out;
+                    transition: max-height .18s ease-out;
 
                     a:first-child {
                         border-top: 1px solid rgba($color_light_01, .075);
@@ -55,19 +55,19 @@
             // Open state
             &.#{$prefix_component_nav}nav--slidedown--active {
                 .#{$prefix_component_nav}nav__links {
-                    max-height: 483px;
+                    max-height: 150px; // Number of links * link height (px)
                     overflow-y: auto;
                 }
                 // Transform to the menu icon
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
                     &:nth-child(1) {
-                        transform: translate3d(0, 7px, 0) rotate(-45deg);
+                        transform: translate3d(0, 7.25px, 0) rotate(-45deg);
                     }
                     &:nth-child(2) {
                         opacity: 0;
                     }
                     &:nth-child(3) {
-                        transform: translate3d(0, -8px, 0) rotate(45deg);
+                        transform: translate3d(0, -7.25px, 0) rotate(45deg);
                     }
                 }
             }
