@@ -59,14 +59,20 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
     * ~~Wells~~
 * ~~Lists~~
 * Navigation
-    * ~~Top~~
-    * Side
-    * Breadcrumb
+    * ~~Links~~
+    * Menus
+      * ~~Top~~
+      * Side
+      * Breadcrumb
+    * Multi-level menus
+    * Tabs
+* Notifications
+   * Alerts
+   * ~~Modals~~
 * ~~Tables~~
 * Typography
     * Font size management
     * Basic tags
-    * ~~Links~~
 
 ## 3. Customization
 * Sizing
