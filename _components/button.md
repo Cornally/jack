@@ -42,6 +42,14 @@ classes:
         title: .btn--secondary
         description: Button mapped to your branding's secondary color, derived from color mappings in <code>_colors.scss</code>
         tag: .a, &#60;button&#62;
+    - item:
+        title: .btn--sm
+        description: Decrease the padding and font size of your button
+        tag: .a, &#60;button&#62;
+    - item:
+        title: .btn--lg
+        description: Increase the padding and font size of your button
+        tag: .a, &#60;button&#62;
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
