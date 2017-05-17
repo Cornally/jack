@@ -1,5 +1,12 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.12 (May 16, 2017)
+
+FEATURES:
+
+  * Roughed out hamburger menu
+  * Updated docs with button componnet.
+
 ## 0.0.11 (April 22, 2017)
 
 FEATURES:

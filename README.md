@@ -30,16 +30,13 @@ or
 
 For a full list of configuration options, view `node_modules/jack-strap/components/settings/_default.config.scss` after installing the module.
 
-## 2. Components
-1. Color management
-2. Spacing (smart margins & padding)
-3. Grid
-4. Cards
-5. Lists
-6. Tables
+## 2. Roadmap
 
-## 3. Component Roadmap
-1. Form Controls
+* Animation
+    * Keyframes
+    * Easing
+    * Timing management
+* Form Controls
     * Input
         * Text
         * Number
@@ -51,30 +48,32 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
     * Select
         * Single
         * Multi
-    * Buttons
-2. Typography
-    * Font size management
-    * Basic tags
-    * Links
-3. Hero
-    * Full-width
+    * ~~Buttons~~
+* Hero
+    * ~~Full-width~~
     * Container-width
-4. Navigation
-    * Top
+* Layout
+    * ~~Cards~~
+    * ~~Grid~~
+    * ~~Spacing (smart margins & padding)~~
+    * ~~Wells~~
+* ~~Lists~~
+* Navigation
+    * ~~Top~~
     * Side
     * Breadcrumb
-5. Animation
-    * Keyframes
-    * Easing
-    * Timing management
-6. Layout
-    * Wells
+* ~~Tables~~
+* Typography
+    * Font size management
+    * Basic tags
+    * ~~Links~~
 
-## 4. Customization
-1. Sizing
+## 3. Customization
+* Sizing
     * Break point sizes
     * Font sizes
     * Spacing sizes
+    * Color management
 
-## 5. Support
+## 4. Browser/Device Support
 The goal is to support IE11, Edge, Chrome, Safari, Firefox, and Opera out of the box.

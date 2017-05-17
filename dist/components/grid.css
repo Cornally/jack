@@ -22,7 +22,7 @@
   flex: 1 1 0;
 }
 .row--border {
-  border: 1px solid #fcac3d;
+  border: 1px solid #5258C7;
 }
 .row--align-left {
   justify-content: flex-start;
@@ -265,11 +265,11 @@
   }
 
   .xs--hidden {
-    display: none;
+    display: none !important;
   }
 
   .xs--visible {
-    display: initial;
+    display: initial !important;
   }
 }
 .container {
@@ -383,11 +383,11 @@
   }
 
   .sm--hidden {
-    display: none;
+    display: none !important;
   }
 
   .sm--visible {
-    display: initial;
+    display: initial !important;
   }
 }
 .container {
@@ -501,11 +501,11 @@
   }
 
   .md--hidden {
-    display: none;
+    display: none !important;
   }
 
   .md--visible {
-    display: initial;
+    display: initial !important;
   }
 }
 @media (min-width: 820px) {
@@ -620,11 +620,11 @@
   }
 
   .lg--hidden {
-    display: none;
+    display: none !important;
   }
 
   .lg--visible {
-    display: initial;
+    display: initial !important;
   }
 }
 @media (min-width: 1024px) {
@@ -739,11 +739,11 @@
   }
 
   .xl--hidden {
-    display: none;
+    display: none !important;
   }
 
   .xl--visible {
-    display: initial;
+    display: initial !important;
   }
 }
 @media (min-width: 1280px) {

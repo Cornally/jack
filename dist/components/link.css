@@ -1,10 +1,14 @@
 a,
 .link {
-  color: #fcac3d;
+  color: #5258C7;
 }
 a:hover,
 .link:hover {
-  color: #ca8a31;
+  color: #42469f;
+}
+a--active,
+.link--active {
+  font-weight: bold;
 }
 
 .link--default {
