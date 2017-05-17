@@ -2,13 +2,15 @@
     var $nav = document.querySelector('.nav--slidedown');
     var $navTrigger = document.querySelector('.nav__hamburger__icon');
     var navActive = false;
-    $navTrigger.addEventListener('click', function() {
-        if (navActive) {
-            $nav.classList.remove('nav--slidedown--active');
-            navActive = false;
-        } else {
-            $nav.classList.add('nav--slidedown--active');
-            navActive = true;
-        }
-    });
+    if ($navTrigger && $nav) {
+        $navTrigger.addEventListener('click', function() {
+            if (navActive) {
+                $nav.classList.remove('nav--slidedown--active');
+                navActive = false;
+            } else {
+                $nav.classList.add('nav--slidedown--active');
+                navActive = true;
+            }
+        });
+    }
 </script>

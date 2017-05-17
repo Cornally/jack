@@ -6,6 +6,9 @@ states:
     - item:
         title: Basic Buttons
         tpl: button.html
+    - item:
+        title: Outline Buttons
+        tpl: button--line.html
 classes:
     - item:
         title: .btn--default
@@ -30,6 +33,14 @@ classes:
     - item:
         title: .btn--disabled
         description: This button state is for when an action is unavailable
+        tag: .a, &#60;button&#62;
+    - item:
+        title: .btn--primary
+        description: Button mapped to your branding's primary color, derived from color mappings in <code>_colors.scss</code>
+        tag: .a, &#60;button&#62;
+    - item:
+        title: .btn--secondary
+        description: Button mapped to your branding's secondary color, derived from color mappings in <code>_colors.scss</code>
         tag: .a, &#60;button&#62;
 ---
 <div class="container content">

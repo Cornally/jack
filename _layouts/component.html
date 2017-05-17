@@ -4,6 +4,7 @@
   <body class="page--component">
     {% include nav.html %}
     {{ content }}
+    {% include docs__footer.html %}
     <script>
       document.addEventListener("DOMContentLoaded", function(event) { 
         new Clipboard('.copy');
