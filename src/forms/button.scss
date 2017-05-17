@@ -114,4 +114,16 @@
                 }
             }
         }
+
+        // Small button
+        .btn--sm {
+            font-size: 12px;
+            padding: $size_gap/2 $size_gap;
+        }
+
+        // Large button
+        .btn--lg {
+            font-size: 16px;
+            padding: $size_gap*2 $size_gap*3;
+        }
 }
