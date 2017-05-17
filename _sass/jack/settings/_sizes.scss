@@ -38,8 +38,9 @@ $sizes_break: (
 $size_font_smaller: 10px !default;
 $size_font_small: 12px !default;
 $size_font_normal: 14px !default;
-$size_font_big: 22px !default;
-$size_font_bigger: 36px !default;
+$size_font_big: 18px !default;
+$size_font_bigger: 22px !default;
+$size_font_biggest: 36px !default;
 
 // Font size mapping
 $sizes_font: (
@@ -47,7 +48,8 @@ $sizes_font: (
     sm : $size_font_small,
     md : $size_font_normal,
     lg : $size_font_big,
-    xl : $size_font_bigger
+    xl : $size_font_bigger,
+    xx : $size_font_biggest
 );
 
 

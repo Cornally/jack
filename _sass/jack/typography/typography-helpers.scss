@@ -12,12 +12,12 @@
     }
 
     h1 {
-        font-size: $size_font_bigger;
+        font-size: $size_font_biggest;
         @extend %header_font;
     }
 
     h2 {
-        font-size: $size_font_big;
+        font-size: $size_font_bigger;
         @extend %header_font;
     }
 
