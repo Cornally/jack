@@ -8,6 +8,7 @@
     .#{$prefix_component_link}link {
         color: $color_brand_primary;
         &:hover { color: $color_brand_primary/$cmp_hover-divider; }
+        &--active { font-weight: bold; }
     }
 
     // Add states
@@ -18,12 +19,13 @@
         }
     }
 
-    // Add states
+    // Add brand palette
     @each $brand, $color in $colors_brand {
         .#{$prefix_component_list}link--#{$brand} {
             color: $color;
             &:hover { color: $color/$cmp_hover-divider; }
         }
     }
+    
 
 }

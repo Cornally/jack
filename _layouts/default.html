@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-  {% include head.html %}
+  {% include docs__head.html %}
   <body>
         {{ content }}
+        {% include docs__footer.html %}
   </body>
 </html>

@@ -1,8 +1,13 @@
-<nav class="nav nav--docs nav-sm--sticky nav-sm--hamburger">
+<nav class="nav nav--docs nav-sm--sticky nav--slidedown">
     <div class="container m-x-auto">
         <div class="row row--space-between">
             <div class="nav__left">
-                <a href="{{ "/" | relative_url }}" class="nav__logo">Jack</a>
+                <a href="{{ "/" | relative_url }}" class="nav__logo m-x-auto m-x-sm-0">Jack</a>
+                 <a class="nav__hamburger__icon sm--hidden">
+                    <div class="nav__hamburger__icon__line"></div>
+                    <div class="nav__hamburger__icon__line"></div>
+                    <div class="nav__hamburger__icon__line"></div>
+                 </a>
             </div>
             <div class="nav__right nav__links">
                 <a href="{{ "/kitchen-sink" | relative_url }}">Components</a>
