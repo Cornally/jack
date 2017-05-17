@@ -18,6 +18,25 @@ $typography_body_lineheight: 1.8em;
 // Documentation styles start here
 ///////////////////////////////////
 .nav--docs {
+    .nav__logo{
+        font-size: 60px;
+        font-weight: bolder;
+        line-height: 1;
+        padding: 0 10px;
+        letter-spacing: -0.1em;
+        margin: 0;
+        height: 50px;
+        position: relative;
+        display: block;
+        color: darken($color_brand_primary, 10%);
+        top: -2px;
+        transform: rotate(-5deg);
+        user-select: none;
+        &:hover {
+            color: darken($color_brand_primary, 20%);
+        }
+    }
+
     .nav__right a {
         padding: 0 $size_gap;
     }
