@@ -56,18 +56,18 @@
             &.#{$prefix_component_nav}nav--slidedown--active {
                 .#{$prefix_component_nav}nav__links {
                     max-height: 150px; // Number of links * link height (px)
-                    overflow-y: auto;
                 }
                 // Transform to the menu icon
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
+                    margin: 0;
                     &:nth-child(1) {
-                        transform: translate3d(0, 7.25px, 0) rotate(-45deg);
+                        transform: translate3d(0, 2px, 0) rotate(-45deg);
                     }
                     &:nth-child(2) {
                         opacity: 0;
                     }
                     &:nth-child(3) {
-                        transform: translate3d(0, -7.25px, 0) rotate(45deg);
+                        transform: translate3d(0, -2px, 0) rotate(45deg);
                     }
                 }
             }
