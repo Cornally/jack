@@ -55,16 +55,15 @@
             // Line
             .#{$prefix_form_button}btn--#{$state}--line {
                 @extend %btn;
-                border-color: $color;
-                background: rgba($color,.025);
+                border-color: rgba($color, .5);
                 color: $color;
                 &:hover {
                     color: $color;
-                    background: rgba($color,.25);
+                    border-color: currentColor;
                 }
                 &:active {
                     color: $color;
-                    background: rgba($color,.5);
+                    border-color: currentColor;
                 }
                 // This styling should render the button's appearance "unclickable"
                 @if($state == 'disabled') {
@@ -72,7 +71,7 @@
                     &:hover,
                     &:active {
                         color: $color, 25;
-                        background: rgba($color,.025);
+                        border-color: rgba($color, .5);
                     }
                     &:hover { cursor: not-allowed; }
                 }
@@ -101,16 +100,15 @@
             // Line
             .#{$prefix_form_button}btn--#{$brand}--line {
                 @extend %btn;
-                border-color: $color;
-                background: rgba($color,.025);
+                border-color: rgba($color, .5);
                 color: $color;
                 &:hover {
                     color: $color;
-                    background: rgba($color,.25);
+                    border-color: currentColor;
                 }
                 &:active {
                     color: $color;
-                    background: rgba($color,.5);
+                    border-color: currentColor;
                 }
             }
         }

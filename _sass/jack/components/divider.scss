@@ -8,6 +8,21 @@
 		height: 1px;
 		border: none;
 		background-color: $color_light_03;
+
+		&--label { text-align: center; }
+		&--label--left { text-align: left; }
+		&--label--right { text-align: right; }
+		&__text {
+			display: inline-block;
+			color: $color_light_04;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-align: center;
+			transform: translateY(-50%);
+			background: white;
+		}
 	}
+
+
 
 }

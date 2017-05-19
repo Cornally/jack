@@ -7,10 +7,37 @@ states:
         title: Basic Divider
         description: null
         tpl: divider.html
+    - item:
+        title: Labeled Divider
+        description: Add a label to the center of your divider
+        tpl: divider--text.html
+classes:
+    - item:
+        title: .divider--label
+        description: Add a centered label to your divider
+        tag: .divider
+    - item:
+        title: .divider--label--left
+        description: Add a left-aligned label to your divider
+        tag: .divider
+    - item:
+        title: .divider--label--right
+        description: Add a right-aligned label to your divider
+        tag: .divider
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
     <p class="well">{{ page.description }}</p>
+
+    <a class="anchor--docs" id="modifier-classes"></a>
+    <table class="table table--striped m-b-4">
+        <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
+        <tbody>
+            {% for class in page.classes %}
+            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td>{{ class.item.description }}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
 
     {% for state in page.states %}
     <hr class="divider">
