@@ -55,6 +55,7 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
 * Layout
     * ~~Cards~~
     * ~~Grid~~
+    * Sections
     * ~~Spacing (smart margins & padding)~~
     * ~~Wells~~
 * ~~Lists~~
