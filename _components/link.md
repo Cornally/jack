@@ -1,6 +1,6 @@
 ---
 title: Links
-description: Links help connect different universal resource locators on the interwebs.
+description: Links help connect different uniform resource locators on the interwebs.
 layout: component
 states:
     - item:
