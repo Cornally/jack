@@ -1,0 +1,18 @@
+{% if include.section == "example" %}
+<div class="divider divider--label divider--success m-b-4">
+    <div class="divider__text">Success Divider</div>
+</div>
+<div class="divider divider--label divider--warning m-b-4">
+    <div class="divider__text">Warning Divider</div>
+</div>
+<div class="divider divider--label divider--error m-b-4">
+    <div class="divider__text">Error Divider</div>
+</div>
+<div class="divider divider--label divider--info">
+    <div class="divider__text">Info Divider</div>
+</div>
+{% else %}
+<div class="divider divider--label divider--success">
+    <div class="divider__text">Divider Label</div>
+</div>
+{% endif %}

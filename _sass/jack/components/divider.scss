@@ -12,6 +12,7 @@
 		&--label { text-align: center; }
 		&--label--left { text-align: left; }
 		&--label--right { text-align: right; }
+		
 		&__text {
 			display: inline-block;
 			color: $color_light_04;
@@ -20,6 +21,15 @@
 			text-align: center;
 			transform: translateY(-50%);
 			background: white;
+			padding: 0 $size_gap;
+		}
+	}
+
+	// Divider States
+	@each $state, $color in $colors_states {
+		.#{$prefix_form_button}divider--#{$state} {
+			background-color: rgba($color, .5);
+			.#{$prefix_form_button}divider__text { color: $color; }
 		}
 	}
 
