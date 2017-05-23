@@ -5,3 +5,68 @@ hr,
   border: none;
   background-color: #efeeee;
 }
+hr--label,
+.divider--label {
+  text-align: center;
+}
+hr--label--left,
+.divider--label--left {
+  text-align: left;
+}
+hr--label--right,
+.divider--label--right {
+  text-align: right;
+}
+hr__text,
+.divider__text {
+  display: inline-block;
+  color: #d8d8d8;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 7px;
+}
+
+.divider--default {
+  background-color: rgba(49, 51, 59, 0.5);
+}
+.divider--default .divider__text {
+  color: #31333B;
+}
+
+.divider--success {
+  background-color: rgba(111, 218, 122, 0.5);
+}
+.divider--success .divider__text {
+  color: #6FDA7A;
+}
+
+.divider--warning {
+  background-color: rgba(238, 230, 113, 0.5);
+}
+.divider--warning .divider__text {
+  color: #EEE671;
+}
+
+.divider--info {
+  background-color: rgba(107, 184, 235, 0.5);
+}
+.divider--info .divider__text {
+  color: #6BB8EB;
+}
+
+.divider--error {
+  background-color: rgba(220, 70, 70, 0.5);
+}
+.divider--error .divider__text {
+  color: #DC4646;
+}
+
+.divider--disabled {
+  background-color: rgba(216, 216, 216, 0.5);
+}
+.divider--disabled .divider__text {
+  color: #d8d8d8;
+}

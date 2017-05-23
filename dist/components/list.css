@@ -68,7 +68,7 @@
   display: inline-block;
   content: "warning";
   text-indent: -9999px;
-  background: #EEE371;
+  background: #EEE671;
   width: 1em;
   height: 1em;
   line-height: 1em;
@@ -88,7 +88,7 @@
   height: 100%;
   content: "warning";
   text-indent: -9999px;
-  background: #EEE371;
+  background: #EEE671;
 }
 
 .list__item--info:before {

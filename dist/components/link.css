@@ -26,10 +26,10 @@ a--active,
 }
 
 .link--warning {
-  color: #EEE371;
+  color: #EEE671;
 }
 .link--warning:hover {
-  color: #beb65a;
+  color: #beb85a;
 }
 
 .link--info {
@@ -51,6 +51,12 @@ a--active,
 }
 .link--disabled:hover {
   color: #adadad;
+}
+.link--disabled, .link--disabled:hover, .link--disabled:active {
+  color: #d8d8d8;
+}
+.link--disabled:hover {
+  cursor: not-allowed;
 }
 
 .link--primary {

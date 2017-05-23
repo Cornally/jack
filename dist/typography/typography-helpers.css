@@ -13,7 +13,7 @@ h1 {
 }
 
 h2 {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 h3 {
@@ -41,6 +41,10 @@ p {
 }
 
 .text-size-xl {
+  font-size: 22px;
+}
+
+.text-size-xx {
   font-size: 36px;
 }
 
@@ -75,7 +79,7 @@ p {
 }
 
 .text--warning {
-  color: #EEE371;
+  color: #EEE671;
 }
 
 .text--info {
