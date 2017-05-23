@@ -12,7 +12,7 @@ states:
         tpl: card--media.html
     - item:
         title: Stateful Cards
-        description: Indicate state by adding the states defined inside <code>colors.scss</code>
+        description: Indicate state by adding the states defined inside <code>_colors.scss</code>
         tpl: card--states.html
 classes:
     - item:
