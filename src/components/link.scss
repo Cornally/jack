@@ -16,6 +16,16 @@
         .#{$prefix_component_list}link--#{$state} {
             color: $color;
             &:hover { color: $color/$cmp_hover-divider; }
+                
+            // This styling should render the component's appearance "unclickable"
+            @if($state == 'disabled') {
+                &,
+                &:hover,
+                &:active {
+                    color: $color;
+                }
+                &:hover { cursor: not-allowed; }
+            }
         }
     }
 

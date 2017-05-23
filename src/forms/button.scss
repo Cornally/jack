@@ -47,6 +47,7 @@
                     &:active {
                         color: darken($color, 25%);
                         background: $color;
+                        border-color: $color;
                     }
                     &:hover { cursor: not-allowed; }
                 }
