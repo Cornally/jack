@@ -49,19 +49,39 @@ $colors_states: (
 //  `$shift`: Apply a lightening or darkening to base $color
 //  `$count`: Number of derivatives
 //  e.g. 
-//  @include generateColorTicks('red', #ff0000, 'color', lighten', 5);
-//  @include generateColorTicks('darken', #264285, 'background', 'darken', 5);
+//  @include generateColorTicks('text_red', #ff0000, 'color', 'lighten', 30%, 5);
+//  @include generateColorTicks('bg_purple', #264285, 'background', 'darken');
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateColorTicks($name, $color, $property, $shift, $count) {
+@mixin generateColorTicks($name, $color, $property, $shift, $desaturate:30%, $count:6) {
     $increment: 50/$count;
     @for $i from 1 through $count {
-        .color_#{$name}_0#{$i} {
+        .#{$name}_0#{$i} {
             @if ($shift == 'lighten') {
-                #{$property}: desaturate(lighten($color, $i*$increment), 30%);
+                #{$property}: desaturate(lighten($color, $i*$increment), $desaturate);
             } @else {
-                #{$property}: desaturate(darken($color, $i*$increment), 30%);
+                #{$property}: desaturate(darken($color, $i*$increment), $desaturate);
             }
         } 
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////
+// 
+//  Font color dirivatives based off of an input color
+//  
+//  Create derivative colors from a base color, suitable for fonts
+//
+//  e.g.
+//  @include generateFontColor('text_brand', $color_brand_secondary, $color_dark_01, 5);
+//
+////////////////////////////////////////////////////////////////////
+@mixin generateFontColor($name, $color, $shift_color:$color_light_01, $count:6) {
+    $increment: 75/$count;
+    @for $i from 1 through $count {
+        .#{$name}_0#{$i} {
+            color: mix($color, $shift_color, $i*$increment);
+        }
     }
 }

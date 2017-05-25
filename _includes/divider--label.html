@@ -1,3 +1,21 @@
+{% if include.section == "example" %}
+<div class="divider divider--label--left m-b-5">
+    <div class="divider__text">Divider Label</div>
+</div>
+<div class="divider divider--label m-b-5">
+    <div class="divider__text">Divider Label</div>
+</div>
+<div class="divider divider--label--right">
+    <div class="divider__text">Divider Label</div>
+</div>
+{% else %}
+<div class="divider divider--label--left">
+    <div class="divider__text">Divider Label</div>
+</div>
 <div class="divider divider--label">
     <div class="divider__text">Divider Label</div>
 </div>
+<div class="divider divider--label--right">
+    <div class="divider__text">Divider Label</div>
+</div>
+{% endif %}

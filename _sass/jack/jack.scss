@@ -2,6 +2,10 @@
 @import './settings/all';
 @import './utils/all';
 
+// Customized overrides
+@import './settings/user.config';
+
+// Jack Source
 @import './animation/all';
 @import './components/all';
 @import './forms/all';
