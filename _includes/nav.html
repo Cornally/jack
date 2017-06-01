@@ -10,7 +10,18 @@
                 </a>
             </div>
             <div class="nav__right nav__links">
-                <a href="{{ "/kitchen-sink" | relative_url }}">Components</a>
+                <div class="nav__links__list">
+                    <a href="{{ "/kitchen-sink" | relative_url }}">Components</a>
+                    <ul class="list">
+                        {% for component in site.components %}
+                            {% if page.url == component.url %}
+                            <li class="list__item list__item--info-bar"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
+                            {% else %}
+                            <li class="list__item"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
                 <a href="https://www.github.com/Cornally/jack">Github</a>
                 <a href="https://www.twitter.com/Cornally">Twitter</a>
             </div>

@@ -54,7 +54,7 @@ $colors_states: (
 //
 ////////////////////////////////////////////////////////////////////
 @mixin generateColorTicks($name, $color, $property, $shift, $desaturate:30%, $count:6) {
-    $increment: 50/$count;
+    $increment: 45/$count;
     @for $i from 1 through $count {
         .#{$name}_0#{$i} {
             @if ($shift == 'lighten') {

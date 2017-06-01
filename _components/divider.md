@@ -54,7 +54,7 @@ classes:
         <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
         <tbody>
             {% for class in page.classes %}
-            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td>{{ class.item.description }}</td></tr>
+            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td class="text-breakword">{{ class.item.description }}</td></tr>
             {% endfor %}
         </tbody>
     </table>
