@@ -56,7 +56,11 @@
     .#{$prefix_typography}text-nowrap {
         white-space: nowrap;
     }
-
+    
+    // Break word
+    .#{$prefix_typography}text-breakword {
+        word-break: break-word;
+    }
 
     // Ellipsis (...)
     .#{$prefix_typography}text-ellipsis {

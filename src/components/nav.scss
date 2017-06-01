@@ -112,3 +112,16 @@
         &:last-child { margin-bottom: 0; }
     }
 }
+
+.nav__links__list .list {
+    position: absolute;
+    @extend .text_brand_01;
+    @extend .bg_brand_03;
+    width: 150px;
+    .list__item {
+        padding: 0;
+        line-height: 1.5em;
+        a { display: block; }
+        &:hover { @extend .bg_brand_04; }
+    }
+}
