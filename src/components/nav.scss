@@ -46,7 +46,11 @@
                         border-top: 1px solid rgba($color_light_01, .075);
                     }
                 }
-                .nav__links a { display: block; }
+                .nav__links a {
+                    display: block;
+                    padding-left: $size_gap*2;
+                    padding-right: $size_gap*2;
+                }
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
                     transition: all .18s ease;
                 }
@@ -54,9 +58,18 @@
 
             // Open state
             &.#{$prefix_component_nav}nav--slidedown--active {
+
                 .#{$prefix_component_nav}nav__links {
-                    max-height: 150px; // Number of links * link height (px)
+                    max-height: $cmp_nav_height * 20; // Number of links * link height (px)
                 }
+
+                .nav__links__list .list.list--active {
+                    display: inline-block;
+                    position: static;
+                    width: 100%;
+                    a { padding: $size_gap*2 $size_gap*4; }
+                }
+
                 // Transform to the menu icon
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
                     margin: 0;
@@ -72,6 +85,20 @@
                 }
             }
         }
+
+        // Hide dropdowns at smallest size
+        .nav__links__list .list { display: none; }
+
+
+        @media (min-width: $size_break_sm) {
+            .nav__right .link { padding: $size_gap*2; } 
+            .nav__links__list {
+                display: inline-block;
+                position: relative;
+            }
+            .nav__links__list:hover .list { display: inline-block; }
+        }
+
 
         a {
             color: $color_light_01;
@@ -111,17 +138,19 @@
         margin-bottom: 5px;
         &:last-child { margin-bottom: 0; }
     }
-}
 
-.nav__links__list .list {
-    position: absolute;
-    @extend .text_brand_01;
-    @extend .bg_brand_03;
-    width: 150px;
-    .list__item {
-        padding: 0;
-        line-height: 1.5em;
-        a { display: block; }
-        &:hover { @extend .bg_brand_04; }
+    .nav__links__list .list {
+        position: absolute;
+        top: $cmp_nav_height;
+        left: 0;
+        @extend .text_brand_01;
+        @extend .bg_brand_03;
+        width: 150px;
+        .list__item {
+            padding: 0;
+            line-height: 1.5em;
+            a { display: block; }
+            &:hover { @extend .bg_brand_04; }
+        }
     }
 }

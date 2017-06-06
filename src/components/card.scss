@@ -35,7 +35,7 @@
             &.#{$prefix_component_card}card--#{$state} {
                 background: desaturate(lighten($color, 25%), 15%);
                 border-color: $color;
-                color: darken($color, 25%);
+                color: desaturate(darken($color, 20%), 10%);
             }
         }
 
