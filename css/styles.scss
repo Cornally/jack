@@ -10,6 +10,7 @@ $color_brand_secondary: #e0ef7d;
 
 // Set your default <body> values
 $typography_header_font: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typography_body_font: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $typography_body_lineheight: 1.8em;
 
 @import 'jack/jack';
@@ -45,16 +46,6 @@ $typography_body_lineheight: 1.8em;
         &:hover {
             color: darken($color_brand_primary, 20%);
         }
-    }
-
-    .nav__links__list .list { display: none; }
-
-    @media (min-width: $size_break_sm) {
-        .nav__right a {
-            padding: $size_gap*2;
-        }
-        .nav__links__list { display: inline-block; }
-        .nav__links__list:hover .list { display: inline-block; }
     }
 }
 

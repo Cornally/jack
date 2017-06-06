@@ -66,18 +66,13 @@
 
 
         // Preserve a smaller gutter on smaller screens
-        @if $px > 768 {
+        @if $px > $size_break_sm {
             @media (min-width: $px) {
                 .#{$prefix_component_grid}container {
                     max-width: $px - 80px;
                 }
             }
-        } @else {
-            .#{$prefix_component_grid}container {
-                max-width: 90%;
-            }
-        }
-
+        } 
 
     }
 }
