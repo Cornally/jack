@@ -18,7 +18,7 @@
                     position: fixed;
                     top: 0;
                     left: 0;
-                    z-index: 10;
+                    z-index: z("nav");
                     
                     // Push content down the height of the nav when sticky
                     & + *:before {
