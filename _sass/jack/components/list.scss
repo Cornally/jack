@@ -30,7 +30,7 @@
             }
         }
         
-        
+
         .#{$prefix_component_list}list__item--#{$state}-bar {
             position: relative;
             padding-left: 20px;
@@ -46,5 +46,37 @@
             }
         }
     }
+
+     @each $brand, $color in $colors_brand {
+        .#{$prefix_component_list}list__item--#{$brand} {
+            &:before {
+                display: inline-block;
+                content: "#{$brand}";
+                text-indent: -9999px;
+                background: $color;
+                width: 1em;
+                height: 1em;
+                line-height: 1em;
+                border-radius: 50%;
+                margin-right: 15px;
+            }
+        }
+        
+
+        .#{$prefix_component_list}list__item--#{$brand}-bar {
+            position: relative;
+            padding-left: 20px;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                content: "#{$brand}";
+                text-indent: -9999px;
+                background: $color;
+            }
+        }
+     }
 
 }

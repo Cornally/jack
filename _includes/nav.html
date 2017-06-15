@@ -15,7 +15,7 @@
                     <ul class="list">
                         {% for component in site.components %}
                             {% if page.url == component.url %}
-                            <li class="list__item list__item--info-bar"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
+                            <li class="list__item list__item--secondary-bar"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
                             {% else %}
                             <li class="list__item"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
                             {% endif %}
