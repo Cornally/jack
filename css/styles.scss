@@ -23,7 +23,7 @@ $typography_body_lineheight: 1.8em;
 .section--angled:nth-of-type(3):after { @extend .bg_brand_04; }
 
 // Generate some on-brand font colors
-@include generateFontColor('text_brand', #5258C7, $color_light_01, 5);
+@include generateFontColor('text_brand', #5258C7, $color_light_01, 10%, 5);
 
 ///////////////////////////////////
 // Documentation styles start here
@@ -76,7 +76,7 @@ code { padding: 0 5px; }
         line-height: 2em;
     }
     p:not(:last-child) {
-        margin-bottom: $size_gap*2;
+        margin-bottom: $size_gap*3;
     }
     .divider {
          margin: $size_gap*4 0;

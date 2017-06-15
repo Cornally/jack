@@ -15,7 +15,6 @@
     }
 
 
-    // Add state indicators
     @each $state, $color in $colors_states {
         .#{$prefix_component_list}list__item--#{$state} {
             &:before {
@@ -30,6 +29,7 @@
                 margin-right: 15px;
             }
         }
+        
         
         .#{$prefix_component_list}list__item--#{$state}-bar {
             position: relative;

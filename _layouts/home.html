@@ -8,7 +8,7 @@ layout: default
     <div class="container p-4 m-x-auto m-y-4">
       
       <div>
-        <h2 class="m-b-2">Intro</h2>
+        <h2 class="m-b-3">Intro</h2>
         <p>Jack is the culmanation of many years of producing styling deliverables.  It's not just about making a design system work.  It's about making it performant, easily extendable, well documented, and customizable.</p>
         <p>You can include as little OR as much of Jack as you see fit.  The goal is to cautiously toe the line between providing an opinionated architecture without forcing Helvetica Nueue down your throat.  You control the design through the extendable nature of Jack's offerings.</p>
         <p>With that said, we'll be providing example implementations and themes that take some design liberties to hand-hold you in the right direction...tripping and falling into ocular bliss!</p>
@@ -17,19 +17,21 @@ layout: default
       <hr class="divider">
 
       <div>
-        <h2 class="m-b-2">Installation Options</h2>
-        <h3 class="m-b-1">Lite</h3>
-        <p>This is for folks who don't want to write a line of custom CSS.  You should be able to get your project started with our development library.  Grab the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/jack.css" target="_blank">development library</a> or the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/min/jack.css" target="_blank">minified library</a>.</p>
-        <h3 class="m-b-1">Organic</h3>
-        <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Import specific bits of Jack, like just the grid, or, the entire library <code>node_modules/jack-strap/src/jack.scss</code> into your project's existing Sass files.</p>
-        <h3 class="m-b-1">Deep-Tissue</h3>
-        <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Customize <code>_user.config.scss</code> with your preferences.  How you handle PostCSS/Autoprefixing and building is completely up to you.  Webpack implementation examples to come.</p>
+        <h2 class="m-b-3">Installation Options</h2>
+        <div class="well">
+          <h3 class="m-b-1">Lite</h3>
+          <p>This is for folks who don't want to write a line of custom CSS.  You should be able to get your project started with our development library.  Grab the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/jack.css" target="_blank">development library</a> or the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/min/jack.css" target="_blank">minified library</a>.</p>
+          <h3 class="m-b-1">Organic</h3>
+          <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Import specific bits of Jack, like just the grid, or, the entire library <code>node_modules/jack-strap/src/jack.scss</code> into your project's existing Sass files.</p>
+          <h3 class="m-b-1">Deep-Tissue</h3>
+          <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Customize <code>_user.config.scss</code> with your preferences.  How you handle PostCSS/Autoprefixing and building is completely up to you.  Webpack implementation examples to come.</p>
+        </div>
       </div>
 
       <hr class="divider">
       
       <div>
-        <h2 class="m-b-2">Components</h2>
+        <h2 class="m-b-3">Components</h2>
         <ul class="list">
         {% for component in site.components %}
           <li class="list__item"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>

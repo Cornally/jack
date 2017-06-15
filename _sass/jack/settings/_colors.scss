@@ -74,14 +74,14 @@ $colors_states: (
 //  Create derivative colors from a base color, suitable for fonts
 //
 //  e.g.
-//  @include generateFontColor('text_brand', $color_brand_secondary, $color_dark_01, 5);
+//  @include generateFontColor('text_brand', $color_brand_secondary, $color_dark_01, 0%, 5);
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateFontColor($name, $color, $shift_color:$color_light_01, $count:6) {
+@mixin generateFontColor($name, $color, $shift_color:$color_light_01, $desaturate:5%, $count:6) {
     $increment: 75/$count;
     @for $i from 1 through $count {
         .#{$name}_0#{$i} {
-            color: mix($color, $shift_color, $i*$increment);
+            color: desaturate(mix($color, $shift_color, $i*$increment), $desaturate);
         }
     }
 }
