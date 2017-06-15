@@ -18,6 +18,11 @@
 
         .card--highlight {
             @extend .col-xs-12;
+            > .card__head {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
             > .card__head + .card__body { margin-top: 0; } 
         }
 
