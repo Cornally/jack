@@ -25,14 +25,10 @@
 		}
 	}
 
-	// Divider States
 	@each $state, $color in $colors_states {
 		.#{$prefix_form_button}divider--#{$state} {
 			background-color: rgba($color, .5);
 			.#{$prefix_form_button}divider__text { color: $color; }
 		}
 	}
-
-
-
 }

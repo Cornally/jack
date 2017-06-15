@@ -11,13 +11,10 @@
         &--active { font-weight: bold; }
     }
 
-    // Add states
     @each $state, $color in $colors_states {
         .#{$prefix_component_list}link--#{$state} {
             color: $color;
             &:hover { color: $color/$cmp_hover-divider; }
-                
-            // This styling should render the component's appearance "unclickable"
             @if($state == 'disabled') {
                 &,
                 &:hover,
@@ -29,7 +26,6 @@
         }
     }
 
-    // Add brand palette
     @each $brand, $color in $colors_brand {
         .#{$prefix_component_list}link--#{$brand} {
             color: $color;

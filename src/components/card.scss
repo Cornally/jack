@@ -4,7 +4,6 @@
 
     .#{$prefix_component_card}card {
 
-        // Default to a white background
         $cmp_background: $color_light_01;
         $cmp_border: $color_light_03;
         $cmp_border-dark: $color_light_03;
@@ -31,7 +30,6 @@
 
         // Card States
         @each $state, $color in $colors_states {
-            // Build out column widths for each breakpoint size
             &.#{$prefix_component_card}card--#{$state} {
                 background: desaturate(lighten($color, 25%), 15%);
                 border-color: $color;

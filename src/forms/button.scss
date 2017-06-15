@@ -1,7 +1,7 @@
 @import '../settings/all';
 
 @if $include_form_button {
-        // Placeholder button
+
         %btn {
             cursor: pointer;
             display: inline-block;
@@ -21,10 +21,8 @@
             }
         }
 
-        // Button States
         @each $state, $color in $colors_states {
 
-            // Solid
             .#{$prefix_form_button}btn--#{$state} {
                 @extend %btn;
                 border-color: $color;
@@ -40,7 +38,6 @@
                     background: $color/1.3;
                     border-color: $color/1.3;
                 }
-                // This styling should render the button's appearance "unclickable"
                 @if($state == 'disabled') {
                     &,
                     &:hover,
@@ -53,7 +50,6 @@
                 }
             }
 
-            // Line
             .#{$prefix_form_button}btn--#{$state}--line {
                 @extend %btn;
                 border-color: rgba($color, .5);
@@ -66,7 +62,6 @@
                     color: $color;
                     border-color: currentColor;
                 }
-                // This styling should render the button's appearance "unclickable"
                 @if($state == 'disabled') {
                     &,
                     &:hover,
@@ -79,10 +74,8 @@
             }
         }
 
-        // Button Brand Colors
         @each $brand, $color in $colors_brand {
 
-            // Solid
             .#{$prefix_form_button}btn--#{$brand} {
                 @extend %btn;
                 border-color: $color;
@@ -98,7 +91,6 @@
                 }
             }
 
-            // Line
             .#{$prefix_form_button}btn--#{$brand}--line {
                 @extend %btn;
                 border-color: rgba($color, .5);
@@ -114,13 +106,11 @@
             }
         }
 
-        // Small button
         .btn--sm {
             font-size: $size_font_small;
             padding: $size_gap/2 $size_gap;
         }
 
-        // Large button
         .btn--lg {
             font-size: 16px;
             padding: $size_gap*2 $size_gap*3;
