@@ -11,7 +11,7 @@
         &--active { font-weight: bold; }
     }
 
-    @each $state, $color in $colors_states {
+    @each $state, $color in $colors_all {
         .#{$prefix_component_list}link--#{$state} {
             color: $color;
             &:hover { color: $color/$cmp_hover-divider; }
@@ -25,13 +25,5 @@
             }
         }
     }
-
-    @each $brand, $color in $colors_brand {
-        .#{$prefix_component_list}link--#{$brand} {
-            color: $color;
-            &:hover { color: $color/$cmp_hover-divider; }
-        }
-    }
-    
 
 }

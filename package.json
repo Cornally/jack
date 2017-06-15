@@ -1,6 +1,6 @@
 {
   "name": "jack-strap",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Lightweight/portable styling engine",
   "main": "server.js",
   "directories": {

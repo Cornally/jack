@@ -21,7 +21,7 @@
             }
         }
 
-        @each $state, $color in $colors_states {
+        @each $state, $color in $colors_all {
 
             .#{$prefix_form_button}btn--#{$state} {
                 @extend %btn;
@@ -70,38 +70,6 @@
                         border-color: rgba($color, .5);
                     }
                     &:hover { cursor: not-allowed; }
-                }
-            }
-        }
-
-        @each $brand, $color in $colors_brand {
-
-            .#{$prefix_form_button}btn--#{$brand} {
-                @extend %btn;
-                border-color: $color;
-                background: $color;
-                color: white;
-                &:hover {
-                    color: white;
-                    background: $color/1.15;
-                }
-                &:active {
-                    color: white;
-                    background: $color/1.3;
-                }
-            }
-
-            .#{$prefix_form_button}btn--#{$brand}--line {
-                @extend %btn;
-                border-color: rgba($color, .5);
-                color: $color;
-                &:hover {
-                    color: $color;
-                    border-color: currentColor;
-                }
-                &:active {
-                    color: $color;
-                    border-color: currentColor;
                 }
             }
         }
