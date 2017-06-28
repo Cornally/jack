@@ -4,30 +4,37 @@
 	
 	hr,
 	.#{$prefix_component_divider}divider {
-		display: block;
-		height: 1px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
 		border: none;
-		background-color: $color_light_03;
+
+		&:before, &:after {
+			display: block;
+			content: " ";
+			height: 1px;
+			flex: 1;
+			background-color: $color_light_03;
+		}
 
 		&--label { text-align: center; }
-		&--label--left { text-align: left; }
-		&--label--right { text-align: right; }
+		&--label--left:before { display: none; }
+		&--label--right:after { display: none; }
 		
 		&__text {
-			display: inline-block;
+
 			color: $color_light_04;
 			font-weight: bold;
 			text-transform: uppercase;
-			text-align: center;
-			transform: translateY(-50%);
-			background: white;
 			padding: 0 $size_gap;
+			flex: 0;
+			white-space: nowrap;
 		}
 	}
 
 	@each $state, $color in $colors_all {
 		.#{$prefix_form_button}divider--#{$state} {
-			background-color: rgba($color, .5);
+			&:before, &:after { background-color: rgba($color, .5); }
 			.#{$prefix_form_button}divider__text { color: $color; }
 		}
 	}
