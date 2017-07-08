@@ -3,7 +3,7 @@
 @if $include_component_well {
 
     .#{$prefix-component_well}well {
-        background: $color_light_03;
+        background: $color_light_02;
         padding: $gap_lg;
 
         &--no-padding {
@@ -11,13 +11,13 @@
         }
 
         &--border {
-            border: 1px solid $color_light_04;
+            border: 1px solid $color_light_03;
         }
 
         &--shadow {
             box-shadow: inset 0 1px 4px 1px rgba($color_dark_01, .075);
             &--border {
-                border: 1px solid $color_light_04;
+                border: 1px solid $color_light_03;
             }
         }
 
