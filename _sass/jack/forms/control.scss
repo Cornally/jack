@@ -25,12 +25,12 @@
         }
 
         font-size: $cmp_font_normal;
-        padding: $size_gap*2;
+        padding: $gap_md;
     }
 
     .#{$prefix_form_control}form-group {
         .#{$prefix_form_control}form-control:not(:last-child) {
-            margin-bottom: $size_gap*2;
+            margin-bottom: $gap_md;
         }
     }
 }

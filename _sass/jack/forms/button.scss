@@ -2,7 +2,7 @@
 
 @if $include_form_button {
 
-        %btn {
+        .#{$prefix_form_button}btn {
             cursor: pointer;
             display: inline-block;
             border-style: solid;
@@ -10,7 +10,7 @@
             border-radius: $size_br_small;
             font-size: 14px;
             font-weight: bold;
-            padding: $size_gap $size_gap*2;
+            padding: $size_gap $gap_md;
             text-align: center;
 
             // Space them out by default
@@ -19,101 +19,68 @@
                 margin-right: $size_gap;
                 margin-bottom: $size_gap;
             }
-        }
 
-        @each $state, $color in $colors_states {
+            @each $state, $color in $colors_all {
 
-            .#{$prefix_form_button}btn--#{$state} {
-                @extend %btn;
-                border-color: $color;
-                background: $color;
-                color: white;
-                &:hover {
+                &.#{$prefix_form_button}btn--#{$state} {
+                    border-color: $color;
+                    background: $color;
                     color: white;
-                    background: $color/1.15;
-                    border-color: $color/1.15;
-                }
-                &:active {
-                    color: white;
-                    background: $color/1.3;
-                    border-color: $color/1.3;
-                }
-                @if($state == 'disabled') {
-                    &,
-                    &:hover,
-                    &:active {
-                        color: darken($color, 25%);
-                        background: $color;
-                        border-color: $color;
+                    &:hover {
+                        color: white;
+                        background: $color/1.15;
+                        border-color: $color/1.15;
                     }
-                    &:hover { cursor: not-allowed; }
-                }
-            }
-
-            .#{$prefix_form_button}btn--#{$state}--line {
-                @extend %btn;
-                border-color: rgba($color, .5);
-                color: $color;
-                &:hover {
-                    color: $color;
-                    border-color: currentColor;
-                }
-                &:active {
-                    color: $color;
-                    border-color: currentColor;
-                }
-                @if($state == 'disabled') {
-                    &,
-                    &:hover,
                     &:active {
-                        color: $color, 25;
-                        border-color: rgba($color, .5);
+                        color: white;
+                        background: $color/1.3;
+                        border-color: $color/1.3;
                     }
-                    &:hover { cursor: not-allowed; }
+                    @if($state == 'disabled') {
+                        &,
+                        &:hover,
+                        &:active {
+                            color: darken($color, 25%);
+                            background: $color;
+                            border-color: $color;
+                        }
+                        &:hover { cursor: not-allowed; }
+                    }
                 }
-            }
-        }
 
-        @each $brand, $color in $colors_brand {
-
-            .#{$prefix_form_button}btn--#{$brand} {
-                @extend %btn;
-                border-color: $color;
-                background: $color;
-                color: white;
-                &:hover {
-                    color: white;
-                    background: $color/1.15;
-                }
-                &:active {
-                    color: white;
-                    background: $color/1.3;
-                }
-            }
-
-            .#{$prefix_form_button}btn--#{$brand}--line {
-                @extend %btn;
-                border-color: rgba($color, .5);
-                color: $color;
-                &:hover {
+                &--#{$state}--line {
+                    border-color: rgba($color, .5);
                     color: $color;
-                    border-color: currentColor;
-                }
-                &:active {
-                    color: $color;
-                    border-color: currentColor;
+                    &:hover {
+                        color: $color;
+                        border-color: currentColor;
+                    }
+                    &:active {
+                        color: $color;
+                        border-color: currentColor;
+                    }
+                    @if($state == 'disabled') {
+                        &,
+                        &:hover,
+                        &:active {
+                            color: $color, 25;
+                            border-color: rgba($color, .5);
+                        }
+                        &:hover { cursor: not-allowed; }
+                    }
                 }
             }
-        }
 
-        .btn--sm {
-            font-size: $size_font_small;
-            padding: $size_gap/2 $size_gap;
-            line-height: 1.5em;
-        }
+            &--sm {
+                font-size: $size_font_small;
+                padding: $size_gap/2 $size_gap;
+                line-height: 1.5em;
+            }
 
-        .btn--lg {
-            font-size: 16px;
-            padding: $size_gap*2 $size_gap*3;
+            &--lg {
+                font-size: 16px;
+                padding: $gap_md $gap_lg;
+            }
+
         }
 }

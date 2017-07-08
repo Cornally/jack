@@ -16,7 +16,7 @@
         background: $cmp_background;
         border-radius: $size_br_small;
         pre {
-            padding: $size_gap*3;
+            padding: $gap_lg;
             overflow: auto;
         }
         code { color: $cmp_base; }

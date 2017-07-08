@@ -17,8 +17,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        z-index: 100;
-        
+        z-index: z("overlay");
 
         &--active {
             visibility: visible;
@@ -39,20 +38,16 @@
             right: 0;
             bottom: 0;
             background: $cmp_overlay;
-            z-index: 101;
-            
             opacity: 0;
             transition: opacity .5s ease;
         }
 
         &__window {
             background: $color_light_01;
-            border-radius: $size_br_normal;
             width: 80vw;
             max-height: 80vh;
             max-width: 720px;
-            z-index: 102;
-
+            z-index: z("modal");
             opacity: 0;
             transition: opacity .2s ease 0s;
         }

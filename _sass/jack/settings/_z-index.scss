@@ -1,0 +1,22 @@
+///////////////////////////////////////////////////////////
+//
+//  Z-Index
+//
+//  Control the stacking order of our components more easily.
+//
+///////////////////////////////////////////////////////////
+
+$z-layers: (
+    "modal"  : 100,
+    "overlay": 90,
+    "nav"    : 30,
+    "section": -1
+) !default;
+
+@function z($layer) {
+    @if not map-has-key($z-layers, $layer) {
+        @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
+    }
+
+    @return map-get($z-layers, $layer);
+}

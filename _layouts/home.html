@@ -18,11 +18,15 @@ layout: default
 
       <div>
         <h2 class="m-b-3">Installation Options</h2>
-        <div class="well">
+        <div class="well well--success m-b-4">
           <h3 class="m-b-1">Lite</h3>
           <p>This is for folks who don't want to write a line of custom CSS.  You should be able to get your project started with our development library.  Grab the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/jack.css" target="_blank">development library</a> or the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/min/jack.css" target="_blank">minified library</a>.</p>
+        </div>
+        <div class="well well--warning m-b-4">
           <h3 class="m-b-1">Organic</h3>
           <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Import specific bits of Jack, like just the grid, or, the entire library <code>node_modules/jack-strap/src/jack.scss</code> into your project's existing Sass files.</p>
+        </div>
+        <div class="well well--error">
           <h3 class="m-b-1">Deep-Tissue</h3>
           <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Customize <code>_user.config.scss</code> with your preferences.  How you handle PostCSS/Autoprefixing and building is completely up to you.  Webpack implementation examples to come.</p>
         </div>

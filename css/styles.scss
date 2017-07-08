@@ -24,6 +24,7 @@ $typography_body_lineheight: 1.8em;
 
 // Generate some on-brand font colors
 @include generateFontColor('text_brand', #5258C7, $color_light_01, 10%, 5);
+@include generateFontColor('text_alt', $color_brand_primary, $color_dark_01, 15%, 5);
 
 ///////////////////////////////////
 // Documentation styles start here

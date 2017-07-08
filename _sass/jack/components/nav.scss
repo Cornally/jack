@@ -18,7 +18,7 @@
                     position: fixed;
                     top: 0;
                     left: 0;
-                    z-index: 10;
+                    z-index: z("nav");
                     
                     // Push content down the height of the nav when sticky
                     & + *:before {
@@ -41,15 +41,11 @@
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .18s ease-out;
-
-                    a:first-child {
-                        border-top: 1px solid rgba($color_light_01, .075);
-                    }
                 }
                 .nav__links a {
                     display: block;
-                    padding-left: $size_gap*2;
-                    padding-right: $size_gap*2;
+                    padding-left: $gap_md;
+                    padding-right: $gap_md;
                 }
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
                     transition: all .18s ease;
@@ -60,6 +56,7 @@
             &.#{$prefix_component_nav}nav--slidedown--active {
 
                 .#{$prefix_component_nav}nav__links {
+                    border-top: 1px solid rgba($color_light_01, .075);
                     max-height: $cmp_nav_height * 20; // Number of links * link height (px)
                 }
 
@@ -67,7 +64,7 @@
                     display: inline-block;
                     position: static;
                     width: 100%;
-                    a { padding: $size_gap*2 $size_gap*4; }
+                    a { padding: $gap_md $gap_xl; }
                 }
 
                 // Transform to the menu icon
@@ -91,7 +88,7 @@
 
 
         @media (min-width: $size_break_sm) {
-            .nav__right .link { padding: $size_gap*2; } 
+            .nav__right .link { padding: $gap_md; } 
             .nav__links__list {
                 display: inline-block;
                 position: relative;
