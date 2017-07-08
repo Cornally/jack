@@ -64,6 +64,8 @@
                     display: inline-block;
                     position: static;
                     width: 100%;
+                    max-height: initial;
+                    overflow-y: visible;
                     a { padding: $gap_md $gap_xl; }
                 }
 
@@ -139,6 +141,8 @@
         position: absolute;
         top: $cmp_nav_height;
         left: 0;
+	    max-height: calc(100vh - #{$cmp_nav_height * 2});
+        overflow-y: auto;
         @extend .text_brand_01;
         @extend .bg_brand_03;
         width: 150px;
