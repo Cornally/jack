@@ -1,5 +1,12 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.17 (May 31, 2017)
+
+FEATURES:
+
+  * Added well component and documentation.
+  * Added helper size vars for gaps.
+
 ## 0.0.14 (May 31, 2017)
 
 FEATURES:

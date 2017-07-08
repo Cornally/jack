@@ -7,11 +7,11 @@
         width: 100%;
 
         th {
-            padding: $size_gap $size_gap*2;
+            padding: $size_gap $gap_md;
             text-align: left;
         }
         td {
-            padding: $size_gap $size_gap*2;
+            padding: $size_gap $gap_md;
         }
         
         &--striped {

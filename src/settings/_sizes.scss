@@ -15,6 +15,11 @@
 
 // Keep spacing between elements consistent with standard gaps
 $size_gap: 7px !default;
+$gap_xs: $size_gap / 2;
+$gap_sm: $size_gap;
+$gap_md: $size_gap * 2;
+$gap_lg: $size_gap * 3;
+$gap_xl: $size_gap * 4;
 
 
 // Break points for @media
