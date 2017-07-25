@@ -9,14 +9,14 @@ $color_brand_primary: #52aac7;
 $color_brand_secondary: #e0ef7d;
 
 // Set your default <body> values
-$typography_header_font: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$typography_body_font: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typography_header_font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+$typography_body_font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $typography_body_lineheight: 1.8em;
 
 @import 'jack/jack';
 
-// // Generate some on-brand background colors
-// @include generateColorTicks('bg_brand', #5258C7, 'background', 'darken', 10%, 5);
+// Generate some on-brand background colors
+@include generateColorTicks('bg_brand', #5258C7, 'background', 'darken', 10%, 5);
 
 .section--angled:nth-of-type(1):after { @extend .bg_brand_03; }
 .section--angled:nth-of-type(2):after { @extend .bg_brand_02; }
@@ -29,6 +29,9 @@ $typography_body_lineheight: 1.8em;
 ///////////////////////////////////
 // Documentation styles start here
 ///////////////////////////////////
+h1 { letter-spacing: -.15rem; }
+h2 { letter-spacing: -.10rem; }
+h3,h4,h5 { letter-spacing: -.05rem; }
 .nav--docs {
     .nav__logo{
         font-size: 60px;

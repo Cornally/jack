@@ -5,11 +5,11 @@
 // Customized overrides
 @import './settings/user.config';
 
+// Generate some on-brand background colors
+@include generateColorTicks('bg_brand', #5258C7, 'background', 'darken', 20%, 5);
+
 // Jack Source
 @import './animation/all';
 @import './components/all';
 @import './forms/all';
 @import './typography/all';
-
-// Generate some on-brand background colors
-@include generateColorTicks('bg_brand', #5258C7, 'background', 'darken', 20%, 5);
