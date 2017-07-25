@@ -1,11 +1,11 @@
 h1, h2, h3 {
-  font-family: "Product Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: $typography_header_font;
 }
 
 body {
   color: #15161A;
   font-size: 14px;
-  font-family: "Roboto", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: $typography_body_font;
 }
 
 h1 {

@@ -1,5 +1,13 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.18 (July 24, 2017)
+
+IMPROVEMENTS:
+
+  * Updated list and well components with some output cleanup.
+  * Switched default font to Open Sans.
+
+
 ## 0.0.17 (May 31, 2017)
 
 FEATURES:
