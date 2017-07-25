@@ -2,6 +2,33 @@
 
 @if $include_component_list {
 
+    %list_item_state {
+        &:before {
+            display: inline-block;
+            content: " ";
+            text-indent: -9999px;
+            width: 1em;
+            height: 1em;
+            line-height: 1em;
+            border-radius: 50%;
+            margin-right: $gap_md;
+        }
+    }
+
+    %list_item_state_bar {
+        position: relative;
+        padding-left: $gap_lg;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            content: " ";
+            text-indent: -9999px;
+        }
+    }
+
     .#{$prefix_component_list}list {
         @extend %no_margins !optional;
         @extend %no_padding !optional;
@@ -17,31 +44,16 @@
 
     @each $state, $color in $colors_all {
         .#{$prefix_component_list}list__item--#{$state} {
+            @extend %list_item_state !optional;
             &:before {
-                display: inline-block;
-                content: "#{$state}";
-                text-indent: -9999px;
                 background: $color;
-                width: 1em;
-                height: 1em;
-                line-height: 1em;
-                border-radius: 50%;
-                margin-right: $gap_md;
             }
         }
         
 
         .#{$prefix_component_list}list__item--#{$state}-bar {
-            position: relative;
-            padding-left: $gap_lg;
+            @extend %list_item_state_bar !optional;
             &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 4px;
-                height: 100%;
-                content: "#{$state}";
-                text-indent: -9999px;
                 background: $color;
             }
         }

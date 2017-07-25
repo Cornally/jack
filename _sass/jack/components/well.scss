@@ -2,6 +2,20 @@
 
 @if $include_component_well {
 
+    %well_state {
+        position: relative;
+        padding-left: $gap_lg;
+        &:before {
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            text-indent: -9999px;
+        }
+    }
+
     .#{$prefix-component_well}well {
         background: $color_light_02;
         padding: $gap_lg;
@@ -23,16 +37,8 @@
 
         @each $state, $color in $colors_all {
             &.#{$prefix-component_well}well--#{$state} {
-                position: relative;
-                padding-left: $gap_lg;
+                @extend %well_state !optional;
                 &:before {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 4px;
-                    height: 100%;
-                    content: "#{$state}";
-                    text-indent: -9999px;
                     background: $color;
                 }
             }
