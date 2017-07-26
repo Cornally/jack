@@ -28,6 +28,14 @@
         @extend %header_font;
     }
 
+    h4 {
+        @extend %header_font;
+    }
+
+    h5 {
+        @extend %header_font;
+    }
+
     p {
         line-height: $typography_body_lineheight;
     }
