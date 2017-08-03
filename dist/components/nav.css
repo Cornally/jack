@@ -9,7 +9,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 30;
   }
   .nav.nav-xs--sticky + *:before {
     display: block;
@@ -22,7 +22,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 30;
   }
   .nav.nav-sm--sticky + *:before {
     display: block;
@@ -35,7 +35,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 30;
   }
   .nav.nav-md--sticky + *:before {
     display: block;
@@ -48,7 +48,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 30;
   }
   .nav.nav-lg--sticky + *:before {
     display: block;
@@ -61,7 +61,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 30;
   }
   .nav.nav-xl--sticky + *:before {
     display: block;
@@ -79,17 +79,27 @@
     overflow: hidden;
     transition: max-height .18s ease-out;
   }
-  .nav.nav--slidedown .nav__links a:first-child {
-    border-top: 1px solid rgba(255, 255, 255, 0.075);
-  }
   .nav.nav--slidedown .nav__links a {
     display: block;
+    padding-left: 14px;
+    padding-right: 14px;
   }
   .nav.nav--slidedown .nav__hamburger__icon__line {
     transition: all .18s ease;
   }
   .nav.nav--slidedown--active .nav__links {
-    max-height: 150px;
+    border-top: 1px solid rgba(255, 255, 255, 0.075);
+    max-height: 1000px;
+  }
+  .nav.nav--slidedown--active .nav__links__list .list.list--active {
+    display: inline-block;
+    position: static;
+    width: 100%;
+    max-height: initial;
+    overflow-y: visible;
+  }
+  .nav.nav--slidedown--active .nav__links__list .list.list--active a {
+    padding: 14px 28px;
   }
   .nav.nav--slidedown--active .nav__hamburger__icon__line {
     margin: 0;
@@ -102,6 +112,21 @@
   }
   .nav.nav--slidedown--active .nav__hamburger__icon__line:nth-child(3) {
     transform: translate3d(0, -2px, 0) rotate(45deg);
+  }
+}
+.nav .nav__links__list .list {
+  display: none;
+}
+@media (min-width: 580px) {
+  .nav .nav__right .link {
+    padding: 14px;
+  }
+  .nav .nav__links__list {
+    display: inline-block;
+    position: relative;
+  }
+  .nav .nav__links__list:hover .list {
+    display: inline-block;
   }
 }
 .nav a {
@@ -142,4 +167,20 @@
 }
 .nav__hamburger__icon__line:last-child {
   margin-bottom: 0;
+}
+
+.nav__links__list .list {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  width: 150px;
+}
+.nav__links__list .list .list__item {
+  padding: 0;
+  line-height: 1.5em;
+}
+.nav__links__list .list .list__item a {
+  display: block;
 }

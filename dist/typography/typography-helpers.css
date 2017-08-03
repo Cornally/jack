@@ -1,22 +1,25 @@
-h1, h2, h3 {
-  font-family: $typography_header_font;
+h1, h2, h3, h4, h5 {
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body {
-  color: #15161A;
+  color: #414551;
   font-size: 14px;
-  font-family: $typography_body_font;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 h1 {
+  color: #15161A;
   font-size: 36px;
 }
 
 h2 {
+  color: #15161A;
   font-size: 22px;
 }
 
 h3 {
+  color: #15161A;
   font-size: 14px;
 }
 
@@ -64,10 +67,22 @@ p {
   white-space: nowrap;
 }
 
+.text-breakword {
+  word-break: break-word;
+}
+
 .text-ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.text--primary {
+  color: #5258C7;
+}
+
+.text--secondary {
+  color: #7defe5;
 }
 
 .text--default {
@@ -92,12 +107,4 @@ p {
 
 .text--disabled {
   color: #d8d8d8;
-}
-
-.text--primary {
-  color: #5258C7;
-}
-
-.text--secondary {
-  color: #7defe5;
 }

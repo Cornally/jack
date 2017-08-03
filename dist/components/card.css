@@ -15,35 +15,45 @@
 .card--shadow--border {
   border: 1px solid #efeeee;
 }
+.card.card--primary {
+  background: #babcdf;
+  border-color: #5258C7;
+  color: #35387e;
+}
+.card.card--secondary {
+  background: #f0fcfb;
+  border-color: #7defe5;
+  color: #2fd7c9;
+}
 .card.card--default {
   background: #767676;
   border-color: #31333B;
-  color: black;
+  color: #030303;
 }
 .card.card--success {
   background: #d8f0db;
   border-color: #6FDA7A;
-  color: #29a035;
+  color: #3aa945;
 }
 .card.card--warning {
   background: #f9f8e5;
   border-color: #EEE671;
-  color: #c8bc18;
+  color: #d2c727;
 }
 .card.card--info {
   background: #deedf7;
   border-color: #6BB8EB;
-  color: #1a7cbd;
+  color: #2988c7;
 }
 .card.card--error {
   background: #e9b8b8;
   border-color: #DC4646;
-  color: #891a1a;
+  color: #952727;
 }
 .card.card--disabled {
   background: white;
   border-color: #d8d8d8;
-  color: #989898;
+  color: #a5a5a5;
 }
 .card__head {
   padding: 21px;

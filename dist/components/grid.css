@@ -272,10 +272,6 @@
     display: initial !important;
   }
 }
-.container {
-  max-width: 90%;
-}
-
 @media (min-width: 580px) {
   .col-sm-0 {
     flex-basis: 0%;
@@ -390,10 +386,6 @@
     display: initial !important;
   }
 }
-.container {
-  max-width: 90%;
-}
-
 @media (min-width: 820px) {
   .col-md-0 {
     flex-basis: 0%;
