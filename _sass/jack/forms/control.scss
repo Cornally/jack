@@ -2,9 +2,7 @@
 
 @if $include_form_control {
 
-    $cmp_font_normal: $size_font_normal;
-
-    .#{$prefix_form_control}form-control {
+    .#{$prefix_form_control}form-control:not([type="color"]) {
         -webkit-appearance: none;
         -moz-appearance: none;
         -ms-appearance: none;
@@ -24,7 +22,7 @@
             color: $color_light_04;
         }
 
-        font-size: $cmp_font_normal;
+        font-size: $size_font_md;
         padding: $gap_md;
     }
 

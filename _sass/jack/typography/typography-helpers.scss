@@ -6,25 +6,33 @@
 
     body {
         color: $color_dark_04;
-        font-size: $size_font_normal;
+        font-size: $size_font_md;
         font-family: $typography_body_font;
     }
 
     h1 {
         color: $color_dark_01;
-        font-size: $size_font_biggest;
+        font-size: $size_font_xxl;
         @extend %header_font;
     }
 
     h2 {
         color: $color_dark_01;
-        font-size: $size_font_bigger;
+        font-size: $size_font_xl;
         @extend %header_font;
     }
 
     h3 {
         color: $color_dark_01;
-        font-size: $size_font_normal;
+        font-size: $size_font_md;
+        @extend %header_font;
+    }
+
+    h4 {
+        @extend %header_font;
+    }
+
+    h5 {
         @extend %header_font;
     }
 
