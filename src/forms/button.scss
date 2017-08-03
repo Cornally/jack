@@ -28,19 +28,19 @@
                     color: white;
                     &:hover {
                         color: white;
-                        background: $color/1.15;
-                        border-color: $color/1.15;
+                        background: adjust-color($color, $lightness: -5%, $saturation: -15%);
+                        border-color: adjust-color($color, $lightness: -5%, $saturation: -15%);;
                     }
                     &:active {
                         color: white;
-                        background: $color/1.3;
-                        border-color: $color/1.3;
+                        background: adjust-color($color, $lightness: -10%, $saturation: -30%);;
+                        border-color: adjust-color($color, $lightness: -10%, $saturation: -30%);;
                     }
                     @if($state == 'disabled') {
                         &,
                         &:hover,
                         &:active {
-                            color: darken($color, 25%);
+                            color: adjust-color($color, $lightness: -15%, $saturation: -15%);
                             background: $color;
                             border-color: $color;
                         }
@@ -63,7 +63,7 @@
                         &,
                         &:hover,
                         &:active {
-                            color: $color, 25;
+                            color: $color;
                             border-color: rgba($color, .5);
                         }
                         &:hover { cursor: not-allowed; }

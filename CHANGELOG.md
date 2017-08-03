@@ -1,5 +1,11 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.19 (August 2, 2017)
+
+FIXES:
+
+  * Replaced button and link component states with internal SASS color function derivatives.
+
 ## 0.0.18 (July 24, 2017)
 
 IMPROVEMENTS:

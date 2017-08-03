@@ -1,20 +1,17 @@
 @import '../settings/all';
 
 @if $include_component_link {
-
-    $cmp_hover-divider: 1.25;
-
     a,
     .#{$prefix_component_link}link {
         color: $color_brand_primary;
-        &:hover { color: $color_brand_primary/$cmp_hover-divider; }
+        &:hover { color: adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%); }
         &--active { font-weight: bold; }
     }
 
     @each $state, $color in $colors_all {
         .#{$prefix_component_list}link--#{$state} {
             color: $color;
-            &:hover { color: $color/$cmp_hover-divider; }
+            &:hover { color: adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%); }
             @if($state == 'disabled') {
                 &,
                 &:hover,
