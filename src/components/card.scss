@@ -38,17 +38,17 @@
 
         &__head {
             padding: $gap_lg;
-            font-size: $size_font_big;
+            font-size: $size_font_lg;
             font-weight: bold;
         }
 
         &__head__title {
-            font-size: $size_font_big;
+            font-size: $size_font_lg;
             font-weight: bold;
         }
 
         &__head__subtitle {
-            font-size: $size_font_normal;
+            font-size: $size_font_md;
             font-weight: lighter;
             color: $color_dark_04;
             margin-top: $gap_md;
@@ -63,7 +63,7 @@
 
         &__body {
             padding: $gap_lg;
-            font-size: $size_font_normal;
+            font-size: $size_font_md;
             line-height: $typography_body_lineheight;
         }
 

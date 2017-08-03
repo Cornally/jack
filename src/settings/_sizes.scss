@@ -40,24 +40,24 @@ $sizes_break: (
 
 
 // Font sizes
-$size_font_smaller: 10px !default;
-$size_font_small: 12px !default;
-$size_font_normal: 14px !default;
-$size_font_big: 18px !default;
-$size_font_bigger: 22px !default;
-$size_font_biggest: 36px !default;
+$size_font_xs: 10px !default;
+$size_font_sm: 12px !default;
+$size_font_md: 14px !default;
+$size_font_lg: 18px !default;
+$size_font_xl: 22px !default;
+$size_font_xxl: 36px !default;
 
 // Font size mapping
 $sizes_font: (
-    xs : $size_font_smaller,
-    sm : $size_font_small,
-    md : $size_font_normal,
-    lg : $size_font_big,
-    xl : $size_font_bigger,
-    xx : $size_font_biggest
+    xs : $size_font_xs,
+    sm : $size_font_sm,
+    md : $size_font_md,
+    lg : $size_font_lg,
+    xl : $size_font_xl,
+    xx : $size_font_xxl
 );
 
 
 // Border radius sizes
-$size_br_small: 3px;
-$size_br_normal: 5px;
+$size_radius_sm: 3px;
+$size_radius_md: 5px;
