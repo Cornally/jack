@@ -37,16 +37,16 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
     * Easing
     * Timing management
 * Form Controls
-    * Input
-        * Text
-        * Number
-        * Password
-        * Search
-        * Radio
-        * Checkbox
+    * ~~Input~~
+        * ~~Text~~
+        * ~~Number~~
+        * ~~Password~~
+        * ~~Search~~
+        * ~~Radio~~
+        * ~~Checkbox~~
     * Textarea
     * Select
-        * Single
+        * ~~Single~~
         * Multi
     * ~~Buttons~~
 * Hero
@@ -56,7 +56,7 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
     * ~~Cards~~
     * ~~Dividers~~
     * ~~Grid~~
-    * Sections
+    * ~~Sections~~
     * ~~Spacing (smart margins & padding)~~
     * ~~Wells~~
 * ~~Lists~~

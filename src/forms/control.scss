@@ -1,34 +1,139 @@
 @import '../settings/all';
 
-@if $include_form_control {
+@if $include_form_field {
 
-    .#{$prefix_form_control}form-control:not([type="color"]) {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        -ms-appearance: none;
-        appearance: none;
+    $cmp_border_radius: $size_radius_sm;
+    $cmp_accent_thickness: 3px;
 
-        outline-color: $color_brand_secondary;
-
-        // Light (controls default to light)
-        @at-root {
-            input#{&},
-            textarea#{&},
-            select#{&} {
-                border: 1px solid $color_light_03;
-            }
-        }
-        &::placeholder {
-            color: $color_light_04;
-        }
-
-        font-size: $size_font_md;
-        padding: $gap_md;
+    .#{$prefix_form_field}field__label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: $gap_sm;
     }
 
-    .#{$prefix_form_control}form-group {
-        .#{$prefix_form_control}form-control:not(:last-child) {
-            margin-bottom: $gap_md;
+    .#{$prefix_form_field}field__control {
+        -ms-appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        outline: none;
+
+        display: block;
+        width: 100%;
+        padding: $gap_md;
+        font-size: $size_font_md;
+        border-radius: $cmp_border_radius;
+
+        // Light (controls default to light)
+        border: 1px solid $color_light_03;
+        background: $color_light_01;
+
+        &:hover,
+        &:focus { border-color: $color_light_04; }
+
+        &::placeholder { color: $color_light_04; }
+    }
+
+    .#{$prefix_form_field}field {
+
+        &--select {
+            position: relative;
+
+            .#{$prefix_form_field}field__control {
+                // Hide Mozilla outline
+                &:-moz-focusring {
+                    color: transparent;
+                    text-shadow: 0 0 0 #000;
+                }
+            }
+
+            &:after, &:before {
+                display: block;
+                content: "";
+                position: absolute;
+                right: $gap_lg;
+                bottom: $gap_lg - 2px;
+                width: $cmp_accent_thickness;
+                height: 12px;
+                background-color: $color_light_04;
+            }
+            &:before {
+                transform: rotate(-45deg) translate3d(calc(-50% - #{$cmp_accent_thickness}), 0, 0);
+            }
+            &:after {
+                transform: rotate(45deg) translate3d(calc(50% + #{$cmp_accent_thickness}), 0, 0);
+            }            
         }
+
+        &--checkbox,
+        &--radio {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            line-height: 22px;
+            
+            label { @extend .m-y-2 !optional; }
+
+            .#{$prefix_form_field}field__control {
+                width: 14px;
+                height: 14px;
+                padding: 10px;
+                float: left;
+                @extend .m-r-2 !optional;
+                @extend .m-y-0 !optional;
+                &:checked {
+                    position: relative;
+                    &:before {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        left: calc(50% - 6px);
+                        top: calc(50% - 6px);
+                        width: 12px;
+                        height: 12px;
+                        background: $color_state_success;
+                        border-top: 2px solid rgba($color_dark_01, .10);
+                        border-bottom: 2px solid rgba($color_light_01, .20);
+                        border-radius: $cmp_border_radius/2;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+
+        &--radio {
+            .#{$prefix_form_field}field__control {
+                border-radius: 50%;
+                &:checked {
+                    &:before {
+                        background: $color_brand_primary;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+
+        &--color {
+            .#{$prefix_form_field}field__control {
+                padding: 0;
+                width: $gap_lg*2;
+                &::-webkit-color-swatch-wrapper {
+                    border-radius: $cmp_border_radius;
+                    overflow: hidden;
+                    padding: 0;
+                }
+                &::-webkit-color-swatch {
+                    border-top: 3px solid rgba($color_dark_01, .10);
+                    border-bottom: 3px solid rgba($color_light_01, .20);
+                    border-left: none;
+                    border-right: none;
+                }
+            }
+        }
+    }
+
+    // Add vertical spacing
+    .#{$prefix_form_field}field:not(:last-of-type) {
+        margin-bottom: $gap_lg;
     }
 }
