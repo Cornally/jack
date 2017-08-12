@@ -30,6 +30,11 @@
 
         &:hover,
         &:focus { border-color: $color_light_04; }
+        &:disabled {
+            border: 1px solid $color_light_03;
+            background: $color_light_02;
+            cursor: not-allowed;
+        }
 
         &::placeholder { color: $color_light_04; }
     }
