@@ -1,0 +1,129 @@
+@import '../settings/all';
+@import '../utils/decimal';
+
+/////////////////////////
+// Spacing Helpers
+/////////////////////////
+
+// Based on our gap size defined in `utils/_sizes.scss`,
+// create a media query for each respective breakpoint size,
+// Loop through each spacing size and set spacing values.
+// .{prefix}-margin-{top, right, left, bottom, left & right, top & bottom}-{breakpoint_size}-{spacing_size}
+//
+// We emit placeholder classes for extendability and
+// to avoid having to include these repeatedly on a 
+// particular component. To add padding to all card headers
+// you can extend the emitted placeholders below:
+// e.g. .your__component { @extend %p-x-xs-2; }
+// Note the use of `!optional`, this is required to prevent
+// compile-time errors.
+//
+// Control whether or not we output_type placeholders or bonafied css utility classes
+// by passing $output_type a value of 'placeholder' or 'class'.
+
+@mixin spacing($output, $type, $count) {
+    $type_count: $count;
+    $prefix_type: null;
+    $prefix_util_spacing: null;
+    $suffix: null;
+    $output_type: null;
+
+    // Handle spacing type (margin or padding)
+    @if $type == "margin" {
+        $prefix_type: "m";
+        $prefix_util_spacing: $prefix_util_margins;
+    } @else if $type == "padding" {
+        $prefix_type: "p";
+        $prefix_util_spacing: $prefix_util_padding;
+    }
+
+    // Handle output_type
+    @if $output == "placeholder" {
+        $output_type: '%';
+    } @else if $output == "class" {
+        $output_type: '.';
+        $suffix: '!important';
+    }
+
+    @for $i from 0 through $type_count {
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-t-#{$i} {
+            #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
+        }
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-r-#{$i} {
+            #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
+        }
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-b-#{$i} {
+            #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
+        }
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-l-#{$i} {
+            #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
+        }
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-x-#{$i} {
+            #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
+            #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
+        }
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-y-#{$i} {
+            #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
+            #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
+        }
+        #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-#{$i} {
+            #{$type}: decimal-round($size_gap * $i) #{$suffix};
+        }
+    }
+    
+    // Horizontally center if we have display: block; and a width set
+    #{$output_type}#{$prefix_util_margins}m-x-auto {
+        margin-left: auto #{$suffix};
+        margin-right: auto #{$suffix};
+    }
+
+    // Loop through each break point size
+    @each $size, $px in $sizes_break {
+        @media (min-width: $px) {
+            @for $i from 0 through $type_count {
+                // Construct classes & extendable faux classes
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-t-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
+                }
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-r-#{$size}-#{$i} {
+                    #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
+                }
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-b-#{$size}-#{$i} {
+                    #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
+                }
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-l-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
+                }
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-x-#{$size}-#{$i} {
+                    #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
+                    #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
+                }
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-y-#{$size}-#{$i} {
+                    #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
+                    #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
+                }
+                #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-#{$size}-#{$i} {
+                    #{$type}: decimal-round($size_gap * $i) #{$suffix};
+                }
+            }
+            
+            // Horizontally center if we have display: block; and a width set
+            #{$output_type}#{$prefix_util_margins}m-x-#{$size}-auto {
+                margin-left: auto #{$suffix};
+                margin-right: auto #{$suffix};
+            }
+        }
+    }
+}
+
+@if $include_util_margins {
+    @include spacing("class", "margin", 5);
+}
+
+@if $include_util_padding {
+    @include spacing("class", "padding", 5);
+}
+
+// Export placeholders for easy extendability
+@include spacing("placeholder", "margin", 5);
+@include spacing("placeholder", "padding", 5);

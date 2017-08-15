@@ -45,6 +45,9 @@
             position: relative;
 
             .#{$prefix_form_field}field__control {
+                &:not(:disabled) {
+                    cursor: pointer;
+                }
                 // Hide Mozilla outline
                 &:-moz-focusring {
                     color: transparent;
@@ -77,15 +80,20 @@
             text-align: left;
             line-height: 22px;
             
-            label { @extend .m-y-2 !optional; }
+            .#{$prefix_form_field}field__label {
+                @extend %m-y-2 !optional;
+            }
 
             .#{$prefix_form_field}field__control {
                 width: 14px;
                 height: 14px;
                 padding: 10px;
                 float: left;
-                @extend .m-r-2 !optional;
-                @extend .m-y-0 !optional;
+                @extend %m-r-2 !optional;
+                @extend %m-y-0 !optional;
+                &:not(:disabled) {
+                    cursor: pointer;
+                }
                 &:checked {
                     position: relative;
                     &:before {
@@ -122,6 +130,9 @@
             .#{$prefix_form_field}field__control {
                 padding: 0;
                 width: $gap_lg*2;
+                &:not(:disabled) {
+                    cursor: pointer;
+                }
                 &::-webkit-color-swatch-wrapper {
                     border-radius: $cmp_border_radius;
                     overflow: hidden;
