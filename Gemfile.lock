@@ -20,7 +20,7 @@ GEM
     jekyll-feed (0.9.2)
       jekyll (~> 3.3)
     jekyll-sass-converter (1.5.0)
-      sass (~> 3.4)
+      sass (~> 3.5)
     jekyll-watch (1.5.0)
       listen (~> 3.0, < 3.1)
     kramdown (1.13.2)
@@ -39,7 +39,7 @@ GEM
       ffi (>= 0.5.0)
     rouge (1.11.1)
     safe_yaml (1.0.4)
-    sass (3.4.23)
+    sass (3.5.1)
 
 PLATFORMS
   ruby
