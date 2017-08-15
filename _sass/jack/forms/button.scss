@@ -10,7 +10,7 @@
             border-radius: $size_radius_sm;
             font-size: 14px;
             font-weight: bold;
-            padding: $size_gap $gap_md;
+            padding: $gap_sm $gap_md;
             text-align: center;
 
             // Space them out by default
@@ -73,13 +73,13 @@
 
             &--sm {
                 font-size: $size_font_sm;
-                padding: $size_gap/2 $size_gap;
+                padding: $gap_xs $gap_sm;
                 line-height: 1.5em;
             }
 
             &--lg {
                 font-size: 16px;
-                padding: $gap_md $gap_lg;
+                padding: $gap_md $gap_xl;
             }
 
         }

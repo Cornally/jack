@@ -13,6 +13,9 @@ $typography_header_font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sa
 $typography_body_font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $typography_body_lineheight: 1.8em;
 
+// Add code styling
+$include_component_code: true;
+
 @import 'jack/jack';
 
 // Generate some on-brand background colors
@@ -24,14 +27,23 @@ $typography_body_lineheight: 1.8em;
 
 // Generate some on-brand font colors
 @include generateFontColor('text_brand', #5258C7, $color_light_01, 10%, 5);
-@include generateFontColor('text_alt', $color_brand_primary, $color_dark_01, 15%, 5);
+@include generateFontColor('text_primary', $color_brand_primary, $color_dark_01, 15%, 5);
 
 ///////////////////////////////////
 // Documentation styles start here
 ///////////////////////////////////
-h1 { letter-spacing: -.15rem; }
-h2 { letter-spacing: -.10rem; }
-h3,h4,h5 { letter-spacing: -.05rem; }
+h1 {
+    letter-spacing: -.15rem;
+    @extend .text_primary_01 !optional;
+}
+h2 {
+    letter-spacing: -.10rem;
+    @extend .text_primary_02 !optional;
+}
+h3, h4, h5 { 
+    letter-spacing: -.05rem;
+    @extend .text_primary_02 !optional;
+}
 .nav--docs {
     .nav__logo{
         font-size: 47px;
@@ -78,6 +90,7 @@ code { padding: 0 5px; }
 .page--home {
     p {
         line-height: 2em;
+        @extend .text_primary_03 !optional;
     }
     p:not(:last-child) {
         margin-bottom: $size_gap*3;

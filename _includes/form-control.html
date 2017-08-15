@@ -1,0 +1,50 @@
+{% if include.section == "example" %}
+<div class="col-12 col-md-8 col-lg-6">
+    <div class="field">
+        <label class="field__label">Text Field</label>
+        <input class="field__control" type="text" placeholder="Placeholder..." />
+    </div>
+    <div class="field">
+        <label class="field__label">Number Field</label>
+        <input class="field__control" type="number" placeholder="123456..." />
+    </div>
+    <div class="field">
+        <label class="field__label">Password Field</label>
+        <input class="field__control" type="password" placeholder="Password..." />
+    </div>
+    <div class="field">
+        <label class="field__label">Search Field</label>
+        <input class="field__control" type="search" placeholder="Search..." />
+    </div>
+    <div class="field field--select">
+        <label class="field__label">Select Field</label>
+        <select class="field__control field__control--select">
+            <option>Something valuable</option>
+            <option>Something valuable</option>
+            <option>Something valuable</option>
+        </select>
+    </div>
+    <div class="field field--checkbox">
+        <label class="field__label">
+            <input class="field__control" type="checkbox" checked>Checkbox Field
+        </label>
+    </div>
+    <div class="field field--radio">
+        <label class="field__label m-r-3">
+            <input class="field__control" type="radio" value="1" name="demo" checked>Radio Field
+        </label>
+        <label class="field__label m-r-3">
+            <input class="field__control" type="radio" value="2" name="demo">Radio Field 
+        </label>
+    </div>
+    <div class="field field--color">
+        <label class="field__label">Color Field</label>
+        <input class="field__control" type="color" value="#FF77AB" />
+    </div>
+</div>
+{% else %}
+ <div class="field">
+    <label class="field__label">Text Field</label>
+    <input class="field__control" type="text" placeholder="Placeholder..." />
+</div>
+{% endif %}
