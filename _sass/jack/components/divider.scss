@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_divider {
+@if $include_component_divider or $jack_include_all {
 	
 	hr,
 	.#{$prefix_component_divider}divider {

@@ -13,8 +13,8 @@ $typography_header_font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sa
 $typography_body_font: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $typography_body_lineheight: 1.8em;
 
-// Add code styling
-$include_component_code: true;
+// Include all the things
+$jack_include_all: true;
 
 @import 'jack/jack';
 

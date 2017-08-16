@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_table {
+@if $include_component_table or $jack_include_all {
 
     .#{$prefix-component_well}table {
         border-spacing: 0;
@@ -32,5 +32,5 @@
         }
 
     }
-
+    
 }

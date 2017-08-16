@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_form_button {
+@if $include_form_button or $jack_include_all {
 
         .#{$prefix_form_button}btn {
             cursor: pointer;

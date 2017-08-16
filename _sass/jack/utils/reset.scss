@@ -4,7 +4,7 @@
    We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
    only use tags appropriately, where they're meant to be used. We WANT those default styles. */
 
-@if $include-util-reset {
+@if $include-util-reset or $jack_include_all {
     html,
     body,
     div,

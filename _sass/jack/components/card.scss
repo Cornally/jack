@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_card {
+@if $include_component_card or $jack_include_all {
 
     .#{$prefix_component_card}card {
 

@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_link {
+@if $include_component_link or $jack_include_all {
     a,
     .#{$prefix_component_link}link {
         color: $color_brand_primary;

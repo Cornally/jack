@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_form_field {
+@if $include_form_field or $jack_include_all {
 
     $cmp_border_radius: $size_radius_sm;
     $cmp_accent_thickness: 3px;

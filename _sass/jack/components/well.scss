@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_well {
+@if $include_component_well or $jack_include_all {
 
     %well_state {
         position: relative;

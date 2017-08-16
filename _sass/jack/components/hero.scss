@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_hero {
+@if $include_component_hero or $jack_include_all {
 
     .#{$prefix_component_hero}hero {
         display: flex;
