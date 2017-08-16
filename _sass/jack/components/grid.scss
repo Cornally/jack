@@ -9,72 +9,22 @@
 // create a media query for each respective breakpoint size,
 // Loop through each column and set the flex-basis value.
 
-@mixin grid {
+@mixin grid($output) {
     $column_count: 12;
     $column_size: 100% / $column_count;
+    $output_type: null;
 
-    @for $i from 0 through $column_count {
-        // Build out column widths
-        .#{$prefix_component_grid}col-#{$i} {
-            flex-basis: decimal-round($column_size * $i, 3);
-            // Use '.col-size-0' for columns that should retain the width of their content.
-            @if $i == 0 {
-                flex: none;
-            }
-        }
-
-        .#{$prefix_component_grid}col-offset-#{$i} {
-            margin-left: decimal-round($column_size * $i, 3);
-        }
+    // Handle output_type
+    @if $output == "placeholder" {
+        $output_type: '%';
+    } @else if $output == "class" {
+        $output_type: '.';
     }
-
-
-    @each $size, $px in $sizes_break {
-
-        @media (min-width: $px) {
-
-            @for $i from 0 through $column_count {
-                .#{$prefix_component_grid}col-#{$size}-#{$i} {
-                    flex-basis: decimal-round($column_size * $i, 3);
-                    @if $i == 0 {
-                        flex: none;
-                    }
-                }
-
-                .#{$prefix_component_grid}col-#{$size}-offset-#{$i} {
-                    margin-left: decimal-round($column_size * $i, 3);
-                }
-            }
-
-            .#{$prefix_component_grid}#{$size}--hidden {
-                display: none !important;
-            }
-
-            .#{$prefix_component_grid}#{$size}--visible {
-                display: initial !important;
-            }
-        
-        }
-
-
-        // Preserve a smaller gutter on smaller screens
-        @if $px > $size_break_sm {
-            @media (min-width: $px) {
-                .#{$prefix_component_grid}container {
-                    max-width: $px - 80px;
-                }
-            }
-        } 
-
-    }
-}
-
-@if $include_component_grid {
 
     $grid_border: $color_brand_primary;
     $grid_gap: $size_gap;
 
-    .#{$prefix_component_grid}row {
+     #{$output_type}#{$prefix_component_grid}row {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -146,5 +96,65 @@
         }
     }
 
-    @include grid;
+    @for $i from 0 through $column_count {
+        // Build out column widths
+         #{$output_type}#{$prefix_component_grid}col-#{$i} {
+            flex-basis: decimal-round($column_size * $i, 3);
+            // Use '.col-size-0' for columns that should retain the width of their content.
+            @if $i == 0 {
+                flex: none;
+            }
+        }
+
+         #{$output_type}#{$prefix_component_grid}col-offset-#{$i} {
+            margin-left: decimal-round($column_size * $i, 3);
+        }
+    }
+
+
+    @each $size, $px in $sizes_break {
+
+        @media (min-width: $px) {
+
+            @for $i from 0 through $column_count {
+                 #{$output_type}#{$prefix_component_grid}col-#{$size}-#{$i} {
+                    flex-basis: decimal-round($column_size * $i, 3);
+                    @if $i == 0 {
+                        flex: none;
+                    }
+                }
+
+                 #{$output_type}#{$prefix_component_grid}col-#{$size}-offset-#{$i} {
+                    margin-left: decimal-round($column_size * $i, 3);
+                }
+            }
+
+             #{$output_type}#{$prefix_component_grid}#{$size}--hidden {
+                display: none !important;
+            }
+
+             #{$output_type}#{$prefix_component_grid}#{$size}--visible {
+                display: initial !important;
+            }
+        
+        }
+
+
+        // Preserve a smaller gutter on smaller screens
+        @if $px > $size_break_sm {
+            @media (min-width: $px) {
+                 #{$output_type}#{$prefix_component_grid}container {
+                    max-width: $px - 80px;
+                }
+            }
+        } 
+
+    }
 }
+
+@if $include_component_grid {
+    @include grid("class");
+}
+
+// Export placeholders for easy extendability
+@include grid("placeholder");
