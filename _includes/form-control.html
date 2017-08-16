@@ -1,5 +1,5 @@
 {% if include.section == "example" %}
-<div class="col-12 col-md-8 col-lg-6">
+<div class="col-12 col-md-8 col-lg-4">
     <div class="field">
         <label class="field__label">Text Field</label>
         <input class="field__control" type="text" placeholder="Placeholder..." />
@@ -19,22 +19,25 @@
     <div class="field field--select">
         <label class="field__label">Select Field</label>
         <select class="field__control field__control--select">
-            <option>Something valuable</option>
-            <option>Something valuable</option>
-            <option>Something valuable</option>
+            <option value="1">Something valuable 1</option>
+            <option value="2">Something valuable 2</option>
+            <option value="3">Something valuable 3</option>
         </select>
     </div>
     <div class="field field--checkbox">
         <label class="field__label">
-            <input class="field__control" type="checkbox" checked>Checkbox Field
+            <input class="field__control" type="checkbox" checked>
+            <span>Checkbox Field</span>
         </label>
     </div>
     <div class="field field--radio">
         <label class="field__label m-r-3">
-            <input class="field__control" type="radio" value="1" name="demo" checked>Radio Field
+            <input class="field__control" type="radio" value="1" name="demo" checked>
+            <span>Radio Field</span>
         </label>
         <label class="field__label m-r-3">
-            <input class="field__control" type="radio" value="2" name="demo">Radio Field 
+            <input class="field__control" type="radio" value="2" name="demo">
+            <span>Radio Field</span>
         </label>
     </div>
     <div class="field field--color">

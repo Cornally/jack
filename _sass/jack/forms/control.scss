@@ -91,7 +91,8 @@
                 float: left;
                 @extend %m-r-2 !optional;
                 @extend %m-y-0 !optional;
-                &:not(:disabled) {
+                &:not(:disabled),
+                &:not(:disabled) + span {
                     cursor: pointer;
                 }
                 &:checked {
