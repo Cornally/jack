@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_section {
+@if $include_component_section or $jack_include_all {
 
     .#{$prefix_component_section}section {
         &--angled {

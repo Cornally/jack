@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_typography {
+@if $include_typography or $jack_include_all {
 
     %header_font { font-family: $typography_header_font; }
 

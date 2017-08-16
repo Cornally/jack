@@ -152,7 +152,7 @@
     }
 }
 
-@if $include_component_grid {
+@if $include_component_grid or $jack_include_all {
     @include grid("class");
 }
 

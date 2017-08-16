@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_code {
+@if $include_component_code or $jack_include_all {
 
     pre,
     xmp,

@@ -116,11 +116,11 @@
     }
 }
 
-@if $include_util_margins {
+@if $include_util_margins or $jack_include_all {
     @include spacing("class", "margin", 5);
 }
 
-@if $include_util_padding {
+@if $include_util_padding or $jack_include_all {
     @include spacing("class", "padding", 5);
 }
 

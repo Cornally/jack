@@ -1,5 +1,22 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.21 (August 15, 2017)
+
+FEATURES:
+
+  * Added placeholders for spacing and grid layout.  This allows use of the aforementioned without requiring the export of their respective vanity classes.  e.g. `@extend %m-2` will work even when `$include_component_spacing: false` is set to false.
+  * Added first pass of form controls.
+
+IMPROVEMENTS:
+
+  * `$jack_include_all` is now respected by all of our utilties and components.  Setting this to `false` allows for manual inclusion of just the utilities/components you use for production builds.
+
+## 0.0.20 (August 9, 2017)
+
+FIXES:
+
+  * Version bump.
+
 ## 0.0.19 (August 2, 2017)
 
 FIXES:
