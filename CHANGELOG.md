@@ -1,6 +1,6 @@
 **This is the complete CHANGELOG.**
 
-## 0.0.22 (August 15, 2017)
+## 0.0.22 (August 16, 2017)
 
 FIXES:
 
