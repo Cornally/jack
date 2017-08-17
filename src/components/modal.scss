@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_modal or $jack_include_all {
+@if check($include_component_modal) {
 
     $cmp_window: $color_light_01;
     $cmp_overlay: rgba($color_dark_03, .85);

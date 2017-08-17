@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_list or $jack_include_all {
+@if check($include_component_list) {
 
     %list_item_state {
         &:before {

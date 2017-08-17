@@ -15,7 +15,7 @@
 //     decimal-round(0.666, 2) => 0.67
 //
 
-@function decimal-round ($number, $digits: 0, $mode: round) {
+@function decimal-round($number, $digits: 0, $mode: round) {
     $n: 1;
     // $number must be a number
     @if type-of($number) != number {

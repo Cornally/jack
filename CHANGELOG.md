@@ -1,5 +1,11 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.22 (August 15, 2017)
+
+FIXES:
+
+  * Dependency management now works correctly.  You can include all components, none, and cherry-pick dependencies from that point forward.
+
 ## 0.0.21 (August 15, 2017)
 
 FEATURES:

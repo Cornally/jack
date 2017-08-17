@@ -9,17 +9,17 @@ $global_prefix: 'jk-' !default;
 
 
 // Include basic styling reset
-$include_util_reset: false !default;
+$include_util_reset: null !default;
 
 // Include helper classes for margins
-$include_util_margins: false !default;
+$include_util_margins: null !default;
 
 // Set a prefix or use the global prefix:
 // $prefix_util_margins: $global_prefix;
 $prefix_util_margins: '' !default;
 
 // Include helper classes for margins
-$include_util_padding: false !default;
+$include_util_padding: null !default;
 
 // Set a prefix or use the global prefix:
 // $prefix_util_padding: $global_prefix;
@@ -39,9 +39,9 @@ $prefix_util_padding: '' !default;
 //
 ///////////////////////////////////////////////////////////
 
-$include_animation: true !default;
-$include_animation_keyframes: true !default;
-$include_animation_easing: true !default;
+$include_animation: null !default;
+$include_animation_keyframes: null !default;
+$include_animation_easing: null !default;
 $animation_default_easing: ease-in-out;
 
 
@@ -65,62 +65,62 @@ $animation_default_easing: ease-in-out;
 ///////////////////////////////////////////////////////////
 
 // Include card style component
-$include_component_card: false !default;
+$include_component_card: null !default;
 $prefix_component_card: '' !default;
 
 
 // Include code formatting styles
-$include_component_code: false !default;
+$include_component_code: null !default;
 $prefix_component_code: '' !default;
 
 
 // Include dividing line style component
-$include_component_divider: false !default;
+$include_component_divider: null !default;
 $prefix_component_divider: '' !default;
 
 
 // Include flexbox grid
-$include_component_grid: false !default;
+$include_component_grid: null !default;
 $prefix_component_grid: '' !default;
 
 
 // Include hero styling
-$include_component_hero: false !default;
+$include_component_hero: null !default;
 $prefix_component_hero: '' !default;
 
 
 // Include link styling
-$include_component_link: false !default;
+$include_component_link: null !default;
 $prefix_component_link: '' !default;
 
 
 // Include list styling
-$include_component_list: false !default;
+$include_component_list: null !default;
 $prefix_component_list: '' !default;
 
 
 // Include modal styling
-$include_component_modal: false !default;
+$include_component_modal: null !default;
 $prefix_component_modal: '' !default;
 
 
 // Include navigation bar styling
-$include_component_nav: false !default;
+$include_component_nav: null !default;
 $prefix_component_nav: '' !default;
 
 
 // Include table styling
-$include_component_section: false !default;
+$include_component_section: null !default;
 $prefix_component_section: '' !default;
 
 
 // Include table styling
-$include_component_table: false !default;
+$include_component_table: null !default;
 $prefix_component_table: '' !default;
 
 
 // Include well style component
-$include_component_well: false !default;
+$include_component_well: null !default;
 $prefix_component_well: '' !default;
 
 
@@ -144,11 +144,11 @@ $prefix_component_well: '' !default;
 ///////////////////////////////////////////////////////////
 
 // Include form buttons
-$include_form_button: false !default;
+$include_form_button: null !default;
 $prefix_form_button: '' !default;
 
 // Include form fields like inputs, text areas, radios, checkboxes, etc.
-$include_form_field: false !default;
+$include_form_field: null !default;
 $prefix_form_field: '' !default;
 
 
@@ -172,7 +172,7 @@ $prefix_form_field: '' !default;
 ///////////////////////////////////////////////////////////
 
 // Include typography
-$include_typography: false !default;
+$include_typography: null !default;
 $prefix_typography: '' !default;
 
 // Set your h1, h2, h3, h4, h5, h6 properties
