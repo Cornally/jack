@@ -22,7 +22,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                @extend .text_primary_03 !optional;
+                @extend %text_primary_03 !optional;
             }
             > .card__head + .card__body { margin-top: 0; } 
         }

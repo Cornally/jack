@@ -19,30 +19,30 @@ $jack_include_all: true;
 @import 'jack/jack';
 
 // Generate some on-brand background colors
-@include generateColorTicks('bg_brand', #5258C7, 'background', 'darken', 10%, 5);
+@include generateColorTicks('placeholder', 'bg_brand', #5258C7, 'background', 'darken', 10%, 5);
 
-.section--angled:nth-of-type(1):after { @extend .bg_brand_03; }
-.section--angled:nth-of-type(2):after { @extend .bg_brand_02; }
-.section--angled:nth-of-type(3):after { @extend .bg_brand_04; }
+.section--angled:nth-of-type(1):after { @extend %bg_brand_03; }
+.section--angled:nth-of-type(2):after { @extend %bg_brand_02; }
+.section--angled:nth-of-type(3):after { @extend %bg_brand_04; }
 
 // Generate some on-brand font colors
-@include generateFontColor('text_brand', #5258C7, $color_light_01, 10%, 5);
-@include generateFontColor('text_primary', $color_brand_primary, $color_dark_01, 15%, 5);
+@include generateFontColor('class', 'text_brand', #5258C7, $color_light_01, 10%, 5);
+@include generateFontColor('class', 'text_primary', $color_brand_primary, $color_dark_01, 15%, 5);
 
 ///////////////////////////////////
 // Documentation styles start here
 ///////////////////////////////////
 h1 {
     letter-spacing: -.15rem;
-    @extend .text_primary_01 !optional;
+    @extend %text_primary_01 !optional;
 }
 h2 {
     letter-spacing: -.10rem;
-    @extend .text_primary_02 !optional;
+    @extend %text_primary_02 !optional;
 }
 h3, h4, h5 { 
     letter-spacing: -.05rem;
-    @extend .text_primary_02 !optional;
+    @extend %text_primary_02 !optional;
 }
 .nav--docs {
     .nav__logo{

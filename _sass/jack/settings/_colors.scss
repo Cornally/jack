@@ -53,14 +53,23 @@ $colors_all: map-merge($colors_brand, $colors_states);
 //  `$shift`: Apply a lightening or darkening to base $color
 //  `$count`: Number of derivatives
 //  e.g. 
-//  @include generateColorTicks('text_red', #ff0000, 'color', 'lighten', 30%, 5);
-//  @include generateColorTicks('bg_purple', #264285, 'background', 'darken');
+//  @include generateColorTicks('class', 'text_red', #ff0000, 'color', 'lighten', 30%, 5);
+//  @include generateColorTicks('placeholder', 'bg_purple', #264285, 'background', 'darken');
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateColorTicks($name, $color, $property, $shift, $desaturate:30%, $count:6) {
+@mixin generateColorTicks($output, $name, $color, $property, $shift, $desaturate:30%, $count:6) {
     $increment: 45/$count;
+
+    // Handle output_type
+    $output_type: null;
+    @if $output == "placeholder" {
+        $output_type: '%';
+    } @else if $output == "class" {
+        $output_type: '.';
+    }
+
     @for $i from 1 through $count {
-        .#{$name}_0#{$i} {
+        #{$output_type}#{$name}_0#{$i} {
             @if ($shift == 'lighten') {
                 #{$property}: desaturate(lighten($color, $i*$increment), $desaturate);
             } @else {
@@ -78,13 +87,22 @@ $colors_all: map-merge($colors_brand, $colors_states);
 //  Create derivative colors from a base color, suitable for fonts
 //
 //  e.g.
-//  @include generateFontColor('text_brand', $color_brand_secondary, $color_dark_01, 0%, 5);
+//  @include generateFontColor('class', 'text_brand', $color_brand_secondary, $color_dark_01, 0%, 5);
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateFontColor($name, $color, $shift_color:$color_light_01, $desaturate:5%, $count:6) {
+@mixin generateFontColor($output, $name, $color, $shift_color:$color_light_01, $desaturate:5%, $count:6) {
     $increment: 75/$count;
+
+    // Handle output_type
+    $output_type: null;
+    @if $output == "placeholder" {
+        $output_type: '%';
+    } @else if $output == "class" {
+        $output_type: '.';
+    }
+
     @for $i from 1 through $count {
-        .#{$name}_0#{$i} {
+        #{$output_type}#{$name}_0#{$i} {
             color: desaturate(mix($color, $shift_color, $i*$increment), $desaturate);
         }
     }

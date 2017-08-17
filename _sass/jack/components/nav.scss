@@ -1,6 +1,6 @@
 @import '../settings/all';
 
-@if $include_component_nav or $jack_include_all {
+@if check($include_component_nav) {
 
     $cmp_nav_height: 50px;
 
@@ -143,14 +143,14 @@
         left: 0;
 	    max-height: calc(100vh - #{$cmp_nav_height * 2});
         overflow-y: auto;
-        @extend .text_brand_01 !optional;
-        @extend .bg_brand_03 !optional;
+        @extend %text_brand_01 !optional;
+        @extend %bg_brand_03 !optional;
         width: 150px;
         .list__item {
             padding: 0;
             line-height: 1.5em;
             a { display: block; }
-            &:hover { @extend .bg_brand_04 !optional; }
+            &:hover { @extend %bg_brand_04 !optional; }
         }
     }
 }
