@@ -79,10 +79,6 @@
             align-items: center;
             text-align: left;
             line-height: 22px;
-            
-            .#{$prefix_form_field}field__label {
-                @extend %m-y-2 !optional;
-            }
 
             .#{$prefix_form_field}field__control {
                 width: 14px;
