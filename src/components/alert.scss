@@ -1,0 +1,118 @@
+@import '../settings/all';
+
+@if check($include_component_alert) {
+
+    // Wrapper positioning for alert(s)
+    %alert_position {
+        position: fixed;
+        right: $gap_lg;
+        left: $gap_lg;
+
+        display: flex;
+        flex-direction: column;
+
+        z-index: z("alert");
+
+        .alert + .alert {
+            margin-top: $gap_md;
+        }
+    }
+
+    .#{$prefix_component_alert}alert {
+
+        $cmp_background: $color_light_01;
+        $cmp_border: $color_light_03;
+        $cmp_border-dark: $color_light_03;
+
+        display: flex;
+        flex-direction: row;
+        background: $cmp_background;
+        
+        &-wrapper--top-left {
+            @extend %alert_position !optional;
+            top: $gap_lg;
+            align-items: flex-start;
+        }
+
+        &-wrapper--top-center {
+            @extend %alert_position !optional;
+            top: $gap_lg;
+            align-items: center;
+        }
+
+        &-wrapper--top-right {
+            @extend %alert_position !optional;
+            top: $gap_lg;
+            align-items: flex-end;
+        }
+
+        &-wrapper--bottom-left {
+            @extend %alert_position !optional;
+            bottom: $gap_lg;
+            align-items: flex-start;
+        }
+
+        &-wrapper--bottom-center {
+            @extend %alert_position !optional;
+            bottom: $gap_lg;
+            align-items: center;
+        }
+
+        &-wrapper--bottom-right {
+            @extend %alert_position !optional;
+            bottom: $gap_lg;
+            align-items: flex-end;
+        }
+
+        &--no-padding {
+            &__body { padding: 0; }
+        }
+
+        &--border {
+            border: 1px solid $cmp_border;
+        }
+
+        &--shadow {
+            box-shadow: 0 1px 4px 1px rgba($color_dark_01,.075);
+            &--border {
+                border: 1px solid $cmp_border-dark;
+            }
+        }
+
+        &__body {
+            padding: $gap_md $gap_lg;
+            font-size: $size_font_md;
+            line-height: $typography_body_lineheight;
+        }
+
+        &__close {
+            padding: $gap_md;
+            font-size: $size_font_md;
+        }
+
+        @each $state, $color in $colors_all {
+            &.#{$prefix_component_alert}alert--#{$state} {
+                background: $color;
+                @if (lightness($color) > 75) {
+                    border-color: desaturate(darken($color, 15%), 5%);
+                    color: desaturate(darken($color, 20%), 10%);
+                } @else {
+                    color: white;
+                }
+            }
+        }
+
+        @each $size, $px in $sizes_break {
+            @media (min-width: $px) {
+                @if ($px > $size_break_sm) {
+                    max-width: 50vw;
+                }
+                @if ($px > $size_break_md) {
+                    max-width: 33vw;
+                }
+            }
+        }
+
+    }
+
+}

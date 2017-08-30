@@ -6,6 +6,12 @@ FIXES:
 
   * Dependency management now works correctly.  You can include all components, none, and cherry-pick dependencies from that point forward.
 
+## 0.0.22 (August 29, 2017)
+
+FEATURES:
+
+  * Stubbed out alert component along with wrapping element.
+
 ## 0.0.21 (August 15, 2017)
 
 FEATURES:

@@ -17,42 +17,42 @@
 }
 .card.card--primary {
   background: #babcdf;
-  border-color: #5258C7;
+  border-color: #979ace;
   color: #35387e;
 }
 .card.card--secondary {
   background: #f0fcfb;
-  border-color: #7defe5;
+  border-color: #c6f2ee;
   color: #2fd7c9;
 }
 .card.card--default {
   background: #767676;
-  border-color: #31333B;
+  border-color: #5c5c5c;
   color: #030303;
 }
 .card.card--success {
   background: #d8f0db;
-  border-color: #6FDA7A;
+  border-color: #b4e2b8;
   color: #3aa945;
 }
 .card.card--warning {
   background: #f9f8e5;
-  border-color: #EEE671;
+  border-color: #f0edbc;
   color: #d2c727;
 }
 .card.card--info {
   background: #deedf7;
-  border-color: #6BB8EB;
+  border-color: #b5d7ed;
   color: #2988c7;
 }
 .card.card--error {
   background: #e9b8b8;
-  border-color: #DC4646;
+  border-color: #dd9191;
   color: #952727;
 }
 .card.card--disabled {
   background: white;
-  border-color: #d8d8d8;
+  border-color: #fefefe;
   color: #a5a5a5;
 }
 .card__head {

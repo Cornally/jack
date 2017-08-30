@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 90;
+  z-index: 70;
 }
 .modal--active {
   visibility: visible;
@@ -35,7 +35,7 @@
   width: 80vw;
   max-height: 80vh;
   max-width: 720px;
-  z-index: 100;
+  z-index: 80;
   opacity: 0;
   transition: opacity .2s ease 0s;
 }

@@ -64,6 +64,10 @@ $animation_default_easing: ease-in-out;
 //
 ///////////////////////////////////////////////////////////
 
+// Include alert style component
+$include_component_alert: null !default;
+$prefix_component_alert: '' !default;
+
 // Include card style component
 $include_component_card: null !default;
 $prefix_component_card: '' !default;
