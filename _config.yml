@@ -33,7 +33,7 @@ sass:
   sass_dir: _sass
 babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
 exclude: [Gemfile, Gemfile.lock, node_modules]
-include: [js/dist]
+include: [js/core.js]
 collections:
   components:
     output: true

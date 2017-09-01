@@ -12,14 +12,12 @@ function logFileHelpers() {
 }
  
 gulp.task('default', () =>
-    gulp.src(['js/**/*.js', '!js/dist/core.js'])
+    gulp.src(['js/**/*.js', '!js/core.js'])
         .pipe(babel({
             presets: ['env']
         }))
         .pipe(logFileHelpers())
         .pipe(concat('core.js'))
-        .pipe(uglify({
-            toplevel: true
-        }))
-        .pipe(gulp.dest('js/dist'))
+        .pipe(uglify())
+        .pipe(gulp.dest('js'))
 )
