@@ -6,3 +6,7 @@ console.log('Watching for changes...');
 cpx.watch('./src/**/*.scss', '../gh-pages/_sass/jack', {}, (e) => {
     console.log("Copied!");
 });
+
+cpx.watch('./src/**/*.svg', '../gh-pages/_includes', {}, (e) => {
+    console.log("Copied!");
+});

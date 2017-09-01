@@ -1,16 +1,22 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.24 (August 31, 2017)
+
+FEATURES:
+
+  * Dropped in svg icons for alerts and building out intial strategy for icons.
+
+## 0.0.23 (August 29, 2017)
+
+FEATURES:
+
+  * Stubbed out alert component along with wrapping element.
+
 ## 0.0.22 (August 16, 2017)
 
 FIXES:
 
   * Dependency management now works correctly.  You can include all components, none, and cherry-pick dependencies from that point forward.
-
-## 0.0.22 (August 29, 2017)
-
-FEATURES:
-
-  * Stubbed out alert component along with wrapping element.
 
 ## 0.0.21 (August 15, 2017)
 
