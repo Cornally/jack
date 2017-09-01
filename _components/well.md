@@ -10,35 +10,35 @@ classes:
     - item:
         title: .well--default
         description: Create a standard well.
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--success
         description: Use this state to indicate positive, forward progress
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--warning
         description: Create a button that indicates caution
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--info
         description: Use this state for triggering supplemental information
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--error
         description: Use this button to depict extreme caution or severity of action
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--disabled
         description: This button state is for when an action is unavailable
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--primary
         description: Button mapped to your branding's primary color, derived from color mappings in <code>_colors.scss</code>
-        tag: .link, &#60;a&#62;
+        tag: .well
     - item:
         title: .well--secondary
         description: Button mapped to your branding's secondary color, derived from color mappings in <code>_colors.scss</code>
-        tag: .link, &#60;a&#62;
+        tag: .well
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>

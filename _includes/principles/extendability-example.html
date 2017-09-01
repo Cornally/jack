@@ -1,0 +1,17 @@
+// Explicitly exclude the margin spacing utility classes
+$include_util_margins: false;
+
+// Create a new class by extending a placeholder selector that's emitted by spacing.scss
+.example-with-top-margin {
+    @extend %m-t-md-2;
+}
+
+
+// Explicitely exclude the grid classes
+$include_component_grid: false;
+
+// Create left navigation (two-columns wide)
+.left-nav {
+    @extend %col-2;
+}
+
