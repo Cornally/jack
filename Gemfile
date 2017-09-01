@@ -26,11 +26,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# Allow JS to execute in Ruby
-gem 'execjs'
-
-# Add babel
-gem 'jekyll-babel'
-
 # Sass dependency
 gem 'sass-listen'
