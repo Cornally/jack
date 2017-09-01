@@ -27,15 +27,21 @@ github_username:  Cornally
 # Build settings
 markdown: kramdown
 gems:
+  - jekyll-babel
   - jekyll-feed
 sass:
   style: compressed
   sass_dir: _sass
+babel_js_extensions: 'es6, babel, jsx' # Do not process .js files
 exclude:
   - Gemfile
   - Gemfile.lock
+include: [js]
 collections:
   components:
     output: true
     permalink: /components/:title:output_ext
+  principles:
+    output: true
+    permalink: /principles/:title:output_ext
 
