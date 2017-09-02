@@ -49,6 +49,10 @@ img {
   display: block;
 }
 
+svg {
+  display: block;
+}
+
 a, a:hover {
   text-decoration: none;
 }

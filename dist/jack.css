@@ -49,6 +49,10 @@ img {
   display: block;
 }
 
+svg {
+  display: block;
+}
+
 a, a:hover {
   text-decoration: none;
 }
@@ -154,21 +158,22 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
   margin-top: 14px;
 }
 
+.alert-wrapper--top-left, .alert-wrapper--top-center, .alert-wrapper--top-right {
+  top: 71px;
+}
+
 .alert {
   display: flex;
   flex-direction: row;
   background: #ffffff;
 }
 .alert-wrapper--top-left {
-  top: 21px;
   align-items: flex-start;
 }
 .alert-wrapper--top-center {
-  top: 21px;
   align-items: center;
 }
 .alert-wrapper--top-right {
-  top: 21px;
   align-items: flex-end;
 }
 .alert-wrapper--bottom-left {
@@ -201,8 +206,11 @@ form, button::-moz-focus-inner, input::-moz-focus-inner {
   line-height: 1.5em;
 }
 .alert__close {
-  padding: 14px;
+  cursor: pointer;
+  fill: currentColor;
   font-size: 14px;
+  padding: 14px;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(21, 22, 26, 0.05));
 }
 .alert.alert--primary {
   background: #5258C7;
