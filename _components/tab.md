@@ -1,6 +1,6 @@
 ---
 title: Tabs
-description: Tabs are used to divide content up over space.  They're also used when playing guitar.  Both are infinitely useful.  We use a wrapping element, <code><div class="tabs> ... </code>, to contain our tabs.
+description: Tabs are used to divide content up over space.  They're also used when playing guitar.  Both are infinitely useful.
 layout: component
 states:
     - item:
