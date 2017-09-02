@@ -18,6 +18,8 @@ gulp.task('default', () =>
         }))
         .pipe(logFileHelpers())
         .pipe(concat('core.js'))
-        .pipe(uglify())
+        .pipe(uglify({
+            compress: true
+        }))
         .pipe(gulp.dest('js'))
 )

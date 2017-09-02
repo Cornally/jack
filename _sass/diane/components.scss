@@ -21,14 +21,13 @@
             > .card__head {
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: baseline;
                 @extend %text_primary_03 !optional;
             }
             > .card__head + .card__body { margin-top: 0; } 
         }
 
         .copy {
-            float: right;
             font-size: 12px;
             cursor: pointer;
             color: $color_brand_primary;
