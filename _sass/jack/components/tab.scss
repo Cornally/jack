@@ -1,0 +1,43 @@
+@import '../settings/all';
+
+@if check($include_component_tab) {
+
+    .#{$prefix-component_tab}tabs {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: stretch;
+
+        &__tab {
+            color: $color_state_default;
+            cursor: pointer;
+            padding: $gap_sm $gap_md;
+
+            &--active {
+                color: $color_brand_primary;
+                cursor: default;
+                font-weight: bold;
+                &:hover {
+                    color: $color_brand_primary;
+                }
+            }
+
+            &--disabled {
+                &,
+                &:hover,
+                &:active {
+                    color: $color_state_disabled;
+                    cursor: not-allowed;
+                }
+            }
+        }
+
+        // Outline
+        &--border {
+            .#{$prefix-component_tab}tabs__tab {
+                border-bottom: 1px solid $color_light_04;
+            }
+        }
+
+    }
+}

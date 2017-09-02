@@ -35,27 +35,3 @@ states:
 <style>
     #modal__ok, #modal__close { width: 100%; }
 </style>
-<script>
-
-    var btnOk = document.getElementById('modal__ok'),
-        btnClose = document.getElementById('modal__close'),
-        btnShow = document.getElementById('modal__show');
-
-    btnShow.addEventListener('click', function(e) {
-        e.preventDefault();
-        modalEl = document.querySelector('.modal');
-        modalEl.classList.add('modal--active');
-    });
-
-    btnOk.addEventListener('click', function(e) {
-        e.preventDefault();
-        modalEl = document.querySelector('.modal');
-        modalEl.classList.remove('modal--active');
-    });
-
-    btnClose.addEventListener('click', function(e) {
-        e.preventDefault();
-        modalEl = document.querySelector('.modal');
-        modalEl.classList.remove('modal--active');
-    });
-</script>
