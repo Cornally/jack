@@ -3,17 +3,23 @@ const btnOk = document.getElementById('modal__ok'),
     btnShow = document.getElementById('modal__show'),
     modalEl = document.querySelector('.modal');
 
-btnShow.addEventListener('click', (e) => {
-    e.preventDefault();
-    modalEl.classList.add('modal--active');
-});
+if (btnShow) {
+    btnShow.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalEl.classList.add('modal--active');
+    });
+}
 
-btnOk.addEventListener('click', (e) => {
-    e.preventDefault();
-    modalEl.classList.remove('modal--active');
-});
+if (btnOk) {
+    btnOk.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalEl.classList.remove('modal--active');
+    });
+}
 
-btnClose.addEventListener('click', (e) => {
-    e.preventDefault();
-    modalEl.classList.remove('modal--active');
-});
+if (btnClose) {
+    btnClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        modalEl.classList.remove('modal--active');
+    });
+}

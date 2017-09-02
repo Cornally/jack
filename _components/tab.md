@@ -9,13 +9,17 @@ states:
         tpl: tab.html
 classes:
     - item:
-        title: .tab--active
-        description: Actively selected tab
-        tag: .tab
+        title: .tabs--border
+        description: Add a border to the tabs
+        tag: .tabs
     - item:
-        title: .tab--disabled
+        title: .tabs__tab--active
+        description: Actively selected tab
+        tag: .tabs__tab
+    - item:
+        title: .tabs__tab--disabled
         description: Used when a tab cannot be selected but it's worth indicating its existence
-        tag: .tab
+        tag: .tabs__tab
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
