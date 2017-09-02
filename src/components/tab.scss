@@ -36,6 +36,9 @@
         &--border {
             .#{$prefix-component_tab}tabs__tab {
                 border-bottom: 1px solid $color_light_04;
+                &--active {
+                    border-bottom: 3px solid currentColor;
+                }
             }
         }
 
