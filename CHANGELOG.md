@@ -1,5 +1,15 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.25 (August 31, 2017)
+
+FEATURES:
+
+  * Stubbed out tabs.
+
+FIXES:
+
+  * Fixed table component's inclusion check.
+
 ## 0.0.24 (August 31, 2017)
 
 FEATURES:

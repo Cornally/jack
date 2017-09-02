@@ -69,7 +69,7 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
     * Multi-level menus
     * Tabs
 * Notifications
-   * Alerts
+   * ~~Alerts~~
    * ~~Modals~~
 * ~~Tables~~
 * Typography
