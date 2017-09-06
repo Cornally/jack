@@ -35,10 +35,10 @@ layout: default
       <hr class="divider">
       
       <div>
-        <h2 class="m-b-3">Principles</h2>
+        <h2 class="m-b-3">Ideology</h2>
         <ul class="list">
-        {% for principle in site.principles %}
-          <li class="list__item"><a href="{{ principle.url | relative_url }}" class="link">{{ principle.title | escape }}</a></li>
+        {% for idea in site.ideology %}
+          <li class="list__item"><a href="{{ idea.url | relative_url }}" class="link">{{ idea.title | escape }}</a></li>
         {% endfor %}
         </ul>
       </div>
