@@ -1,5 +1,11 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.26 (September 6, 2017)
+
+IMPROVEMENTS:
+
+  * You may now manipulate the `$colors_brand`, `$colors_state`, `$sizes_break`, and `$sizes_font` array maps more easily.  This makes it easier to test out adding/remove brand colors, stateful colors, breakpoint sizes, and font sizes.
+
 ## 0.0.25 (August 31, 2017)
 
 FEATURES:
