@@ -17,7 +17,7 @@ $color_brand_secondary: #7defe5 !default;
 $colors_brand: (
     primary  : $color_brand_primary,
     secondary: $color_brand_secondary
-);
+) !default;
 
 
 // Stateful colors
@@ -35,7 +35,7 @@ $colors_states: (
     info    : $color_state_info,
     error   : $color_state_error,
     disabled: $color_state_disabled
-);
+) !default;
 
 
 // Combine maps for easier looping

@@ -36,7 +36,7 @@ $sizes_break: (
     md : $size_break_md,
     lg : $size_break_lg,
     xl : $size_break_xl
-);
+) !default;
 
 
 // Font sizes
@@ -55,7 +55,7 @@ $sizes_font: (
     lg : $size_font_lg,
     xl : $size_font_xl,
     xxl: $size_font_xxl
-);
+) !default;
 
 
 // Border radius sizes
