@@ -38,7 +38,7 @@ collections:
   components:
     output: true
     permalink: /components/:title:output_ext
-  ideology:
+  customization:
     output: true
-    permalink: /ideology/:title:output_ext
+    permalink: /customization/:title:output_ext
 

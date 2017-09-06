@@ -15,7 +15,7 @@ ideas:
         anchor: placeholders-and-mixins
         title: Placeholders and Mixins
         description: Most utilities classes output a placeholder or mixin, even if their respective stylesheet isn't included and generated.  This lets you leverage their usefulness whilst not bloating your output.
-        tpl: ideology/extendability-example.html
+        tpl: customization/extendability-example.html
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>

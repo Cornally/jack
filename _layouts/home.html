@@ -17,17 +17,17 @@ layout: default
       <hr class="divider">
 
       <div>
-        <h2 class="m-b-3">Installation Options</h2>
+        <h2 class="m-b-3">Getting Started</h2>
         <div class="well well--success m-b-4">
-          <h3 class="m-b-1">Lite</h3>
-          <p>This is for folks who don't want to write a line of custom CSS.  You should be able to get your project started with our development library.  Grab the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/jack.css" target="_blank">development library</a> or the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/min/jack.css" target="_blank">minified library</a>.</p>
+          <h3 class="m-b-1">Easy</h3>
+          <p>The simplest approach for getting started is for folks who don't want to write a line of custom CSS.  Grab the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/jack.css" target="_blank">development library</a> or the <a href="https://raw.githubusercontent.com/Cornally/jack/master/dist/min/jack.css" target="_blank">minified library</a> and add it to the head of your document, <code>&#60;link rel="stylesheet" href="jack.css"&#62;</code>.</p>
         </div>
         <div class="well well--warning m-b-4">
-          <h3 class="m-b-1">Organic</h3>
+          <h3 class="m-b-1">Moderate</h3>
           <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Import specific bits of Jack, like just the grid, or, the entire library <code>node_modules/jack-strap/src/jack.scss</code> into your project's existing Sass files.</p>
         </div>
         <div class="well well--error">
-          <h3 class="m-b-1">Deep-Tissue</h3>
+          <h3 class="m-b-1">Advanced</h3>
           <p>Install via npm or yarn, <code>npm install jack-strap --save-dev</code>.  Customize <code>_user.config.scss</code> with your preferences.  How you handle PostCSS/Autoprefixing and building is completely up to you.  Webpack implementation examples to come.</p>
         </div>
       </div>
@@ -35,10 +35,10 @@ layout: default
       <hr class="divider">
       
       <div>
-        <h2 class="m-b-3">Ideology</h2>
+        <h2 class="m-b-3">Customization</h2>
         <ul class="list">
-        {% for idea in site.ideology %}
-          <li class="list__item"><a href="{{ idea.url | relative_url }}" class="link">{{ idea.title | escape }}</a></li>
+        {% for item in site.customization %}
+          <li class="list__item"><a href="{{ item.url | relative_url }}" class="link">{{ item.title | escape }}</a></li>
         {% endfor %}
         </ul>
       </div>
@@ -48,8 +48,8 @@ layout: default
       <div>
         <h2 class="m-b-3">Components</h2>
         <ul class="list">
-        {% for component in site.components %}
-          <li class="list__item"><a href="{{ component.url | relative_url }}" class="link">{{ component.title | escape }}</a></li>
+        {% for item in site.components %}
+          <li class="list__item"><a href="{{ item.url | relative_url }}" class="link">{{ item.title | escape }}</a></li>
         {% endfor %}
         </ul>
       </div>
