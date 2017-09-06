@@ -17,20 +17,23 @@ if ($navTrigger && $nav) {
 }
 
 // Toggle sub-menus open
-let $subNav = document.querySelector('.nav__links__list'),
-    $subNavTrigger = $subNav.querySelector('.nav__links__trigger'),
-    $subNavList = $subNav.querySelector('.list');
-let subNavActive = false;
+let $subNav = document.querySelectorAll('.nav__links__list');
 
-function subNavTriggerHandler() {
-    if (subNavActive) {
-        $subNavList.classList.remove('list--active');
+function subNavTriggerHandler(subNavList) {
+    let active = subNavList.getAttribute('data-active');
+    if (active === "true") {
+        subNavList.classList.remove('list--active');
+        subNavList.setAttribute('data-active', false);
     } else {
-        $subNavList.classList.add('list--active');
+        subNavList.classList.add('list--active');
+        subNavList.setAttribute('data-active', true);
     }
-    subNavActive = !subNavActive;
 }
 
-if ($subNavTrigger && $subNav) {
-    $subNavTrigger.addEventListener('click', () => subNavTriggerHandler());
+if ($subNav.length) {
+    $subNav.forEach((subNav, idx) => {
+        let subNavTrigger = subNav.querySelector('.nav__links__trigger'),
+            subNavList = subNav.querySelector('.list');
+        subNavTrigger.addEventListener('click', () => subNavTriggerHandler(subNavList));
+    });
 }
