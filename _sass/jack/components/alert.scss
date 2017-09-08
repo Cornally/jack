@@ -13,7 +13,8 @@
 
         z-index: z("alert");
 
-        .alert:not(:first-of-type) {
+        .alert:not(:first-child) {
+            margin-top: 0;
             margin-bottom: $gap_md;
         }
     }
@@ -27,8 +28,9 @@
         }
 
         flex-direction: column;
-        .alert:not(:first-of-type) {
+        .alert:not(:first-child) {
             margin-top: $gap_md;
+            margin-bottom: 0;
         }
     }
 
