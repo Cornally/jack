@@ -10,12 +10,12 @@ ideas:
     - item:
         anchor: adding-and-removing-components
         title: Adding and Removing Components
-        description: By default, all components are included, <code>$jack_include_all&#58; true !default;</code>.  You may cherry-pick components to exclude at this point.  Setting <code>$include_component_card&#58; false;</code> before Jack's SASS compiles would include all components minus the card one.  Conversely, you can set <code>$jack_include_all&#58; false;</code> followed by <code>$include_component_card&#58; true;</code> to output just the card component.
+        description: By default, all components are included, <code>$jack_include_all&#58; true !default;</code>.  You may cherry-pick components to exclude at this point.  Setting <code>$include_component_card&#58; false;</code> before Jack's Sass compiles would include all components minus the card one.  Conversely, you can set <code>$jack_include_all&#58; false;</code> followed by <code>$include_component_card&#58; true;</code> to output just the card component.
     - item:
         anchor: placeholders-and-mixins
         title: Placeholders and Mixins
         description: Most utilities classes output a placeholder or mixin, even if their respective stylesheet isn't included and generated.  This lets you leverage their usefulness whilst not bloating your output.
-        tpl: customization/extendability-example.html
+        tpl: customization/extendability.html
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>

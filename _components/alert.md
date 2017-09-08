@@ -6,10 +6,6 @@ states:
     - item:
         title: Basic Alerts
         tpl: alert.html
-    - item:
-        title: Stateful Alerts
-        description: Indicate state by adding the states defined inside <code>_colors.scss</code>
-        tpl: alert--states.html
 classes:
     - item:
         title: .alert--border
