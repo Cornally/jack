@@ -9,12 +9,13 @@
         left: $gap_lg;
 
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
 
         z-index: z("alert");
 
-        .alert + .alert {
-            margin-top: $gap_md;
+        .alert:not(:first-child) {
+            margin-top: 0;
+            margin-bottom: $gap_md;
         }
     }
 
@@ -24,6 +25,12 @@
             top: $gap_lg + $cmp_nav_height;
         } @else {
             top: $gap_lg;
+        }
+
+        flex-direction: column;
+        .alert:not(:first-child) {
+            margin-top: $gap_md;
+            margin-bottom: 0;
         }
     }
 
