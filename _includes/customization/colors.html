@@ -3,7 +3,7 @@
 @import 'jack/settings/colors';
 $colors_brand: map-merge($colors_brand, (experimental: salmon));
 
-// Psuedo output styling rules
+// Outputs
 .btn--experimental { background: salmon; }
 .alert--experimental { background: salmon; }
 .divider--experimental { background: salmon; }
@@ -14,4 +14,16 @@ $colors_brand: map-merge($colors_brand, (experimental: salmon));
 // Removing default "secondary" brand color
 @import 'jack/settings/colors';
 $colors_brand: map-remove($colors_brand, (secondary));
+{% endif %}
+
+{% if section == "add-state-colors" %}
+// Add a 'welcome' state
+@import 'jack/settings/colors';
+$colors_brand: map-merge($colors_states, (welcome: #ffebcd));
+
+// Outputs
+.btn--welcome { background: #ffebcd; }
+.alert--welcome { background: #ffebcd; }
+.divider--welcome { background: #ffebcd; }
+.card--welcome { background: #ffebcd; }
 {% endif %}

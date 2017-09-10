@@ -11,6 +11,10 @@ ideas:
         title: Remove Brand Colors
         description: Use the native <code>map-remove</code> functionality of Sass to remove colors from your brand array mapping.
         tpl: customization/colors.html
+    - item:
+        title: Add State Colors
+        description: Jack ships with 'success', 'warning', 'error', 'disabled', and 'info' states that reside in the <code>$colors_states</code> array map.  This map is looped through by components like buttons, cards, and alerts.  Use the native <code>map-merge</code> functionality of Sass to add colors from your brand array mapping.  
+        tpl: customization/colors.html
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
