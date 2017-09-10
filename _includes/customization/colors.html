@@ -1,3 +1,4 @@
+{% if section == "add-brand-colors" %}
 // Testing out a new brand color
 @import 'jack/settings/colors';
 $colors_brand: map-merge($colors_brand, (experimental: salmon));
@@ -7,3 +8,10 @@ $colors_brand: map-merge($colors_brand, (experimental: salmon));
 .alert--experimental { background: salmon; }
 .divider--experimental { background: salmon; }
 .card--experimental { background: salmon; }
+{% endif %}
+
+{% if section == "remove-brand-colors" %}
+// Removing default "secondary" brand color
+@import 'jack/settings/colors';
+$colors_brand: map-remove($colors_brand, (secondary));
+{% endif %}

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const clipboard = new Clipboard('.copy');
     clipboard.on('success', (e) => {
         CreateAlert({
-            text: 'Snippet copied successfully!',
+            text: 'Code copied to clipboard!',
             type: 'success',
             timeout: 3000
         });
