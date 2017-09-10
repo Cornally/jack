@@ -1,5 +1,12 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.27 (September 9, 2017)
+
+IMPROVEMENTS:
+
+  * Removed user selection from buttons and prevent alert wrappers from trapping pointer events.
+
+
 ## 0.0.26 (September 6, 2017)
 
 IMPROVEMENTS:
