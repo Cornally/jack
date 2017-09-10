@@ -12,6 +12,7 @@
             font-weight: bold;
             padding: $gap_sm $gap_md;
             text-align: center;
+            user-select: none;
 
             // Space them out by default
             .btn-group & {
