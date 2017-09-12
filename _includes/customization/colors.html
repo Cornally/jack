@@ -1,7 +1,7 @@
 {% if section == "add-brand-colors" %}
 // Testing out a new brand color
 @import 'jack/settings/colors';
-$colors_brand: map-merge($colors_brand, (experimental: salmon));
+$colors_brand: map-merge($colors_brand, (experimental: #fa7162));
 
 // Outputs
 .btn--experimental { /* Salmon-flavored styles */ }
@@ -33,11 +33,11 @@ $colors_brand: map-merge($colors_states, (welcome: #8bc34a));
 @include generateColorTicks('class', 'bg_latte', #5258C7, 'background', 'lighten', 10%, 5);
 
 // Outputs
-.bg_latte_01 { background: #c9bd7e; }
-.bg_latte_02 { background: #d7ce9e; }
-.bg_latte_03 { background: #e4debf; }
-.bg_latte_04 { background: #f2efdf; }
-.bg_latte_05 { background: #fff; }
+.bg_latte_01 { background: #af9755; }
+.bg_latte_02 { background: #bdaa74; }
+.bg_latte_03 { background: #ccbd94; }
+.bg_latte_04 { background: #dbd0b3; }
+.bg_latte_05 { background: #eae3d2; }
 {% endif %}
 
 {% if section == "generate-placeholders" %}
