@@ -16,9 +16,17 @@ $typography_body_lineheight: 1.8em;
 // Include all the things
 $jack_include_all: true;
 
+// Import this so we can tweak color array maps
+@import 'jack/settings/colors';
+
+// Add brand color for docs
+$colors_brand: map-merge($colors_brand, (experimental: salmon));
+$colors_states: map-merge($colors_states, (welcome: #8bc34a));
+
 @import 'jack/jack';
 
 // Generate some on-brand background colors
+@include generateColorTicks('class', 'bg_latte', #C7B552, 'background', 'lighten', 10%, 5);
 @include generateColorTicks('placeholder', 'bg_brand', #5258C7, 'background', 'darken', 10%, 5);
 
 .section--angled:nth-of-type(1):after { @extend %bg_brand_03; }
@@ -26,6 +34,7 @@ $jack_include_all: true;
 .section--angled:nth-of-type(3):after { @extend %bg_brand_04; }
 
 // Generate some on-brand font colors
+@include generateFontColor('class', 'text_latte', #C7B552, $color_dark_01, 10%, 5);
 @include generateFontColor('class', 'text_brand', #5258C7, $color_light_01, 10%, 5);
 @include generateFontColor('class', 'text_primary', $color_brand_primary, $color_dark_01, 15%, 5);
 

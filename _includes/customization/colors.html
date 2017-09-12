@@ -4,10 +4,10 @@
 $colors_brand: map-merge($colors_brand, (experimental: salmon));
 
 // Outputs
-.btn--experimental { background: salmon; }
-.alert--experimental { background: salmon; }
-.divider--experimental { background: salmon; }
-.card--experimental { background: salmon; }
+.btn--experimental { /* Salmon-flavored styles */ }
+.alert--experimental { /* Salmon-flavored styles */ }
+.divider--experimental { /* Salmon-flavored styles */ }
+.card--experimental { /* Salmon-flavored styles */ }
 {% endif %}
 
 {% if section == "remove-brand-colors" %}
@@ -19,25 +19,25 @@ $colors_brand: map-remove($colors_brand, (secondary));
 {% if section == "add-state-colors" %}
 // Add a 'welcome' state
 @import 'jack/settings/colors';
-$colors_brand: map-merge($colors_states, (welcome: #ffebcd));
+$colors_brand: map-merge($colors_states, (welcome: #8bc34a));
 
 // Outputs
-.btn--welcome { background: #ffebcd; }
-.alert--welcome { background: #ffebcd; }
-.divider--welcome { background: #ffebcd; }
-.card--welcome { background: #ffebcd; }
+.btn--welcome { background: #8bc34a; }
+.alert--welcome { background: #8bc34a; }
+.divider--welcome { background: #8bc34a; }
+.card--welcome { background: #8bc34a; }
 {% endif %}
 
 {% if section == "generate-classes" %}
 // Generate shade derivative classes
-@include generateColorTicks('class', 'bg_brand', #5258C7, 'background', 'darken', 10%, 5);
+@include generateColorTicks('class', 'bg_latte', #5258C7, 'background', 'lighten', 10%, 5);
 
 // Outputs
-.bg_brand_01 { background: #454aa6 }
-.bg_brand_02 { background: #383c85 }
-.bg_brand_03 { background: #2a2d65 }
-.bg_brand_04 { background: #1d1f45 }
-.bg_brand_05 { background: #0f1024 }
+.bg_latte_01 { background: #c9bd7e; }
+.bg_latte_02 { background: #d7ce9e; }
+.bg_latte_03 { background: #e4debf; }
+.bg_latte_04 { background: #f2efdf; }
+.bg_latte_05 { background: #fff; }
 {% endif %}
 
 {% if section == "generate-placeholders" %}
