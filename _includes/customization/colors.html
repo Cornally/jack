@@ -27,3 +27,24 @@ $colors_brand: map-merge($colors_states, (welcome: #ffebcd));
 .divider--welcome { background: #ffebcd; }
 .card--welcome { background: #ffebcd; }
 {% endif %}
+
+{% if section == "generate-classes" %}
+// Generate shade derivative classes
+@include generateColorTicks('class', 'bg_brand', #5258C7, 'background', 'darken', 10%, 5);
+
+// Outputs
+.bg_brand_01 { background: #454aa6 }
+.bg_brand_02 { background: #383c85 }
+.bg_brand_03 { background: #2a2d65 }
+.bg_brand_04 { background: #1d1f45 }
+.bg_brand_05 { background: #0f1024 }
+{% endif %}
+
+{% if section == "generate-placeholders" %}
+// Generate shade derivatives placeholders
+@include generateColorTicks('placeholder', 'bg_brand', #5258C7, 'background', 'darken', 10%, 5);
+
+.section--angled:nth-of-type(1):after { @extend %bg_brand_03; }
+.section--angled:nth-of-type(2):after { @extend %bg_brand_02; }
+.section--angled:nth-of-type(3):after { @extend %bg_brand_04; }
+{% endif %}

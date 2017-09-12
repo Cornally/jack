@@ -15,6 +15,14 @@ ideas:
         title: Add State Colors
         description: Jack ships with 'success', 'warning', 'error', 'disabled', and 'info' states that reside in the <code>$colors_states</code> array map.  This map is looped through by components like buttons, cards, and alerts.  Use the native <code>map-merge</code> functionality of Sass to add colors from your brand array mapping.  
         tpl: customization/colors.html
+    - item:
+        title: Generate Classes
+        description: Welcome to the magic of Jack.  You can auto-generate color shade class derivatives for any CSS property that accepts a color for the value, e.g. <code>color</code>, <code>background</code>, <code>border-color</code>, <code>fill</code>, you get the idea.  You may also pass rgb/rgba/hsl properties as the base color.
+        tpl: customization/colors.html
+    - item:
+        title: Generate Placeholders
+        description: You can auto-emit color shade %placeholders for any CSS property that accepts a color for the value, e.g. <code>color</code>, <code>background</code>, <code>border-color</code>, <code>fill</code>, you get the idea.  You may also pass rgb/rgba/hsl properties as the base color.
+        tpl: customization/colors.html
 ---
 <div class="container content">
     <h1>{{ page.title }}</h1>
