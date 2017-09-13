@@ -17,8 +17,19 @@
                 color: $color_brand_primary;
                 cursor: default;
                 font-weight: bold;
+                position: relative;
                 &:hover {
                     color: $color_brand_primary;
+                }
+                &:after {
+                    display: block;
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 3px;
+                    width: 100%;
+                    background: currentColor;
                 }
             }
 
@@ -32,15 +43,8 @@
             }
         }
 
-        // Outline
         &--border {
-            .#{$prefix-component_tab}tabs__tab {
-                border-bottom: 1px solid $color_light_04;
-                &--active {
-                    border-bottom: 3px solid currentColor;
-                }
-            }
+            border-bottom: 1px solid $color_light_03;
         }
-
     }
 }

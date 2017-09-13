@@ -94,6 +94,7 @@
             .nav__links__list {
                 display: inline-block;
                 position: relative;
+                z-index: z("nav");
             }
             .nav__links__list:hover .list { display: inline-block; }
         }
