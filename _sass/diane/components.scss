@@ -10,10 +10,15 @@
         .row:not(:last-child) { margin-bottom: $size_gap*5; }
 
         .row--component-header {
-            @media (max-width: $size_break_md) {
+            @media (max-width: $size_break_sm) {
                 > :first-child { order: 2; }
                 > :nth-child(2) { order: 1; }
             }
+        }
+
+        @media (min-width: $size_break_lg) {
+            .table__modifier-classes { min-width: 200px; }
+            .table__modifies { min-width: 150px; }
         }
 
         .card--example {

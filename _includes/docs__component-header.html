@@ -6,7 +6,7 @@
         {% if page.classes %}
         <a class="anchor--docs" id="modifier-classes"></a>
         <table class="table table--striped m-b-4">
-            <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
+            <thead><tr><th class="table__modifier-classes">Modifier Classes</th><th class="table__modifies">Modifies</th><th>Description</th></tr></thead>
             <tbody>
                 {% for class in page.classes %}
                 <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td class="text-breakword">{{ class.item.description }}</td></tr>
