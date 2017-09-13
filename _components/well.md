@@ -2,7 +2,7 @@
 title: Wells
 description: Use wells to highlight sections of content.  You're looking at a well right now, in the flesh!
 layout: component
-states:
+sections:
     - item:
         title: Basic Well
         tpl: well.html
@@ -41,20 +41,9 @@ classes:
         tag: .well
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
-
-    <a class="anchor--docs" id="modifier-classes"></a>
-    <table class="table table--striped m-b-4">
-        <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
-        <tbody>
-            {% for class in page.classes %}
-            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td class="text-breakword">{{ class.item.description }}</td></tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% include docs__component-header.html %}
     
-    {% for state in page.states %}
+    {% for state in page.sections %}
     <hr class="divider">
     <div class="row">
         <a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>

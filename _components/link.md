@@ -2,7 +2,7 @@
 title: Links
 description: Links help connect different uniform resource locators on the interwebs.
 layout: component
-states:
+sections:
     - item:
         title: Basic Links
         tpl: link.html
@@ -41,20 +41,9 @@ classes:
         tag: .link, &#60;a&#62;
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
-
-    <a class="anchor--docs" id="modifier-classes"></a>
-    <table class="table table--striped m-b-4">
-        <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
-        <tbody>
-            {% for class in page.classes %}
-            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td class="text-breakword">{{ class.item.description }}</td></tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% include docs__component-header.html %}
     
-    {% for state in page.states %}
+    {% for state in page.sections %}
     <hr class="divider">
     <div class="row">
         <a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>

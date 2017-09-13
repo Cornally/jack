@@ -19,6 +19,11 @@
                     top: 0;
                     left: 0;
                     z-index: z("nav");
+
+                    .list {
+                        max-height: calc(100vh - #{$cmp_nav_height * 2});
+                        overflow-y: auto;
+                    }
                     
                     // Push content down the height of the nav when sticky
                     & + *:before {
@@ -86,16 +91,17 @@
         }
 
         // Hide dropdowns at smallest size
-        .nav__links__list .list { display: none; }
+        &__links__list .list { display: none; }
 
 
         @media (min-width: $size_break_sm) {
-            .nav__right .link { padding: $gap_md; } 
-            .nav__links__list {
+            &__right .link { padding: $gap_md; } 
+            &__links__list {
                 display: inline-block;
                 position: relative;
+                z-index: z("nav");
             }
-            .nav__links__list:hover .list { display: inline-block; }
+            &__links__list:hover .list { display: inline-block; }
         }
 
 
@@ -105,44 +111,44 @@
         a:hover {
             color: $color_light_02;
         }
-    }
 
-    .#{$prefix_component_nav}nav__logo {
-        font-size: $size_font_lg;
-        font-weight: bold;
-    }
+        &__logo {
+            font-size: $size_font_lg;
+            font-weight: bold;
+        }
 
-    .#{$prefix_component_nav}nav__left {
-        overflow: hidden;
-    }
+        &__left {
+            overflow: hidden;
+        }
 
-    .#{$prefix_component_nav}nav__hamburger__icon {
-        cursor: pointer;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: $cmp_nav_height;
-        height: $cmp_nav_height;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        &__hamburger__icon {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $cmp_nav_height;
+            height: $cmp_nav_height;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        &__hamburger__icon__line {
+            width: 20px;
+            height: 2px;
+            background: lighten($color_brand_primary, 25%);
+            border-radius: 2px;
+            margin-bottom: 5px;
+            &:last-child { margin-bottom: 0; }
+        }
+
     }
-    .#{$prefix_component_nav}nav__hamburger__icon__line {
-        width: 20px;
-        height: 2px;
-        background: lighten($color_brand_primary, 25%);
-        border-radius: 2px;
-        margin-bottom: 5px;
-        &:last-child { margin-bottom: 0; }
-    }
+    
 
     .nav__links__list .list {
         position: absolute;
         top: $cmp_nav_height;
         left: 0;
-	    max-height: calc(100vh - #{$cmp_nav_height * 2});
-        overflow-y: auto;
         @extend %text_brand_01 !optional;
         @extend %bg_brand_03 !optional;
         width: 150px;

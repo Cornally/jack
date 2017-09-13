@@ -2,7 +2,7 @@
 title: Tables
 description: Tables have some "baggage" from the olden days when folks used them for layout.  You know where they really shine?  When it's time to show tabular data.
 layout: component
-states:
+sections:
     - item:
         title: Default
         description: Your standard no-frills table.
@@ -15,12 +15,20 @@ states:
         title: Border
         description: Add a border with the <code>.table--border</code> class to frame your table.
         tpl: table--border.html
+classes:
+    - item:
+        title: .table--border
+        description: Add a border to the table
+        tag: .table
+    - item:
+        title: .table--striped
+        description: Add odd/even background highlighting to table
+        tag: .table
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
+    {% include docs__component-header.html %}
 
-    {% for state in page.states %}
+    {% for state in page.sections %}
     <hr class="divider">
     <div class="row">
         <a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>

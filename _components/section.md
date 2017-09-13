@@ -2,7 +2,7 @@
 title: Sections
 description: Sections are used to differentiate content.
 layout: component
-states:
+sections:
     - item:
         title: Angled Background
         description: Add an angled background to your sections.
@@ -14,21 +14,10 @@ classes:
         tag: .section
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
-
-    <a class="anchor--docs" id="modifier-classes"></a>
-    <table class="table table--striped m-b-4">
-        <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
-        <tbody>
-            {% for class in page.classes %}
-            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td class="text-breakword">{{ class.item.description }}</td></tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    {% include docs__component-header.html %}
 </div>
 
-{% for state in page.states %}
+{% for state in page.sections %}
 {% include {{ state.item.tpl }} %}
 <div class="container content">
     <div class="col-12 m-0 p-0">

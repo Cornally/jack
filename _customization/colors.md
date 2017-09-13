@@ -2,7 +2,7 @@
 title: Colors
 description: Quickly pin down your brand's palette with some of the following techniques.  Jack uses a number of generator functions behind the scenes to compile utility derivatives for a set of brand colors and colors that convey stateful meaning.
 layout: component
-ideas:
+sections:
     - item:
         title: Add Brand Colors
         description: Use the native <code>map-merge</code> functionality of Sass to add new colors to your brand array mapping.
@@ -19,19 +19,18 @@ ideas:
         demoTpl: customization/colors--demo.html
     - item:
         title: Generate Classes
-        description: Welcome to the magic of Jack.  You can auto-generate color shade class derivatives for any CSS property that accepts a color for the value, e.g. <code>color</code>, <code>background</code>, <code>border-color</code>, <code>fill</code>, you get the idea.  You may also pass rgb/rgba/hsl properties as the base color.
+        description: Auto-generate color shade derivative styling classes for any CSS property that accepts a color for the value, e.g. <code>color</code>, <code>background</code>, <code>border-color</code>, or <code>fill</code>  You may also pass rgb/rgba/hsl properties as the base color.
         tpl: customization/colors.html
         demoTpl: customization/colors--demo.html
     - item:
         title: Generate Placeholders
-        description: You can auto-emit color shade %placeholders for any CSS property that accepts a color for the value, e.g. <code>color</code>, <code>background</code>, <code>border-color</code>, <code>fill</code>, you get the idea.  You may also pass rgb/rgba/hsl properties as the base color.
+        description: Auto-emit color shade %placeholders for any CSS property that accepts a color for the value, e.g. <code>color</code>, <code>background</code>, <code>border-color</code>, or <code>fill</code>.  You may also pass rgb/rgba/hsl properties as the base color.
         tpl: customization/colors.html
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
+    {% include docs__component-header.html %}
 
-    {% for idea in page.ideas %}
+    {% for idea in page.sections %}
     <hr class="divider">
     <div class="row">
         <a class="anchor--docs" id="{{ idea.item.title | slugify }}"></a>

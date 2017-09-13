@@ -2,17 +2,16 @@
 title: Modals
 description: Modals or dialog boxes are popping off!
 layout: component
-states:
+sections:
     - item:
         title: Default
         description: Click to launch modal!
         tpl: modal.html
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
+    {% include docs__component-header.html %}
 
-    {% for state in page.states %}
+    {% for state in page.sections %}
     <hr class="divider">
     <div class="row">
         <a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>

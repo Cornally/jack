@@ -9,6 +9,13 @@
 
         .row:not(:last-child) { margin-bottom: $size_gap*5; }
 
+        .row--component-header {
+            @media (max-width: $size_break_md) {
+                > :first-child { order: 2; }
+                > :nth-child(2) { order: 1; }
+            }
+        }
+
         .card--example {
             @extend %col-12;
             > .card__head,

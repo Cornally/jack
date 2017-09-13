@@ -2,7 +2,7 @@
 title: Dividers
 description: Use dividers to split content up.  You may style <code>&#60;hr&#62;</code> tags directly or apply a <code>.divider</code> class to a  <code>&#60;div&#62;</code> element.
 layout: component
-states:
+sections:
     - item:
         title: Basic Divider
         description: null
@@ -46,20 +46,9 @@ classes:
         tag: .divider
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
+    {% include docs__component-header.html %}
 
-    <a class="anchor--docs" id="modifier-classes"></a>
-    <table class="table table--striped m-b-4">
-        <thead><tr><th>Modifier Classes</th><th>Modifies</th><th>Description</th></tr></thead>
-        <tbody>
-            {% for class in page.classes %}
-            <tr><td><code>{{ class.item.title }}</code></td><td><code>{{ class.item.tag }}</code></td><td class="text-breakword">{{ class.item.description }}</td></tr>
-            {% endfor %}
-        </tbody>
-    </table>
-
-    {% for state in page.states %}
+    {% for state in page.sections %}
     <hr class="divider">
     <div class="row">
         <a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>

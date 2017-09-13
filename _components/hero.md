@@ -2,18 +2,18 @@
 title: Heroes
 description: Add a hero to create a bigger splash!  Did you know -- 93% of hero images include scenes of nature?  Heroes occupy the full width of their container.
 layout: component
-states:
+sections:
     - item:
         title: Default
         description: null
         tpl: hero.html
 ---
 <div class="container content">
-    <h1>{{ page.title }}</h1>
-    <p class="well">{{ page.description }}</p>
+    {% include docs__component-header.html %}
 </div>
 
-{% for state in page.states %}
+{% for state in page.sections %}
+<a class="anchor--docs" id="{{ state.item.title | slugify }}"></a>
 {% include {{ state.item.tpl }} %}
 <div class="container content">
     <div class="col-12 m-0 p-0">
