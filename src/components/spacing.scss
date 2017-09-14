@@ -5,6 +5,61 @@
 // Spacing Helpers
 /////////////////////////
 
+// Ad-hoc inclusion of a specific margin location, size, and an optional set of breakpoints
+// You can call @include margin(...) or a shorthand @include m(...)
+// @include m(x, 4), @include m(t, 2, md), @include m(y, 5, sm, md, lg, xl);
+@mixin margin($location: '', $count: 2, $sizes...) {
+    $output_type: 'margin';
+    $halt_execution: false;
+    
+    @if $location == 'top' or $location == 't' { $output_type: 'margin-top'; }
+    @else if $location == 'right' or $location == 'r' { $output_type: 'margin-right'; }
+    @else if $location == 'bottom' or $location == 'b' { $output_type: 'margin-bottom'; }
+    @else if $location == 'left' or $location == 'l' { $output_type: 'margin-left'; }
+    @else if $location == 'horizontal' or $location == 'x' {
+        $halt_execution: true;
+        @include margin('l', $count, $sizes...);
+        @include margin('r', $count, $sizes...);
+    }
+    @else if $location == 'vertical' or $location == 'y' {
+        $halt_execution: true;
+        @include margin('t', $count, $sizes...);
+        @include margin('b', $count, $sizes...);
+    }
+    
+    @if $halt_execution == false {
+        // No breakpoints passed
+        @if length($sizes) == 0 {
+            @if type-of($count) == 'number' {
+                #{$output_type}: $size_gap * $count;
+            } @else {
+                #{$output_type}: auto;
+            }
+        } @else {
+            // Generate for breakpoints (e.g. pass md, lg, or just sm)
+            @each $size in $sizes {
+                @if map-has-key($sizes_break, $size) == true {
+                    @media (min-width: map-get($sizes_break, $size)) {
+                        @if type-of($count) == 'number' {
+                            #{$output_type}: $size_gap * $count;
+                        } @else {
+                            #{$output_type}: auto;
+                        }
+                    }
+                }
+                @else {
+                    @warn 'The "#{$size}" does not exist as a key in $sizes_break!';
+                }
+            }
+        }
+    }
+}
+
+@mixin m($location, $count, $sizes...) {
+    @include margin($location, $count, $sizes...);
+}
+
+
 // Based on our gap size defined in `utils/_sizes.scss`,
 // create a media query for each respective breakpoint size,
 // Loop through each spacing size and set spacing values.
@@ -72,9 +127,11 @@
     }
     
     // Horizontally center if we have display: block; and a width set
-    #{$output_type}#{$prefix_util_margins}m-x-auto {
-        margin-left: auto #{$suffix};
-        margin-right: auto #{$suffix};
+    @if $type == 'margin' {
+        #{$output_type}#{$prefix_util_margins}m-x-auto {
+            margin-left: auto #{$suffix};
+            margin-right: auto #{$suffix};
+        }
     }
 
     // Loop through each break point size
