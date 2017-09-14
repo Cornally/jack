@@ -1,5 +1,15 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.28 (September 14, 2017)
+
+IMPROVEMENTS:
+
+  * Moved tab border to :after psuedo-selector.
+
+BUG FIXES:
+
+  * Nav dropdowns are correctly z-indexed
+
 ## 0.0.27 (September 9, 2017)
 
 IMPROVEMENTS:
