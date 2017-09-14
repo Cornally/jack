@@ -24,7 +24,7 @@
         .card--example {
             @extend %col-12;
             > .card__head,
-            > .card__body { padding: $size_gap*2; }
+            > .card__body { padding: $size_gap*2 0; }
             > .card__head + .card__body { margin-top: 0; line-height: initial; }
         }
 
@@ -36,6 +36,8 @@
                 align-items: baseline;
                 @extend %text_primary_03 !optional;
             }
+            > .card__head,
+            > .card__body { padding: $size_gap*2 0; }
             > .card__head + .card__body { margin-top: 0; } 
         }
 

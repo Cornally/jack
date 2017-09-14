@@ -85,8 +85,7 @@
                 height: 14px;
                 padding: 10px;
                 float: left;
-                @extend %m-r-2 !optional;
-                @extend %m-y-0 !optional;
+                margin: 0 $size_gap*2 0 0;
                 &:not(:disabled),
                 &:not(:disabled) + span {
                     cursor: pointer;
