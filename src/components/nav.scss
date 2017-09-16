@@ -65,7 +65,7 @@
                     max-height: $cmp_nav_height * 20; // Number of links * link height (px)
                 }
 
-                .nav__links__list .list.list--active {
+                .#{$prefix_component_nav}nav__links__list .list.list--active {
                     display: inline-block;
                     position: static;
                     width: 100%;
@@ -145,7 +145,7 @@
     }
     
 
-    .nav__links__list .list {
+    .#{$prefix_component_nav}nav__links__list .list {
         position: absolute;
         top: $cmp_nav_height;
         left: 0;

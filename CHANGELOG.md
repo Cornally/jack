@@ -1,5 +1,15 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.29 (September 14, 2017)
+
+IMPROVEMENTS:
+
+  * Prefix values are all mapped to the global default which is now blank.
+
+  BUG FIXES:
+
+  * Nav classes now properly receive prefixes.
+
 ## 0.0.28 (September 14, 2017)
 
 IMPROVEMENTS:
