@@ -15,7 +15,7 @@
             user-select: none;
 
             // Space them out by default
-            .btn-group & {
+            &---group & {
                 float: left;
                 margin-right: $size_gap;
                 margin-bottom: $size_gap;
