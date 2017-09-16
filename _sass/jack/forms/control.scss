@@ -45,6 +45,7 @@
             position: relative;
 
             .#{$prefix_form_field}field__control {
+                padding: $gap_md $gap_xxl $gap_md $gap_md;
                 &:not(:disabled) {
                     cursor: pointer;
                 }

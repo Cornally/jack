@@ -22,14 +22,14 @@
         }
 
         .card--example {
-            @extend %col-12;
+            width: 100%;
             > .card__head,
             > .card__body { padding: $size_gap*2 0; }
             > .card__head + .card__body { margin-top: 0; line-height: initial; }
         }
 
         .card--highlight {
-            @extend %col-12;
+            width: 100%;
             > .card__head {
                 display: flex;
                 justify-content: space-between;
