@@ -51,24 +51,32 @@
     }
 
     img {
-        max-width: 100%;
         -ms-interpolation-mode: bicubic;
         display: block;
+        max-width: 100%;
     }
 
-    svg { display: block; }
+    svg {
+        display: block;
+    }
 
     // Default links
     a {
         &,
-        &:hover { text-decoration: none; }
-        &:focus { outline-color: $color_brand_primary; }
+        &:hover {
+            text-decoration: none;
+        }
+        &:focus {
+            outline-color: $color_brand_primary;
+        }
     }
 
     // Outline moved to box-shadow for accessibility
     h1,
     h2,
-    h3 { outline: none; }
+    h3 {
+        outline: none;
+    }
 
     p,
     h1,
@@ -102,9 +110,13 @@
         -webkit-text-fill-color: #fff;
     }
 
-    // Change highlight color
-    * { &::selection { background: rgba($color_brand_primary, .5); }}
+    * {
+        // Disable tap highlight
+        -webkit-tap-highlight-color: transparent;
 
-    // Disable tap highlight
-    * { -webkit-tap-highlight-color: transparent; }
+        // Change text selection highlight color
+        &::selection {
+            background: rgba($color_brand_primary, .5);
+        }
+    }
 }

@@ -86,12 +86,12 @@
 
         // Add a spacing gap vertically between cols
         &--col-vgap {
-            margin-top: -1 * $grid_gap;
             margin-bottom: -1 * $grid_gap;
+            margin-top: -1 * $grid_gap;
 
             > [class^=#{$prefix_component_grid}col-] {
-                padding-top: $grid_gap;
                 padding-bottom: $grid_gap;
+                padding-top: $grid_gap;
             }
         }
     }

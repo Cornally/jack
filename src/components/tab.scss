@@ -3,9 +3,9 @@
 @if check($include_component_tab) {
 
     .#{$prefix-component_tab}tabs {
+        align-items: center;
         display: flex;
         flex-direction: row;
-        align-items: center;
         justify-content: stretch;
 
         &__tab {
@@ -22,14 +22,14 @@
                     color: $color_brand_primary;
                 }
                 &:after {
-                    display: block;
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
-                    height: 3px;
-                    width: 100%;
                     background: currentColor;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
                 }
             }
 

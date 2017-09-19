@@ -1,87 +1,93 @@
 @import '../settings/all';
 
 @if $include_form_button or $jack_include_all {
-
-        .#{$prefix_form_button}btn {
-            cursor: pointer;
-            display: inline-block;
-            border-style: solid;
-            border-width: 1px;
-            border-radius: $size_radius_sm;
-            font-size: 14px;
-            font-weight: bold;
-            padding: $gap_sm $gap_md;
-            text-align: center;
-            user-select: none;
-
-            // Space them out by default
-            &---group & {
-                float: left;
-                margin-right: $size_gap;
-                margin-bottom: $size_gap;
+    
+    .#{$prefix_form_button}btn {
+        border-radius: $size_radius_sm;
+        border-style: solid;
+        border-width: 1px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: $gap_sm $gap_md;
+        text-align: center;
+        user-select: none;
+        
+        // Space them out by default
+        &-group & {
+            float: left;
+            margin-bottom: $size_gap;
+            margin-right: $size_gap;
+            &:last-child {
+                margin-right: 0;
             }
-
-            @each $state, $color in $colors_all {
-
-                &.#{$prefix_form_button}btn--#{$state} {
-                    border-color: $color;
-                    background: $color;
-                    color: white;
-                    &:hover {
-                        color: white;
-                        background: adjust-color($color, $lightness: -5%, $saturation: -15%);
-                        border-color: adjust-color($color, $lightness: -5%, $saturation: -15%);;
-                    }
-                    &:active {
-                        color: white;
-                        background: adjust-color($color, $lightness: -10%, $saturation: -30%);;
-                        border-color: adjust-color($color, $lightness: -10%, $saturation: -30%);;
-                    }
-                    @if($state == 'disabled') {
-                        &,
-                        &:hover,
-                        &:active {
-                            color: adjust-color($color, $lightness: -15%, $saturation: -15%);
-                            background: $color;
-                            border-color: $color;
-                        }
-                        &:hover { cursor: not-allowed; }
-                    }
-                }
-
-                &--#{$state}--line {
-                    border-color: rgba($color, .5);
-                    color: $color;
-                    &:hover {
-                        color: $color;
-                        border-color: currentColor;
-                    }
-                    &:active {
-                        color: $color;
-                        border-color: currentColor;
-                    }
-                    @if($state == 'disabled') {
-                        &,
-                        &:hover,
-                        &:active {
-                            color: $color;
-                            border-color: rgba($color, .5);
-                        }
-                        &:hover { cursor: not-allowed; }
-                    }
-                }
-            }
-
-            &--sm {
-                font-size: $size_font_sm;
-                padding: $gap_xs $gap_sm;
-                line-height: 1.5em;
-            }
-
-            &--lg {
-                font-size: 16px;
-                padding: $gap_md $gap_xl;
-            }
-
         }
+        
+        @each $state, $color in $colors_all {
+            
+            &.#{$prefix_form_button}btn--#{$state} {
+                background: $color;
+                border-color: $color;
+                color: white;
+                &:hover {
+                    background: adjust-color($color, $lightness: -5%, $saturation: -15%);
+                    border-color: adjust-color($color, $lightness: -5%, $saturation: -15%);
+                    color: white;
+                }
+                &:active {
+                    background: adjust-color($color, $lightness: -10%, $saturation: -30%);
+                    border-color: adjust-color($color, $lightness: -10%, $saturation: -30%);
+                    color: white;
+                }
+                @if($state == 'disabled') {
+                    &,
+                    &:hover,
+                    &:active {
+                        background: $color;
+                        border-color: $color;
+                        color: adjust-color($color, $lightness: -15%, $saturation: -15%);
+                    }
+                    &:hover {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+            
+            &--#{$state}--line {
+                border-color: rgba($color, .5);
+                color: $color;
+                &:hover {
+                    border-color: currentColor;
+                    color: $color;
+                }
+                &:active {
+                    border-color: currentColor;
+                    color: $color;
+                }
+                @if($state == 'disabled') {
+                    &,
+                    &:hover,
+                    &:active {
+                        border-color: rgba($color, .5);
+                        color: $color;
+                    }
+                    &:hover {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+        
+        &--sm {
+            font-size: $size_font_sm;
+            line-height: 1.5em;
+            padding: $gap_xs $gap_sm;
+        }
+        
+        &--lg {
+            font-size: 16px;
+            padding: $gap_md $gap_xl;
+        }
+    }
 }

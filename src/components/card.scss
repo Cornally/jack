@@ -8,9 +8,9 @@
         $cmp_border: $color_light_03;
         $cmp_border-dark: $color_light_03;
 
+        background: $cmp_background;
         display: flex;
         flex-direction: column;
-        background: $cmp_background;
 
         &--no-padding {
             &__head,
@@ -37,9 +37,9 @@
         }
 
         &__head {
-            padding: $gap_lg;
             font-size: $size_font_lg;
             font-weight: bold;
+            padding: $gap_lg;
         }
 
         &__head__title {
@@ -48,28 +48,28 @@
         }
 
         &__head__subtitle {
+            color: $color_dark_04;
             font-size: $size_font_md;
             font-weight: lighter;
-            color: $color_dark_04;
             margin-top: $gap_md;
         }
 
         &__media {
+            background: $color_light_04;
             height: 200px;
             line-height: 200px;
             text-align: center;
-            background: $color_light_04;
         }
 
         &__body {
-            padding: $gap_lg;
             font-size: $size_font_md;
             line-height: $typography_body_lineheight;
+            padding: $gap_lg;
         }
 
         &__head + &__body {
-            padding-top: 0;
             margin-top: $size_gap*-2;
+            padding-top: 0;
         }
 
     }

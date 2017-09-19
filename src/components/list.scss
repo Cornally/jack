@@ -4,40 +4,40 @@
 
     %list_item_state {
         &:before {
-            display: inline-block;
+            border-radius: 50%;
             content: " ";
-            text-indent: -9999px;
-            width: 1em;
+            display: inline-block;
             height: 1em;
             line-height: 1em;
-            border-radius: 50%;
             margin-right: $gap_md;
+            text-indent: -9999px;
+            width: 1em;
         }
     }
 
     %list_item_state_bar {
-        position: relative;
         padding-left: $gap_lg;
+        position: relative;
         &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
             content: " ";
+            height: 100%;
+            left: 0;
+            position: absolute;
             text-indent: -9999px;
+            top: 0;
+            width: 4px;
         }
     }
 
     .#{$prefix_component_list}list {
+        list-style: none;
         margin: 0;
         padding: 0;
-        list-style: none;
     }
 
     .#{$prefix_component_list}list__item {
-        padding: $size_gap $gap_md;
         border-bottom: 1px solid rgba($color_brand_primary, .10);
+        padding: $size_gap $gap_md;
         &:last-child { border-bottom: 0; }
     }
 

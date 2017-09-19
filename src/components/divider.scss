@@ -2,19 +2,18 @@
 
 @if check($include_component_divider) {
 	
-	hr,
 	.#{$prefix_component_divider}divider {
-		display: flex;
-		justify-content: space-around;
 		align-items: center;
 		border: none;
+		display: flex;
+		justify-content: space-around;
 
 		&:before, &:after {
-			display: block;
-			content: " ";
-			height: 1px;
-			flex: 1;
 			background-color: $color_light_03;
+			content: " ";
+			display: block;
+			flex: 1;
+			height: 1px;
 		}
 
 		&--label { text-align: center; }
@@ -22,12 +21,11 @@
 		&--label--right:after { display: none; }
 		
 		&__text {
-
 			color: $color_light_04;
-			font-weight: bold;
-			text-transform: uppercase;
-			padding: 0 $size_gap;
 			flex: 0;
+			font-weight: bold;
+			padding: 0 $size_gap;
+			text-transform: uppercase;
 			white-space: nowrap;
 		}
 	}
