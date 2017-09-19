@@ -1,24 +1,55 @@
 @import '../settings/all';
 
 @if check($include_component_link) {
+
+    %link_underline {
+        text-decoration: underline;
+    }
     
     .#{$prefix_component_link}link {
         color: $color_brand_primary;
-        &:hover { color: adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%); }
-        &--active { font-weight: bold; }
+        
+        &:hover {
+            color: adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%);
+        }
+        &--underline {
+            @extend %link_underline !optional;
+            text-decoration-color: rgba(adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%), .25);
+            &.#{$prefix_component_link}link:hover {
+                @extend %link_underline !optional;
+                text-decoration-color: rgba(adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%), .5);
+            }
+        }
+        &--active {
+            font-weight: bold;
+        }
     }
 
     @each $state, $color in $colors_all {
         .#{$prefix_component_list}link--#{$state} {
             color: $color;
-            &:hover { color: adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%); }
+
+            &:hover {
+                color: adjust-color($color, $lightness: -5%, $saturation: -15%);
+            }
+
+            &.#{$prefix_component_list}link--underline {
+                @extend %link_underline !optional;
+                text-decoration-color: rgba($color, .25);
+                &:hover {
+                    text-decoration-color: rgba(adjust-color($color, $lightness: -5%, $saturation: -15%), .5);
+                }
+            }
+
             @if($state == 'disabled') {
                 &,
                 &:hover,
                 &:active {
                     color: $color;
                 }
-                &:hover { cursor: not-allowed; }
+                &:hover {
+                    cursor: not-allowed;
+                }
             }
         }
     }
