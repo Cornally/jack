@@ -4,13 +4,11 @@
 
     // Wrapper positioning for alert(s)
     %alert_position {
-        position: fixed;
-        right: $gap_lg;
-        left: $gap_lg;
-
         display: flex;
         flex-direction: column-reverse;
-
+        left: $gap_lg;
+        position: fixed;
+        right: $gap_lg;
         z-index: z("alert");
 
         .alert:not(:first-child) {
@@ -26,23 +24,22 @@
         } @else {
             top: $gap_lg;
         }
-
         flex-direction: column;
+
         .alert:not(:first-child) {
-            margin-top: $gap_md;
             margin-bottom: 0;
+            margin-top: $gap_md;
         }
     }
 
     .#{$prefix_component_alert}alert {
-
         $cmp_background: $color_light_01;
         $cmp_border: $color_light_03;
         $cmp_border-dark: $color_light_03;
 
+        background: $cmp_background;
         display: flex;
         flex-direction: row;
-        background: $cmp_background;
         pointer-events: initial;
 
         &-wrapper {
@@ -101,17 +98,17 @@
         }
 
         &__body {
-            padding: $gap_md $gap_lg;
             font-size: $size_font_md;
             line-height: $typography_body_lineheight;
+            padding: $gap_md $gap_lg;
         }
 
         &__close {
+            background: linear-gradient(45deg, rgba(0,0,0,0), rgba($color_dark_01, .05));
             cursor: pointer;
             fill: currentColor;
             font-size: $size_font_md;
             padding: $gap_md;
-            background: linear-gradient(45deg, rgba(0,0,0,0), rgba($color_dark_01, .05));
         }
 
         @each $state, $color in $colors_all {

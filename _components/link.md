@@ -6,10 +6,13 @@ sections:
     - item:
         title: Basic Links
         tpl: link.html
+    - item:
+        title: Underlined Links
+        tpl: link--underline.html
 classes:
     - item:
         title: .link--default
-        description: Create a standard button.
+        description: Create a standard link.
         tag: .link, &#60;a&#62;
     - item:
         title: .link--success
@@ -33,11 +36,11 @@ classes:
         tag: .link, &#60;a&#62;
     - item:
         title: .link--primary
-        description: Button mapped to your branding's primary color, derived from color mappings in <code>_colors.scss</code>
+        description: Link mapped to your branding's primary color, derived from color mappings in <code>_colors.scss</code>
         tag: .link, &#60;a&#62;
     - item:
         title: .link--secondary
-        description: Button mapped to your branding's secondary color, derived from color mappings in <code>_colors.scss</code>
+        description: Link mapped to your branding's secondary color, derived from color mappings in <code>_colors.scss</code>
         tag: .link, &#60;a&#62;
 ---
 <div class="container content">

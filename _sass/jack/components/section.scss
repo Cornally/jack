@@ -5,17 +5,17 @@
     .#{$prefix_component_section}section {
         &--angled {
             background: none;
-            position: relative;
             padding: 60px 0 !important;
+            position: relative;
             &:after {
                 content: "";
+                height: 100%;
+                left: 0;
+                padding: 60px 0 !important;
                 position: absolute;
                 top: 0;
-                left: 0;
                 width: 100%;
-                height: 100%;
                 z-index: z("section");
-                padding: 60px 0 !important;
             }
             &:nth-of-type(1):after,
             &:nth-of-type(4):after {
@@ -32,9 +32,16 @@
                 background: $color_light_03;
                 transform: skewY(1.25deg);
             }
-            &:first-of-type:after { transform-origin: top right; }
-            &:last-of-type:after { transform-origin: bottom left; padding-bottom: 0 !important; }
-            &:last-of-type { padding-bottom: 0 !important; }
+            &:first-of-type:after {
+                transform-origin: top right;
+            }
+            &:last-of-type:after {
+                padding-bottom: 0 !important;
+                transform-origin: bottom left;
+            }
+            &:last-of-type {
+                padding-bottom: 0 !important;
+            }
         }
     }
 

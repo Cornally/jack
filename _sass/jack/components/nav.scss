@@ -5,19 +5,19 @@
     $cmp_nav_height: 50px;
 
     .#{$prefix_component_nav}nav {
-        width: 100%;
-        min-height: $cmp_nav_height;
-        line-height: $cmp_nav_height;
         background: $color_brand_primary;
+        line-height: $cmp_nav_height;
+        min-height: $cmp_nav_height;
+        width: 100%;
 
         @each $size, $px in $sizes_break {
             @media (min-width: $px) {
 
                 // Set sticky per size so that you can determine when the nav goes sticky
                 &.#{$prefix_component_nav}nav-#{$size}--sticky {
+                    left: 0;
                     position: fixed;
                     top: 0;
-                    left: 0;
                     z-index: z("nav");
 
                     .list {
@@ -27,8 +27,8 @@
                     
                     // Push content down the height of the nav when sticky
                     & + *:before {
-                        display: block;
                         content: "";
+                        display: block;
                         padding-top: $cmp_nav_height;
                     }
                 }
@@ -42,10 +42,10 @@
                     text-align: center;
                 }
                 .#{$prefix_component_nav}nav__links {
-                    width: 100%;
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .18s ease-out;
+                    width: 100%;
                 }
                 .nav__links a {
                     display: block;
@@ -67,10 +67,10 @@
 
                 .#{$prefix_component_nav}nav__links__list .list.list--active {
                     display: inline-block;
-                    position: static;
-                    width: 100%;
                     max-height: initial;
                     overflow-y: visible;
+                    position: static;
+                    width: 100%;
                     a { padding: $gap_md $gap_xl; }
                 }
 
@@ -122,23 +122,23 @@
         }
 
         &__hamburger__icon {
+            align-items: center;
             cursor: pointer;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: $cmp_nav_height;
-            height: $cmp_nav_height;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            height: $cmp_nav_height;
             justify-content: center;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: $cmp_nav_height;
         }
         &__hamburger__icon__line {
-            width: 20px;
-            height: 2px;
             background: lighten($color_brand_primary, 25%);
             border-radius: 2px;
+            height: 2px;
             margin-bottom: 5px;
+            width: 20px;
             &:last-child { margin-bottom: 0; }
         }
 
@@ -146,15 +146,15 @@
     
 
     .#{$prefix_component_nav}nav__links__list .list {
+        left: 0;
         position: absolute;
         top: $cmp_nav_height;
-        left: 0;
         @extend %text_brand_01 !optional;
         @extend %bg_brand_03 !optional;
         width: 150px;
         .list__item {
-            padding: 0;
             line-height: 1.5em;
+            padding: 0;
             a { display: block; }
             &:hover { @extend %bg_brand_04 !optional; }
         }

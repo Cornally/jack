@@ -11,32 +11,34 @@
         margin-bottom: $gap_sm;
     }
 
+
+    // Light (controls default to light)
     .#{$prefix_form_field}field__control {
         -ms-appearance: none;
         -moz-appearance: none;
         -webkit-appearance: none;
         appearance: none;
-        outline: none;
-
-        display: block;
-        width: 100%;
-        padding: $gap_md;
-        font-size: $size_font_md;
-        border-radius: $cmp_border_radius;
-
-        // Light (controls default to light)
-        border: 1px solid $color_light_03;
         background: $color_light_01;
+        border-radius: $cmp_border_radius;
+        border: 1px solid $color_light_03;
+        display: block;
+        font-size: $size_font_md;
+        outline: none;
+        padding: $gap_md;
+        width: 100%;
 
         &:hover,
-        &:focus { border-color: $color_light_04; }
+        &:focus {
+            border-color: $color_light_04;
+        }
         &:disabled {
-            border: 1px solid $color_light_03;
             background: $color_light_02;
+            border: 1px solid $color_light_03;
             cursor: not-allowed;
         }
-
-        &::placeholder { color: $color_light_04; }
+        &::placeholder {
+            color: $color_light_04;
+        }
     }
 
     .#{$prefix_form_field}field {
@@ -57,14 +59,14 @@
             }
 
             &:after, &:before {
+                background-color: $color_light_04;
+                bottom: $gap_lg - 2px;
+                content: " ";
                 display: block;
-                content: "";
+                height: 12px;
                 position: absolute;
                 right: $gap_lg;
-                bottom: $gap_lg - 2px;
                 width: $cmp_accent_thickness;
-                height: 12px;
-                background-color: $color_light_04;
             }
             &:before {
                 transform: rotate(-45deg) translate3d(calc(-50% - #{$cmp_accent_thickness}), 0, 0);
@@ -76,17 +78,18 @@
 
         &--checkbox,
         &--radio {
-            display: flex;
             align-items: center;
-            text-align: left;
+            display: flex;
             line-height: 22px;
+            text-align: left;
 
             .#{$prefix_form_field}field__control {
-                width: 14px;
-                height: 14px;
-                padding: 10px;
                 float: left;
+                height: 14px;
                 margin: 0 $size_gap*2 0 0;
+                padding: 10px;
+                width: 14px;
+
                 &:not(:disabled),
                 &:not(:disabled) + span {
                     cursor: pointer;
@@ -94,18 +97,18 @@
                 &:checked {
                     position: relative;
                     &:before {
-                        display: block;
-                        content: "";
-                        position: absolute;
-                        left: calc(50% - 6px);
-                        top: calc(50% - 6px);
-                        width: 12px;
-                        height: 12px;
                         background: $color_state_success;
-                        border-top: 2px solid rgba($color_dark_01, .10);
                         border-bottom: 2px solid rgba($color_light_01, .20);
                         border-radius: $cmp_border_radius/2;
+                        border-top: 2px solid rgba($color_dark_01, .10);
                         box-sizing: border-box;
+                        content: "";
+                        display: block;
+                        height: 12px;
+                        left: calc(50% - 6px);
+                        position: absolute;
+                        top: calc(50% - 6px);
+                        width: 12px;
                     }
                 }
             }
@@ -136,10 +139,10 @@
                     padding: 0;
                 }
                 &::-webkit-color-swatch {
-                    border-top: 3px solid rgba($color_dark_01, .10);
                     border-bottom: 3px solid rgba($color_light_01, .20);
                     border-left: none;
                     border-right: none;
+                    border-top: 3px solid rgba($color_dark_01, .10);
                 }
             }
         }

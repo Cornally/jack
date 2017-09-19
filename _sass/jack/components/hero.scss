@@ -1,14 +1,14 @@
 @import '../settings/all';
 
 @if check($include_component_hero) {
-
+    
     .#{$prefix_component_hero}hero {
+        align-items: center;
+        background: $color_brand_secondary;
+        color: white;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        color: white;
-        background: $color_brand_secondary;
         min-height: 75vh;
     }
 }
