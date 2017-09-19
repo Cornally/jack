@@ -1,5 +1,7 @@
 # Meet Jack
-A modern styling library with an affinity for animation.  Just add content, kid. [View Examples](https://cornally.github.io/jack)
+A modern styling library with an affinity for animation.  Just add content, kid.
+
+[Full Documentation](https://cornally.github.io/jack)
 
 ## 1. Getting Started
 Install the package `npm install jack-strap --save`.  There are a few options for harnessing the power of Jack.
@@ -8,11 +10,11 @@ Install the package `npm install jack-strap --save`.  There are a few options fo
 `<link rel="stylesheet" href="node_modules/jack-strap/dist/jack.css">`
 for the minified production version.
 
-1. Import compiled component resources into your project's existing SASS/LESS:
+1. Import compiled component resources into your project's existing Sass/LESS:
 `@import url('node_modules/jack-strap/dist/components/grid.css');`
 
-2. Import component SASS partials and overwrite the defaults inside `src/settings/_user.config.scss` for granular control, e.g.:
-```sass
+2. Import component Sass partials and overwrite the defaults inside `src/settings/_user.config.scss` for granular control, e.g.:
+```scss
 // Add project-specific prefix
 $global_prefix: 'cc-';
 
@@ -22,7 +24,7 @@ $include_util_reset: false;
 @import 'node_modules/jack-strap/src/jack';
 ```
 or
-```sass
+```scss
 @import 'node_modules/jack-strap/src/settings/colors';
 @import 'node_modules/jack-strap/src/settings/sizes';
 @import 'node_modules/jack-strap/src/typography/typography';
@@ -67,21 +69,23 @@ For a full list of configuration options, view `node_modules/jack-strap/componen
       * Side
       * Breadcrumb
     * Multi-level menus
-    * Tabs
+    * ~~Tabs~~
 * Notifications
    * ~~Alerts~~
    * ~~Modals~~
 * ~~Tables~~
 * Typography
     * Font size management
-    * Basic tags
+    * ~~Headers~~
+    * ~~Paragraphs~~
 
 ## 3. Customization
 * Sizing
-    * Break point sizes
+    * ~~Break point sizes~~
     * Font sizes
-    * Spacing sizes
-    * Color management
+    * ~~Spacing sizes~~
+*Colors
+    * ~~Color management~~
 
 ## 4. Browser/Device Support
 The goal is to support IE11, Edge, Chrome, Safari, Firefox, and Opera out of the box.
