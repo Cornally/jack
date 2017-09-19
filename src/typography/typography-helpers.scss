@@ -63,27 +63,31 @@
             @extend %text_paragraph;
         }
 
-        &--left {
+        &-left {
             text-align: left;
         }
 
-        &--right {
+        &-right {
             text-align: right;
         }
 
-        &--center {
+        &-center {
             text-align: center;
         }
 
-        &--nowrap {
+        &-justify {
+            text-align: justify;
+        }
+
+        &-nowrap {
             white-space: nowrap;
         }
         
-        &--breakword {
+        &-breakword {
             word-break: break-word;
         }
 
-        &--ellipsis {
+        &-ellipsis {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -102,4 +106,6 @@
         }
     }
 
+} @else {
+    @warn "We strongly encourage enabling '$include_typography' or adding your own font styling to the <body> tag."
 }
