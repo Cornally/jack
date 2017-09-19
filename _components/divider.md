@@ -2,6 +2,10 @@
 title: Dividers
 description: Use dividers to split content up.  You may style <code>&#60;hr&#62;</code> tags directly or apply a <code>.divider</code> class to a  <code>&#60;div&#62;</code> element.
 layout: component
+source:
+    - item:
+        scss: divider.scss
+        folder: components
 sections:
     - item:
         title: Basic Divider

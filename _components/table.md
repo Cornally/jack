@@ -2,6 +2,10 @@
 title: Tables
 description: Tables have some "baggage" from the olden days when folks used them for layout.  You know where they really shine?  When it's time to show tabular data.
 layout: component
+source:
+    - item:
+        scss: table.scss
+        folder: components
 sections:
     - item:
         title: Default

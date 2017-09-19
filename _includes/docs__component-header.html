@@ -25,6 +25,9 @@
             {% for idea in page.sections %}
             <li class="m-b-1"><a href="#{{ idea.item.title | slugify }}" class="link">{{ idea.item.title }}</a></li>
             {% endfor %}
+            {% for file in page.source %}
+            <li class="m-b-1"><a href="{{ site.github_src }}/{{ file.item.folder }}/{{ file.item.scss }}" class="link" target="_blank">View <b>{{ file.item.scss }}</b></a></li>
+            {% endfor %}
             </ul>
         </div>
     </div>

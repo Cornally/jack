@@ -2,6 +2,10 @@
 title: Buttons
 description: Meet the ubiquitous button; your friend when it's time to guide users through flows or complete a conversion.
 layout: component
+source:
+    - item:
+        scss: button.scss
+        folder: forms
 sections:
     - item:
         title: Basic Buttons

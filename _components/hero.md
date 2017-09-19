@@ -2,6 +2,10 @@
 title: Heroes
 description: Add a hero to create a bigger splash!  Did you know -- 93% of hero images include scenes of nature?  Heroes occupy the full width of their container.
 layout: component
+source:
+    - item:
+        scss: hero.scss
+        folder: components
 sections:
     - item:
         title: Default

@@ -2,6 +2,10 @@
 title: Sections
 description: Sections are used to differentiate content.
 layout: component
+source:
+    - item:
+        scss: section.scss
+        folder: components
 sections:
     - item:
         title: Angled Background

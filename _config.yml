@@ -24,6 +24,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Cornally
 github_username:  Cornally
 
+# References in docs with links directly to .scss files
+github_src: https://github.com/Cornally/jack/tree/master/src
+
 # Build settings
 markdown: kramdown
 gems:

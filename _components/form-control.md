@@ -2,6 +2,10 @@
 title: Form Controls
 description: Inputs, selects, text areas, checkboxes, radios, and other building blocks for forms.
 layout: component
+source:
+    - item:
+        scss: control.scss
+        folder: forms
 sections:
     - item:
         title: Basic Controls

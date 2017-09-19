@@ -2,6 +2,10 @@
 title: Lists
 description: Lists let you repeat elements using semantic HTML tags.  You may also indicate state on your list items using the global state names defined in the <code>_colors.scss</code> partial.
 layout: component
+source:
+    - item:
+        scss: list.scss
+        folder: components
 sections:
     - item:
         title: Basic List

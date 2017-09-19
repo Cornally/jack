@@ -2,6 +2,10 @@
 title: Colors
 description: Quickly pin down your brand's palette with some of the following techniques.  Jack uses a number of generator functions behind the scenes to compile utility derivatives for a set of brand colors and colors that convey stateful meaning.
 layout: component
+source:
+    - item:
+        scss: _colors.scss
+        folder: settings
 sections:
     - item:
         title: Add Brand Colors

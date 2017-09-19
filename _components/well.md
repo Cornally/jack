@@ -2,6 +2,10 @@
 title: Wells
 description: Use wells to highlight sections of content.  You're looking at a well right now, in the flesh!
 layout: component
+source:
+    - item:
+        scss: well.scss
+        folder: components
 sections:
     - item:
         title: Basic Well

@@ -2,6 +2,10 @@
 title: Modals
 description: Modals or dialog boxes are popping off!
 layout: component
+source:
+    - item:
+        scss: modal.scss
+        folder: components
 sections:
     - item:
         title: Default

@@ -2,6 +2,10 @@
 title: Links
 description: Links help connect different uniform resource locators on the interwebs.
 layout: component
+source:
+    - item:
+        scss: link.scss
+        folder: components
 sections:
     - item:
         title: Basic Links

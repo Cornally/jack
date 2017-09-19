@@ -2,6 +2,10 @@
 title: Tabs
 description: Tabs are used to divide content up over space.  They're also used when playing guitar.  Both are infinitely useful.
 layout: component
+source:
+    - item:
+        scss: tab.scss
+        folder: components
 sections:
     - item:
         title: Basic Tabs

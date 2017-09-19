@@ -2,6 +2,10 @@
 title: Alerts
 description: Cards can be used to isolate or create separation between content.  You may indicate state or include media (think photos or videos) in your cards.  They occupy 100% the width of their container by default.  In our examples, we wrap the cards with our grid construct to constrain the width.
 layout: component
+source:
+    - item:
+        scss: alert.scss
+        folder: components
 sections:
     - item:
         title: Basic Alerts
