@@ -1,13 +1,13 @@
 .modal {
-  visibility: hidden;
+  align-items: center;
+  bottom: 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
   left: 0;
+  position: fixed;
   right: 0;
-  bottom: 0;
+  top: 0;
+  visibility: hidden;
   z-index: 70;
 }
 .modal--active {
@@ -21,21 +21,21 @@
   transition: opacity .2s ease .2s;
 }
 .modal__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: rgba(49, 51, 59, 0.85);
+  bottom: 0;
+  left: 0;
   opacity: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
   transition: opacity .5s ease;
 }
 .modal__window {
   background: #ffffff;
-  width: 80vw;
   max-height: 80vh;
   max-width: 720px;
-  z-index: 80;
   opacity: 0;
   transition: opacity .2s ease 0s;
+  width: 80vw;
+  z-index: 80;
 }

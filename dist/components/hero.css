@@ -1,9 +1,9 @@
 .hero {
+  align-items: center;
+  background: #7defe5;
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  color: white;
-  background: #7defe5;
   min-height: 75vh;
 }

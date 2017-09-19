@@ -1,38 +1,31 @@
-hr,
 .divider {
-  display: flex;
-  justify-content: space-around;
   align-items: center;
   border: none;
+  display: flex;
+  justify-content: space-around;
 }
-hr:before, hr:after,
-.divider:before,
-.divider:after {
-  display: block;
-  content: " ";
-  height: 1px;
-  flex: 1;
+.divider:before, .divider:after {
   background-color: #efeeee;
+  content: " ";
+  display: block;
+  flex: 1;
+  height: 1px;
 }
-hr--label,
 .divider--label {
   text-align: center;
 }
-hr--label--left:before,
 .divider--label--left:before {
   display: none;
 }
-hr--label--right:after,
 .divider--label--right:after {
   display: none;
 }
-hr__text,
 .divider__text {
   color: #d8d8d8;
-  font-weight: bold;
-  text-transform: uppercase;
-  padding: 0 7px;
   flex: 0;
+  font-weight: bold;
+  padding: 0 7px;
+  text-transform: uppercase;
   white-space: nowrap;
 }
 

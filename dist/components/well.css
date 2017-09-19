@@ -1,15 +1,15 @@
 .well.well--primary, .well.well--secondary, .well.well--default, .well.well--success, .well.well--warning, .well.well--info, .well.well--error, .well.well--disabled {
-  position: relative;
   padding-left: 21px;
+  position: relative;
 }
 .well.well--primary:before, .well.well--secondary:before, .well.well--default:before, .well.well--success:before, .well.well--warning:before, .well.well--info:before, .well.well--error:before, .well.well--disabled:before {
   content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
   height: 100%;
+  left: 0;
+  position: absolute;
   text-indent: -9999px;
+  top: 0;
+  width: 4px;
 }
 
 .well {

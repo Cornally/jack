@@ -9,21 +9,21 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  outline: none;
-  display: block;
-  width: 100%;
-  padding: 14px;
-  font-size: 14px;
+  background: #ffffff;
   border-radius: 3px;
   border: 1px solid #efeeee;
-  background: #ffffff;
+  display: block;
+  font-size: 14px;
+  outline: none;
+  padding: 14px;
+  width: 100%;
 }
 .field__control:hover, .field__control:focus {
   border-color: #d8d8d8;
 }
 .field__control:disabled {
-  border: 1px solid #efeeee;
   background: #f7f7f7;
+  border: 1px solid #efeeee;
   cursor: not-allowed;
 }
 .field__control::placeholder {
@@ -33,6 +33,9 @@
 .field--select {
   position: relative;
 }
+.field--select .field__control {
+  padding: 14px 42px 14px 14px;
+}
 .field--select .field__control:not(:disabled) {
   cursor: pointer;
 }
@@ -41,14 +44,14 @@
   text-shadow: 0 0 0 #000;
 }
 .field--select:after, .field--select:before {
+  background-color: #d8d8d8;
+  bottom: 19px;
+  content: " ";
   display: block;
-  content: "";
+  height: 12px;
   position: absolute;
   right: 21px;
-  bottom: 19px;
   width: 3px;
-  height: 12px;
-  background-color: #d8d8d8;
 }
 .field--select:before {
   transform: rotate(-45deg) translate3d(calc(-50% - 3px), 0, 0);
@@ -57,16 +60,17 @@
   transform: rotate(45deg) translate3d(calc(50% + 3px), 0, 0);
 }
 .field--checkbox, .field--radio {
-  display: flex;
   align-items: center;
-  text-align: left;
+  display: flex;
   line-height: 22px;
+  text-align: left;
 }
 .field--checkbox .field__control, .field--radio .field__control {
-  width: 14px;
-  height: 14px;
-  padding: 10px;
   float: left;
+  height: 14px;
+  margin: 0 14px 0 0;
+  padding: 10px;
+  width: 14px;
 }
 .field--checkbox .field__control:not(:disabled), .field--checkbox .field__control:not(:disabled) + span, .field--radio .field__control:not(:disabled), .field--radio .field__control:not(:disabled) + span {
   cursor: pointer;
@@ -75,18 +79,18 @@
   position: relative;
 }
 .field--checkbox .field__control:checked:before, .field--radio .field__control:checked:before {
-  display: block;
-  content: "";
-  position: absolute;
-  left: calc(50% - 6px);
-  top: calc(50% - 6px);
-  width: 12px;
-  height: 12px;
   background: #6FDA7A;
-  border-top: 2px solid rgba(21, 22, 26, 0.1);
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 1.5px;
+  border-top: 2px solid rgba(21, 22, 26, 0.1);
   box-sizing: border-box;
+  content: "";
+  display: block;
+  height: 12px;
+  left: calc(50% - 6px);
+  position: absolute;
+  top: calc(50% - 6px);
+  width: 12px;
 }
 .field--radio .field__control {
   border-radius: 50%;
@@ -108,10 +112,10 @@
   padding: 0;
 }
 .field--color .field__control::-webkit-color-swatch {
-  border-top: 3px solid rgba(21, 22, 26, 0.1);
   border-bottom: 3px solid rgba(255, 255, 255, 0.2);
   border-left: none;
   border-right: none;
+  border-top: 3px solid rgba(21, 22, 26, 0.1);
 }
 
 .field:not(:last-of-type) {

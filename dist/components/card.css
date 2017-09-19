@@ -1,7 +1,7 @@
 .card {
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  background: #ffffff;
 }
 .card--no-padding__head, .card--no-padding__body {
   padding: 0;
@@ -56,32 +56,32 @@
   color: #a5a5a5;
 }
 .card__head {
-  padding: 21px;
   font-size: 18px;
   font-weight: bold;
+  padding: 21px;
 }
 .card__head__title {
   font-size: 18px;
   font-weight: bold;
 }
 .card__head__subtitle {
+  color: #414551;
   font-size: 14px;
   font-weight: lighter;
-  color: #414551;
   margin-top: 14px;
 }
 .card__media {
+  background: #d8d8d8;
   height: 200px;
   line-height: 200px;
   text-align: center;
-  background: #d8d8d8;
 }
 .card__body {
-  padding: 21px;
   font-size: 14px;
   line-height: 1.5em;
+  padding: 21px;
 }
 .card__head + .card__body {
-  padding-top: 0;
   margin-top: -14px;
+  padding-top: 0;
 }

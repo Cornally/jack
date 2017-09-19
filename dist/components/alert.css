@@ -1,23 +1,33 @@
 .alert-wrapper--top-left, .alert-wrapper--top-center, .alert-wrapper--top-right, .alert-wrapper--bottom-left, .alert-wrapper--bottom-center, .alert-wrapper--bottom-right {
+  display: flex;
+  flex-direction: column-reverse;
+  left: 21px;
   position: fixed;
   right: 21px;
-  left: 21px;
-  display: flex;
-  flex-direction: column;
   z-index: 90;
 }
-.alert-wrapper--top-left .alert + .alert, .alert-wrapper--top-center .alert + .alert, .alert-wrapper--top-right .alert + .alert, .alert-wrapper--bottom-left .alert + .alert, .alert-wrapper--bottom-center .alert + .alert, .alert-wrapper--bottom-right .alert + .alert {
-  margin-top: 14px;
+.alert-wrapper--top-left .alert:not(:first-child), .alert-wrapper--top-center .alert:not(:first-child), .alert-wrapper--top-right .alert:not(:first-child), .alert-wrapper--bottom-left .alert:not(:first-child), .alert-wrapper--bottom-center .alert:not(:first-child), .alert-wrapper--bottom-right .alert:not(:first-child) {
+  margin-top: 0;
+  margin-bottom: 14px;
 }
 
 .alert-wrapper--top-left, .alert-wrapper--top-center, .alert-wrapper--top-right {
   top: 71px;
+  flex-direction: column;
+}
+.alert-wrapper--top-left .alert:not(:first-child), .alert-wrapper--top-center .alert:not(:first-child), .alert-wrapper--top-right .alert:not(:first-child) {
+  margin-bottom: 0;
+  margin-top: 14px;
 }
 
 .alert {
+  background: #ffffff;
   display: flex;
   flex-direction: row;
-  background: #ffffff;
+  pointer-events: initial;
+}
+.alert-wrapper {
+  pointer-events: none;
 }
 .alert-wrapper--top-left {
   align-items: flex-start;
@@ -53,16 +63,16 @@
   border: 1px solid #efeeee;
 }
 .alert__body {
-  padding: 14px 21px;
   font-size: 14px;
   line-height: 1.5em;
+  padding: 14px 21px;
 }
 .alert__close {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(21, 22, 26, 0.05));
   cursor: pointer;
   fill: currentColor;
   font-size: 14px;
   padding: 14px;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(21, 22, 26, 0.05));
 }
 .alert.alert--primary {
   background: #5258C7;

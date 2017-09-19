@@ -1,71 +1,91 @@
 .nav {
-  width: 100%;
-  min-height: 50px;
-  line-height: 50px;
   background: #5258C7;
+  line-height: 50px;
+  min-height: 50px;
+  width: 100%;
 }
 @media (min-width: 320px) {
   .nav.nav-xs--sticky {
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 30;
   }
+  .nav.nav-xs--sticky .list {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
   .nav.nav-xs--sticky + *:before {
-    display: block;
     content: "";
+    display: block;
     padding-top: 50px;
   }
 }
 @media (min-width: 580px) {
   .nav.nav-sm--sticky {
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 30;
   }
+  .nav.nav-sm--sticky .list {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
   .nav.nav-sm--sticky + *:before {
-    display: block;
     content: "";
+    display: block;
     padding-top: 50px;
   }
 }
 @media (min-width: 820px) {
   .nav.nav-md--sticky {
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 30;
   }
+  .nav.nav-md--sticky .list {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
   .nav.nav-md--sticky + *:before {
-    display: block;
     content: "";
+    display: block;
     padding-top: 50px;
   }
 }
 @media (min-width: 1024px) {
   .nav.nav-lg--sticky {
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 30;
   }
+  .nav.nav-lg--sticky .list {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
   .nav.nav-lg--sticky + *:before {
-    display: block;
     content: "";
+    display: block;
     padding-top: 50px;
   }
 }
 @media (min-width: 1280px) {
   .nav.nav-xl--sticky {
+    left: 0;
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 30;
   }
+  .nav.nav-xl--sticky .list {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
   .nav.nav-xl--sticky + *:before {
-    display: block;
     content: "";
+    display: block;
     padding-top: 50px;
   }
 }
@@ -74,10 +94,10 @@
     text-align: center;
   }
   .nav.nav--slidedown .nav__links {
-    width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height .18s ease-out;
+    width: 100%;
   }
   .nav.nav--slidedown .nav__links a {
     display: block;
@@ -93,10 +113,10 @@
   }
   .nav.nav--slidedown--active .nav__links__list .list.list--active {
     display: inline-block;
-    position: static;
-    width: 100%;
     max-height: initial;
     overflow-y: visible;
+    position: static;
+    width: 100%;
   }
   .nav.nav--slidedown--active .nav__links__list .list.list--active a {
     padding: 14px 28px;
@@ -114,18 +134,19 @@
     transform: translate3d(0, -2px, 0) rotate(45deg);
   }
 }
-.nav .nav__links__list .list {
+.nav__links__list .list {
   display: none;
 }
 @media (min-width: 580px) {
-  .nav .nav__right .link {
+  .nav__right .link {
     padding: 14px;
   }
-  .nav .nav__links__list {
+  .nav__links__list {
     display: inline-block;
     position: relative;
+    z-index: 30;
   }
-  .nav .nav__links__list:hover .list {
+  .nav__links__list:hover .list {
     display: inline-block;
   }
 }
@@ -135,51 +156,45 @@
 .nav a:hover {
   color: #f7f7f7;
 }
-
 .nav__logo {
   font-size: 18px;
   font-weight: bold;
 }
-
 .nav__left {
   overflow: hidden;
 }
-
 .nav__hamburger__icon {
+  align-items: center;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50px;
-  height: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 50px;
   justify-content: center;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50px;
 }
-
 .nav__hamburger__icon__line {
-  width: 20px;
-  height: 2px;
   background: #b2b5e6;
   border-radius: 2px;
+  height: 2px;
   margin-bottom: 5px;
+  width: 20px;
 }
 .nav__hamburger__icon__line:last-child {
   margin-bottom: 0;
 }
 
 .nav__links__list .list {
+  left: 0;
   position: absolute;
   top: 50px;
-  left: 0;
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
   width: 150px;
 }
 .nav__links__list .list .list__item {
-  padding: 0;
   line-height: 1.5em;
+  padding: 0;
 }
 .nav__links__list .list .list__item a {
   display: block;

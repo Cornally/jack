@@ -1293,11 +1293,6 @@
   padding: 35px !important;
 }
 
-.m-x-auto {
-  margin-left: auto !important;
-  margin-right: auto !important;
-}
-
 @media (min-width: 320px) {
   .p-t-xs-0 {
     padding-top: 0px !important;
