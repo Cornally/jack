@@ -1,12 +1,24 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.30 (September 18, 2017)
+
+IMPROVEMENTS:
+
+  * Added underline treatment for links.
+  * Alphabetized styling declarations for consistency.
+
+BREAKING CHANGES:
+
+  * The a, body, h1, h2, h3, h4, h5, h6, hr, and p tags are no longer styled directly.  You must use their respective utility classes located in `typography-helpers.scss`. e.g. To replicate previous styling on an `<a>` tag, add `.link`.  To bring default body styling back to all text, add `.text-body` to your `<body>` tag.
+
+
 ## 0.0.29 (September 14, 2017)
 
 IMPROVEMENTS:
 
   * Prefix values are all mapped to the global default which is now blank.
 
-  BUG FIXES:
+BUG FIXES:
 
   * Nav classes now properly receive prefixes.
 
