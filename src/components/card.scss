@@ -29,7 +29,7 @@
         }
 
         @each $state, $color in $colors_all {
-            &.#{$prefix_component_card}card--#{$state} {
+            &--#{$state} {
                 background: desaturate(lighten($color, 25%), 15%);
                 border-color: desaturate(lighten($color, 15%), 15%);;
                 color: desaturate(darken($color, 20%), 10%);

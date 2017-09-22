@@ -36,7 +36,7 @@
         }
 
         @each $state, $color in $colors_all {
-            &.#{$prefix-component_well}well--#{$state} {
+            &--#{$state} {
                 @extend %well_state !optional;
                 &:before {
                     background: $color;

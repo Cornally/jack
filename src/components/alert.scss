@@ -112,7 +112,7 @@
         }
 
         @each $state, $color in $colors_all {
-            &.#{$prefix_component_alert}alert--#{$state} {
+            &--#{$state} {
                 background: $color;
                 @if (lightness($color) > 75) {
                     border-color: desaturate(darken($color, 15%), 5%);
