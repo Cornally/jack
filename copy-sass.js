@@ -14,3 +14,8 @@ const svgWatch = cpx.watch('./src/**/*.svg', '../gh-pages/_includes', {});
 svgWatch.on('copy', (e) => {
     console.log(`Copied ${e.srcPath}`);
 });
+
+const dataWatch = cpx.watch('./package.json', '../gh-pages/_data', {});
+dataWatch.on('copy', (e) => {
+    console.log(`Copied ${e.srcPath}`);
+});

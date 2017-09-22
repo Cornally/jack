@@ -41,6 +41,9 @@
         margin: 0 auto;
         position: relative;
         overflow-x: hidden;
+        
+        // Disable tap highlight
+        -webkit-tap-highlight-color: transparent;
     }
 
     a,
@@ -110,13 +113,9 @@
         -webkit-text-fill-color: #fff;
     }
 
-    * {
-        // Disable tap highlight
-        -webkit-tap-highlight-color: transparent;
-
-        // Change text selection highlight color
-        &::selection {
-            background: rgba($color_brand_primary, .5);
-        }
+    // Change text selection highlight color
+    ::selection {
+        background: rgba($color_brand_primary, .5);
     }
+
 }
