@@ -11,26 +11,26 @@
 
     .#{$prefix_typography}text {
         &-body {
-            color: $color_dark_04;
+            color: $color_dark_4;
             font-family: $typography_body_font;
             font-size: $size_font_md;
             @extend %text_paragraph;
         }
 
         &-h-1 {
-            color: $color_dark_01;
+            color: $color_dark_1;
             font-size: $size_font_xxl;
             @extend %text_header;
         }
 
         &-h-2 {
-            color: $color_dark_01;
+            color: $color_dark_1;
             font-size: $size_font_xl;
             @extend %text_header;
         }
 
         &-h-3 {
-            color: $color_dark_01;
+            color: $color_dark_1;
             font-size: $size_font_md;
             @extend %text_header;
         }

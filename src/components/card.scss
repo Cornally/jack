@@ -4,9 +4,9 @@
 
     .#{$prefix_component_card}card {
 
-        $cmp_background: $color_light_01;
-        $cmp_border: $color_light_03;
-        $cmp_border-dark: $color_light_03;
+        $cmp_background: $color_light_1;
+        $cmp_border: $color_light_3;
+        $cmp_border-dark: $color_light_3;
 
         background: $cmp_background;
         display: flex;
@@ -22,7 +22,7 @@
         }
 
         &--shadow {
-            box-shadow: 0 1px 4px 1px rgba($color_dark_01,.075);
+            box-shadow: 0 1px 4px 1px rgba($color_dark_1,.075);
             &--border {
                 border: 1px solid $cmp_border-dark;
             }
@@ -48,14 +48,14 @@
         }
 
         &__head__subtitle {
-            color: $color_dark_04;
+            color: $color_dark_4;
             font-size: $size_font_md;
             font-weight: lighter;
             margin-top: $gap_md;
         }
 
         &__media {
-            background: $color_light_04;
+            background: $color_light_4;
             height: 200px;
             line-height: 200px;
             text-align: center;

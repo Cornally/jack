@@ -1,12 +1,12 @@
 // Utility colors
-$color_light_01       : #ffffff !default;
-$color_light_02       : #f7f7f7 !default;
-$color_light_03       : #efeeee !default;
-$color_light_04       : #d8d8d8 !default;
-$color_dark_01        : #15161A !default;
-$color_dark_02        : #1D1E23 !default;
-$color_dark_03        : #31333B !default;
-$color_dark_04        : #414551 !default;
+$color_light_1       : #ffffff !default;
+$color_light_2       : #f7f7f7 !default;
+$color_light_3       : #efeeee !default;
+$color_light_4       : #d8d8d8 !default;
+$color_dark_1        : #15161A !default;
+$color_dark_2        : #1D1E23 !default;
+$color_dark_3        : #31333B !default;
+$color_dark_4        : #414551 !default;
 
 
 // Brand colors
@@ -25,8 +25,8 @@ $color_state_success : #6FDA7A !default;
 $color_state_warning : #EEE671 !default;
 $color_state_info    : #6BB8EB !default;
 $color_state_error   : #DC4646 !default;
-$color_state_default : $color_dark_03 !default;
-$color_state_disabled: $color_light_04 !default;
+$color_state_default : $color_dark_3 !default;
+$color_state_disabled: $color_light_4 !default;
 
 $colors_states: (
     default : $color_state_default,
@@ -53,8 +53,8 @@ $colors_all: map-merge($colors_brand, $colors_states);
 //  `$shift`: Apply a lightening or darkening to base $color
 //  `$count`: Number of derivatives
 //  e.g. 
-//  @include generateColorTicks('class', 'text_red', #ff0000, 'color', 'lighten', 30%, 5);
-//  @include generateColorTicks('placeholder', 'bg_purple', #264285, 'background', 'darken');
+//  @include generateColorTicks('class', 'text red', #ff0000, 'color', 'lighten', 30%, 5);
+//  @include generateColorTicks('placeholder', 'bg purple', #264285, 'background', 'darken');
 //
 ////////////////////////////////////////////////////////////////////
 @mixin generateColorTicks($output, $name, $color, $property, $shift, $desaturate:30%, $count:6) {
@@ -68,8 +68,19 @@ $colors_all: map-merge($colors_brand, $colors_states);
         $output_type: '.';
     }
 
+    // Handle separator unless explicitely set
+    $output_separator: null;
+    @if $output == "placeholder" {
+        $output_separator: '_';
+    } @else if $output == "class" {
+        $output_separator: '-';
+    }
+
+    // Add appropriate separator to name
+    $output_name: str-replace($name, " ", $output_separator);
+
     @for $i from 1 through $count {
-        #{$output_type}#{$name}_0#{$i} {
+        #{$output_type}#{$output_name}#{$output_separator}#{$i} {
             @if ($shift == 'lighten') {
                 #{$property}: desaturate(lighten($color, $i*$increment), $desaturate);
             } @else {
@@ -87,10 +98,10 @@ $colors_all: map-merge($colors_brand, $colors_states);
 //  Create derivative colors from a base color, suitable for fonts
 //
 //  e.g.
-//  @include generateFontColor('class', 'text_brand', $color_brand_secondary, $color_dark_01, 0%, 5);
+//  @include generateFontColor('class', 'text brand', $color_brand_secondary, $color_dark_1, 0%, 5);
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateFontColor($output, $name, $color, $shift_color:$color_light_01, $desaturate:5%, $count:6) {
+@mixin generateFontColor($output, $name, $color, $shift_color:$color_light_1, $desaturate:5%, $count:6) {
     $increment: 75/$count;
 
     // Handle output_type
@@ -101,8 +112,19 @@ $colors_all: map-merge($colors_brand, $colors_states);
         $output_type: '.';
     }
 
+    // Handle separator unless explicitely set
+    $output_separator: null;
+    @if $output == "placeholder" {
+        $output_separator: '_';
+    } @else if $output == "class" {
+        $output_separator: '-';
+    }
+
+    // Add appropriate separator to name
+    $output_name: str-replace($name, " ", $output_separator);
+
     @for $i from 1 through $count {
-        #{$output_type}#{$name}_0#{$i} {
+        #{$output_type}#{$output_name}#{$output_separator}#{$i} {
             color: desaturate(mix($color, $shift_color, $i*$increment), $desaturate);
         }
     }
