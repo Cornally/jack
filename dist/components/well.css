@@ -1,8 +1,8 @@
-.well.well--primary, .well.well--secondary, .well.well--default, .well.well--success, .well.well--warning, .well.well--info, .well.well--error, .well.well--disabled {
+.well--primary, .well--secondary, .well--default, .well--success, .well--warning, .well--info, .well--error, .well--disabled {
   padding-left: 21px;
   position: relative;
 }
-.well.well--primary:before, .well.well--secondary:before, .well.well--default:before, .well.well--success:before, .well.well--warning:before, .well.well--info:before, .well.well--error:before, .well.well--disabled:before {
+.well--primary:before, .well--secondary:before, .well--default:before, .well--success:before, .well--warning:before, .well--info:before, .well--error:before, .well--disabled:before {
   content: " ";
   height: 100%;
   left: 0;
@@ -28,27 +28,27 @@
 .well--shadow--border {
   border: 1px solid #efeeee;
 }
-.well.well--primary:before {
+.well--primary:before {
   background: #5258C7;
 }
-.well.well--secondary:before {
+.well--secondary:before {
   background: #7defe5;
 }
-.well.well--default:before {
+.well--default:before {
   background: #31333B;
 }
-.well.well--success:before {
+.well--success:before {
   background: #6FDA7A;
 }
-.well.well--warning:before {
+.well--warning:before {
   background: #EEE671;
 }
-.well.well--info:before {
+.well--info:before {
   background: #6BB8EB;
 }
-.well.well--error:before {
+.well--error:before {
   background: #DC4646;
 }
-.well.well--disabled:before {
+.well--disabled:before {
   background: #d8d8d8;
 }

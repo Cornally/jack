@@ -74,35 +74,35 @@
   font-size: 14px;
   padding: 14px;
 }
-.alert.alert--primary {
+.alert--primary {
   background: #5258C7;
   color: white;
 }
-.alert.alert--secondary {
+.alert--secondary {
   background: #7defe5;
   color: white;
 }
-.alert.alert--default {
+.alert--default {
   background: #31333B;
   color: white;
 }
-.alert.alert--success {
+.alert--success {
   background: #6FDA7A;
   color: white;
 }
-.alert.alert--warning {
+.alert--warning {
   background: #EEE671;
   color: white;
 }
-.alert.alert--info {
+.alert--info {
   background: #6BB8EB;
   color: white;
 }
-.alert.alert--error {
+.alert--error {
   background: #DC4646;
   color: white;
 }
-.alert.alert--disabled {
+.alert--disabled {
   background: #d8d8d8;
   border-color: #b2b2b2;
   color: #a5a5a5;

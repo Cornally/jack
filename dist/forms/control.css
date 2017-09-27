@@ -3,7 +3,17 @@
   font-weight: bold;
   margin-bottom: 7px;
 }
-
+.field--required__label {
+  position: relative;
+}
+.field--required__label:before {
+  color: #DC4646;
+  content: "*";
+  display: block;
+  left: -14px;
+  position: absolute;
+  top: 0;
+}
 .field__control {
   -ms-appearance: none;
   -moz-appearance: none;
@@ -29,7 +39,11 @@
 .field__control::placeholder {
   color: #d8d8d8;
 }
-
+.field__helper {
+  font-size: 10px;
+  font-weight: bold;
+  width: 100%;
+}
 .field--select {
   position: relative;
 }
@@ -43,25 +57,23 @@
   color: transparent;
   text-shadow: 0 0 0 #000;
 }
-.field--select:after, .field--select:before {
-  background-color: #d8d8d8;
-  bottom: 19px;
+.field--select:before {
+  border: 3px solid #d8d8d8;
+  border-right: 0;
+  border-top: 0;
   content: " ";
   display: block;
-  height: 12px;
+  width: .75em;
+  height: .75em;
   position: absolute;
-  right: 21px;
-  width: 3px;
-}
-.field--select:before {
-  transform: rotate(-45deg) translate3d(calc(-50% - 3px), 0, 0);
-}
-.field--select:after {
-  transform: rotate(45deg) translate3d(calc(50% + 3px), 0, 0);
+  right: 14px;
+  bottom: 19px;
+  transform: rotate(-45deg) translate3d(-50%, -50%, 0);
 }
 .field--checkbox, .field--radio {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   line-height: 22px;
   text-align: left;
 }

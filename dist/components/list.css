@@ -28,7 +28,6 @@
   margin: 0;
   padding: 0;
 }
-
 .list__item {
   border-bottom: 1px solid rgba(82, 88, 199, 0.1);
   padding: 7px 14px;
@@ -36,67 +35,51 @@
 .list__item:last-child {
   border-bottom: 0;
 }
-
 .list__item--primary:before {
   background: #5258C7;
 }
-
 .list__item--primary-bar:before {
   background: #5258C7;
 }
-
 .list__item--secondary:before {
   background: #7defe5;
 }
-
 .list__item--secondary-bar:before {
   background: #7defe5;
 }
-
 .list__item--default:before {
   background: #31333B;
 }
-
 .list__item--default-bar:before {
   background: #31333B;
 }
-
 .list__item--success:before {
   background: #6FDA7A;
 }
-
 .list__item--success-bar:before {
   background: #6FDA7A;
 }
-
 .list__item--warning:before {
   background: #EEE671;
 }
-
 .list__item--warning-bar:before {
   background: #EEE671;
 }
-
 .list__item--info:before {
   background: #6BB8EB;
 }
-
 .list__item--info-bar:before {
   background: #6BB8EB;
 }
-
 .list__item--error:before {
   background: #DC4646;
 }
-
 .list__item--error-bar:before {
   background: #DC4646;
 }
-
 .list__item--disabled:before {
   background: #d8d8d8;
 }
-
 .list__item--disabled-bar:before {
   background: #d8d8d8;
 }
