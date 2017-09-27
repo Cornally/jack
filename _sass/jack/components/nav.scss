@@ -61,7 +61,7 @@
             &.#{$prefix_component_nav}nav--slidedown--active {
 
                 .#{$prefix_component_nav}nav__links {
-                    border-top: 1px solid rgba($color_light_01, .075);
+                    border-top: 1px solid rgba($color_light_1, .075);
                     max-height: $cmp_nav_height * 20; // Number of links * link height (px)
                 }
 
@@ -93,7 +93,6 @@
         // Hide dropdowns at smallest size
         &__links__list .list { display: none; }
 
-
         @media (min-width: $size_break_sm) {
             &__right .link { padding: $gap_md; } 
             &__links__list {
@@ -106,10 +105,10 @@
 
 
         a {
-            color: $color_light_01;
+            color: $color_light_1;
         }
         a:hover {
-            color: $color_light_02;
+            color: $color_light_2;
         }
 
         &__logo {
@@ -149,14 +148,14 @@
         left: 0;
         position: absolute;
         top: $cmp_nav_height;
-        @extend %text_brand_01 !optional;
-        @extend %bg_brand_03 !optional;
+        @extend %text_brand_1 !optional;
+        @extend %bg_brand_3 !optional;
         width: 150px;
         .list__item {
             line-height: 1.5em;
             padding: 0;
             a { display: block; }
-            &:hover { @extend %bg_brand_04 !optional; }
+            &:hover { @extend %bg_brand_4 !optional; }
         }
     }
 }

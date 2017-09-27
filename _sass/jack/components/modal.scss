@@ -2,8 +2,8 @@
 
 @if check($include_component_modal) {
 
-    $cmp_window: $color_light_01;
-    $cmp_overlay: rgba($color_dark_03, .85);
+    $cmp_window: $color_light_1;
+    $cmp_overlay: rgba($color_dark_3, .85);
 
     .#{$prefix_component_list}modal {
         align-items: center;
@@ -41,7 +41,7 @@
         }
 
         &__window {
-            background: $color_light_01;
+            background: $color_light_1;
             max-height: 80vh;
             max-width: 720px;
             opacity: 0;

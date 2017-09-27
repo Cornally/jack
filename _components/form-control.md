@@ -10,6 +10,10 @@ sections:
     - item:
         title: Basic Controls
         tpl: form-control.html
+sections-in-progress:
+    - item:
+        title: Helper Text
+        tpl: form-control--helper-text.html
 classes:
     - item:
         title: .field--checkbox

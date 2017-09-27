@@ -1,0 +1,42 @@
+{
+  "name": "jack-strap",
+  "version": "0.0.30",
+  "description": "Lightweight/portable styling engine",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "node copy-sass.js",
+    "build": "sass --update src:dist --style expanded --sourcemap=none && sass --update src:dist/min --style compressed --sourcemap=none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cornally/jack.git"
+  },
+  "keywords": [
+    "styling",
+    "framework",
+    "jack",
+    "sass",
+    "scss",
+    "flexbox",
+    "flex"
+  ],
+  "author": "@Cornally",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cornally/jack/issues"
+  },
+  "homepage": "https://github.com/Cornally/jack#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "cpx": "^1.5.0",
+    "express": "^4.15.4",
+    "node-sass": "^4.5.3",
+    "path": "^0.12.7",
+    "postcss-cli": "^4.1.1"
+  }
+}

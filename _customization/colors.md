@@ -1,6 +1,6 @@
 ---
 title: Colors
-description: Quickly pin down your brand's palette with some of the following techniques.  Jack uses a number of generator functions behind the scenes to compile utility derivatives for a set of brand colors and colors that convey stateful meaning.
+description: Quickly pin down your brand's palette with some of the following techniques.  Jack uses a number of generator functions behind the scenes to compile utility derivatives for a set of brand colors and colors that convey stateful meaning.<br><br>A carefully curated list of colors, grouped inside meaningful maps, leads to pre-generated components with your respective color themes intact.  For a more ad-hoc approach, color variables can be pulled directly into components.<br><br>The examples below illustrate components which inherit brand or state color map set derivatives.
 layout: component
 source:
     - item:

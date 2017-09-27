@@ -1,0 +1,47 @@
+{% if include.section == "example" %}
+<div class="col-12 col-md-8 col-lg-4">
+    <div class="field">
+        <label class="field__label">Text Field</label>
+        <input class="field__control" type="text" placeholder="Placeholder..." />
+        <div class="field__helper text--primary m-t-1">Hi, I'm your friendly helper text!</div>
+    </div>
+    <div class="field field--select">
+        <label class="field__label">Select Field</label>
+        <select class="field__control field__control--select">
+            <option value="1">Something valuable 1</option>
+            <option value="2">Something valuable 2</option>
+            <option value="3">Something valuable 3</option>
+        </select>
+        <div class="field__helper text--success m-t-1">Your selection is special!</div>
+    </div>
+    <div class="field field--checkbox">
+        <label class="field__label">
+            <input class="field__control" type="checkbox" checked>
+            <span>Checkbox Field</span>
+        </label>
+        <div class="field__helper text--success">That checks out!</div>
+    </div>
+    <div class="field field--radio">
+        <label class="field__label m-r-3">
+            <input class="field__control" type="radio" value="1" name="demo2" checked>
+            <span>Radio Field</span>
+        </label>
+        <label class="field__label m-r-3">
+            <input class="field__control" type="radio" value="2" name="demo2">
+            <span>Radio Field</span>
+        </label>
+        <div class="field__helper text--error">Hi, I'm your friendly helper text!</div>
+    </div>
+    <div class="field field--color field--required">
+        <label class="field__label field--required__label">Color Field</label>
+        <input class="field__control" type="color" value="#FF77AB" />
+        <div class="field__helper text--error m-t-1">Required field!</div>
+    </div>
+</div>
+{% else %}
+ <div class="field">
+    <label class="field__label">Text Field</label>
+    <input class="field__control" type="text" placeholder="Placeholder..." />
+    <div class="field__helper m-t-1">Hi, I'm your friendly helper text!</div>
+</div>
+{% endif %}

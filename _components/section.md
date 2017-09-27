@@ -14,7 +14,7 @@ sections:
 classes:
     - item:
         title: .section--angled
-        description: Add an angled background to your section.  Adjacent sections receive a dirvative of your brand coloring by default.
+        description: Add an angled background to your section.  Adjacent sections receive a dervative of your brand coloring by default.
         tag: .section
 ---
 <div class="container content">

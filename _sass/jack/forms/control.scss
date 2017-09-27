@@ -5,52 +5,77 @@
     $cmp_border_radius: $size_radius_sm;
     $cmp_accent_thickness: 3px;
 
-    .#{$prefix_form_field}field__label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: $gap_sm;
-    }
-
-
-    // Light (controls default to light)
-    .#{$prefix_form_field}field__control {
-        -ms-appearance: none;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        appearance: none;
-        background: $color_light_01;
-        border-radius: $cmp_border_radius;
-        border: 1px solid $color_light_03;
-        display: block;
-        font-size: $size_font_md;
-        outline: none;
-        padding: $gap_md;
-        width: 100%;
-
-        &:hover,
-        &:focus {
-            border-color: $color_light_04;
-        }
-        &:disabled {
-            background: $color_light_02;
-            border: 1px solid $color_light_03;
-            cursor: not-allowed;
-        }
-        &::placeholder {
-            color: $color_light_04;
-        }
-    }
-
     .#{$prefix_form_field}field {
+
+        // Labels sit on top of field controls by default
+        &__label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: $gap_sm;
+        }
+        &--required {
+            &__label {
+                position: relative;
+            }
+            
+            &__label:before {
+                color: $color_state_error;
+                content: "*";
+                display: block;
+                left: -2 * $size_gap;
+                position: absolute;
+                top: 0;
+            }
+        }
+
+        // Light (controls default to light)
+        &__control {
+            -ms-appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background: $color_light_1;
+            border-radius: $cmp_border_radius;
+            border: 1px solid $color_light_3;
+            display: block;
+            font-size: $size_font_md;
+            outline: none;
+            padding: $gap_md;
+            width: 100%;
+
+            &:hover,
+            &:focus {
+                border-color: $color_light_4;
+            }
+
+            &:disabled {
+                background: $color_light_2;
+                border: 1px solid $color_light_3;
+                cursor: not-allowed;
+            }
+
+            &::placeholder {
+                color: $color_light_4;
+            }
+        }
+
+        // Helper sub-text
+        &__helper {
+            font-size: $size_font_xs;
+            font-weight: bold;
+            width: 100%;
+        }
 
         &--select {
             position: relative;
 
             .#{$prefix_form_field}field__control {
                 padding: $gap_md $gap_xxl $gap_md $gap_md;
+
                 &:not(:disabled) {
                     cursor: pointer;
                 }
+
                 // Hide Mozilla outline
                 &:-moz-focusring {
                     color: transparent;
@@ -58,28 +83,27 @@
                 }
             }
 
-            &:after, &:before {
-                background-color: $color_light_04;
-                bottom: $gap_lg - 2px;
+            &:before {
+                border: $cmp_accent_thickness solid $color_light_4;
+                border-right: 0;
+                border-top: 0;
                 content: " ";
                 display: block;
-                height: 12px;
+                width: .75em;
+                height: .75em;
                 position: absolute;
-                right: $gap_lg;
-                width: $cmp_accent_thickness;
+                right: $gap_md;
+                bottom: $gap_lg - 2;
+                transform: rotate(-45deg) translate3d(-50%, -50%, 0);
             }
-            &:before {
-                transform: rotate(-45deg) translate3d(calc(-50% - #{$cmp_accent_thickness}), 0, 0);
-            }
-            &:after {
-                transform: rotate(45deg) translate3d(calc(50% + #{$cmp_accent_thickness}), 0, 0);
-            }            
+
         }
 
         &--checkbox,
         &--radio {
             align-items: center;
             display: flex;
+            flex-wrap: wrap;
             line-height: 22px;
             text-align: left;
 
@@ -98,9 +122,9 @@
                     position: relative;
                     &:before {
                         background: $color_state_success;
-                        border-bottom: 2px solid rgba($color_light_01, .20);
+                        border-bottom: 2px solid rgba($color_light_1, .20);
                         border-radius: $cmp_border_radius/2;
-                        border-top: 2px solid rgba($color_dark_01, .10);
+                        border-top: 2px solid rgba($color_dark_1, .10);
                         box-sizing: border-box;
                         content: "";
                         display: block;
@@ -139,10 +163,10 @@
                     padding: 0;
                 }
                 &::-webkit-color-swatch {
-                    border-bottom: 3px solid rgba($color_light_01, .20);
+                    border-bottom: 3px solid rgba($color_light_1, .20);
                     border-left: none;
                     border-right: none;
-                    border-top: 3px solid rgba($color_dark_01, .10);
+                    border-top: 3px solid rgba($color_dark_1, .10);
                 }
             }
         }

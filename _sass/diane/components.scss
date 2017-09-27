@@ -2,7 +2,13 @@
     .content {
         margin: $size_gap auto;
         padding: $size_gap*3;
-        
+
+        &--short {
+            // Subtract top nav height + footer height + margin-y from viewport height
+            // when the content length of the section is short.
+            min-height: calc(100vh - 117px);
+        }
+    
         h1, p { margin-bottom: $size_gap*4; }
 
         .divider { margin-bottom: $size_gap*2; }
@@ -34,7 +40,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: baseline;
-                @extend %text_primary_03 !optional;
+                @extend %text_primary_3 !optional;
             }
             > .card__head,
             > .card__body { padding: $size_gap*2 0; }

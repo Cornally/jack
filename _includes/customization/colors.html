@@ -30,21 +30,21 @@ $colors_brand: map-merge($colors_states, (welcome: #8bc34a));
 
 {% if section == "generate-classes" %}
 // Generate shade derivative classes
-@include generateColorTicks('class', 'bg_latte', #5258C7, 'background', 'lighten', 10%, 5);
+@include generateColorTicks('class', 'bg latte', #5258C7, 'background', 'lighten', 10%, 5);
 
 // Outputs
-.bg_latte_01 { background: #af9755; }
-.bg_latte_02 { background: #bdaa74; }
-.bg_latte_03 { background: #ccbd94; }
-.bg_latte_04 { background: #dbd0b3; }
-.bg_latte_05 { background: #eae3d2; }
+.bg-latte-1 { background: #af9755; }
+.bg-latte-2 { background: #bdaa74; }
+.bg-latte-3 { background: #ccbd94; }
+.bg-latte-4 { background: #dbd0b3; }
+.bg-latte-5 { background: #eae3d2; }
 {% endif %}
 
 {% if section == "generate-placeholders" %}
 // Generate shade derivatives placeholders
-@include generateColorTicks('placeholder', 'bg_brand', #5258C7, 'background', 'darken', 10%, 5);
+@include generateColorTicks('placeholder', 'bg brand', #5258C7, 'background', 'darken', 10%, 5);
 
-.section--angled:nth-of-type(1):after { @extend %bg_brand_03; }
-.section--angled:nth-of-type(2):after { @extend %bg_brand_02; }
-.section--angled:nth-of-type(3):after { @extend %bg_brand_04; }
+.section--angled:nth-of-type(1):after { @extend %bg_brand_3; }
+.section--angled:nth-of-type(2):after { @extend %bg_brand_2; }
+.section--angled:nth-of-type(3):after { @extend %bg_brand_4; }
 {% endif %}
