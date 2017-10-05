@@ -5,42 +5,57 @@
     .#{$prefix_component_section}section {
         &--angled {
             background: none;
-            padding: 60px 0 !important;
+            padding: 60px 0;
             position: relative;
+
             &:after {
-                content: "";
+                content: '';
                 height: 100%;
                 left: 0;
-                padding: 60px 0 !important;
+                padding: 60px 0;
                 position: absolute;
                 top: 0;
                 width: 100%;
-                z-index: z("section");
+                z-index: z('section');
             }
-            &:nth-of-type(1):after,
-            &:nth-of-type(4):after {
-                background: $color_light_2;
-                transform: skewY(1.25deg);
+
+            &:nth-of-type(1),
+            &:nth-of-type(4) {
+                &:after {
+                    background: $color_light_2;
+                    transform: skewY(1.25deg);
+                }
             }
-            &:nth-of-type(2):after,
-            &:nth-of-type(5):after {
-                background: $color_light_4;
-                transform: skewY(-1.25deg);
+
+            &:nth-of-type(2),
+            &:nth-of-type(5) {
+                &:after {
+                    background: $color_light_4;
+                    transform: skewY(-1.25deg);
+                }
             }
-            &:nth-of-type(3):after,
-            &:nth-of-type(6):after {
-                background: $color_light_3;
-                transform: skewY(1.25deg);
+
+            &:nth-of-type(3),
+            &:nth-of-type(6) {
+                &:after {
+                    background: $color_light_3;
+                    transform: skewY(1.25deg);
+                }
             }
-            &:first-of-type:after {
-                transform-origin: top right;
+
+            &:first-of-type {
+                &:after {
+                    transform-origin: top right;
+                }
             }
-            &:last-of-type:after {
-                padding-bottom: 0 !important;
-                transform-origin: bottom left;
-            }
+
             &:last-of-type {
-                padding-bottom: 0 !important;
+                padding-bottom: 0;
+
+                &:after {
+                    padding-bottom: 0;
+                    transform-origin: bottom left;
+                }
             }
         }
     }

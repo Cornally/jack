@@ -5,34 +5,35 @@
     %text_header {
         font-family: $typography_header_font;
     }
+
     %text_paragraph {
         line-height: $typography_body_lineheight;
     }
 
     .#{$prefix_typography}text {
         &-body {
+            @extend %text_paragraph;
             color: $color_dark_4;
             font-family: $typography_body_font;
             font-size: $size_font_md;
-            @extend %text_paragraph;
         }
 
         &-h-1 {
+            @extend %text_header;
             color: $color_dark_1;
             font-size: $size_font_xxl;
-            @extend %text_header;
         }
 
         &-h-2 {
+            @extend %text_header;
             color: $color_dark_1;
             font-size: $size_font_xl;
-            @extend %text_header;
         }
 
         &-h-3 {
+            @extend %text_header;
             color: $color_dark_1;
             font-size: $size_font_md;
-            @extend %text_header;
         }
 
         &-h-4 {
@@ -82,7 +83,7 @@
         &-nowrap {
             white-space: nowrap;
         }
-        
+
         &-breakword {
             word-break: break-word;
         }
@@ -106,6 +107,4 @@
         }
     }
 
-} @else {
-    @warn "We strongly encourage enabling '$include_typography' or adding your own font styling to the <body> tag."
-}
+} @else { @warn 'We strongly encourage enabling $include_typography or adding your own font styling to the <body> tag.' }

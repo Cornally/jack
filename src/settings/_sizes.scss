@@ -1,3 +1,5 @@
+// sass-lint:disable space-before-colon
+
 ///////////////////////////////////////////////////////////
 //
 //  Global Size Vars
@@ -41,11 +43,11 @@ $sizes_break: (
 
 
 // Font sizes
-$size_font_xs: 10px !default;
-$size_font_sm: 12px !default;
-$size_font_md: 14px !default;
-$size_font_lg: 18px !default;
-$size_font_xl: 22px !default;
+$size_font_xs : 10px !default;
+$size_font_sm : 12px !default;
+$size_font_md : 14px !default;
+$size_font_lg : 18px !default;
+$size_font_xl : 22px !default;
 $size_font_xxl: 36px !default;
 
 // Font size mapping

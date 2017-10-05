@@ -9,11 +9,13 @@
         left: $gap_lg;
         position: fixed;
         right: $gap_lg;
-        z-index: z("alert");
+        z-index: z('alert');
 
-        .alert:not(:first-child) {
-            margin-top: 0;
-            margin-bottom: $gap_md;
+        .#{$prefix_component_alert}alert {
+            &:not(:first-child) { 
+                margin-bottom: $gap_md;
+                margin-top: 0;
+            }
         }
     }
 
@@ -26,16 +28,18 @@
         }
         flex-direction: column;
 
-        .alert:not(:first-child) {
-            margin-bottom: 0;
-            margin-top: $gap_md;
+        .#{$prefix_component_alert}alert {
+            &:not(:first-child) {
+                margin-bottom: 0;
+                margin-top: $gap_md;
+            }
         }
     }
 
     .#{$prefix_component_alert}alert {
         $cmp_background: $color_light_1;
         $cmp_border: $color_light_3;
-        $cmp_border-dark: $color_light_3;
+        $cmp_border_dark: $color_light_3;
 
         background: $cmp_background;
         display: flex;
@@ -45,7 +49,7 @@
         &-wrapper {
             pointer-events: none;
         }
-        
+
         &-wrapper--top-left {
             @extend %alert_position !optional;
             @extend %alert_position_top !optional;
@@ -66,20 +70,20 @@
 
         &-wrapper--bottom-left {
             @extend %alert_position !optional;
-            bottom: $gap_lg;
             align-items: flex-start;
+            bottom: $gap_lg;
         }
 
         &-wrapper--bottom-center {
             @extend %alert_position !optional;
-            bottom: $gap_lg;
             align-items: center;
+            bottom: $gap_lg;
         }
 
         &-wrapper--bottom-right {
             @extend %alert_position !optional;
-            bottom: $gap_lg;
             align-items: flex-end;
+            bottom: $gap_lg;
         }
 
         &--no-padding {
@@ -91,9 +95,10 @@
         }
 
         &--shadow {
-            box-shadow: 0 1px 4px 1px rgba($color_dark_1,.075);
+            box-shadow: 0 1px 4px 1px rgba($color_dark_1, .075);
+
             &--border {
-                border: 1px solid $cmp_border-dark;
+                border: 1px solid $cmp_border_dark;
             }
         }
 
@@ -104,7 +109,7 @@
         }
 
         &__close {
-            background: linear-gradient(45deg, rgba(0,0,0,0), rgba($color_dark_1, .05));
+            background: linear-gradient(45deg, rgba($color_dark_1, 0), rgba($color_dark_1, .05));
             cursor: pointer;
             fill: currentColor;
             font-size: $size_font_md;
@@ -118,7 +123,7 @@
                     border-color: desaturate(darken($color, 15%), 5%);
                     color: desaturate(darken($color, 20%), 10%);
                 } @else {
-                    color: white;
+                    color: $color_light_1;
                 }
             }
         }

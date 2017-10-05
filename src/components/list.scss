@@ -5,7 +5,7 @@
     %list_item_state {
         &:before {
             border-radius: 50%;
-            content: " ";
+            content: '';
             display: inline-block;
             height: 1em;
             line-height: 1em;
@@ -18,8 +18,9 @@
     %list_item_state_bar {
         padding-left: $gap_lg;
         position: relative;
+
         &:before {
-            content: " ";
+            content: '';
             height: 100%;
             left: 0;
             position: absolute;
@@ -35,7 +36,7 @@
         padding: 0;
 
         &__item {
-            border-bottom: 1px solid rgba($color_brand_primary, .10);
+            border-bottom: 1px solid rgba($color_brand_primary, .1);
             padding: $size_gap $gap_md;
             
             &:last-child { border-bottom: 0; }
@@ -43,14 +44,15 @@
             @each $state, $color in $colors_all {
                 &--#{$state} {
                     @extend %list_item_state !optional;
+
                     &:before {
                         background: $color;
                     }
                 }
-                
 
                 &--#{$state}-bar {
                     @extend %list_item_state_bar !optional;
+
                     &:before {
                         background: $color;
                     }

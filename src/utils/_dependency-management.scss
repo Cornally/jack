@@ -9,15 +9,13 @@
 
 @function check($flag) {
     // Include if the flag is true
-   @if $flag == true {
+    @if $flag == true {
         @return true;
-    }
-    // Include if global "all" is set, and the flag is still null, not a proper false bool
-    @else if $jack_include_all == true and not (type-of($flag) == bool) and not ($flag == false) {
+    } @else if $jack_include_all == true and not (type-of($flag) == bool) and not ($flag == false) {
+        // Include if global "all" is set, and the flag is still null, not a proper false bool
         @return true;
-    }
-    // Don't include it
-    @else {
+    } @else {
+        // Don't include it
         @return false;
     }
 }

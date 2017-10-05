@@ -1,20 +1,21 @@
 @import '../settings/all';
 
 @if check($include_component_link) {
-    
+
     .#{$prefix_component_link}link {
         color: $color_brand_primary;
 
         &:hover {
             color: adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%);
         }
-        
+
         &--underline {
             text-decoration: underline;
             text-decoration-color: rgba(adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%), .25);
+
             &:hover {
                 text-decoration: underline;
-                text-decoration-color: rgba(adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%), .5);    
+                text-decoration-color: rgba(adjust-color($color_brand_primary, $lightness: -5%, $saturation: -15%), .5);
             }
         }
 
@@ -38,6 +39,7 @@
                     &:active {
                         color: $color;
                     }
+
                     &:hover {
                         cursor: not-allowed;
                     }

@@ -11,22 +11,25 @@
 @mixin margin($location: '', $count: 2, $sizes...) {
     $output_type: 'margin';
     $halt_execution: false;
-    
-    @if $location == 'top' or $location == 't' { $output_type: 'margin-top'; }
-    @else if $location == 'right' or $location == 'r' { $output_type: 'margin-right'; }
-    @else if $location == 'bottom' or $location == 'b' { $output_type: 'margin-bottom'; }
-    @else if $location == 'left' or $location == 'l' { $output_type: 'margin-left'; }
-    @else if $location == 'horizontal' or $location == 'x' {
+
+    @if $location == 'top' or $location == 't' {
+        $output_type: 'margin-top';
+    } @else if $location == 'right' or $location == 'r' {
+        $output_type: 'margin-right';
+    } @else if $location == 'bottom' or $location == 'b' {
+        $output_type: 'margin-bottom';
+    } @else if $location == 'left' or $location == 'l' {
+        $output_type: 'margin-left';
+    } @else if $location == 'horizontal' or $location == 'x' {
         $halt_execution: true;
         @include margin('l', $count, $sizes...);
         @include margin('r', $count, $sizes...);
-    }
-    @else if $location == 'vertical' or $location == 'y' {
+    } @else if $location == 'vertical' or $location == 'y' {
         $halt_execution: true;
         @include margin('t', $count, $sizes...);
         @include margin('b', $count, $sizes...);
     }
-    
+
     @if $halt_execution == false {
         // No breakpoints passed
         @if length($sizes) == 0 {
@@ -47,9 +50,7 @@
                         }
                     }
                 }
-                @else {
-                    @warn 'The "#{$size}" does not exist as a key in $sizes_break!';
-                }
+                @else { @warn 'The `#{$size}` does not exist as a key in $sizes_break!'; }
             }
         }
     }
@@ -66,7 +67,7 @@
 // .{prefix}-margin-{top, right, left, bottom, left & right, top & bottom}-{breakpoint_size}-{spacing_size}
 //
 // We emit placeholder classes for extendability and
-// to avoid having to include these repeatedly on a 
+// to avoid having to include these repeatedly on a
 // particular component. To add padding to all card headers
 // you can extend the emitted placeholders below:
 // e.g. .your__component { @extend %p-x-xs-2; }
@@ -84,18 +85,18 @@
     $output_type: null;
 
     // Handle spacing type (margin or padding)
-    @if $type == "margin" {
-        $prefix_type: "m";
+    @if $type == 'margin' {
+        $prefix_type: 'm';
         $prefix_util_spacing: $prefix_util_margins;
-    } @else if $type == "padding" {
-        $prefix_type: "p";
+    } @else if $type == 'padding' {
+        $prefix_type: 'p';
         $prefix_util_spacing: $prefix_util_padding;
     }
 
     // Handle output_type
-    @if $output == "placeholder" {
+    @if $output == 'placeholder' {
         $output_type: '%';
-    } @else if $output == "class" {
+    } @else if $output == 'class' {
         $output_type: '.';
         $suffix: '!important';
     }
@@ -104,28 +105,34 @@
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-t-#{$i} {
             #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
         }
+
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-r-#{$i} {
             #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
         }
+
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-b-#{$i} {
             #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
         }
+
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-l-#{$i} {
             #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
         }
+
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-x-#{$i} {
             #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
             #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
         }
+
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-y-#{$i} {
-            #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
             #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
+            #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
         }
+
         #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-#{$i} {
             #{$type}: decimal-round($size_gap * $i) #{$suffix};
         }
     }
-    
+
     // Horizontally center if we have display: block; and a width set
     @if $type == 'margin' {
         #{$output_type}#{$prefix_util_margins}m-x-auto {
@@ -142,28 +149,34 @@
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-t-#{$size}-#{$i} {
                     #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
                 }
+
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-r-#{$size}-#{$i} {
                     #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
                 }
+
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-b-#{$size}-#{$i} {
                     #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
                 }
+
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-l-#{$size}-#{$i} {
                     #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
                 }
+
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-x-#{$size}-#{$i} {
                     #{$type}-left: decimal-round($size_gap * $i) #{$suffix};
                     #{$type}-right: decimal-round($size_gap * $i) #{$suffix};
                 }
+
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-y-#{$size}-#{$i} {
-                    #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
                     #{$type}-bottom: decimal-round($size_gap * $i) #{$suffix};
+                    #{$type}-top: decimal-round($size_gap * $i) #{$suffix};
                 }
+
                 #{$output_type}#{$prefix_util_spacing}#{$prefix_type}-#{$size}-#{$i} {
                     #{$type}: decimal-round($size_gap * $i) #{$suffix};
                 }
             }
-            
+
             // Horizontally center if we have display: block; and a width set
             #{$output_type}#{$prefix_util_margins}m-x-#{$size}-auto {
                 margin-left: auto #{$suffix};
@@ -174,13 +187,13 @@
 }
 
 @if check($include_util_margins) {
-    @include spacing("class", "margin", 5);
+    @include spacing('class', 'margin', 5);
 }
 
 @if check($include_util_padding) {
-    @include spacing("class", "padding", 5);
+    @include spacing('class', 'padding', 5);
 }
 
 // Export placeholders for easy extendability
-@include spacing("placeholder", "margin", 5);
-@include spacing("placeholder", "padding", 5);
+@include spacing('placeholder', 'margin', 5);
+@include spacing('placeholder', 'padding', 5);

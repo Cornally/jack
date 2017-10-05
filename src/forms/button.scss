@@ -1,7 +1,7 @@
 @import '../settings/all';
 
 @if $include_form_button or $jack_include_all {
-    
+
     .#{$prefix_form_button}btn {
         border-radius: $size_radius_sm;
         border-style: solid;
@@ -13,33 +13,37 @@
         padding: $gap_sm $gap_md;
         text-align: center;
         user-select: none;
-        
+
         // Space them out by default
         &-group & {
             float: left;
             margin-bottom: $size_gap;
             margin-right: $size_gap;
+
             &:last-child {
                 margin-right: 0;
             }
         }
-        
+
         @each $state, $color in $colors_all {
-            
+
             &.#{$prefix_form_button}btn--#{$state} {
                 background: $color;
                 border-color: $color;
-                color: white;
+                color: $color_light_1;
+
                 &:hover {
                     background: adjust-color($color, $lightness: -5%, $saturation: -15%);
                     border-color: adjust-color($color, $lightness: -5%, $saturation: -15%);
-                    color: white;
+                    color: $color_light_1;
                 }
+
                 &:active {
                     background: adjust-color($color, $lightness: -10%, $saturation: -30%);
                     border-color: adjust-color($color, $lightness: -10%, $saturation: -30%);
-                    color: white;
+                    color: currentColor;
                 }
+
                 @if($state == 'disabled') {
                     &,
                     &:hover,
@@ -48,23 +52,27 @@
                         border-color: $color;
                         color: adjust-color($color, $lightness: -15%, $saturation: -15%);
                     }
+
                     &:hover {
                         cursor: not-allowed;
                     }
                 }
             }
-            
+
             &--#{$state}--line {
                 border-color: rgba($color, .5);
                 color: $color;
+
                 &:hover {
                     border-color: currentColor;
                     color: $color;
                 }
+
                 &:active {
                     border-color: currentColor;
                     color: $color;
                 }
+
                 @if($state == 'disabled') {
                     &,
                     &:hover,
@@ -72,19 +80,20 @@
                         border-color: rgba($color, .5);
                         color: $color;
                     }
+
                     &:hover {
                         cursor: not-allowed;
                     }
                 }
             }
         }
-        
+
         &--sm {
             font-size: $size_font_sm;
             line-height: 1.5em;
             padding: $gap_xs $gap_sm;
         }
-        
+
         &--lg {
             font-size: 16px;
             padding: $gap_md $gap_xl;

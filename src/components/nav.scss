@@ -18,16 +18,16 @@
                     left: 0;
                     position: fixed;
                     top: 0;
-                    z-index: z("nav");
+                    z-index: z('nav');
 
                     .list {
                         max-height: calc(100vh - #{$cmp_nav_height * 2});
                         overflow-y: auto;
                     }
-                    
+
                     // Push content down the height of the nav when sticky
                     & + *:before {
-                        content: "";
+                        content: '';
                         display: block;
                         padding-top: $cmp_nav_height;
                     }
@@ -41,17 +41,20 @@
                 .#{$prefix_component_nav}nav__logo {
                     text-align: center;
                 }
+
                 .#{$prefix_component_nav}nav__links {
                     max-height: 0;
                     overflow: hidden;
                     transition: max-height .18s ease-out;
                     width: 100%;
+
+                    a {
+                        display: block;
+                        padding-left: $gap_md;
+                        padding-right: $gap_md;
+                    }
                 }
-                .nav__links a {
-                    display: block;
-                    padding-left: $gap_md;
-                    padding-right: $gap_md;
-                }
+
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
                     transition: all .18s ease;
                 }
@@ -65,24 +68,30 @@
                     max-height: $cmp_nav_height * 20; // Number of links * link height (px)
                 }
 
-                .#{$prefix_component_nav}nav__links__list .list.list--active {
+                .#{$prefix_component_nav}nav__links__list .list.list--active { //sass-lint:disable-line force-element-nesting
                     display: inline-block;
                     max-height: initial;
                     overflow-y: visible;
                     position: static;
                     width: 100%;
-                    a { padding: $gap_md $gap_xl; }
+
+                    a {
+                        padding: $gap_md $gap_xl;
+                    }
                 }
 
                 // Transform to the menu icon
                 .#{$prefix_component_nav}nav__hamburger__icon__line {
                     margin: 0;
+
                     &:nth-child(1) {
                         transform: translate3d(0, 2px, 0) rotate(-45deg);
                     }
+
                     &:nth-child(2) {
                         opacity: 0;
                     }
+
                     &:nth-child(3) {
                         transform: translate3d(0, -2px, 0) rotate(45deg);
                     }
@@ -91,24 +100,33 @@
         }
 
         // Hide dropdowns at smallest size
-        &__links__list .list { display: none; }
+        &__links__list .list { display: none; } //sass-lint:disable-line force-element-nesting
 
         @media (min-width: $size_break_sm) {
-            &__right .link { padding: $gap_md; } 
-            &__links__list {
+            &__right .link { //sass-lint:disable-line force-element-nesting
+                padding: $gap_md;
+            }
+
+            &__links__list { //sass-lint:disable-line force-element-nesting
                 display: inline-block;
                 position: relative;
-                z-index: z("nav");
+                z-index: z('nav');
             }
-            &__links__list:hover .list { display: inline-block; }
+
+            &__links__list {
+                &:hover .list { //sass-lint:disable-line force-element-nesting
+                    display: inline-block;
+                }
+            }
         }
 
 
         a {
             color: $color_light_1;
-        }
-        a:hover {
-            color: $color_light_2;
+
+            &:hover {
+                color: $color_light_2;
+            }
         }
 
         &__logo {
@@ -132,6 +150,7 @@
             top: 0;
             width: $cmp_nav_height;
         }
+
         &__hamburger__icon__line {
             background: lighten($color_brand_primary, 25%);
             border-radius: 2px;
@@ -140,18 +159,17 @@
             width: 20px;
             &:last-child { margin-bottom: 0; }
         }
-
     }
-    
 
-    .#{$prefix_component_nav}nav__links__list .list {
+    .#{$prefix_component_nav}nav__links__list .list { //sass-lint:disable-line force-element-nesting
+        @extend %text_brand_1 !optional;
+        @extend %bg_brand_3 !optional;
         left: 0;
         position: absolute;
         top: $cmp_nav_height;
-        @extend %text_brand_1 !optional;
-        @extend %bg_brand_3 !optional;
         width: 150px;
-        .list__item {
+
+        .list__item { //sass-lint:disable-line class-name-format
             line-height: 1.5em;
             padding: 0;
             a { display: block; }

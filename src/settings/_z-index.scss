@@ -1,3 +1,5 @@
+// sass-lint:disable space-before-colon
+
 ///////////////////////////////////////////////////////////
 //
 //  Z-Index
@@ -6,18 +8,16 @@
 //
 ///////////////////////////////////////////////////////////
 
-$z-layers: (
-    "alert"  : 90,
-    "modal"  : 80,
-    "overlay": 70,
-    "nav"    : 30,
-    "section": -1
+$z_layers: (
+    'alert'  : 90,
+    'modal'  : 80,
+    'overlay': 70,
+    'nav'    : 30,
+    'section': -1
 ) !default;
 
 @function z($layer) {
-    @if not map-has-key($z-layers, $layer) {
-        @warn "No layer found for `#{$layer}` in $z-layers map. Property omitted.";
-    }
+    @if not map-has-key($z_layers, $layer) { @warn 'No layer found for #{$layer} in $z_layers map. Property omitted.'; }
 
-    @return map-get($z-layers, $layer);
+    @return map-get($z_layers, $layer);
 }

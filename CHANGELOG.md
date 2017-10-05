@@ -1,5 +1,20 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.32 (October 4, 2017)
+
+IMPROVEMENTS:
+
+  * Added sass-lint and updated source files to adhere to configuration defaults.  You may lint the library by running `npm run lint`.
+
+BUG FIXES:
+
+  * `$include-util-reset` was incorrectly named inside of reset.scss.  It has been correctly set to snakecase, `$include_util_reset`.
+
+BREAKING CHANGES:
+
+  * Renamed `generateColorTicks` mixin to `generate-color-ticks` to conform with sass-lint rules.
+  * Renamed `generateFontColor` mixin to `generate-font-colors` to conform with sass-lint rules.
+
 ## 0.0.31 (September 27, 2017)
 
 IMPROVEMENTS:
