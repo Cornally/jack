@@ -41,7 +41,7 @@
                 &:active {
                     background: adjust-color($color, $lightness: -10%, $saturation: -30%);
                     border-color: adjust-color($color, $lightness: -10%, $saturation: -30%);
-                    color: currentColor;
+                    color: $color_light_1;
                 }
 
                 @if($state == 'disabled') {
