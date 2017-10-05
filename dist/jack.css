@@ -4341,7 +4341,7 @@ span.go {
 .btn.btn--primary:active {
   background: #5b5d8b;
   border-color: #5b5d8b;
-  color: currentColor;
+  color: #fff;
 }
 .btn--primary--line {
   border-color: rgba(82, 88, 199, 0.5);
@@ -4368,7 +4368,7 @@ span.go {
 .btn.btn--secondary:active {
   background: #6dccc4;
   border-color: #6dccc4;
-  color: currentColor;
+  color: #fff;
 }
 .btn--secondary--line {
   border-color: rgba(125, 239, 229, 0.5);
@@ -4395,7 +4395,7 @@ span.go {
 .btn.btn--default:active {
   background: #1d1d1d;
   border-color: #1d1d1d;
-  color: currentColor;
+  color: #fff;
 }
 .btn--default--line {
   border-color: rgba(49, 51, 59, 0.5);
@@ -4422,7 +4422,7 @@ span.go {
 .btn.btn--success:active {
   background: #69ad70;
   border-color: #69ad70;
-  color: currentColor;
+  color: #fff;
 }
 .btn--success--line {
   border-color: rgba(111, 218, 122, 0.5);
@@ -4449,7 +4449,7 @@ span.go {
 .btn.btn--warning:active {
   background: #c9c363;
   border-color: #c9c363;
-  color: currentColor;
+  color: #fff;
 }
 .btn--warning--line {
   border-color: rgba(238, 230, 113, 0.5);
@@ -4476,7 +4476,7 @@ span.go {
 .btn.btn--info:active {
   background: #5f9cc4;
   border-color: #5f9cc4;
-  color: currentColor;
+  color: #fff;
 }
 .btn--info--line {
   border-color: rgba(107, 184, 235, 0.5);
@@ -4503,7 +4503,7 @@ span.go {
 .btn.btn--error:active {
   background: #a54a4a;
   border-color: #a54a4a;
-  color: currentColor;
+  color: #fff;
 }
 .btn--error--line {
   border-color: rgba(220, 70, 70, 0.5);
@@ -4530,7 +4530,7 @@ span.go {
 .btn.btn--disabled:active {
   background: #bfbfbf;
   border-color: #bfbfbf;
-  color: currentColor;
+  color: #fff;
 }
 .btn.btn--disabled, .btn.btn--disabled:hover, .btn.btn--disabled:active {
   background: #d8d8d8;
