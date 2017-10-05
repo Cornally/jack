@@ -30,7 +30,7 @@ $colors_brand: map-merge($colors_states, (welcome: #8bc34a));
 
 {% if section == "generate-classes" %}
 // Generate shade derivative classes
-@include generateColorTicks('class', 'bg latte', #5258C7, 'background', 'lighten', 10%, 5);
+@include generate-color-ticks('class', 'bg latte', #5258C7, 'background', 'lighten', 10%, 5);
 
 // Outputs
 .bg-latte-1 { background: #af9755; }
@@ -42,7 +42,7 @@ $colors_brand: map-merge($colors_states, (welcome: #8bc34a));
 
 {% if section == "generate-placeholders" %}
 // Generate shade derivatives placeholders
-@include generateColorTicks('placeholder', 'bg brand', #5258C7, 'background', 'darken', 10%, 5);
+@include generate-color-ticks('placeholder', 'bg brand', #5258C7, 'background', 'darken', 10%, 5);
 
 .section--angled:nth-of-type(1):after { @extend %bg_brand_3; }
 .section--angled:nth-of-type(2):after { @extend %bg_brand_2; }

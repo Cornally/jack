@@ -1,40 +1,51 @@
 @import '../settings/all';
 
 @if check($include_component_divider) {
-	
-	.#{$prefix_component_divider}divider {
-		align-items: center;
-		border: none;
-		color: $color_light_4;
-		display: flex;
-		justify-content: space-around;
+    
+    .#{$prefix_component_divider}divider {
+        align-items: center;
+        border: 0;
+        color: $color_light_4;
+        display: flex;
+        justify-content: space-around;
 
-		&:before, &:after {
-			background-color: $color_light_3;
-			content: " ";
-			display: block;
-			flex: 1;
-			height: 1px;
-		}
+        &:before,
+        &:after {
+            background-color: $color_light_3;
+            content: '';
+            display: block;
+            flex: 1;
+            height: 1px;
+        }
 
-		&--label { text-align: center; }
-		&--label--left:before { display: none; }
-		&--label--right:after { display: none; }
-		
-		&__text {
-			flex: 0;
-			font-weight: bold;
-			padding: 0 $size_gap;
-			text-transform: uppercase;
-			white-space: nowrap;
-		}
+        &--label { text-align: center; }
+
+        &--label--left {
+            &:before { display: none; }
+        }
+
+        &--label--right {
+            &:after { display: none; }
+        }
+
+        &__text {
+            flex: 0;
+            font-weight: bold;
+            padding: 0 $size_gap;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
 
 
-		@each $state, $color in $colors_all {
-			&--#{$state} {
-				color: $color;
-				&:before, &:after { background-color: rgba($color, .5); }
-			}
-		}
-	}
+        @each $state, $color in $colors_all {
+            &--#{$state} {
+                color: $color;
+
+                &:before,
+                &:after {
+                    background-color: rgba($color, .5);
+                }
+            }
+        }
+    }
 }

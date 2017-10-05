@@ -2,7 +2,7 @@
 
 @if check($include_component_tab) {
 
-    .#{$prefix-component_tab}tabs {
+    .#{$prefix_component_tab}tabs {
         align-items: center;
         display: flex;
         flex-direction: row;
@@ -18,13 +18,15 @@
                 cursor: default;
                 font-weight: bold;
                 position: relative;
+
                 &:hover {
                     color: $color_brand_primary;
                 }
+
                 &:after {
                     background: currentColor;
                     bottom: 0;
-                    content: "";
+                    content: '';
                     display: block;
                     height: 3px;
                     left: 0;

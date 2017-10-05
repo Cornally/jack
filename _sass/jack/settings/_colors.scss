@@ -1,16 +1,18 @@
+// sass-lint:disable space-before-colon
+
 // Utility colors
-$color_light_1       : #ffffff !default;
-$color_light_2       : #f7f7f7 !default;
-$color_light_3       : #efeeee !default;
-$color_light_4       : #d8d8d8 !default;
-$color_dark_1        : #15161A !default;
-$color_dark_2        : #1D1E23 !default;
-$color_dark_3        : #31333B !default;
-$color_dark_4        : #414551 !default;
+$color_light_1: #fff !default;
+$color_light_2: #f7f7f7 !default;
+$color_light_3: #efeeee !default;
+$color_light_4: #d8d8d8 !default;
+$color_dark_1 : #15161a !default;
+$color_dark_2 : #1d1e23 !default;
+$color_dark_3 : #31333b !default;
+$color_dark_4 : #414551 !default;
 
 
 // Brand colors
-$color_brand_primary  : #5258C7 !default;
+$color_brand_primary  : #5258c7 !default;
 $color_brand_secondary: #7defe5 !default;
 
 
@@ -21,10 +23,10 @@ $colors_brand: (
 
 
 // Stateful colors
-$color_state_success : #6FDA7A !default;
-$color_state_warning : #EEE671 !default;
-$color_state_info    : #6BB8EB !default;
-$color_state_error   : #DC4646 !default;
+$color_state_success : #6fda7a !default;
+$color_state_warning : #eee671 !default;
+$color_state_info    : #6bb8eb !default;
+$color_state_error   : #dc4646 !default;
 $color_state_default : $color_dark_3 !default;
 $color_state_disabled: $color_light_4 !default;
 
@@ -53,31 +55,31 @@ $colors_all: map-merge($colors_brand, $colors_states);
 //  `$shift`: Apply a lightening or darkening to base $color
 //  `$count`: Number of derivatives
 //  e.g. 
-//  @include generateColorTicks('class', 'text red', #ff0000, 'color', 'lighten', 30%, 5);
-//  @include generateColorTicks('placeholder', 'bg purple', #264285, 'background', 'darken');
+//  @include generate-color-ticks('class', 'text red', #ff0000, 'color', 'lighten', 30%, 5);
+//  @include generate-color-ticks('placeholder', 'bg purple', #264285, 'background', 'darken');
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateColorTicks($output, $name, $color, $property, $shift, $desaturate:30%, $count:6) {
+@mixin generate-color-ticks($output, $name, $color, $property, $shift, $desaturate: 30%, $count: 6) {
     $increment: 45/$count;
 
     // Handle output_type
     $output_type: null;
-    @if $output == "placeholder" {
+    @if $output == 'placeholder' {
         $output_type: '%';
-    } @else if $output == "class" {
+    } @else if $output == 'class' {
         $output_type: '.';
     }
 
     // Handle separator unless explicitely set
     $output_separator: null;
-    @if $output == "placeholder" {
+    @if $output == 'placeholder' {
         $output_separator: '_';
-    } @else if $output == "class" {
+    } @else if $output == 'class' {
         $output_separator: '-';
     }
 
     // Add appropriate separator to name
-    $output_name: str-replace($name, " ", $output_separator);
+    $output_name: str-replace($name, ' ', $output_separator);
 
     @for $i from 1 through $count {
         #{$output_type}#{$output_name}#{$output_separator}#{$i} {
@@ -98,30 +100,30 @@ $colors_all: map-merge($colors_brand, $colors_states);
 //  Create derivative colors from a base color, suitable for fonts
 //
 //  e.g.
-//  @include generateFontColor('class', 'text brand', $color_brand_secondary, $color_dark_1, 0%, 5);
+//  @include generate-font-colors('class', 'text brand', $color_brand_secondary, $color_dark_1, 0%, 5);
 //
 ////////////////////////////////////////////////////////////////////
-@mixin generateFontColor($output, $name, $color, $shift_color:$color_light_1, $desaturate:5%, $count:6) {
+@mixin generate-font-colors($output, $name, $color, $shift_color: $color_light_1, $desaturate: 5%, $count: 6) {
     $increment: 75/$count;
 
     // Handle output_type
     $output_type: null;
-    @if $output == "placeholder" {
+    @if $output == 'placeholder' {
         $output_type: '%';
-    } @else if $output == "class" {
+    } @else if $output == 'class' {
         $output_type: '.';
     }
 
     // Handle separator unless explicitely set
     $output_separator: null;
-    @if $output == "placeholder" {
+    @if $output == 'placeholder' {
         $output_separator: '_';
-    } @else if $output == "class" {
+    } @else if $output == 'class' {
         $output_separator: '-';
     }
 
     // Add appropriate separator to name
-    $output_name: str-replace($name, " ", $output_separator);
+    $output_name: str-replace($name, ' ', $output_separator);
 
     @for $i from 1 through $count {
         #{$output_type}#{$output_name}#{$output_separator}#{$i} {
@@ -131,15 +133,13 @@ $colors_all: map-merge($colors_brand, $colors_states);
 }
 
 // Credit https://medium.com/@pentzzsolt/a-non-destructive-map-merge-function-for-sass-f91637f87b2e
-@function non-destructive-map-merge($parent-map, $child-map) {
-	$result: $parent-map;
-	@each $key, $value in $child-map {
-		@if (not map-has-key($result, $key)) or (type-of(map-get($result, $key)) != type-of($value)) or (not (type-of(map-get($result, $key)) == map and type-of($value) == map)) {
-			$result: map-merge($result, ($key: $value));
-		}
-		@else {
-			$result: map-merge($result, ($key: non-destructive-map-merge(map-get($result, $key), $value)));
-		}
-	}
-	@return $result;
+@function non-destructive-map-merge($parent_map, $child_map) {
+    $result: $parent_map;
+    @each $key, $value in $child_map {
+        @if (not map-has-key($result, $key)) or (type-of(map-get($result, $key)) != type-of($value)) or (not (type-of(map-get($result, $key)) == map and type-of($value) == map)) {
+            $result: map-merge($result, ($key: $value));
+        }
+        @else { $result: map-merge($result, ($key: non-destructive-map-merge(map-get($result, $key), $value))); }
+    }
+    @return $result;
 }

@@ -28,18 +28,18 @@ $colors_states: map-merge($colors_states, (welcome: #8bc34a));
 @import 'jack/jack';
 
 // Generate some on-brand background colors
-@include generateColorTicks('placeholder', 'bg brand', #5258C7, 'background', 'darken', 10%, 5);
+@include generate-color-ticks('placeholder', 'bg brand', #5258C7, 'background', 'darken', 10%, 5);
 .section--angled:nth-of-type(1):after { @extend %bg_brand_3; }
 .section--angled:nth-of-type(2):after { @extend %bg_brand_2; }
 .section--angled:nth-of-type(3):after { @extend %bg_brand_4; }
 
 // Generate some on-brand font colors
-@include generateFontColor('class', 'text brand', #5258C7, $color_light_1, 10%, 5);
-@include generateFontColor('class', 'text primary', $color_brand_primary, $color_dark_1, 15%, 5);
+@include generate-font-colors('class', 'text brand', #5258C7, $color_light_1, 10%, 5);
+@include generate-font-colors('class', 'text primary', $color_brand_primary, $color_dark_1, 15%, 5);
 
 // Color customization examples
-@include generateColorTicks('class', 'bg latte', #8D8058, 'background', 'lighten', 0%, 5);
-@include generateFontColor('class', 'text latte', #D4C296, $color_dark_1, 0%, 5);
+@include generate-color-ticks('class', 'bg latte', #8D8058, 'background', 'lighten', 0%, 5);
+@include generate-font-colors('class', 'text latte', #D4C296, $color_dark_1, 0%, 5);
 
 
 ///////////////////////////////////

@@ -9,11 +9,11 @@ $animation_duration: .2s;
 
 $velocity: 1;
 
-@function distanceToDuration($distance) {
-    @return (($distance/100) / $velocity) + "s";
+@function distance-to-duration($distance) {
+    @return (($distance/100) / $velocity) + 's';
 }
 
 
-@function durationToDistance($duration) {
-    @return (($duration*100) * $velocity) + "px";
+@function duration-to-distance($duration) {
+    @return (($duration*100) * $velocity) + 'px';
 }

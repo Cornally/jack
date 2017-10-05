@@ -1,56 +1,57 @@
+// sass-lint:disable no-vendor-prefixes
+
 @import '../settings/all';
 
 // Reset a few styles. Note that we only reset things we're likely to use, rather than using a whole reset stylesheet.
 // We also don't blindly overwrite base styles on things like UL, H1, or P because we follow semantic HTML standards and
 // only use tags appropriately, where they're meant to be used. We WANT those default styles.
 
-@if $include-util-reset or $jack_include_all {
-    html,
-    body,
-    div,
-    span,
+@if $include_util_reset or $jack_include_all {
     article,
+    body,
     details,
+    div,
     footer,
+    form ,
     header,
+    html,
     nav,
     section,
-    summary,
-    form {
+    span,
+    summary {
         @extend %no_margins !optional;
         @extend %no_padding !optional;
         @extend %no_borders !optional;
-        vertical-align: baseline;
         box-sizing: border-box;
+        vertical-align: baseline;
     }
 
     html { 
-        height: 100%;
-        font-size: 62.5%;
-        font-family: sans-serif;
-        -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        -ms-text-size-adjust: 100%;
         -moz-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -webkit-font-smoothing: antialiased;
         -webkit-text-size-adjust: 100%;
+        font-family: sans-serif;
+        font-size: 62.5%;
+        height: 100%;
     }
 
     body {
-        height: 100%;
-        width: 100%;
-        margin: 0 auto;
-        position: relative;
-        overflow-x: hidden;
-        
         // Disable tap highlight
         -webkit-tap-highlight-color: transparent;
+        height: 100%;
+        margin: 0 auto;
+        overflow-x: hidden;
+        position: relative;
+        width: 100%;
     }
 
     a,
     input,
     select { 
-        box-sizing: border-box;
         -webkit-font-smoothing: antialiased; // Chrome needs this explicitely on inputs (vs. just html {...})
+        box-sizing: border-box;
     }
 
     img {
@@ -69,6 +70,7 @@
         &:hover {
             text-decoration: none;
         }
+
         &:focus {
             outline-color: $color_brand_primary;
         }
@@ -81,36 +83,40 @@
         outline: none;
     }
 
-    p,
+    code,
+    figure,
     h1,
     h2,
     h3,
     h4,
     h5,
-    ul,
-    figure,
-    code,
-    pre,
     hr,
-    li {
+    li,
+    p,
+    pre,
+    ul {
         @extend %no_margins !optional;
         @extend %no_padding !optional;
     }
 
-    // Hide Firefox <button> outline
-    button::-moz-focus-inner {
-        @extend %no_borders !optional;
+    button {
+        // Hide Firefox <button> outline
+        &::-moz-focus-inner {
+            @extend %no_borders !optional;
+        }
     }
 
-    // Hide Firefox <input> outline
-    input::-moz-focus-inner {
-        @extend %no_borders !optional;
-    }
+    input {
+        // Hide Firefox <input> outline
+        &::-moz-focus-inner {
+            @extend %no_borders !optional;
+        }
 
-    // Disable yellow autofill boxes
-    input:-webkit-autofill {
-        -webkit-box-shadow: 0 0 0px 1000px #333 inset;
-        -webkit-text-fill-color: #fff;
+        // Disable yellow autofill boxes
+        &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px $color_dark_1 inset;
+            -webkit-text-fill-color: $color_light_1;
+        }
     }
 
     // Change text selection highlight color

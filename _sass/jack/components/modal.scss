@@ -15,18 +15,19 @@
         right: 0;
         top: 0;
         visibility: hidden;
-        z-index: z("overlay");
+        z-index: z('overlay');
 
         &--active {
             visibility: visible;
-            
-           .#{$prefix_component_list}modal__overlay {
-            opacity: 1;
-           }
-           .#{$prefix_component_list}modal__window {
-            opacity: 1;
-            transition: opacity .2s ease .2s;
-           }
+
+            .#{$prefix_component_list}modal__overlay {
+                opacity: 1;
+            }
+
+            .#{$prefix_component_list}modal__window {
+                opacity: 1;
+                transition: opacity .2s ease .2s;
+            }
         }
 
         &__overlay {
@@ -47,8 +48,7 @@
             opacity: 0;
             transition: opacity .2s ease 0s;
             width: 80vw;
-            z-index: z("modal");
+            z-index: z('modal');
         }
     }
-
 }

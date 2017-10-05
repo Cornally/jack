@@ -6,7 +6,7 @@
 
         $cmp_background: $color_light_1;
         $cmp_border: $color_light_3;
-        $cmp_border-dark: $color_light_3;
+        $cmp_border_dark: $color_light_3;
 
         background: $cmp_background;
         display: flex;
@@ -14,7 +14,9 @@
 
         &--no-padding {
             &__head,
-            &__body { padding: 0; }
+            &__body {
+                padding: 0;
+            }
         }
 
         &--border {
@@ -22,16 +24,17 @@
         }
 
         &--shadow {
-            box-shadow: 0 1px 4px 1px rgba($color_dark_1,.075);
+            box-shadow: 0 1px 4px 1px rgba($color_dark_1, .075);
+
             &--border {
-                border: 1px solid $cmp_border-dark;
+                border: 1px solid $cmp_border_dark;
             }
         }
 
         @each $state, $color in $colors_all {
             &--#{$state} {
                 background: desaturate(lighten($color, 25%), 15%);
-                border-color: desaturate(lighten($color, 15%), 15%);;
+                border-color: desaturate(lighten($color, 15%), 15%);
                 color: desaturate(darken($color, 20%), 10%);
             }
         }
