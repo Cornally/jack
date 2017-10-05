@@ -10,7 +10,7 @@
   padding: 7px 14px;
 }
 .table--striped tbody tr {
-  background: #ffffff;
+  background: #fff;
 }
 .table--striped tbody tr:nth-child(odd) {
   background: #f7f7f7;
@@ -18,7 +18,9 @@
 .table--border {
   border: 1px solid #efeeee;
 }
-.table--border thead tr th,
-.table--border tbody tr:not(:last-child) td {
+.table--border th {
+  border-bottom: 1px solid #efeeee;
+}
+.table--border tr:not(:last-child) td {
   border-bottom: 1px solid #efeeee;
 }

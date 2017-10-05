@@ -1,13 +1,13 @@
 .section--angled {
   background: none;
-  padding: 60px 0 !important;
+  padding: 60px 0;
   position: relative;
 }
 .section--angled:after {
-  content: "";
+  content: '';
   height: 100%;
   left: 0;
-  padding: 60px 0 !important;
+  padding: 60px 0;
   position: absolute;
   top: 0;
   width: 100%;
@@ -28,12 +28,12 @@
 .section--angled:first-of-type:after {
   transform-origin: top right;
 }
-.section--angled:last-of-type:after {
-  padding-bottom: 0 !important;
-  transform-origin: bottom left;
-}
 .section--angled:last-of-type {
-  padding-bottom: 0 !important;
+  padding-bottom: 0;
+}
+.section--angled:last-of-type:after {
+  padding-bottom: 0;
+  transform-origin: bottom left;
 }
 
 .section-wrapper {

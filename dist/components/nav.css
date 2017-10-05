@@ -1,5 +1,5 @@
 .nav {
-  background: #5258C7;
+  background: #5258c7;
   line-height: 50px;
   min-height: 50px;
   width: 100%;
@@ -16,7 +16,7 @@
     overflow-y: auto;
   }
   .nav.nav-xs--sticky + *:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 50px;
   }
@@ -33,7 +33,7 @@
     overflow-y: auto;
   }
   .nav.nav-sm--sticky + *:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 50px;
   }
@@ -50,7 +50,7 @@
     overflow-y: auto;
   }
   .nav.nav-md--sticky + *:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 50px;
   }
@@ -67,7 +67,7 @@
     overflow-y: auto;
   }
   .nav.nav-lg--sticky + *:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 50px;
   }
@@ -84,7 +84,7 @@
     overflow-y: auto;
   }
   .nav.nav-xl--sticky + *:before {
-    content: "";
+    content: '';
     display: block;
     padding-top: 50px;
   }
@@ -151,7 +151,7 @@
   }
 }
 .nav a {
-  color: #ffffff;
+  color: #fff;
 }
 .nav a:hover {
   color: #f7f7f7;

@@ -3,7 +3,7 @@
   position: relative;
 }
 .well--primary:before, .well--secondary:before, .well--default:before, .well--success:before, .well--warning:before, .well--info:before, .well--error:before, .well--disabled:before {
-  content: " ";
+  content: '';
   height: 100%;
   left: 0;
   position: absolute;
@@ -29,25 +29,25 @@
   border: 1px solid #efeeee;
 }
 .well--primary:before {
-  background: #5258C7;
+  background: #5258c7;
 }
 .well--secondary:before {
   background: #7defe5;
 }
 .well--default:before {
-  background: #31333B;
+  background: #31333b;
 }
 .well--success:before {
-  background: #6FDA7A;
+  background: #6fda7a;
 }
 .well--warning:before {
-  background: #EEE671;
+  background: #eee671;
 }
 .well--info:before {
-  background: #6BB8EB;
+  background: #6bb8eb;
 }
 .well--error:before {
-  background: #DC4646;
+  background: #dc4646;
 }
 .well--disabled:before {
   background: #d8d8d8;

@@ -7,8 +7,8 @@
   z-index: 90;
 }
 .alert-wrapper--top-left .alert:not(:first-child), .alert-wrapper--top-center .alert:not(:first-child), .alert-wrapper--top-right .alert:not(:first-child), .alert-wrapper--bottom-left .alert:not(:first-child), .alert-wrapper--bottom-center .alert:not(:first-child), .alert-wrapper--bottom-right .alert:not(:first-child) {
-  margin-top: 0;
   margin-bottom: 14px;
+  margin-top: 0;
 }
 
 .alert-wrapper--top-left, .alert-wrapper--top-center, .alert-wrapper--top-right {
@@ -21,7 +21,7 @@
 }
 
 .alert {
-  background: #ffffff;
+  background: #fff;
   display: flex;
   flex-direction: row;
   pointer-events: initial;
@@ -39,16 +39,16 @@
   align-items: flex-end;
 }
 .alert-wrapper--bottom-left {
-  bottom: 21px;
   align-items: flex-start;
+  bottom: 21px;
 }
 .alert-wrapper--bottom-center {
-  bottom: 21px;
   align-items: center;
+  bottom: 21px;
 }
 .alert-wrapper--bottom-right {
-  bottom: 21px;
   align-items: flex-end;
+  bottom: 21px;
 }
 .alert--no-padding__body {
   padding: 0;
@@ -68,39 +68,39 @@
   padding: 14px 21px;
 }
 .alert__close {
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0), rgba(21, 22, 26, 0.05));
+  background: linear-gradient(45deg, rgba(21, 22, 26, 0), rgba(21, 22, 26, 0.05));
   cursor: pointer;
   fill: currentColor;
   font-size: 14px;
   padding: 14px;
 }
 .alert--primary {
-  background: #5258C7;
-  color: white;
+  background: #5258c7;
+  color: #fff;
 }
 .alert--secondary {
   background: #7defe5;
-  color: white;
+  color: #fff;
 }
 .alert--default {
-  background: #31333B;
-  color: white;
+  background: #31333b;
+  color: #fff;
 }
 .alert--success {
-  background: #6FDA7A;
-  color: white;
+  background: #6fda7a;
+  color: #fff;
 }
 .alert--warning {
-  background: #EEE671;
-  color: white;
+  background: #eee671;
+  color: #fff;
 }
 .alert--info {
-  background: #6BB8EB;
-  color: white;
+  background: #6bb8eb;
+  color: #fff;
 }
 .alert--error {
-  background: #DC4646;
-  color: white;
+  background: #dc4646;
+  color: #fff;
 }
 .alert--disabled {
   background: #d8d8d8;

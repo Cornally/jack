@@ -1,5 +1,5 @@
 .link {
-  color: #5258C7;
+  color: #5258c7;
 }
 .link:hover {
   color: #5257ae;
@@ -16,7 +16,7 @@
   font-weight: bold;
 }
 .link--primary {
-  color: #5258C7;
+  color: #5258c7;
   text-decoration-color: rgba(82, 87, 174, 0.25);
 }
 .link--primary:hover {
@@ -32,7 +32,7 @@
   text-decoration-color: rgba(115, 223, 214, 0.5);
 }
 .link--default {
-  color: #31333B;
+  color: #31333b;
   text-decoration-color: rgba(41, 41, 41, 0.25);
 }
 .link--default:hover {
@@ -40,7 +40,7 @@
   text-decoration-color: rgba(41, 41, 41, 0.5);
 }
 .link--success {
-  color: #6FDA7A;
+  color: #6fda7a;
   text-decoration-color: rgba(106, 197, 116, 0.25);
 }
 .link--success:hover {
@@ -48,7 +48,7 @@
   text-decoration-color: rgba(106, 197, 116, 0.5);
 }
 .link--warning {
-  color: #EEE671;
+  color: #eee671;
   text-decoration-color: rgba(221, 214, 104, 0.25);
 }
 .link--warning:hover {
@@ -56,7 +56,7 @@
   text-decoration-color: rgba(221, 214, 104, 0.5);
 }
 .link--info {
-  color: #6BB8EB;
+  color: #6bb8eb;
   text-decoration-color: rgba(99, 170, 217, 0.25);
 }
 .link--info:hover {
@@ -64,7 +64,7 @@
   text-decoration-color: rgba(99, 170, 217, 0.5);
 }
 .link--error {
-  color: #DC4646;
+  color: #dc4646;
   text-decoration-color: rgba(198, 67, 67, 0.25);
 }
 .link--error:hover {

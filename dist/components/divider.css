@@ -1,13 +1,13 @@
 .divider {
   align-items: center;
-  border: none;
+  border: 0;
   color: #d8d8d8;
   display: flex;
   justify-content: space-around;
 }
 .divider:before, .divider:after {
   background-color: #efeeee;
-  content: " ";
+  content: '';
   display: block;
   flex: 1;
   height: 1px;
@@ -29,7 +29,7 @@
   white-space: nowrap;
 }
 .divider--primary {
-  color: #5258C7;
+  color: #5258c7;
 }
 .divider--primary:before, .divider--primary:after {
   background-color: rgba(82, 88, 199, 0.5);
@@ -41,31 +41,31 @@
   background-color: rgba(125, 239, 229, 0.5);
 }
 .divider--default {
-  color: #31333B;
+  color: #31333b;
 }
 .divider--default:before, .divider--default:after {
   background-color: rgba(49, 51, 59, 0.5);
 }
 .divider--success {
-  color: #6FDA7A;
+  color: #6fda7a;
 }
 .divider--success:before, .divider--success:after {
   background-color: rgba(111, 218, 122, 0.5);
 }
 .divider--warning {
-  color: #EEE671;
+  color: #eee671;
 }
 .divider--warning:before, .divider--warning:after {
   background-color: rgba(238, 230, 113, 0.5);
 }
 .divider--info {
-  color: #6BB8EB;
+  color: #6bb8eb;
 }
 .divider--info:before, .divider--info:after {
   background-color: rgba(107, 184, 235, 0.5);
 }
 .divider--error {
-  color: #DC4646;
+  color: #dc4646;
 }
 .divider--error:before, .divider--error:after {
   background-color: rgba(220, 70, 70, 0.5);
