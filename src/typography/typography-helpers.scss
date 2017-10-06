@@ -33,15 +33,17 @@
         &-h-3 {
             @extend %text_header;
             color: $color_dark_1;
-            font-size: $size_font_md;
+            font-size: $size_font_lg;
         }
 
         &-h-4 {
             @extend %text_header;
+            font-size: $size_font_md;
         }
 
         &-h-5 {
             @extend %text_header;
+            font-size: $size_font_sm;
         }
 
         &-p-1 {
