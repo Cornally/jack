@@ -4321,7 +4321,6 @@ span.go {
   user-select: none;
 }
 .btn-group .btn {
-  float: left;
   margin-bottom: 7px;
   margin-right: 7px;
 }
@@ -4728,7 +4727,13 @@ span.go {
 }
 .text-h-3 {
   color: #15161a;
+  font-size: 18px;
+}
+.text-h-4 {
   font-size: 14px;
+}
+.text-h-5 {
+  font-size: 12px;
 }
 .text-left {
   text-align: left;

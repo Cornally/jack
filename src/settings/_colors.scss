@@ -16,10 +16,11 @@ $color_brand_primary  : #5258c7 !default;
 $color_brand_secondary: #7defe5 !default;
 
 
-$colors_brand: (
-    primary  : $color_brand_primary,
-    secondary: $color_brand_secondary
-) !default;
+$colors_brand: () !default;
+$colors_brand: map-merge((
+        primary  : $color_brand_primary,
+        secondary: $color_brand_secondary
+), $colors_brand);
 
 
 // Stateful colors
@@ -30,14 +31,16 @@ $color_state_error   : #dc4646 !default;
 $color_state_default : $color_dark_3 !default;
 $color_state_disabled: $color_light_4 !default;
 
-$colors_states: (
-    default : $color_state_default,
-    success : $color_state_success,
-    warning : $color_state_warning,
-    info    : $color_state_info,
-    error   : $color_state_error,
-    disabled: $color_state_disabled
-) !default;
+
+$colors_states: () !default;
+$colors_states: map-merge((
+        default : $color_state_default,
+        success : $color_state_success,
+        warning : $color_state_warning,
+        info    : $color_state_info,
+        error   : $color_state_error,
+        disabled: $color_state_disabled
+), $colors_states);
 
 
 // Combine maps for easier looping
@@ -61,7 +64,7 @@ $colors_all: map-merge($colors_brand, $colors_states);
 ////////////////////////////////////////////////////////////////////
 @mixin generate-color-ticks($output, $name, $color, $property, $shift, $desaturate: 30%, $count: 6) {
     $increment: 45/$count;
-
+    
     // Handle output_type
     $output_type: null;
     @if $output == 'placeholder' {
@@ -69,7 +72,7 @@ $colors_all: map-merge($colors_brand, $colors_states);
     } @else if $output == 'class' {
         $output_type: '.';
     }
-
+    
     // Handle separator unless explicitely set
     $output_separator: null;
     @if $output == 'placeholder' {
@@ -77,10 +80,10 @@ $colors_all: map-merge($colors_brand, $colors_states);
     } @else if $output == 'class' {
         $output_separator: '-';
     }
-
+    
     // Add appropriate separator to name
     $output_name: str-replace($name, ' ', $output_separator);
-
+    
     @for $i from 1 through $count {
         #{$output_type}#{$output_name}#{$output_separator}#{$i} {
             @if ($shift == 'lighten') {
@@ -105,7 +108,7 @@ $colors_all: map-merge($colors_brand, $colors_states);
 ////////////////////////////////////////////////////////////////////
 @mixin generate-font-colors($output, $name, $color, $shift_color: $color_light_1, $desaturate: 5%, $count: 6) {
     $increment: 75/$count;
-
+    
     // Handle output_type
     $output_type: null;
     @if $output == 'placeholder' {
@@ -113,7 +116,7 @@ $colors_all: map-merge($colors_brand, $colors_states);
     } @else if $output == 'class' {
         $output_type: '.';
     }
-
+    
     // Handle separator unless explicitely set
     $output_separator: null;
     @if $output == 'placeholder' {
@@ -121,10 +124,10 @@ $colors_all: map-merge($colors_brand, $colors_states);
     } @else if $output == 'class' {
         $output_separator: '-';
     }
-
+    
     // Add appropriate separator to name
     $output_name: str-replace($name, ' ', $output_separator);
-
+    
     @for $i from 1 through $count {
         #{$output_type}#{$output_name}#{$output_separator}#{$i} {
             color: desaturate(mix($color, $shift_color, $i*$increment), $desaturate);

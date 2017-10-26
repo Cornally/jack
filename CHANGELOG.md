@@ -1,5 +1,16 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.33 (October 25, 2017)
+
+IMPROVEMENTS:
+
+  * Added a new border radius size.
+  * Adjusted letter spacing on headers.
+
+BUG FIXES:
+
+  * Corrected overriding single properties of a Sass map like the ones located in `_colors.scss`.
+
 ## 0.0.32 (October 4, 2017)
 
 IMPROVEMENTS:
