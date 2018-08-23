@@ -1,5 +1,12 @@
 **This is the complete CHANGELOG.**
 
+## 0.0.34 (October 25, 2017)
+
+BUG FIXES:
+
+  * Removed npm packages flagged with vulnerabilities.
+
+
 ## 0.0.33 (October 25, 2017)
 
 IMPROVEMENTS:
